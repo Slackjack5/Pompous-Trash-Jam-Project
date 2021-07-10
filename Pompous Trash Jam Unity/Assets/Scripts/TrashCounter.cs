@@ -29,15 +29,18 @@ public class TrashCounter : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if (currentCount <= 0)
+    if (GameManager.IsGameActive)
     {
-      // Player wins when there are zero trash left
-      SceneManager.LoadScene("YouWin");
-    }
+      if (currentCount <= 0)
+      {
+        // Player wins when there are zero trash left
+        SceneManager.LoadScene("YouWin");
+      }
 
-    if (remainingSpawnCount > 0 && !isWaitingSpawn)
-    {
-      StartCoroutine(SetSpawnInterval());
+      if (remainingSpawnCount > 0 && !isWaitingSpawn)
+      {
+        StartCoroutine(SetSpawnInterval());
+      }
     }
   }
 

@@ -59,43 +59,52 @@ public class PlayerController : MonoBehaviour
 
   public void OnAttack()
   {
-    // Hit boxes beneath player
-    RaycastHit2D groundHit = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, touchDistance, whatIsBox);
-    if (groundHit)
+    if (GameManager.IsGameActive)
     {
-      groundHit.transform.GetComponent<BoxDestruction>().Destroy();
-    }
+      // Hit boxes beneath player
+      RaycastHit2D groundHit = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, touchDistance, whatIsBox);
+      if (groundHit)
+      {
+        groundHit.transform.GetComponent<BoxDestruction>().Destroy();
+      }
 
-    // Hit boxes in front of player
-    Vector2 origin = frontCheckPosition.position;
-    origin.x += hitboxWidth / 2;
-    Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
-    RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
-    foreach (RaycastHit2D hit in hits)
-    {
-      hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
+      // Hit boxes in front of player
+      Vector2 origin = frontCheckPosition.position;
+      origin.x += hitboxWidth / 2;
+      Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
+      RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
+      foreach (RaycastHit2D hit in hits)
+      {
+        hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
+      }
     }
   }
 
   // OnJump is called on both press and release of the jump key
   public void OnJump()
   {
-    isJumpKeyHeld = !isJumpKeyHeld;
-
-    if (isJumpKeyHeld && isGrounded)
+    if (GameManager.IsGameActive)
     {
-      jumpTimeCounter = maxJumpTime;
+      isJumpKeyHeld = !isJumpKeyHeld;
+
+      if (isJumpKeyHeld && isGrounded)
+      {
+        jumpTimeCounter = maxJumpTime;
+      }
     }
   }
 
   public void OnMove(InputValue value)
   {
-    Vector2 motionVector = value.Get<Vector2>();
-    xInput = motionVector.x;
-
-    if (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight)
+    if (GameManager.IsGameActive)
     {
-      Flip();
+      Vector2 motionVector = value.Get<Vector2>();
+      xInput = motionVector.x;
+
+      if (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight)
+      {
+        Flip();
+      }
     }
   }
 
