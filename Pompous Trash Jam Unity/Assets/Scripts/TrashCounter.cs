@@ -8,7 +8,7 @@ public class TrashCounter : MonoBehaviour
   [SerializeField] private int maxCount = 100;
   [SerializeField] private GameObject box;
   [SerializeField] private Transform spawnArea;
-  [SerializeField] private float spawnWidth;
+  [SerializeField] private float spawnWidth = 12f;
   [SerializeField] private float spawnInterval = 0.5f;
 
   // Amount of trash remaining to collect

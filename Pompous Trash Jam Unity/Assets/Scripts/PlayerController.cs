@@ -12,16 +12,20 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private LayerMask whatIsBox;
   [SerializeField] private LayerMask whatIsGround;
   [SerializeField] private Transform groundCheckPosition;
+  [SerializeField] private Transform frontCheckPosition;
+  [SerializeField] private float hitboxWidth = 1f;
+  [SerializeField] private float hitboxHeight = 1f;
 
   private Rigidbody2D rb;
 
+  private bool isFacingRight = true;
   private bool isGrounded = false;
   private bool isJumpKeyHeld = false;
   private float jumpTimeCounter;
   private Vector2 velocity;
   private float xInput;
 
-  const float groundCheckDistance = .1f;
+  const float touchDistance = .1f;
 
   // Start is called before the first frame update
   void Start()
@@ -31,15 +35,17 @@ public class PlayerController : MonoBehaviour
 
   private void Update()
   {
-    isGrounded = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, groundCheckDistance, whatIsGround | whatIsBox);
+    isGrounded = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, touchDistance, whatIsGround | whatIsBox);
   }
 
   private void FixedUpdate()
   {
+    // Move
     float targetVelocityX = baseSpeed * xInput * Time.fixedDeltaTime;
     Vector2 targetVelocity = new Vector2(targetVelocityX, rb.velocity.y);
     rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothTime);
 
+    // Jump
     if (isJumpKeyHeld && jumpTimeCounter > 0)
     {
       rb.velocity = new Vector2(rb.velocity.x, baseJumpSpeed);
@@ -53,8 +59,19 @@ public class PlayerController : MonoBehaviour
 
   public void OnAttack()
   {
-    RaycastHit2D hit = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, groundCheckDistance, whatIsBox);
-    if (hit)
+    // Hit boxes beneath player
+    RaycastHit2D groundHit = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, touchDistance, whatIsBox);
+    if (groundHit)
+    {
+      groundHit.transform.GetComponent<BoxDestruction>().Destroy();
+    }
+
+    // Hit boxes in front of player
+    Vector2 origin = frontCheckPosition.position;
+    origin.x += hitboxWidth / 2;
+    Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
+    RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
+    foreach (RaycastHit2D hit in hits)
     {
       hit.transform.GetComponent<BoxDestruction>().Destroy();
     }
@@ -75,5 +92,19 @@ public class PlayerController : MonoBehaviour
   {
     Vector2 motionVector = value.Get<Vector2>();
     xInput = motionVector.x;
+
+    if (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight)
+    {
+      Flip();
+    }
+  }
+
+  private void Flip()
+  {
+    isFacingRight = !isFacingRight;
+
+    Vector3 theScale = transform.localScale;
+    theScale.x *= -1;
+    transform.localScale = theScale;
   }
 }
