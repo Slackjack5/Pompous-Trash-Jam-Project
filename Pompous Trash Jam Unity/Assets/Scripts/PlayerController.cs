@@ -51,11 +51,6 @@ public class PlayerController : MonoBehaviour
     }
   }
 
-  private void OnGUI()
-  {
-    GUI.Label(new Rect(10, 10, 400, 30), "jumpTimeCounter: " + jumpTimeCounter);
-  }
-
   public void OnAttack()
   {
     RaycastHit2D hit = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, groundCheckDistance, whatIsBox);
