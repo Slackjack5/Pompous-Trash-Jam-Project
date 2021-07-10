@@ -144,6 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e1bde99663f9a4081bcbcf3de7fc0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructible: 0
+  maxHealth: 3
+  hitForce: 500
   destructable: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
-  explosion: {fileID: 0}

@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
     RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
     foreach (RaycastHit2D hit in hits)
     {
-      hit.transform.GetComponent<BoxDestruction>().Destroy();
+      hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
     }
   }
 
