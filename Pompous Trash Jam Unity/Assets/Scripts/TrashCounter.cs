@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TrashCounter : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class TrashCounter : MonoBehaviour
     if (currentCount <= 0)
     {
       // Player wins when there are zero trash left
-      print("You win!");
+      SceneManager.LoadScene("YouWin");
     }
   }
 
