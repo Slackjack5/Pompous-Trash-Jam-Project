@@ -6,6 +6,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
   [SerializeField] private float maxTime = 100f;
+  [SerializeField] private GameObject gameOverCanvas;
 
   private TextMeshProUGUI timerText;
 
@@ -17,6 +18,8 @@ public class Timer : MonoBehaviour
     timerText = GetComponent<TextMeshProUGUI>();
 
     currentTimeLeft = maxTime;
+    gameOverCanvas.SetActive(false);
+    Time.timeScale = 1;
   }
 
   // Update is called once per frame
@@ -27,6 +30,8 @@ public class Timer : MonoBehaviour
     if (currentTimeLeft <= 0)
     {
       currentTimeLeft = 0;
+      gameOverCanvas.SetActive(true);
+      Time.timeScale = 0;
     }
     else
     {
