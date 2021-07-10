@@ -13,10 +13,11 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private LayerMask whatIsGround;
   [SerializeField] private Transform groundCheckPosition;
 
+  private Rigidbody2D rb;
+
   private bool isGrounded = false;
   private bool isJumpKeyHeld = false;
   private float jumpTimeCounter;
-  private Rigidbody2D rb;
   private Vector2 velocity;
   private float xInput;
 
