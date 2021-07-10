@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private float movementSmoothTime = 0.1f;
   [SerializeField] private float baseJumpSpeed = 10f;
   [SerializeField] private float maxJumpTime = 0.3f;
+  [SerializeField] private LayerMask whatIsBox;
   [SerializeField] private LayerMask whatIsGround;
   [SerializeField] private Transform groundCheckPosition;
 
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
   private void Update()
   {
-    isGrounded = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, groundCheckDistance, whatIsGround);
+    isGrounded = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, groundCheckDistance, whatIsGround | whatIsBox);
   }
 
   private void FixedUpdate()
@@ -52,6 +53,15 @@ public class PlayerController : MonoBehaviour
   private void OnGUI()
   {
     GUI.Label(new Rect(10, 10, 400, 30), "jumpTimeCounter: " + jumpTimeCounter);
+  }
+
+  public void OnAttack()
+  {
+    RaycastHit2D hit = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, groundCheckDistance, whatIsBox);
+    if (hit)
+    {
+      hit.transform.GetComponent<BoxDestruction>().Destroy();
+    }
   }
 
   // OnJump is called on both press and release of the jump key
