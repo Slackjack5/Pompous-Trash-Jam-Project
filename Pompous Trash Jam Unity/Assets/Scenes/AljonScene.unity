@@ -249,7 +249,7 @@ PrefabInstance:
     - target: {fileID: 2202151929508145596, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 1925435389}
+      objectReference: {fileID: 0}
     - target: {fileID: 2202151929508145597, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -612,63 +612,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1369601016
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.18320079
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.4930007
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374683, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622984440336374686, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-      propertyPath: m_Name
-      value: MiniExplosion
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
 --- !u!1 &1699890148
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +682,7 @@ PrefabInstance:
     - target: {fileID: 2202151929508145596, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 1925435389}
+      objectReference: {fileID: 0}
     - target: {fileID: 2202151929508145597, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -786,11 +729,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
---- !u!1 &1925435389 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1622984440336374686, guid: 152ef7f52b0c34247adf6c7abf4461a0, type: 3}
-  m_PrefabInstance: {fileID: 1369601016}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2005074521
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +852,7 @@ PrefabInstance:
     - target: {fileID: 2202151929508145596, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 1925435389}
+      objectReference: {fileID: 0}
     - target: {fileID: 2202151929508145597, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
       propertyPath: m_RootOrder
       value: 6

@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class BoxDestruction : MonoBehaviour
 {
-  public bool destructible = false;
   public GameObject destructable;
-  public GameObject explosion;
 
   public void Destroy()
   {
