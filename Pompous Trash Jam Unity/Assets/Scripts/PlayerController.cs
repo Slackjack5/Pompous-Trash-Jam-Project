@@ -9,17 +9,27 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private float movementSmoothTime = 0.1f;
   [SerializeField] private float baseJumpSpeed = 10f;
   [SerializeField] private float maxJumpTime = 0.3f;
+  [SerializeField] private LayerMask whatIsGround;
+  [SerializeField] private Transform groundCheckPosition;
 
+  private bool isGrounded = false;
   private bool isJumpKeyHeld = false;
   private float jumpTimeCounter;
   private Rigidbody2D rb;
   private Vector2 velocity;
   private float xInput;
 
+  const float groundCheckDistance = .1f;
+
   // Start is called before the first frame update
   void Start()
   {
     rb = GetComponent<Rigidbody2D>();
+  }
+
+  private void Update()
+  {
+    isGrounded = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, groundCheckDistance, whatIsGround);
   }
 
   private void FixedUpdate()
@@ -33,6 +43,15 @@ public class PlayerController : MonoBehaviour
       rb.velocity = new Vector2(rb.velocity.x, baseJumpSpeed);
       jumpTimeCounter -= Time.fixedDeltaTime;
     }
+    else
+    {
+      jumpTimeCounter = 0;
+    }
+  }
+
+  private void OnGUI()
+  {
+    GUI.Label(new Rect(10, 10, 400, 30), "jumpTimeCounter: " + jumpTimeCounter);
   }
 
   // OnJump is called on both press and release of the jump key
@@ -40,7 +59,7 @@ public class PlayerController : MonoBehaviour
   {
     isJumpKeyHeld = !isJumpKeyHeld;
 
-    if (isJumpKeyHeld)
+    if (isJumpKeyHeld && isGrounded)
     {
       jumpTimeCounter = maxJumpTime;
     }
