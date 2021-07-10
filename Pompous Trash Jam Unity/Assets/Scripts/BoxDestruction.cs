@@ -8,8 +8,10 @@ public class BoxDestruction : MonoBehaviour
   [SerializeField] private float hitForce = 10f;
     public GameObject destructable;
     public GameObject Wormhole;
+    public GameObject Box;
     public bool Explosive;
     public bool gravityBox;
+    public bool infinityBox;
     public float fieldofImpact;
     public float force;
     public float torque;
@@ -53,19 +55,25 @@ public class BoxDestruction : MonoBehaviour
     public void Destroy()
     {
         Instantiate(destructable, transform.position, Quaternion.identity);
-        if (Wormhole)
+        if (Explosive)
+        {
+            Explosion();
+        }
+        if (gravityBox)
         {
             Instantiate(Wormhole, new Vector2(transform.position.x,transform.position.y+2), Quaternion.identity);
+        }
+        else if (infinityBox)
+        {
+            Instantiate(Box, new Vector2(transform.position.x+.5f, transform.position.y + .5f), Quaternion.identity);
+            Instantiate(Box, new Vector2(transform.position.x - .5f, transform.position.y + .5f), Quaternion.identity);
+            Instantiate(Box, new Vector2(transform.position.x, transform.position.y + .5f), Quaternion.identity);
         }
         DestroyGameObject();
     }
     //Debugging Code
     private void OnMouseDown()
     {
-        if (Explosive)
-        {
-            Explosion();
-        }
         Destroy();
     }
     private void OnDrawGizmosSelected()
