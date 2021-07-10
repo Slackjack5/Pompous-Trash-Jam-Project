@@ -6,27 +6,23 @@ public class BoxDestruction : MonoBehaviour
 {
   [SerializeField] private int maxHealth = 3;
   [SerializeField] private float hitForce = 10f;
-
     public GameObject destructable;
     public GameObject Wormhole;
     public bool Explosive;
     public bool gravityBox;
-
     public float fieldofImpact;
     public float force;
     public float torque;
     [SerializeField] Vector2 forceDirection;
-  private Rigidbody2D rb;
-
-  private int currentHealth;
-
+    public LayerMask LayerToHit;
+    private Rigidbody2D rb;
+    private int currentHealth;
   private void Start()
   {
     rb = GetComponent<Rigidbody2D>();
 
     currentHealth = maxHealth;
   }
-
   public void Hit(bool isHitRight)
   {
     int direction = isHitRight ? 1 : -1;
@@ -38,14 +34,10 @@ public class BoxDestruction : MonoBehaviour
       Destroy();
     }
   }
-
-    public LayerMask LayerToHit;
-
   private void DestroyGameObject()
   {
     Destroy(gameObject);
   }
-
     private void Explosion()
     {
         Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldofImpact, LayerToHit);
@@ -58,7 +50,6 @@ public class BoxDestruction : MonoBehaviour
             obj.GetComponent<Rigidbody2D>().AddTorque(randTorque);
         }
     }
-
     public void Destroy()
     {
         Instantiate(destructable, transform.position, Quaternion.identity);
@@ -68,7 +59,6 @@ public class BoxDestruction : MonoBehaviour
         }
         DestroyGameObject();
     }
-
     //Debugging Code
     private void OnMouseDown()
     {
@@ -78,7 +68,6 @@ public class BoxDestruction : MonoBehaviour
         }
         Destroy();
     }
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
