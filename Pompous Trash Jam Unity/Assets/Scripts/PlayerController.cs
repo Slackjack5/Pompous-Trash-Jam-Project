@@ -126,6 +126,22 @@ public class PlayerController : MonoBehaviour
     }
   }
 
+  public void OnLeft()
+  {
+    if (GameManager.IsMinigameActive)
+    {
+      GameManager.CurrentMinigame.OnLeft();
+    }
+  }
+
+  public void OnRight()
+  {
+    if (GameManager.IsMinigameActive)
+    {
+      GameManager.CurrentMinigame.OnRight();
+    }
+  }
+
   private void Flip()
   {
     isFacingRight = !isFacingRight;

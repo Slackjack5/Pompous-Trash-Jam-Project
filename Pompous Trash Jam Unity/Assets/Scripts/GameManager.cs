@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
   [SerializeField] private InputActionAsset actions;
   [SerializeField] private ButtonMash buttonMashMinigame;
   [SerializeField] private Accuracy accuracyMinigame;
+  [SerializeField] private AlternatingButtonMash alternatingButtonMashMinigame;
 
   private static InputActionMap playerActions;
   private static InputActionMap minigameActions;
@@ -41,9 +42,14 @@ public class GameManager : MonoBehaviour
       StartMinigame(buttonMashMinigame);
     }
 
-    if (GUI.Button(new Rect(25, 145, 120, 40), "Start Accuracy"))
+    if (GUI.Button(new Rect(145, 25, 120, 40), "Start Accuracy"))
     {
       StartMinigame(accuracyMinigame);
+    }
+
+    if (GUI.Button(new Rect(265, 25, 120, 40), "Start Alternating Button Mash"))
+    {
+      StartMinigame(alternatingButtonMashMinigame);
     }
   }
 
