@@ -71,15 +71,18 @@ public class GameManager : MonoBehaviour
 
   public static void StartMinigame(Minigame minigame)
   {
-    IsGameActive = false;
-    Physics2D.gravity = Vector2.zero;
+    if (!IsMinigameActive)
+    {
+      IsGameActive = false;
+      Physics2D.gravity = Vector2.zero;
 
-    minigameActions.Enable();
-    playerActions.Disable();
+      minigameActions.Enable();
+      playerActions.Disable();
 
-    minigame.complete.AddListener(() => EndMinigame());
-    minigame.Restart();
-    CurrentMinigame = minigame;
+      minigame.complete.AddListener(() => EndMinigame());
+      minigame.Restart();
+      CurrentMinigame = minigame;
+    }
   }
 
   public void Restart()
