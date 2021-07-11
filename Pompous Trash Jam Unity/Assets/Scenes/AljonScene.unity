@@ -2157,6 +2157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12addfad424e37941bd68d4bfaa57aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actions: {fileID: -944628639613478452, guid: cbf42aa6fec6e39488b92f37b93c974e, type: 3}
   buttonMashMinigame: {fileID: 1525289460}
 --- !u!4 &1559761009
 Transform:

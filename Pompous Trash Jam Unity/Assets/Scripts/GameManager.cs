@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+  [SerializeField] private InputActionAsset actions;
   [SerializeField] private ButtonMash buttonMashMinigame;
+
+  private static InputActionMap playerActions;
+  private static InputActionMap minigameActions;
 
   public static bool IsGameActive { get; set; }
 
@@ -20,6 +25,12 @@ public class GameManager : MonoBehaviour
   private void Start()
   {
     IsGameActive = false;
+
+    playerActions = actions.FindActionMap("Player");
+    minigameActions = actions.FindActionMap("Minigame");
+
+    playerActions.Enable();
+    minigameActions.Disable();
   }
 
   private void OnGUI()
@@ -40,6 +51,9 @@ public class GameManager : MonoBehaviour
     IsGameActive = true;
     Physics2D.gravity = new Vector2(0, defaultGravity);
 
+    playerActions.Enable();
+    minigameActions.Disable();
+
     CurrentMinigame = null;
   }
 
@@ -47,6 +61,9 @@ public class GameManager : MonoBehaviour
   {
     IsGameActive = false;
     Physics2D.gravity = Vector2.zero;
+
+    minigameActions.Enable();
+    playerActions.Disable();
 
     minigame.complete.AddListener(() => EndMinigame());
     minigame.Restart();
