@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - VacuumVFX
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - VacuumVFX
   - Water
   - UI
   - Box
@@ -40,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: VacuumVFX
+    uniqueID: 3622239491
     locked: 0
