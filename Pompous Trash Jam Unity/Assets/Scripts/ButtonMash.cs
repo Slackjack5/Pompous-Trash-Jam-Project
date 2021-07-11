@@ -9,8 +9,6 @@ public class ButtonMash : Minigame
   [SerializeField] private float increaseAmount = 50f;
   [SerializeField] private float decreaseInterval = 0.01f;
 
-  private bool isWaitingDecrease;
-
   private void Start()
   {
     progressBar.SetMaxValue(100);
@@ -26,10 +24,7 @@ public class ButtonMash : Minigame
       progressBar.gameObject.SetActive(false);
     }
 
-    if (!isWaitingDecrease)
-    {
-      StartCoroutine(SetDecreaseInterval());
-    }
+    progressBar.Decrease(Time.deltaTime / decreaseInterval);
   }
 
   public override void OnFire()
@@ -41,14 +36,5 @@ public class ButtonMash : Minigame
   {
     progressBar.gameObject.SetActive(true);
     progressBar.SetValue(0);
-  }
-
-  private IEnumerator SetDecreaseInterval()
-  {
-    isWaitingDecrease = true;
-    yield return new WaitForSeconds(decreaseInterval);
-    isWaitingDecrease = false;
-
-    progressBar.Decrease(1);
   }
 }

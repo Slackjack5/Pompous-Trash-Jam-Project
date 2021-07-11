@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
   [SerializeField] private InputActionAsset actions;
   [SerializeField] private ButtonMash buttonMashMinigame;
+  [SerializeField] private Accuracy accuracyMinigame;
 
   private static InputActionMap playerActions;
   private static InputActionMap minigameActions;
@@ -38,6 +39,11 @@ public class GameManager : MonoBehaviour
     if (GUI.Button(new Rect(25, 25, 120, 40), "Start Button Mash"))
     {
       StartMinigame(buttonMashMinigame);
+    }
+
+    if (GUI.Button(new Rect(25, 145, 120, 40), "Start Accuracy"))
+    {
+      StartMinigame(accuracyMinigame);
     }
   }
 
