@@ -117,12 +117,27 @@ public class PlayerController : MonoBehaviour
     }
   }
 
-  // Minigame input actions
   public void OnMainFire()
   {
     if (GameManager.IsMinigameActive)
     {
       GameManager.CurrentMinigame.OnFire();
+    }
+  }
+
+  public void OnUp()
+  {
+    if (GameManager.IsMinigameActive)
+    {
+      GameManager.CurrentMinigame.OnUp();
+    }
+  }
+
+  public void OnDown()
+  {
+    if (GameManager.IsMinigameActive)
+    {
+      GameManager.CurrentMinigame.OnDown();
     }
   }
 

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
   [SerializeField] private ButtonMash buttonMashMinigame;
   [SerializeField] private Accuracy accuracyMinigame;
   [SerializeField] private AlternatingButtonMash alternatingButtonMashMinigame;
+  [SerializeField] private Sequence sequenceMinigame;
 
   private static InputActionMap playerActions;
   private static InputActionMap minigameActions;
@@ -50,6 +51,11 @@ public class GameManager : MonoBehaviour
     if (GUI.Button(new Rect(265, 25, 120, 40), "Start Alternating Button Mash"))
     {
       StartMinigame(alternatingButtonMashMinigame);
+    }
+
+    if (GUI.Button(new Rect(385, 25, 120, 40), "Start Sequence"))
+    {
+      StartMinigame(sequenceMinigame);
     }
   }
 
