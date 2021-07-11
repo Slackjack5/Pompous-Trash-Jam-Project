@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class ButtonMash : Minigame
+public class AlternatingButtonMash : Minigame
 {
   [SerializeField] private ProgressBar progressBar;
-  [SerializeField] private float increaseAmount = 50f;
+  [SerializeField] private float increaseAmount = 25f;
   [SerializeField] private float decreaseInterval = 0.01f;
+
+  private bool isLeftNext = true;
 
   private void Start()
   {
@@ -27,9 +28,22 @@ public class ButtonMash : Minigame
     progressBar.Decrease(Time.deltaTime / decreaseInterval);
   }
 
-  public override void OnFire()
+  public override void OnLeft()
   {
-    progressBar.Increase(increaseAmount);
+    if (isLeftNext)
+    {
+      progressBar.Increase(increaseAmount);
+      isLeftNext = false;
+    }
+  }
+
+  public override void OnRight()
+  {
+    if (!isLeftNext)
+    {
+      progressBar.Increase(increaseAmount);
+      isLeftNext = true;
+    }
   }
 
   public override void Restart()

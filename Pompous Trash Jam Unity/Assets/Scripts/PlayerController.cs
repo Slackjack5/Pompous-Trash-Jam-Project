@@ -90,11 +90,6 @@ public class PlayerController : MonoBehaviour
         hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
       }
     }
-    
-    if (GameManager.IsMinigameActive)
-    {
-      GameManager.CurrentMinigame.OnFire();
-    }
   }
 
   // OnJump is called on both press and release of the jump key
@@ -119,6 +114,46 @@ public class PlayerController : MonoBehaviour
     if (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight)
     {
       Flip();
+    }
+  }
+
+  public void OnMainFire()
+  {
+    if (GameManager.IsMinigameActive)
+    {
+      GameManager.CurrentMinigame.OnFire();
+    }
+  }
+
+  public void OnUp()
+  {
+    if (GameManager.IsMinigameActive)
+    {
+      GameManager.CurrentMinigame.OnUp();
+    }
+  }
+
+  public void OnDown()
+  {
+    if (GameManager.IsMinigameActive)
+    {
+      GameManager.CurrentMinigame.OnDown();
+    }
+  }
+
+  public void OnLeft()
+  {
+    if (GameManager.IsMinigameActive)
+    {
+      GameManager.CurrentMinigame.OnLeft();
+    }
+  }
+
+  public void OnRight()
+  {
+    if (GameManager.IsMinigameActive)
+    {
+      GameManager.CurrentMinigame.OnRight();
     }
   }
 
