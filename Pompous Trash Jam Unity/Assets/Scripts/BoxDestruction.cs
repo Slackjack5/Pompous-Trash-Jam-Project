@@ -2,29 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoxDestruction : MonoBehaviour
+public class BoxDestruction : PhysicsObject
 {
   [SerializeField] private int maxHealth = 3;
   [SerializeField] private float hitForce = 10f;
-    public GameObject destructable;
-    public GameObject Wormhole;
-    public GameObject Box;
-    public bool Explosive;
-    public bool gravityBox;
-    public bool infinityBox;
-    public float fieldofImpact;
-    public float force;
-    public float torque;
-    [SerializeField] Vector2 forceDirection;
-    public LayerMask LayerToHit;
-    private Rigidbody2D rb;
-    private int currentHealth;
-  private void Start()
+  public GameObject destructable;
+  public GameObject Wormhole;
+  public GameObject Box;
+  public bool Explosive;
+  public bool gravityBox;
+  public bool infinityBox;
+  public float fieldofImpact;
+  public float force;
+  public float torque;
+  public LayerMask LayerToHit;
+  private int currentHealth;
+
+  protected override void Start()
   {
-    rb = GetComponent<Rigidbody2D>();
+    base.Start();
 
     currentHealth = maxHealth;
   }
+
   public void Hit(bool isHitRight)
   {
     int direction = isHitRight ? 1 : -1;

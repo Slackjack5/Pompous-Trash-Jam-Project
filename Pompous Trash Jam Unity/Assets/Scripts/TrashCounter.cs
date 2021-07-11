@@ -54,6 +54,7 @@ public class TrashCounter : MonoBehaviour
     currentCount -= value;
   }
 
+  // Spawn value represents the amount of trash pieces inside a box
   private void Spawn(int value)
   {
     remainingSpawnCount -= value;
@@ -72,6 +73,6 @@ public class TrashCounter : MonoBehaviour
     yield return new WaitForSeconds(spawnInterval);
     isWaitingSpawn = false;
 
-    Spawn(1);
+    Spawn(4);
   }
 }

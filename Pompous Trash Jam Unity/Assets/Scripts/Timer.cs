@@ -50,6 +50,7 @@ public class Timer : MonoBehaviour
     {
       if (currentTimeLeft <= 0)
       {
+        // Player ran out of time
         currentTimeLeft = 0;
         gameOverCanvas.SetActive(true);
         GameManager.FreezeGame();
