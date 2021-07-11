@@ -41,9 +41,16 @@ public class PlayerController : MonoBehaviour
   private void FixedUpdate()
   {
     // Move
-    float targetVelocityX = baseSpeed * xInput * Time.fixedDeltaTime;
-    Vector2 targetVelocity = new Vector2(targetVelocityX, rb.velocity.y);
-    rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothTime);
+    if (GameManager.IsGameActive)
+    {
+      float targetVelocityX = baseSpeed * xInput * Time.fixedDeltaTime;
+      Vector2 targetVelocity = new Vector2(targetVelocityX, rb.velocity.y);
+      rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothTime);
+    }
+    else if (GameManager.IsMinigameActive)
+    {
+      rb.velocity = Vector2.zero;
+    }
 
     // Jump
     if (isJumpKeyHeld && jumpTimeCounter > 0)
@@ -57,23 +64,36 @@ public class PlayerController : MonoBehaviour
     }
   }
 
+  private void OnGUI()
+  {
+    GUI.Label(new Rect(10, 50, 400, 30), "xInput: " + xInput);
+  }
+
   public void OnAttack()
   {
-    // Hit boxes beneath player
-    RaycastHit2D groundHit = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, touchDistance, whatIsBox);
-    if (groundHit)
+    if (GameManager.IsGameActive)
     {
-      groundHit.transform.GetComponent<BoxDestruction>().Destroy();
-    }
+      // Hit boxes beneath player
+      RaycastHit2D groundHit = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, touchDistance, whatIsBox);
+      if (groundHit)
+      {
+        groundHit.transform.GetComponent<BoxDestruction>().Destroy();
+      }
 
-    // Hit boxes in front of player
-    Vector2 origin = frontCheckPosition.position;
-    origin.x += hitboxWidth / 2;
-    Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
-    RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
-    foreach (RaycastHit2D hit in hits)
+      // Hit boxes in front of player
+      Vector2 origin = frontCheckPosition.position;
+      origin.x += hitboxWidth / 2;
+      Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
+      RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
+      foreach (RaycastHit2D hit in hits)
+      {
+        hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
+      }
+    }
+    
+    if (GameManager.IsMinigameActive)
     {
-      hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
+      GameManager.CurrentMinigame.OnFire();
     }
   }
 
@@ -82,9 +102,12 @@ public class PlayerController : MonoBehaviour
   {
     isJumpKeyHeld = !isJumpKeyHeld;
 
-    if (isJumpKeyHeld && isGrounded)
+    if (GameManager.IsGameActive)
     {
-      jumpTimeCounter = maxJumpTime;
+      if (isJumpKeyHeld && isGrounded)
+      {
+        jumpTimeCounter = maxJumpTime;
+      }
     }
   }
 

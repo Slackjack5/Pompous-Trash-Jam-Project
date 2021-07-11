@@ -29,15 +29,18 @@ public class TrashCounter : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if (currentCount <= 0)
+    if (GameManager.IsGameActive)
     {
-      // Player wins when there are zero trash left
-      SceneManager.LoadScene("YouWin");
-    }
+      if (currentCount <= 0)
+      {
+        // Player wins when there are zero trash left
+        SceneManager.LoadScene("YouWin");
+      }
 
-    if (remainingSpawnCount > 0 && !isWaitingSpawn)
-    {
-      StartCoroutine(SetSpawnInterval());
+      if (remainingSpawnCount > 0 && !isWaitingSpawn)
+      {
+        StartCoroutine(SetSpawnInterval());
+      }
     }
   }
 
@@ -51,6 +54,7 @@ public class TrashCounter : MonoBehaviour
     currentCount -= value;
   }
 
+  // Spawn value represents the amount of trash pieces inside a box
   private void Spawn(int value)
   {
     remainingSpawnCount -= value;
@@ -69,6 +73,6 @@ public class TrashCounter : MonoBehaviour
     yield return new WaitForSeconds(spawnInterval);
     isWaitingSpawn = false;
 
-    Spawn(1);
+    Spawn(4);
   }
 }
