@@ -12,6 +12,7 @@ public class BoxDestruction : PhysicsObject
   public bool Explosive;
   public bool gravityBox;
   public bool infinityBox;
+  public bool upgradeBox;
   public float fieldofImpact;
   public float force;
   public float torque;
@@ -68,6 +69,22 @@ public class BoxDestruction : PhysicsObject
             Instantiate(Box, new Vector2(transform.position.x+.5f, transform.position.y + .5f), Quaternion.identity);
             Instantiate(Box, new Vector2(transform.position.x - .5f, transform.position.y + .5f), Quaternion.identity);
             Instantiate(Box, new Vector2(transform.position.x, transform.position.y + .5f), Quaternion.identity);
+        }
+        else if (upgradeBox)
+        {
+            int randNumber = Random.Range(0, 3);
+            if (randNumber==0)
+            {
+                Debug.Log("Spawned Power Up 1");
+            }
+            else if (randNumber == 1)
+            {
+                Debug.Log("Spawned Power Up 2");
+            }
+            else if (randNumber == 2)
+            {
+                Debug.Log("Spawned Power Up 3");
+            }
         }
         DestroyGameObject();
     }

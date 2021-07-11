@@ -145,8 +145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceDirection: {x: 100, y: 60}
-  torque: 40
-  rb2d: {fileID: 0}
 --- !u!1 &4996138828028946984
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,8 +290,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceDirection: {x: -100, y: 150}
-  torque: -20
-  rb2d: {fileID: 0}
 --- !u!1 &5584003428336877601
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,8 +521,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceDirection: {x: 0, y: 0}
-  torque: 0
-  rb2d: {fileID: 0}
 --- !u!1 &8078620525056343047
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,5 +666,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceDirection: {x: 0, y: 100}
-  torque: 100
-  rb2d: {fileID: 0}
