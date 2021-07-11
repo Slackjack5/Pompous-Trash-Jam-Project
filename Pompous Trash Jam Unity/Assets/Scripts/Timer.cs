@@ -52,7 +52,7 @@ public class Timer : MonoBehaviour
       {
         currentTimeLeft = 0;
         gameOverCanvas.SetActive(true);
-        Time.timeScale = 0;
+        GameManager.FreezeGame();
       }
       else
       {

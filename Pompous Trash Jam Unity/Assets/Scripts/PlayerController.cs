@@ -41,9 +41,16 @@ public class PlayerController : MonoBehaviour
   private void FixedUpdate()
   {
     // Move
-    float targetVelocityX = baseSpeed * xInput * Time.fixedDeltaTime;
-    Vector2 targetVelocity = new Vector2(targetVelocityX, rb.velocity.y);
-    rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothTime);
+    if (GameManager.IsGameActive)
+    {
+      float targetVelocityX = baseSpeed * xInput * Time.fixedDeltaTime;
+      Vector2 targetVelocity = new Vector2(targetVelocityX, rb.velocity.y);
+      rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothTime);
+    }
+    else if (GameManager.IsMinigameActive)
+    {
+      rb.velocity = Vector2.zero;
+    }
 
     // Jump
     if (isJumpKeyHeld && jumpTimeCounter > 0)
@@ -55,6 +62,11 @@ public class PlayerController : MonoBehaviour
     {
       jumpTimeCounter = 0;
     }
+  }
+
+  private void OnGUI()
+  {
+    GUI.Label(new Rect(10, 50, 400, 30), "xInput: " + xInput);
   }
 
   public void OnAttack()
@@ -78,15 +90,20 @@ public class PlayerController : MonoBehaviour
         hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
       }
     }
+    
+    if (GameManager.IsMinigameActive)
+    {
+      GameManager.CurrentMinigame.OnFire();
+    }
   }
 
   // OnJump is called on both press and release of the jump key
   public void OnJump()
   {
+    isJumpKeyHeld = !isJumpKeyHeld;
+
     if (GameManager.IsGameActive)
     {
-      isJumpKeyHeld = !isJumpKeyHeld;
-
       if (isJumpKeyHeld && isGrounded)
       {
         jumpTimeCounter = maxJumpTime;
@@ -96,15 +113,12 @@ public class PlayerController : MonoBehaviour
 
   public void OnMove(InputValue value)
   {
-    if (GameManager.IsGameActive)
-    {
-      Vector2 motionVector = value.Get<Vector2>();
-      xInput = motionVector.x;
+    Vector2 motionVector = value.Get<Vector2>();
+    xInput = motionVector.x;
 
-      if (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight)
-      {
-        Flip();
-      }
+    if (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight)
+    {
+      Flip();
     }
   }
 
