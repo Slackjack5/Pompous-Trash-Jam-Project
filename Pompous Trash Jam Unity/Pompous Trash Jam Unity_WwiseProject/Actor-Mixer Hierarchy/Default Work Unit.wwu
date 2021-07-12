@@ -1,6 +1,591 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="WoodBreak" ID="{B6B8385D-43BB-498D-BA1A-8FA2E81429F0}" ShortID="471807108">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse" ID="{02D28826-21DF-4D61-A310-830B158E9E42}" ShortID="728879295">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse" ID="{80C36B6B-11B2-4C21-842E-9C4495317ED6}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.120966267682263"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.721317373957198"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.833323177366701"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WoodBreak\SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="792431716"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse" ID="{80C36B6B-11B2-4C21-842E-9C4495317ED6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SPLC-1333_FX_Oneshot_Wood_Hit_Smashing" ID="{4E210A53-B267-440C-B47A-1F80B6C10DA1}" ShortID="461631194">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SPLC-1333_FX_Oneshot_Wood_Hit_Smashing" ID="{92953939-185F-4DFD-8240-E2E61A931890}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.62904026115343"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WoodBreak\SPLC-1333_FX_Oneshot_Wood_Hit_Smashing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="310359424"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="SPLC-1333_FX_Oneshot_Wood_Hit_Smashing" ID="{92953939-185F-4DFD-8240-E2E61A931890}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="WoodHit" ID="{990298CD-B86D-4713-BEB7-4E1D89ACEE0F}" ShortID="649995757">
+					<PropertyList>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="WoodHit1" ID="{94CAA9BF-A66F-4144-91C1-0443C7514909}" ShortID="757820202">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WoodHit1" ID="{F906409E-A5C8-402C-AFC3-0A1342667881}">
+									<Language>SFX</Language>
+									<AudioFile>WoodHit\WoodHit1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="595008138"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="WoodHit1" ID="{F906409E-A5C8-402C-AFC3-0A1342667881}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WoodHit2" ID="{A26FC761-3F14-4216-B398-46BCF88B4ECD}" ShortID="295335530">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WoodHit2" ID="{282F01CA-B584-4901-B458-F51F8B3437F4}">
+									<Language>SFX</Language>
+									<AudioFile>WoodHit\WoodHit2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="228988825"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="WoodHit2" ID="{282F01CA-B584-4901-B458-F51F8B3437F4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WoodHit3" ID="{9D9ED414-E823-4417-9733-FFEE53398A32}" ShortID="57210960">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WoodHit3" ID="{A0927F98-5E13-4C9C-B443-FCE8775A0CB8}">
+									<Language>SFX</Language>
+									<AudioFile>WoodHit\WoodHit3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="571112002"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="WoodHit3" ID="{A0927F98-5E13-4C9C-B443-FCE8775A0CB8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="WoodHit4" ID="{F693F12B-9AFF-4FEC-9C7A-7A39CE3E88B7}" ShortID="476632046">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="WoodHit4" ID="{0C31D3B0-C3B6-4B62-A221-45C6D501EC7C}">
+									<Language>SFX</Language>
+									<AudioFile>WoodHit\WoodHit4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="489467709"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="WoodHit4" ID="{0C31D3B0-C3B6-4B62-A221-45C6D501EC7C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="WoodThud" ID="{45E7A9C7-E43D-44A4-AC0F-29103600C512}" ShortID="8145869">
+					<PropertyList>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Wood Thud 1" ID="{57B44AB1-CBA4-491C-948B-2F07AA16369F}" ShortID="306596582">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wood Thud 1" ID="{4F6B0424-20DA-4A74-8908-181CDAD8BB72}">
+									<Language>SFX</Language>
+									<AudioFile>WoodThud\Wood Thud 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="752847234"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Wood Thud 1" ID="{4F6B0424-20DA-4A74-8908-181CDAD8BB72}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wood Thud 2" ID="{4467BD84-4660-4684-B2E6-6F96EA9830E6}" ShortID="895806758">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wood Thud 2" ID="{0F027FEC-22BF-4417-8A22-4956B6910A3A}">
+									<Language>SFX</Language>
+									<AudioFile>WoodThud\Wood Thud 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="144115303"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Wood Thud 2" ID="{0F027FEC-22BF-4417-8A22-4956B6910A3A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wood Thud 3" ID="{27C7440F-F834-4AF2-BAA4-222057D77597}" ShortID="845192917">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wood Thud 3" ID="{706AD651-EC0D-4E36-91F5-247A70D49725}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0429800507798332"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.71733333333333"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.00560609357997824"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WoodThud\Wood Thud 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="454540404"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Wood Thud 3" ID="{706AD651-EC0D-4E36-91F5-247A70D49725}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wood Thud 4" ID="{58BD9ED9-7296-4D59-BCAF-3EF6A6C5ECF3}" ShortID="92895743">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wood Thud 4" ID="{2F58FEA2-D92F-4345-944E-B4FFCE1F5AF7}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.442289445048966"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.46113891911498"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WoodThud\Wood Thud 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="777306263"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Wood Thud 4" ID="{2F58FEA2-D92F-4345-944E-B4FFCE1F5AF7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wood Thud 5" ID="{7F2E1EA1-5541-42A5-8F54-11EBEC5FA508}" ShortID="840344412">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wood Thud 5" ID="{C20E8065-FCF1-433F-A445-3D4710220B15}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.513404425099746"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.130158868335147"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.643563293434893"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WoodThud\Wood Thud 5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="525101497"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Wood Thud 5" ID="{C20E8065-FCF1-433F-A445-3D4710220B15}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wood Thud 6" ID="{12402810-8E28-4C06-8495-266E5897EA5A}" ShortID="568869427">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wood Thud 6" ID="{151DF2F9-2D1E-4853-A134-0DD0BC32F13B}">
+									<Language>SFX</Language>
+									<AudioFile>WoodThud\Wood Thud 6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="2430078"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Wood Thud 6" ID="{151DF2F9-2D1E-4853-A134-0DD0BC32F13B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wood Thud 7" ID="{127FF1AC-227D-4FCB-99C2-FA0D5553D3A0}" ShortID="413544827">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wood Thud 7" ID="{AC4B4ED4-9FB7-4765-853D-424F54270CE5}">
+									<Language>SFX</Language>
+									<AudioFile>WoodThud\Wood Thud 7.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="271794642"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Wood Thud 7" ID="{AC4B4ED4-9FB7-4765-853D-424F54270CE5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="WoodTrash" ID="{7F568486-8FCE-479C-8F87-3DECE66A1DBF}" ShortID="879095887">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="wTrashCollide1" ID="{AA4159FC-6B35-41A7-BCA5-5519AFB123FD}" ShortID="67059976">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="wTrashCollide1" ID="{2BC8F4E2-38AC-4354-9A96-BFFF15819F1D}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.479958333333333"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WoodTrash\wTrashCollide1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="647691902"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="wTrashCollide1" ID="{2BC8F4E2-38AC-4354-9A96-BFFF15819F1D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="wTrashCollide2" ID="{0869E60F-7C14-4AA8-9877-FA2B0E761080}" ShortID="467002795">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="wTrashCollide2" ID="{22DD5A68-7494-4AA3-9D04-DB96364FBF54}">
+									<Language>SFX</Language>
+									<AudioFile>WoodTrash\wTrashCollide2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="935085097"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="wTrashCollide2" ID="{22DD5A68-7494-4AA3-9D04-DB96364FBF54}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="wTrashCollide3" ID="{7B28E921-BB9E-4BED-AA0B-6E8FBA40F4CD}" ShortID="493642559">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="wTrashCollide3" ID="{FA0A19B9-57FF-4D03-86C4-E6C88B8017C0}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.92"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WoodTrash\wTrashCollide3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="142213009"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="wTrashCollide3" ID="{FA0A19B9-57FF-4D03-86C4-E6C88B8017C0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="wTrashCollide4" ID="{B748438A-1160-4185-AE02-9BDCC8B0F07F}" ShortID="71852178">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="wTrashCollide4" ID="{49BC8DD2-3C25-47BF-B246-7F484B635D8E}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.16266666666667"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WoodTrash\wTrashCollide4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="32430924"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="wTrashCollide4" ID="{49BC8DD2-3C25-47BF-B246-7F484B635D8E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="wTrashCollide5" ID="{567ADE55-1495-4B40-8B98-49F0B054D4E4}" ShortID="1048397488">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="wTrashCollide5" ID="{0B960FBC-20CA-4F62-AF7C-A967582CDBE9}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.952"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WoodTrash\wTrashCollide5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1010161511"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="wTrashCollide5" ID="{0B960FBC-20CA-4F62-AF7C-A967582CDBE9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="wTrashCollide6" ID="{E1B02D4E-CA79-48AD-A5C0-D5AC22A965D5}" ShortID="288284631">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="wTrashCollide6" ID="{BC217208-803E-420E-910F-BF7DE1309D07}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.938666666666667"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>WoodTrash\wTrashCollide6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="139869678"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="wTrashCollide6" ID="{BC217208-803E-420E-910F-BF7DE1309D07}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
