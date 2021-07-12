@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private Transform frontCheckPosition;
   [SerializeField] private float hitboxWidth = 1f;
   [SerializeField] private float hitboxHeight = 1f;
-  [SerializeField] private float freezeTime = 0.5f;
 
   private Rigidbody2D rb;
 
@@ -74,23 +73,11 @@ public class PlayerController : MonoBehaviour
   {
     if (GameManager.IsGameActive)
     {
-      // Hit boxes beneath player
-      RaycastHit2D groundHit = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, touchDistance, whatIsBox);
-      if (groundHit)
-      {
-        groundHit.transform.GetComponent<BoxDestruction>().Destroy();
-      }
-
       // Hit boxes in front of player
       Vector2 origin = frontCheckPosition.position;
       origin.x += hitboxWidth / 2;
       Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
       RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
-
-      if (hits.Length > 0)
-      {
-        StartCoroutine(Freeze());
-      }
 
       foreach (RaycastHit2D hit in hits)
       {
@@ -171,12 +158,5 @@ public class PlayerController : MonoBehaviour
     Vector3 theScale = transform.localScale;
     theScale.x *= -1;
     transform.localScale = theScale;
-  }
-
-  private IEnumerator Freeze()
-  {
-    GameManager.DeactivateGame();
-    yield return new WaitForSeconds(freezeTime);
-    GameManager.ActivateGame();
   }
 }
