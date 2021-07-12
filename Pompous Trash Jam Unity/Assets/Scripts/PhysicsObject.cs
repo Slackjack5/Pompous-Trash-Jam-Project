@@ -26,8 +26,8 @@ public class PhysicsObject : MonoBehaviour
       rb.velocity = storedVelocity;
       storedVelocity = Vector2.zero;
     }
-
-    if (GameManager.IsMinigameActive)
+    
+    if (!GameManager.IsGameActive)
     {
       if (storedVelocity == Vector2.zero)
       {

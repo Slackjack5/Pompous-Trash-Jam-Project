@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
   public static Minigame CurrentMinigame { get; private set; }
 
-  const float defaultGravity = -9.8f;
+  Vector2 defaultGravity = new Vector2(0, -9.8f);
 
   private void Start()
   {
@@ -34,6 +34,11 @@ public class GameManager : MonoBehaviour
 
     playerActions.Enable();
     minigameActions.Disable();
+  }
+
+  private void Update()
+  {
+    Physics2D.gravity = IsGameActive ? defaultGravity : Vector2.zero;
   }
 
   private void OnGUI()
@@ -67,7 +72,6 @@ public class GameManager : MonoBehaviour
   public static void EndMinigame()
   {
     IsGameActive = true;
-    Physics2D.gravity = new Vector2(0, defaultGravity);
 
     playerActions.Enable();
     minigameActions.Disable();
@@ -80,7 +84,6 @@ public class GameManager : MonoBehaviour
     if (!IsMinigameActive)
     {
       IsGameActive = false;
-      Physics2D.gravity = Vector2.zero;
 
       minigameActions.Enable();
       playerActions.Disable();

@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private Transform frontCheckPosition;
   [SerializeField] private float hitboxWidth = 1f;
   [SerializeField] private float hitboxHeight = 1f;
+  [SerializeField] private float freezeTime = 0.5f;
 
   private Rigidbody2D rb;
 
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
       Vector2 targetVelocity = new Vector2(targetVelocityX, rb.velocity.y);
       rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothTime);
     }
-    else if (GameManager.IsMinigameActive)
+    else
     {
       rb.velocity = Vector2.zero;
     }
@@ -85,6 +86,12 @@ public class PlayerController : MonoBehaviour
       origin.x += hitboxWidth / 2;
       Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
       RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
+
+      if (hits.Length > 0)
+      {
+        StartCoroutine(Freeze());
+      }
+
       foreach (RaycastHit2D hit in hits)
       {
         hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
@@ -164,5 +171,12 @@ public class PlayerController : MonoBehaviour
     Vector3 theScale = transform.localScale;
     theScale.x *= -1;
     transform.localScale = theScale;
+  }
+
+  private IEnumerator Freeze()
+  {
+    GameManager.IsGameActive = false;
+    yield return new WaitForSeconds(freezeTime);
+    GameManager.IsGameActive = true;
   }
 }
