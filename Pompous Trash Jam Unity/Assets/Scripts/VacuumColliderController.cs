@@ -14,6 +14,5 @@ public class VacuumColliderController : MonoBehaviour
       float forceMult = Mathf.Min(1 / dist, 1f) * 125;
       col.attachedRigidbody.AddForce(normal * forceMult);
     }
-    print("inside trigger");
   }
 }
