@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
   private static InputActionMap playerActions;
   private static InputActionMap minigameActions;
 
-  public static bool IsGameActive { get; set; }
+  public static bool IsGameActive { get; private set; }
 
   public static bool IsMinigameActive {
     get { return CurrentMinigame != null; }
@@ -23,22 +23,17 @@ public class GameManager : MonoBehaviour
 
   public static Minigame CurrentMinigame { get; private set; }
 
-  Vector2 defaultGravity = new Vector2(0, -9.8f);
+  private static Vector2 defaultGravity = new Vector2(0, -9.8f);
 
   private void Start()
   {
-    IsGameActive = false;
+    DeactivateGame();
 
     playerActions = actions.FindActionMap("Player");
     minigameActions = actions.FindActionMap("Minigame");
 
     playerActions.Enable();
     minigameActions.Disable();
-  }
-
-  private void Update()
-  {
-    Physics2D.gravity = IsGameActive ? defaultGravity : Vector2.zero;
   }
 
   private void OnGUI()
@@ -64,6 +59,18 @@ public class GameManager : MonoBehaviour
     }
   }
 
+  public static void ActivateGame()
+  {
+    IsGameActive = true;
+    Physics2D.gravity = defaultGravity;
+  }
+
+  public static void DeactivateGame()
+  {
+    IsGameActive = false;
+    Physics2D.gravity = Vector2.zero;
+  }
+
   public static void FreezeGame()
   {
     Time.timeScale = 0;
@@ -71,7 +78,7 @@ public class GameManager : MonoBehaviour
 
   public static void EndMinigame()
   {
-    IsGameActive = true;
+    ActivateGame();
 
     playerActions.Enable();
     minigameActions.Disable();
@@ -83,7 +90,7 @@ public class GameManager : MonoBehaviour
   {
     if (!IsMinigameActive)
     {
-      IsGameActive = false;
+      DeactivateGame();
 
       minigameActions.Enable();
       playerActions.Disable();

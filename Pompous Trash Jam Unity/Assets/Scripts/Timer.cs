@@ -43,7 +43,7 @@ public class Timer : MonoBehaviour
         StartCoroutine(DisplayGo());
 
         isCountingDown = false;
-        GameManager.IsGameActive = true;
+        GameManager.ActivateGame();
       }
     }
     else

@@ -175,8 +175,8 @@ public class PlayerController : MonoBehaviour
 
   private IEnumerator Freeze()
   {
-    GameManager.IsGameActive = false;
+    GameManager.DeactivateGame();
     yield return new WaitForSeconds(freezeTime);
-    GameManager.IsGameActive = true;
+    GameManager.ActivateGame();
   }
 }
