@@ -15,9 +15,11 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private Transform frontCheckPosition;
   [SerializeField] private float hitboxWidth = 1f;
   [SerializeField] private float hitboxHeight = 1f;
+  [SerializeField] private float meleeCooldownTime = 0.5f;
 
   private Rigidbody2D rb;
 
+  private float currentMeleeCooldown;
   private bool isFacingRight = true;
   private bool isGrounded = false;
   private bool isJumpKeyHeld = false;
@@ -36,6 +38,12 @@ public class PlayerController : MonoBehaviour
   private void Update()
   {
     isGrounded = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, touchDistance, whatIsGround | whatIsBox);
+
+    // Update melee cooldown
+    if (currentMeleeCooldown > 0)
+    {
+      currentMeleeCooldown -= Time.deltaTime;
+    }
   }
 
   private void FixedUpdate()
@@ -67,11 +75,12 @@ public class PlayerController : MonoBehaviour
   private void OnGUI()
   {
     GUI.Label(new Rect(10, 50, 400, 30), "xInput: " + xInput);
+    GUI.Label(new Rect(100, 50, 400, 30), "currentMeleeCooldown: " + currentMeleeCooldown);
   }
 
   public void OnAttack()
   {
-    if (GameManager.IsGameActive)
+    if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
     {
       // Hit boxes in front of player
       Vector2 origin = frontCheckPosition.position;
@@ -83,6 +92,8 @@ public class PlayerController : MonoBehaviour
       {
         hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
       }
+
+      currentMeleeCooldown = meleeCooldownTime;
     }
   }
 
