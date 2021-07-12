@@ -6,6 +6,23 @@ using UnityEngine.Events;
 public class Minigame : MonoBehaviour
 {
   public readonly UnityEvent complete = new UnityEvent();
+  protected bool isComplete = false;
+
+  protected void Update()
+  {
+    if (!isComplete)
+    {
+      DoUpdate();
+    }
+  }
+
+  protected void Complete()
+  {
+    complete.Invoke();
+    isComplete = true;
+  }
+
+  protected virtual void DoUpdate() { }
 
   public virtual void OnFire() { }
 
@@ -17,5 +34,8 @@ public class Minigame : MonoBehaviour
 
   public virtual void OnRight() { }
 
-  public virtual void Restart() { }
+  public virtual void Restart()
+  {
+    isComplete = false;
+  }
 }

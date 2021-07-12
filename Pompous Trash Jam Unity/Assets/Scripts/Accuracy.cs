@@ -27,7 +27,7 @@ public class Accuracy : Minigame
     {
       if (spinner.CurrentAngle <= hitRange.start && spinner.CurrentAngle >= hitRange.end)
       {
-        complete.Invoke();
+        Complete();
         spinner.gameObject.SetActive(false);
       }
     }
@@ -35,6 +35,8 @@ public class Accuracy : Minigame
 
   public override void Restart()
   {
+    base.Restart();
+
     spinner.SpinSpeed = spinSpeed;
     spinner.gameObject.SetActive(true);
   }

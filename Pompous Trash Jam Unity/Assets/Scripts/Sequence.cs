@@ -29,11 +29,11 @@ public class Sequence : Minigame
     progressBar.gameObject.SetActive(false);
   }
 
-  private void Update()
+  protected override void DoUpdate()
   {
     if (progressBar.IsFull)
     {
-      complete.Invoke();
+      Complete();
       progressBar.gameObject.SetActive(false);
     }
   }
@@ -72,6 +72,8 @@ public class Sequence : Minigame
 
   public override void Restart()
   {
+    base.Restart();
+
     progressBar.SetValue(0);
     currentProgress = 0;
 

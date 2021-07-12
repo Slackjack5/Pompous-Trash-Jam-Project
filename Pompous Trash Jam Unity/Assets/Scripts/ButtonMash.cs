@@ -16,15 +16,17 @@ public class ButtonMash : Minigame
     progressBar.gameObject.SetActive(false);
   }
 
-  private void Update()
+  protected override void DoUpdate()
   {
     if (progressBar.IsFull)
     {
-      complete.Invoke();
+      Complete();
       progressBar.gameObject.SetActive(false);
     }
-
-    progressBar.Decrease(Time.deltaTime / decreaseInterval);
+    else
+    {
+      progressBar.Decrease(Time.deltaTime / decreaseInterval);
+    }
   }
 
   public override void OnFire()
@@ -34,7 +36,8 @@ public class ButtonMash : Minigame
 
   public override void Restart()
   {
-    progressBar.gameObject.SetActive(true);
+    base.Restart();
     progressBar.SetValue(0);
+    progressBar.gameObject.SetActive(true);
   }
 }
