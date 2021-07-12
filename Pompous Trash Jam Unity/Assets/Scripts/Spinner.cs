@@ -25,4 +25,9 @@ public class Spinner : MonoBehaviour
 
     cursor.transform.localEulerAngles = angles;
   }
+
+  public void Restart()
+  {
+    cursor.transform.localEulerAngles = new Vector3(0, 0, 360);
+  }
 }

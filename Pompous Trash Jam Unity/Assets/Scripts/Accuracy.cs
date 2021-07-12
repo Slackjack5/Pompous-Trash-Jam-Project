@@ -37,7 +37,7 @@ public class Accuracy : Minigame
   {
     base.Restart();
 
-    spinner.SpinSpeed = spinSpeed;
+    spinner.Restart();
     spinner.gameObject.SetActive(true);
   }
 }

@@ -59,21 +59,19 @@ public class GameManager : MonoBehaviour
     }
 
     GUI.Label(new Rect(10, 70, 400, 40), "IsGameActive: " + IsGameActive);
-    GUI.Label(new Rect(10, 110, 400, 40), "IsMinigameActive: " + IsMinigameActive);
+    GUI.Label(new Rect(10, 90, 400, 40), "IsMinigameActive: " + IsMinigameActive);
   }
 
   public static void ActivateGame()
   {
     IsGameActive = true;
     Physics2D.gravity = defaultGravity;
-    print("Activated game");
   }
 
   public static void DeactivateGame()
   {
     IsGameActive = false;
     Physics2D.gravity = Vector2.zero;
-    print("Deactivated game");
   }
 
   public static void FreezeGame()
@@ -95,7 +93,6 @@ public class GameManager : MonoBehaviour
   {
     if (!IsMinigameActive)
     {
-      print("Starting minigame...");
       DeactivateGame();
 
       minigameActions.Enable();
