@@ -6,14 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-  [SerializeField] private InputActionAsset actions;
   [SerializeField] private ButtonMash buttonMashMinigame;
   [SerializeField] private Accuracy accuracyMinigame;
   [SerializeField] private AlternatingButtonMash alternatingButtonMashMinigame;
   [SerializeField] private Sequence sequenceMinigame;
-
-  private static InputActionMap playerActions;
-  private static InputActionMap minigameActions;
+  [SerializeField] private TubeMinigame tubeMinigame;
 
   public static bool IsGameActive { get; private set; }
 
@@ -29,11 +26,7 @@ public class GameManager : MonoBehaviour
   {
     DeactivateGame();
 
-    playerActions = actions.FindActionMap("Player");
-    minigameActions = actions.FindActionMap("Minigame");
-
-    playerActions.Enable();
-    minigameActions.Disable();
+    tubeMinigame.triggered.AddListener(() => StartMinigame(tubeMinigame));
   }
 
   private void OnGUI()
@@ -83,9 +76,6 @@ public class GameManager : MonoBehaviour
   {
     ActivateGame();
 
-    playerActions.Enable();
-    minigameActions.Disable();
-
     CurrentMinigame = null;
   }
 
@@ -94,9 +84,6 @@ public class GameManager : MonoBehaviour
     if (!IsMinigameActive)
     {
       DeactivateGame();
-
-      minigameActions.Enable();
-      playerActions.Disable();
 
       minigame.complete.AddListener(() => EndMinigame());
       minigame.Restart();
