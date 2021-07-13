@@ -30,8 +30,10 @@ public class PlayerController : MonoBehaviour
   
   const float touchDistance = .1f;
 
-  // Start is called before the first frame update
-  void Start()
+    //Animations
+    [SerializeField] private Animator myAnimator;
+    // Start is called before the first frame update
+    void Start()
   {
     rb = GetComponent<Rigidbody2D>();
 
@@ -64,6 +66,26 @@ public class PlayerController : MonoBehaviour
       rb.velocity = Vector2.zero;
     }
 
+    //Animation
+        if(xInput!=0)
+        {
+            myAnimator.SetFloat("Speed", 1);
+        }
+        else
+        {
+            myAnimator.SetFloat("Speed", 0);
+        }
+
+        if (isGrounded)
+        {
+            //animation
+            myAnimator.SetBool("isJumping", false);
+        }
+        else
+        {
+            //animation
+            myAnimator.SetBool("isJumping", true);
+        }
     // Jump
     if (isJumpKeyHeld && jumpTimeCounter > 0)
     {
@@ -84,6 +106,11 @@ public class PlayerController : MonoBehaviour
     GUI.Label(new Rect(450, 50, 400, 30), "isGrounded: " + isGrounded);
   }
 
+  public void AttackFinished()
+    {
+        //animation
+        myAnimator.SetBool("isAttacking", false);
+    }
   public void OnAttack()
   {
     if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
@@ -100,6 +127,9 @@ public class PlayerController : MonoBehaviour
       }
 
       currentMeleeCooldown = meleeCooldownTime;
+
+     //animation
+      myAnimator.SetBool("isAttacking", true);
     }
   }
 
@@ -107,7 +137,6 @@ public class PlayerController : MonoBehaviour
   public void OnJump()
   {
     isJumpKeyHeld = !isJumpKeyHeld;
-
     if (GameManager.IsGameActive)
     {
       if (isJumpKeyHeld && isGrounded)
@@ -121,7 +150,6 @@ public class PlayerController : MonoBehaviour
   {
     Vector2 motionVector = value.Get<Vector2>();
     xInput = motionVector.x;
-
     if (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight)
     {
       Flip();
