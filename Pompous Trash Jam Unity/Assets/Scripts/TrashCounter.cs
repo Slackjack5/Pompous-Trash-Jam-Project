@@ -12,7 +12,7 @@ public class TrashCounter : MonoBehaviour
   [SerializeField] private float spawnInterval = 0.5f;
 
   // Amount of trash remaining to collect
-  private int currentCount;
+  private int remainingTrash;
 
   // Amount of trash remaining to spawn
   private int remainingSpawnCount;
@@ -22,7 +22,7 @@ public class TrashCounter : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    currentCount = maxCount;
+    remainingTrash = maxCount;
     remainingSpawnCount = maxCount;
   }
 
@@ -31,7 +31,7 @@ public class TrashCounter : MonoBehaviour
   {
     if (GameManager.IsGameActive)
     {
-      if (currentCount <= 0)
+      if (remainingTrash <= 0)
       {
         // Player wins when there are zero trash left
         SceneManager.LoadScene("YouWin");
@@ -47,11 +47,12 @@ public class TrashCounter : MonoBehaviour
   private void OnGUI()
   {
     GUI.Label(new Rect(10, 10, 400, 30), "remainingSpawnCount: " + remainingSpawnCount);
+    GUI.Label(new Rect(300, 10, 400, 30), "remainingTrash: " + remainingTrash);
   }
 
   public void Decrease(int value)
   {
-    currentCount -= value;
+    remainingTrash -= value;
   }
 
   // Spawn value represents the amount of trash pieces inside a box
