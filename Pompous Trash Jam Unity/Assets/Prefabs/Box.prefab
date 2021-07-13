@@ -146,4 +146,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   hitForce: 500
+  freezeTime: 0.1
   destructable: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
+  Wormhole: {fileID: 0}
+  Box: {fileID: 0}
+  Explosive: 0
+  gravityBox: 0
+  infinityBox: 0
+  upgradeBox: 0
+  fieldofImpact: 0
+  force: 0
+  torque: 0
+  LayerToHit:
+    serializedVersion: 2
+    m_Bits: 0
