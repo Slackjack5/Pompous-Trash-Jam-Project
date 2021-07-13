@@ -28,6 +28,11 @@ public class TubeMinigame : ButtonMash
     }
   }
 
+  private void OnGUI()
+  {
+    GUI.Label(new Rect(10, 110, 400, 30), "tubeMinigame.isReady: " + isReady);
+  }
+
   private IEnumerator Ready()
   {
     yield return new WaitForSeconds(playInterval);

@@ -3104,7 +3104,6 @@ GameObject:
   - component: {fileID: 934240478}
   - component: {fileID: 934240477}
   - component: {fileID: 934240476}
-  - component: {fileID: 934240479}
   m_Layer: 0
   m_Name: Rope
   m_TagString: Untagged
@@ -3213,23 +3212,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &934240479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934240475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d04af4448aef4e4b90ee52bde9ac2c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progressBar: {fileID: 558579161}
-  increaseAmount: 50
-  decreaseInterval: 0.01
-  playInterval: 5
-  player: {fileID: 590744670}
 --- !u!1 &951168971
 GameObject:
   m_ObjectHideFlags: 0
