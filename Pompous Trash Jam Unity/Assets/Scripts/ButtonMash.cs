@@ -9,7 +9,7 @@ public class ButtonMash : Minigame
   [SerializeField] private float increaseAmount = 50f;
   [SerializeField] private float decreaseInterval = 0.01f;
 
-  private void Start()
+  protected virtual void Start()
   {
     progressBar.SetMaxValue(100);
     progressBar.SetValue(0);

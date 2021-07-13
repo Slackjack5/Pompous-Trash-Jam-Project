@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
   {
     GUI.Label(new Rect(10, 50, 400, 30), "xInput: " + xInput);
     GUI.Label(new Rect(100, 50, 400, 30), "currentMeleeCooldown: " + currentMeleeCooldown);
+    GUI.Label(new Rect(300, 50, 400, 30), "isJumpKeyHeld: " + isJumpKeyHeld);
   }
 
   public void OnAttack()
