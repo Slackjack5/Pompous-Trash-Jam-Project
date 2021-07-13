@@ -30,4 +30,12 @@ public class VacuumController : MonoBehaviour
     Vector2 normal = (mousePos - bone.position).normalized;
     bone.AddForce(normal * 500);
   }
+
+  void OnCollisionEnter2D(Collision2D col)
+  {
+    if (col.collider.bounds.size.y < 0.8 && col.gameObject.name != "Capsule Player")
+    {
+      Destroy(col.gameObject);
+    }
+  }
 }
