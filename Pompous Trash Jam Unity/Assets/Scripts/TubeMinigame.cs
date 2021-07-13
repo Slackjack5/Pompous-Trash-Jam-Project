@@ -8,7 +8,7 @@ public class TubeMinigame : ButtonMash
   [SerializeField] private float playInterval = 30f;
   [SerializeField] private GameObject player;
 
-  private bool isReady = false;
+  public bool IsReady { get; private set; }
 
   public readonly UnityEvent triggered = new UnityEvent();
 
@@ -16,27 +16,28 @@ public class TubeMinigame : ButtonMash
   {
     base.Start();
 
+    IsReady = false;
     StartCoroutine(Ready());
   }
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
-    if (isReady && collision.name == player.name)
+    if (IsReady && collision.name == player.name)
     {
-      isReady = false;
+      IsReady = false;
       triggered.Invoke();
     }
   }
 
   private void OnGUI()
   {
-    GUI.Label(new Rect(10, 110, 400, 30), "tubeMinigame.isReady: " + isReady);
+    GUI.Label(new Rect(10, 110, 400, 30), "tubeMinigame.isReady: " + IsReady);
   }
 
   private IEnumerator Ready()
   {
     yield return new WaitForSeconds(playInterval);
-    isReady = true;
+    IsReady = true;
   }
 
   public override void Restart()
