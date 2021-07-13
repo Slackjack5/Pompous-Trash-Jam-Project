@@ -10,8 +10,9 @@ public class VacuumColliderController : MonoBehaviour
     if (col.attachedRigidbody != null && Input.GetMouseButton(0))
     {
       float dist = Vector2.Distance(col.attachedRigidbody.transform.position, vacuumBone.transform.position);
+      dist = Mathf.Max(dist, 0.2f);
       Vector2 normal = (vacuumBone.transform.position - col.attachedRigidbody.transform.position).normalized;
-      float forceMult = Mathf.Min(1 / dist, 1f) * 125;
+      float forceMult = Mathf.Min(1 / dist, 1f) * 75;
       col.attachedRigidbody.AddForce(normal * forceMult);
     }
   }
