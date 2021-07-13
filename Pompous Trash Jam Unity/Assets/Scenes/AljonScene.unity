@@ -1992,6 +1992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trashCounter: {fileID: 1310723169}
   trash: Trash
+  tubeMinigame: {fileID: 1720740153}
 --- !u!233 &616557225
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -4728,7 +4729,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 9e788ec49515f3344b3f86d4ffdce1c6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4810,6 +4811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411bcbfdbabf5246936812daa27b5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tubeMinigame: {fileID: 1720740153}
   vacuumBone: {fileID: 616557221}
 --- !u!58 &1691120461
 CircleCollider2D:
