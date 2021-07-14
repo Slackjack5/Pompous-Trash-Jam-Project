@@ -9,9 +9,16 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private Transform spawnArea;
   [SerializeField] private float spawnWidth = 12f;
   [SerializeField] private float spawnInterval = 0.5f;
-  [SerializeField] private TextMeshProUGUI scoreText;
   [SerializeField] private int baseMultiplier = 100;
+  [SerializeField] private float maxComboTime = 1f;
+  [SerializeField] private int maxComboUpgradeCount = 10;
+  [SerializeField] private TextMeshProUGUI scoreText;
+  [SerializeField] private TextMeshProUGUI comboMultiplierText;
+  [SerializeField] private TextMeshProUGUI comboCountText;
 
+  private int comboMultiplier = 1;
+  private float currentComboTime;
+  private int currentComboUpgradeCount;
   private bool isWaitingSpawn;
 
   public int Score { get; private set; }
@@ -20,16 +27,45 @@ public class ScoreTracker : MonoBehaviour
   void Update()
   {
     scoreText.text = Score.ToString();
+    comboMultiplierText.text = comboMultiplier + "x";
+    comboCountText.text = currentComboUpgradeCount + " / " + maxComboUpgradeCount;
 
-    if (GameManager.IsGameActive && !isWaitingSpawn)
+    if (GameManager.IsGameActive)
     {
-      StartCoroutine(SetSpawnInterval());
+      if (!isWaitingSpawn)
+      {
+        StartCoroutine(SetSpawnInterval());
+      }
+      
+      if (currentComboTime > 0)
+      {
+        currentComboTime -= Time.deltaTime;
+      }
+      else
+      {
+        comboMultiplier = 1;
+        currentComboUpgradeCount = 0;
+      }
     }
+  }
+
+  private void OnGUI()
+  {
+    GUI.Label(new Rect(10, 10, 400, 30), "currentComboTime: " + currentComboTime);
   }
 
   public void Increase(int value)
   {
-    Score += value * baseMultiplier;
+    currentComboTime = maxComboTime;
+    currentComboUpgradeCount++;
+
+    if (currentComboUpgradeCount >= maxComboUpgradeCount)
+    {
+      comboMultiplier++;
+      currentComboUpgradeCount = 0;
+    }
+
+    Score += value * baseMultiplier * comboMultiplier;
   }
 
   private void Spawn()
