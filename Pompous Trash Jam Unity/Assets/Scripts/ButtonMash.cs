@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using EZCameraShake;
 public class ButtonMash : Minigame
 {
   [SerializeField] private ProgressBar progressBar;
@@ -32,6 +32,7 @@ public class ButtonMash : Minigame
   public override void OnFire()
   {
     progressBar.Increase(increaseAmount);
+    CameraShaker.Instance.ShakeOnce(3f, 3f, .1f, 1f);
   }
 
   public override void Restart()

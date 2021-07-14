@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
+using EZCameraShake;
 
 public class VacuumController : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class VacuumController : MonoBehaviour
     if (GameManager.IsGameActive && !tubeMinigame.IsReady && Input.GetMouseButton(0))
     {
       vfx.SetInt("SpawnRate", 64);
+      //Camera Shake
+      CameraShaker.Instance.ShakeOnce(1f, 1f, .1f, 1f);
     }
     else
     {

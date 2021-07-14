@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using EZCameraShake;
 public class BoxDestruction : PhysicsObject
 {
   [SerializeField] private int maxHealth = 3;
@@ -90,7 +90,7 @@ public class BoxDestruction : PhysicsObject
             Debug.Log("Spawned Power Up 3");
         }
     }
-
+    CameraShaker.Instance.ShakeOnce(2.5f, 2.5f, .2f, 2f);
     StartCoroutine(Freeze());
   }
 
