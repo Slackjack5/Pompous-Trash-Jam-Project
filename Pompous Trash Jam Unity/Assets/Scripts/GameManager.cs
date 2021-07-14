@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     tubeMinigame.triggered.AddListener(() => StartMinigame(tubeMinigame));
 
+    isPaused = false;
     pauseMenu = pauseMenuCanvas;
     pauseMenu.SetActive(false);
   }
@@ -121,6 +122,11 @@ public class GameManager : MonoBehaviour
   {
     Time.timeScale = 1;
     pauseMenu.SetActive(false);
+  }
+
+  public void Quit()
+  {
+    SceneManager.LoadScene(0);
   }
 
   public void Restart()
