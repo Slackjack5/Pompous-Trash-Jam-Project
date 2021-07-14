@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
   private Rigidbody2D rb;
 
+  private Vector2 boxCastSize;
   private float currentMeleeCooldown;
   private bool isFacingRight = true;
   private bool isGrounded = false;
@@ -26,18 +27,21 @@ public class PlayerController : MonoBehaviour
   private float jumpTimeCounter;
   private Vector2 velocity;
   private float xInput;
-
+  
   const float touchDistance = .1f;
 
   // Start is called before the first frame update
   void Start()
   {
     rb = GetComponent<Rigidbody2D>();
+
+    boxCastSize = new Vector2(transform.localScale.x - touchDistance, touchDistance);
   }
 
   private void Update()
   {
-    isGrounded = Physics2D.Raycast(groundCheckPosition.position, Vector2.down, touchDistance, whatIsGround | whatIsBox);
+    // Use BoxCast instead of Raycast so that ground checking spans the width of the player
+    isGrounded = Physics2D.BoxCast(groundCheckPosition.position, boxCastSize, /* angle = */ 0f, Vector2.down, /* distance = */ 0f, whatIsGround | whatIsBox);
 
     // Update melee cooldown
     if (currentMeleeCooldown > 0)
@@ -77,6 +81,7 @@ public class PlayerController : MonoBehaviour
     GUI.Label(new Rect(10, 50, 400, 30), "xInput: " + xInput);
     GUI.Label(new Rect(100, 50, 400, 30), "currentMeleeCooldown: " + currentMeleeCooldown);
     GUI.Label(new Rect(300, 50, 400, 30), "isJumpKeyHeld: " + isJumpKeyHeld);
+    GUI.Label(new Rect(450, 50, 400, 30), "isGrounded: " + isGrounded);
   }
 
   public void OnAttack()
@@ -121,6 +126,11 @@ public class PlayerController : MonoBehaviour
     {
       Flip();
     }
+  }
+
+  public void OnPause()
+  {
+    GameManager.TogglePause();
   }
 
   public void OnMainFire()
