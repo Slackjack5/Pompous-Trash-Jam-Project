@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using EZCameraShake;
 public class PlayerController : MonoBehaviour
 {
   [SerializeField] private float baseSpeed = 800f;
@@ -30,8 +30,10 @@ public class PlayerController : MonoBehaviour
   
   const float touchDistance = .1f;
 
-  // Start is called before the first frame update
-  void Start()
+    //Animations
+    [SerializeField] private Animator myAnimator;
+    // Start is called before the first frame update
+    void Start()
   {
     rb = GetComponent<Rigidbody2D>();
 
@@ -64,6 +66,26 @@ public class PlayerController : MonoBehaviour
       rb.velocity = Vector2.zero;
     }
 
+    //Animation
+        if(xInput!=0)
+        {
+            myAnimator.SetFloat("Speed", 1);
+        }
+        else
+        {
+            myAnimator.SetFloat("Speed", 0);
+        }
+
+        if (isGrounded)
+        {
+            //animation
+            myAnimator.SetBool("isJumping", false);
+        }
+        else
+        {
+            //animation
+            myAnimator.SetBool("isJumping", true);
+        }
     // Jump
     if (isJumpKeyHeld && jumpTimeCounter > 0)
     {
@@ -84,13 +106,26 @@ public class PlayerController : MonoBehaviour
     GUI.Label(new Rect(450, 50, 400, 30), "isGrounded: " + isGrounded);
   }
 
+  public void AttackFinished()
+    {
+        //animation
+        myAnimator.SetBool("isAttacking", false);
+    }
   public void OnAttack()
   {
     if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
     {
       // Hit boxes in front of player
       Vector2 origin = frontCheckPosition.position;
-      origin.x += hitboxWidth / 2;
+      if(isFacingRight)
+      {
+        origin.x += hitboxWidth / 2;
+      }
+      else
+      {
+        origin.x -= hitboxWidth / 2;
+      }
+      
       Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
       RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
 
@@ -99,7 +134,15 @@ public class PlayerController : MonoBehaviour
         hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
       }
 
+      //Screan shake
+      if (hits.Length > 0)
+      {
+        CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1f);
+      }
       currentMeleeCooldown = meleeCooldownTime;
+
+     //animation
+      myAnimator.SetBool("isAttacking", true);
     }
   }
 
@@ -107,7 +150,6 @@ public class PlayerController : MonoBehaviour
   public void OnJump()
   {
     isJumpKeyHeld = !isJumpKeyHeld;
-
     if (GameManager.IsGameActive)
     {
       if (isJumpKeyHeld && isGrounded)
@@ -121,7 +163,6 @@ public class PlayerController : MonoBehaviour
   {
     Vector2 motionVector = value.Get<Vector2>();
     xInput = motionVector.x;
-
     if (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight)
     {
       Flip();
