@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
   [SerializeField] private AlternatingButtonMash alternatingButtonMashMinigame;
   [SerializeField] private Sequence sequenceMinigame;
   [SerializeField] private TubeMinigame tubeMinigame;
+  [SerializeField] private GameObject pauseMenuCanvas;
 
   public static bool IsGameActive { get; private set; }
 
@@ -21,12 +22,17 @@ public class GameManager : MonoBehaviour
   public static Minigame CurrentMinigame { get; private set; }
 
   private static Vector2 defaultGravity = new Vector2(0, -9.8f);
+  private static bool isPaused = false;
+  private static GameObject pauseMenu;
 
   private void Start()
   {
     DeactivateGame();
 
     tubeMinigame.triggered.AddListener(() => StartMinigame(tubeMinigame));
+
+    pauseMenu = pauseMenuCanvas;
+    pauseMenu.SetActive(false);
   }
 
   private void OnGUI()
@@ -89,6 +95,32 @@ public class GameManager : MonoBehaviour
       minigame.Restart();
       CurrentMinigame = minigame;
     }
+  }
+
+  public static void TogglePause()
+  {
+    if (isPaused)
+    {
+      Resume();
+      isPaused = false;
+    }
+    else
+    {
+      Pause();
+      isPaused = true;
+    }
+  }
+
+  private static void Pause()
+  {
+    FreezeGame();
+    pauseMenu.SetActive(true);
+  }
+
+  private static void Resume()
+  {
+    Time.timeScale = 1;
+    pauseMenu.SetActive(false);
   }
 
   public void Restart()

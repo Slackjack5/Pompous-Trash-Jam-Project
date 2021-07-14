@@ -128,6 +128,11 @@ public class PlayerController : MonoBehaviour
     }
   }
 
+  public void OnPause()
+  {
+    GameManager.TogglePause();
+  }
+
   public void OnMainFire()
   {
     if (GameManager.IsMinigameActive)
