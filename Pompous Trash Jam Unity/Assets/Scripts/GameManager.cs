@@ -124,6 +124,11 @@ public class GameManager : MonoBehaviour
     pauseMenu.SetActive(false);
   }
 
+  public void NextLevel()
+  {
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+  }
+
   public void Quit()
   {
     SceneManager.LoadScene(0);
