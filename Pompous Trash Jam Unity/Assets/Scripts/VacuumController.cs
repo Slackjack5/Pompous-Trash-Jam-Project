@@ -6,7 +6,7 @@ using EZCameraShake;
 
 public class VacuumController : MonoBehaviour
 {
-  [SerializeField] private TrashCounter trashCounter;
+  [SerializeField] private ScoreTracker trashCounter;
   [SerializeField] private string trash = "Trash";
   [SerializeField] private TubeMinigame tubeMinigame;
 
@@ -48,7 +48,7 @@ public class VacuumController : MonoBehaviour
   {
     if (col.gameObject.layer == LayerMask.NameToLayer(trash) && col.gameObject.name != "Capsule Player")
     {
-      trashCounter.Decrease(1);
+      trashCounter.Increase(1);
       Destroy(col.gameObject);
     }
   }
