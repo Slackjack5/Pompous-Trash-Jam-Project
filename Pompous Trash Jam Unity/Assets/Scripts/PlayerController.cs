@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using EZCameraShake;
 public class PlayerController : MonoBehaviour
 {
   [SerializeField] private float baseSpeed = 800f;
@@ -117,7 +117,15 @@ public class PlayerController : MonoBehaviour
     {
       // Hit boxes in front of player
       Vector2 origin = frontCheckPosition.position;
-      origin.x += hitboxWidth / 2;
+      if(isFacingRight)
+      {
+        origin.x += hitboxWidth / 2;
+      }
+      else
+      {
+        origin.x -= hitboxWidth / 2;
+      }
+      
       Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
       RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
 
@@ -126,6 +134,11 @@ public class PlayerController : MonoBehaviour
         hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
       }
 
+      //Screan shake
+      if (hits.Length > 0)
+      {
+        CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1f);
+      }
       currentMeleeCooldown = meleeCooldownTime;
 
      //animation
