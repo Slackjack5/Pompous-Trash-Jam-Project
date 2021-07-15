@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using EZCameraShake;
-public class PlayerController : MonoBehaviour
+public class PlayerController : PhysicsObject
 {
   [SerializeField] private float baseSpeed = 800f;
   [SerializeField] private float movementSmoothTime = 0.1f;
@@ -16,14 +16,14 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private float hitboxWidth = 1f;
   [SerializeField] private float hitboxHeight = 1f;
   [SerializeField] private float meleeCooldownTime = 0.5f;
-
-  private Rigidbody2D rb;
+  [SerializeField] private float stunTime = 4f;
 
   private Vector2 boxCastSize;
   private float currentMeleeCooldown;
   private bool isFacingRight = true;
   private bool isGrounded = false;
   private bool isJumpKeyHeld = false;
+  private bool isStunned = false;
   private float jumpTimeCounter;
   private Vector2 velocity;
   private float xInput;
@@ -33,15 +33,17 @@ public class PlayerController : MonoBehaviour
     //Animations
     [SerializeField] private Animator myAnimator;
     // Start is called before the first frame update
-    void Start()
+  protected override void Start()
   {
-    rb = GetComponent<Rigidbody2D>();
+    base.Start();
 
     boxCastSize = new Vector2(transform.localScale.x - touchDistance, touchDistance);
   }
 
-  private void Update()
+  protected override void Update()
   {
+    base.Update();
+
     // Use BoxCast instead of Raycast so that ground checking spans the width of the player
     isGrounded = Physics2D.BoxCast(groundCheckPosition.position, boxCastSize, /* angle = */ 0f, Vector2.down, /* distance = */ 0f, whatIsGround | whatIsBox);
 
@@ -54,47 +56,47 @@ public class PlayerController : MonoBehaviour
 
   private void FixedUpdate()
   {
-    // Move
     if (GameManager.IsGameActive)
     {
-      float targetVelocityX = baseSpeed * xInput * Time.fixedDeltaTime;
-      Vector2 targetVelocity = new Vector2(targetVelocityX, rb.velocity.y);
-      rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothTime);
+      // Move
+      if (!isStunned)
+      {
+        float targetVelocityX = baseSpeed * xInput * Time.fixedDeltaTime;
+        Vector2 targetVelocity = new Vector2(targetVelocityX, rb.velocity.y);
+        rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothTime);
+      }
+
+      // Jump
+      if (isJumpKeyHeld && jumpTimeCounter > 0)
+      {
+        rb.velocity = new Vector2(rb.velocity.x, baseJumpSpeed);
+        jumpTimeCounter -= Time.fixedDeltaTime;
+      }
+      else
+      {
+        jumpTimeCounter = 0;
+      }
+
+      //Animation
+      if (xInput != 0 && !isStunned)
+      {
+        myAnimator.SetFloat("Speed", 1);
+      }
+      else
+      {
+        myAnimator.SetFloat("Speed", 0);
+      }
+    }
+
+    if (isGrounded)
+    {
+      //animation
+      myAnimator.SetBool("isJumping", false);
     }
     else
     {
-      rb.velocity = Vector2.zero;
-    }
-
-    //Animation
-        if(xInput!=0)
-        {
-            myAnimator.SetFloat("Speed", 1);
-        }
-        else
-        {
-            myAnimator.SetFloat("Speed", 0);
-        }
-
-        if (isGrounded)
-        {
-            //animation
-            myAnimator.SetBool("isJumping", false);
-        }
-        else
-        {
-            //animation
-            myAnimator.SetBool("isJumping", true);
-        }
-    // Jump
-    if (isJumpKeyHeld && jumpTimeCounter > 0)
-    {
-      rb.velocity = new Vector2(rb.velocity.x, baseJumpSpeed);
-      jumpTimeCounter -= Time.fixedDeltaTime;
-    }
-    else
-    {
-      jumpTimeCounter = 0;
+      //animation
+      myAnimator.SetBool("isJumping", true);
     }
   }
 
@@ -111,6 +113,12 @@ public class PlayerController : MonoBehaviour
         //animation
         myAnimator.SetBool("isAttacking", false);
     }
+
+  public void Stun()
+  {
+    StartCoroutine(WaitStun());
+  }
+
   public void OnAttack()
   {
     if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
@@ -150,12 +158,9 @@ public class PlayerController : MonoBehaviour
   public void OnJump()
   {
     isJumpKeyHeld = !isJumpKeyHeld;
-    if (GameManager.IsGameActive)
+    if (GameManager.IsGameActive && !isStunned && isJumpKeyHeld && isGrounded)
     {
-      if (isJumpKeyHeld && isGrounded)
-      {
-        jumpTimeCounter = maxJumpTime;
-      }
+      jumpTimeCounter = maxJumpTime;
     }
   }
 
@@ -221,5 +226,12 @@ public class PlayerController : MonoBehaviour
     Vector3 theScale = transform.localScale;
     theScale.x *= -1;
     transform.localScale = theScale;
+  }
+
+  private IEnumerator WaitStun()
+  {
+    isStunned = true;
+    yield return new WaitForSeconds(stunTime);
+    isStunned = false;
   }
 }

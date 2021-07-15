@@ -7,6 +7,10 @@ public class BoxDestruction : PhysicsObject
   [SerializeField] private int maxHealth = 3;
   [SerializeField] private float hitForce = 10f;
   [SerializeField] private float freezeTime = 0.4f;
+  [SerializeField] private float explodeSpeed = 10f;
+  [SerializeField] private string tube = "Tube";
+  [SerializeField] private PlayerController player;
+  [SerializeField] private float playerForceMultiplier = 3f;
 
   public GameObject destructable;
   public GameObject Wormhole;
@@ -20,13 +24,27 @@ public class BoxDestruction : PhysicsObject
   public float torque;
   public LayerMask LayerToHit;
 
+  private SpriteRenderer spriteRenderer;
+
   private int currentHealth;
+  private bool isExploded = false;
 
   protected override void Start()
   {
     base.Start();
 
+    spriteRenderer = GetComponent<SpriteRenderer>();
+
     currentHealth = maxHealth;
+  }
+
+  private void OnCollisionEnter2D(Collision2D collision)
+  {
+    if (Explosive && !isExploded && collision.gameObject.layer != LayerMask.NameToLayer(tube) && rb.velocity.magnitude >= explodeSpeed)
+    {
+      Destroy();
+      isExploded = true;
+    }
   }
 
   public void Hit(bool isHitRight)
@@ -45,20 +63,29 @@ public class BoxDestruction : PhysicsObject
   {
     Destroy(gameObject);
   }
-    private void Explosion()
+  private void Explosion()
+  {
+    Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldofImpact, LayerToHit);
+    foreach (Collider2D obj in objects)
     {
-        Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldofImpact, LayerToHit);
-        foreach (Collider2D obj in objects)
-        {
-            float randTorque = Random.Range(-25, 25);
-            Vector2 direction = obj.transform.position - transform.position;
-            obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
-            obj.GetComponent<Rigidbody2D>().AddForce(transform.up * force/2);
-            obj.GetComponent<Rigidbody2D>().AddTorque(randTorque);
-        }
+      float theForce = force;
+      if (obj.name == player.gameObject.name)
+      {
+        theForce *= playerForceMultiplier;
+        player.Stun();
+      }
+
+      float randTorque = Random.Range(-25, 25);
+      Vector2 direction = obj.transform.position - transform.position;
+      obj.GetComponent<Rigidbody2D>().AddForce(direction * theForce);
+      obj.GetComponent<Rigidbody2D>().AddForce(transform.up * theForce / 2);
+      obj.GetComponent<Rigidbody2D>().AddTorque(randTorque);
     }
+  }
   private void Destroy()
   {
+    spriteRenderer.enabled = false;
+
     Instantiate(destructable, transform.position, Quaternion.identity);
     if (Explosive)
     {
@@ -91,10 +118,11 @@ public class BoxDestruction : PhysicsObject
         }
     }
     CameraShaker.Instance.ShakeOnce(2.5f, 2.5f, .2f, 2f);
-    StartCoroutine(Freeze());
+
+    StartCoroutine(FreezeImpact());
   }
 
-  private IEnumerator Freeze()
+  private IEnumerator FreezeImpact()
   {
     GameManager.DeactivateGame();
     yield return new WaitForSeconds(freezeTime);

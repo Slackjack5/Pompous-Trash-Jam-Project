@@ -18,7 +18,7 @@ public class PhysicsObject : MonoBehaviour
   }
 
   // Update is called once per frame
-  void Update()
+  protected virtual void Update()
   {
     if (GameManager.IsGameActive && storedVelocity != Vector2.zero)
     {
