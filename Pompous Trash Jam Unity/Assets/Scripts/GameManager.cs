@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     isPaused = false;
     pauseMenu = pauseMenuCanvas;
     pauseMenu.SetActive(false);
+
+    isLevelComplete = false;
   }
 
   private void OnGUI()

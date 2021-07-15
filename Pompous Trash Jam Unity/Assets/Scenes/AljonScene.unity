@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473051, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 590744676}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e3594560a701e458b6f71e27515897, type: 3}
 --- !u!1 &240866811
@@ -2498,6 +2502,7 @@ MonoBehaviour:
   hitboxWidth: 1
   hitboxHeight: 1
   meleeCooldownTime: 0.5
+  stunTime: 4
   myAnimator: {fileID: 590744677}
 --- !u!95 &590744677
 Animator:
@@ -8832,7 +8837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2122302126
 Transform:
   m_ObjectHideFlags: 0

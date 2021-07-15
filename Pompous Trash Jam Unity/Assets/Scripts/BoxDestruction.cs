@@ -9,7 +9,7 @@ public class BoxDestruction : PhysicsObject
   [SerializeField] private float freezeTime = 0.4f;
   [SerializeField] private float explodeSpeed = 10f;
   [SerializeField] private string tube = "Tube";
-  [SerializeField] private string player = "Capsule Player";
+  [SerializeField] private PlayerController player;
   [SerializeField] private float playerForceMultiplier = 3f;
 
   public GameObject destructable;
@@ -69,9 +69,10 @@ public class BoxDestruction : PhysicsObject
     foreach (Collider2D obj in objects)
     {
       float theForce = force;
-      if (obj.name == player)
+      if (obj.name == player.gameObject.name)
       {
         theForce *= playerForceMultiplier;
+        player.Stun();
       }
 
       float randTorque = Random.Range(-25, 25);
