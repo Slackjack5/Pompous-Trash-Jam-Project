@@ -161,4 +161,4 @@ MonoBehaviour:
   torque: 50
   LayerToHit:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192

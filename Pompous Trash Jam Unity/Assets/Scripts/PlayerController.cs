@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using EZCameraShake;
-public class PlayerController : MonoBehaviour
+public class PlayerController : PhysicsObject
 {
   [SerializeField] private float baseSpeed = 800f;
   [SerializeField] private float movementSmoothTime = 0.1f;
@@ -16,8 +16,6 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private float hitboxWidth = 1f;
   [SerializeField] private float hitboxHeight = 1f;
   [SerializeField] private float meleeCooldownTime = 0.5f;
-
-  private Rigidbody2D rb;
 
   private Vector2 boxCastSize;
   private float currentMeleeCooldown;
@@ -33,15 +31,17 @@ public class PlayerController : MonoBehaviour
     //Animations
     [SerializeField] private Animator myAnimator;
     // Start is called before the first frame update
-    void Start()
+  protected override void Start()
   {
-    rb = GetComponent<Rigidbody2D>();
+    base.Start();
 
     boxCastSize = new Vector2(transform.localScale.x - touchDistance, touchDistance);
   }
 
-  private void Update()
+  protected override void Update()
   {
+    base.Update();
+
     // Use BoxCast instead of Raycast so that ground checking spans the width of the player
     isGrounded = Physics2D.BoxCast(groundCheckPosition.position, boxCastSize, /* angle = */ 0f, Vector2.down, /* distance = */ 0f, whatIsGround | whatIsBox);
 
@@ -60,10 +60,6 @@ public class PlayerController : MonoBehaviour
       float targetVelocityX = baseSpeed * xInput * Time.fixedDeltaTime;
       Vector2 targetVelocity = new Vector2(targetVelocityX, rb.velocity.y);
       rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocity, movementSmoothTime);
-    }
-    else
-    {
-      rb.velocity = Vector2.zero;
     }
 
     //Animation
