@@ -6,12 +6,11 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
   [SerializeField] private float maxTime = 100f;
-  [SerializeField] private GameObject gameOverCanvas;
+  [SerializeField] private GameObject levelCompleteCanvas;
+  [SerializeField] private TextMeshProUGUI timerText;
   [SerializeField] private TextMeshProUGUI countdownText;
   [SerializeField] private float maxFontSize = 72f;
   [SerializeField] private float minFontSize = 24f;
-
-  private TextMeshProUGUI timerText;
 
   private float currentCountdownTime = 3f;
   private bool isCountingDown = true;
@@ -20,10 +19,8 @@ public class Timer : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    timerText = GetComponent<TextMeshProUGUI>();
-
     currentTimeLeft = maxTime;
-    gameOverCanvas.SetActive(false);
+    levelCompleteCanvas.SetActive(false);
     Time.timeScale = 1;
   }
 
@@ -52,7 +49,7 @@ public class Timer : MonoBehaviour
       {
         // Player ran out of time
         currentTimeLeft = 0;
-        gameOverCanvas.SetActive(true);
+        levelCompleteCanvas.SetActive(true);
         GameManager.FreezeGame();
       }
       else

@@ -15,6 +15,10 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private TextMeshProUGUI scoreText;
   [SerializeField] private TextMeshProUGUI comboMultiplierText;
   [SerializeField] private TextMeshProUGUI comboCountText;
+  [SerializeField] private int bronzeScore;
+  [SerializeField] private int silverScore;
+  [SerializeField] private int goldScore;
+  [SerializeField] private TextMeshProUGUI starText;
 
   private int comboMultiplier = 1;
   private float currentComboTime;
@@ -29,6 +33,7 @@ public class ScoreTracker : MonoBehaviour
     scoreText.text = Score.ToString();
     comboMultiplierText.text = comboMultiplier + "x";
     comboCountText.text = currentComboUpgradeCount + " / " + maxComboUpgradeCount;
+    starText.text = EvaluateScore();
 
     if (GameManager.IsGameActive)
     {
@@ -66,6 +71,26 @@ public class ScoreTracker : MonoBehaviour
     }
 
     Score += value * baseMultiplier * comboMultiplier;
+  }
+
+  private string EvaluateScore()
+  {
+    if (Score >= goldScore)
+    {
+      return "3 Stars";
+    }
+    else if (Score >= silverScore)
+    {
+      return "2 Stars";
+    }
+    else if (Score >= bronzeScore)
+    {
+      return "1 Star";
+    }
+    else
+    {
+      return "0 Stars";
+    }
   }
 
   private void Spawn()
