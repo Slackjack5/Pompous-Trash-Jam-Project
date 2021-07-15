@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -74,9 +74,9 @@ public class GameManager : MonoBehaviour
     Physics2D.gravity = Vector2.zero;
   }
 
-  public static void FreezeGame()
+  public static void EndLevel()
   {
-    Time.timeScale = 0;
+    FreezeGame();
   }
 
   public static void EndMinigame()
@@ -110,6 +110,11 @@ public class GameManager : MonoBehaviour
       Pause();
       isPaused = true;
     }
+  }
+
+  private static void FreezeGame()
+  {
+    Time.timeScale = 0;
   }
 
   private static void Pause()

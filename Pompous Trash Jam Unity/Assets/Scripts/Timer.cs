@@ -50,7 +50,7 @@ public class Timer : MonoBehaviour
         // Player ran out of time
         currentTimeLeft = 0;
         levelCompleteCanvas.SetActive(true);
-        GameManager.FreezeGame();
+        GameManager.EndLevel();
       }
       else
       {

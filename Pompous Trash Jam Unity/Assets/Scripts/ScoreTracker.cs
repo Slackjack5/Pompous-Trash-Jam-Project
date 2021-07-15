@@ -5,10 +5,6 @@ using TMPro;
 
 public class ScoreTracker : MonoBehaviour
 {
-  [SerializeField] private GameObject box;
-  [SerializeField] private Transform spawnArea;
-  [SerializeField] private float spawnWidth = 12f;
-  [SerializeField] private float spawnInterval = 0.5f;
   [SerializeField] private int baseMultiplier = 100;
   [SerializeField] private float maxComboTime = 1f;
   [SerializeField] private int maxComboUpgradeCount = 10;
@@ -19,29 +15,29 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private int silverScore;
   [SerializeField] private int goldScore;
   [SerializeField] private TextMeshProUGUI starText;
+  [SerializeField] private TextMeshProUGUI highScoreText;
 
   private int comboMultiplier = 1;
   private float currentComboTime;
   private int currentComboUpgradeCount;
-  private bool isWaitingSpawn;
+  private int highScore;
+  private int score;
 
-  public int Score { get; private set; }
-
-  // Update is called once per frame
-  void Update()
+  private void Start()
   {
-    scoreText.text = Score.ToString();
+    highScore = PlayerPrefs.GetInt("highScore", 0);
+  }
+
+  private void Update()
+  {
+    scoreText.text = score.ToString();
     comboMultiplierText.text = comboMultiplier + "x";
     comboCountText.text = currentComboUpgradeCount + " / " + maxComboUpgradeCount;
     starText.text = EvaluateScore();
+    highScoreText.text = highScore.ToString();
 
     if (GameManager.IsGameActive)
     {
-      if (!isWaitingSpawn)
-      {
-        StartCoroutine(SetSpawnInterval());
-      }
-      
       if (currentComboTime > 0)
       {
         currentComboTime -= Time.deltaTime;
@@ -70,20 +66,28 @@ public class ScoreTracker : MonoBehaviour
       currentComboUpgradeCount = 0;
     }
 
-    Score += value * baseMultiplier * comboMultiplier;
+    score += value * baseMultiplier * comboMultiplier;
+
+    if (score > highScore)
+    {
+      highScore = score;
+
+      // Use PlayerPrefs to save values
+      PlayerPrefs.SetInt("highScore", highScore);
+    }
   }
 
   private string EvaluateScore()
   {
-    if (Score >= goldScore)
+    if (score >= goldScore)
     {
       return "3 Stars";
     }
-    else if (Score >= silverScore)
+    else if (score >= silverScore)
     {
       return "2 Stars";
     }
-    else if (Score >= bronzeScore)
+    else if (score >= bronzeScore)
     {
       return "1 Star";
     }
@@ -91,24 +95,5 @@ public class ScoreTracker : MonoBehaviour
     {
       return "0 Stars";
     }
-  }
-
-  private void Spawn()
-  {
-    float spawnHeight = spawnArea.position.y;
-    float min = spawnArea.position.x - (spawnWidth / 2);
-    float max = spawnArea.position.x + (spawnWidth / 2);
-
-    Vector2 spawnPosition = new Vector2(Random.Range(min, max), spawnHeight);
-    Instantiate(box, spawnPosition, Quaternion.identity);
-  }
-
-  private IEnumerator SetSpawnInterval()
-  {
-    isWaitingSpawn = true;
-    yield return new WaitForSeconds(spawnInterval);
-    isWaitingSpawn = false;
-
-    Spawn();
   }
 }
