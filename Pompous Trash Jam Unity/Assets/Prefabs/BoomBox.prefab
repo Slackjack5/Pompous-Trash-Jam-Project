@@ -152,6 +152,7 @@ MonoBehaviour:
   destructable: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
   Wormhole: {fileID: 958652358315364687, guid: a3b12e4323a002044894e174dd7c8b58, type: 3}
   Box: {fileID: 2202151929508145569, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
+  explosionVFX: {fileID: 267461415123664180, guid: b325f329fe9bbe14893057443aa536eb, type: 3}
   Explosive: 1
   gravityBox: 0
   infinityBox: 0

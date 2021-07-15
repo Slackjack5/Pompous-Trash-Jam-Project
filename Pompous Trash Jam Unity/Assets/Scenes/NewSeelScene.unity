@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411bcbfdbabf5246936812daa27b5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tubeMinigame: {fileID: 0}
   vacuumBone: {fileID: 116943209}
 --- !u!58 &58666160
 CircleCollider2D:
@@ -529,6 +530,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3082f1e5f71afb34e9334273dff8f796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trashCounter: {fileID: 0}
+  trash: Trash
+  tubeMinigame: {fileID: 0}
 --- !u!233 &116943213
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -656,7 +660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202151929508145597, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2202151929508145597, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -970,7 +974,7 @@ RectTransform:
   m_Children:
   - {fileID: 1863040126}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2036,7 +2040,7 @@ Transform:
   - {fileID: 276723935}
   - {fileID: 1984043355}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &590744674
 Rigidbody2D:
@@ -2209,7 +2213,7 @@ RectTransform:
   m_Children:
   - {fileID: 1844177569}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2387,7 +2391,7 @@ RectTransform:
   m_Children:
   - {fileID: 356308500}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2776,7 +2780,7 @@ Transform:
   m_LocalScale: {x: 16, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &889463307
 GameObject:
@@ -3591,7 +3595,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1311275857
 GameObject:
@@ -3761,7 +3765,7 @@ RectTransform:
   m_Children:
   - {fileID: 135414076}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3875,7 +3879,7 @@ Transform:
   m_LocalScale: {x: 1, y: 9, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369377965
 GameObject:
@@ -4234,8 +4238,65 @@ Transform:
   - {fileID: 1518011761}
   - {fileID: 116943208}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1482439421
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9083730487365473030, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_Name
+      value: BoomBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.7477973
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4509331
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083730487365473050, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03e3594560a701e458b6f71e27515897, type: 3}
 --- !u!1 &1518011758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4407,7 +4468,7 @@ RectTransform:
   m_Children:
   - {fileID: 558579159}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4594,11 +4655,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12addfad424e37941bd68d4bfaa57aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: {fileID: -944628639613478452, guid: cbf42aa6fec6e39488b92f37b93c974e, type: 3}
   buttonMashMinigame: {fileID: 1525289460}
   accuracyMinigame: {fileID: 723148405}
   alternatingButtonMashMinigame: {fileID: 312563547}
   sequenceMinigame: {fileID: 1884561162}
+  tubeMinigame: {fileID: 0}
 --- !u!4 &1559761009
 Transform:
   m_ObjectHideFlags: 0
@@ -4611,7 +4672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1699890148
 GameObject:
@@ -4667,7 +4728,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735660157
 GameObject:
@@ -4869,7 +4930,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1839968363
 GameObject:
@@ -5222,7 +5283,7 @@ RectTransform:
   m_Children:
   - {fileID: 533560265}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5731,7 +5792,7 @@ Transform:
   m_LocalScale: {x: 1, y: 9, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2068955970
 GameObject:
@@ -5895,7 +5956,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2123794201
 PrefabInstance:
@@ -5922,7 +5983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202151929508145597, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2202151929508145597, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
       propertyPath: m_LocalPosition.x
