@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
   public static Minigame CurrentMinigame { get; private set; }
 
   private static Vector2 defaultGravity = new Vector2(0, -9.8f);
+  private static bool isLevelComplete = false;
   private static bool isPaused = false;
   private static GameObject pauseMenu;
 
@@ -74,9 +75,10 @@ public class GameManager : MonoBehaviour
     Physics2D.gravity = Vector2.zero;
   }
 
-  public static void FreezeGame()
+  public static void EndLevel()
   {
-    Time.timeScale = 0;
+    FreezeGame();
+    isLevelComplete = true;
   }
 
   public static void EndMinigame()
@@ -100,16 +102,24 @@ public class GameManager : MonoBehaviour
 
   public static void TogglePause()
   {
-    if (isPaused)
+    if (!isLevelComplete)
     {
-      Resume();
-      isPaused = false;
+      if (isPaused)
+      {
+        Resume();
+        isPaused = false;
+      }
+      else
+      {
+        Pause();
+        isPaused = true;
+      }
     }
-    else
-    {
-      Pause();
-      isPaused = true;
-    }
+  }
+
+  private static void FreezeGame()
+  {
+    Time.timeScale = 0;
   }
 
   private static void Pause()
@@ -122,6 +132,11 @@ public class GameManager : MonoBehaviour
   {
     Time.timeScale = 1;
     pauseMenu.SetActive(false);
+  }
+
+  public void NextLevel()
+  {
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
   }
 
   public void Quit()
