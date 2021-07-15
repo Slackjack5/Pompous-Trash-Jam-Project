@@ -7,6 +7,8 @@ public class BoxDestruction : PhysicsObject
   [SerializeField] private int maxHealth = 3;
   [SerializeField] private float hitForce = 10f;
   [SerializeField] private float freezeTime = 0.4f;
+  [SerializeField] private float explodeSpeed = 10f;
+  [SerializeField] private string tube = "Tube";
 
   public GameObject destructable;
   public GameObject Wormhole;
@@ -20,13 +22,27 @@ public class BoxDestruction : PhysicsObject
   public float torque;
   public LayerMask LayerToHit;
 
+  private SpriteRenderer spriteRenderer;
+
   private int currentHealth;
+  private bool isExploded = false;
 
   protected override void Start()
   {
     base.Start();
 
+    spriteRenderer = GetComponent<SpriteRenderer>();
+
     currentHealth = maxHealth;
+  }
+
+  private void OnCollisionEnter2D(Collision2D collision)
+  {
+    if (Explosive && !isExploded && collision.gameObject.layer != LayerMask.NameToLayer(tube) && rb.velocity.magnitude >= explodeSpeed)
+    {
+      Destroy();
+      isExploded = true;
+    }
   }
 
   public void Hit(bool isHitRight)
@@ -59,6 +75,8 @@ public class BoxDestruction : PhysicsObject
     }
   private void Destroy()
   {
+    spriteRenderer.enabled = false;
+
     Instantiate(destructable, transform.position, Quaternion.identity);
     if (Explosive)
     {
@@ -91,10 +109,11 @@ public class BoxDestruction : PhysicsObject
         }
     }
     CameraShaker.Instance.ShakeOnce(2.5f, 2.5f, .2f, 2f);
-    StartCoroutine(Freeze());
+
+    StartCoroutine(FreezeImpact());
   }
 
-  private IEnumerator Freeze()
+  private IEnumerator FreezeImpact()
   {
     GameManager.DeactivateGame();
     yield return new WaitForSeconds(freezeTime);

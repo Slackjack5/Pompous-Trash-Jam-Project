@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
 
   public static void EndLevel()
   {
-    FreezeGame();
+    FreezeTime();
     isLevelComplete = true;
   }
 
@@ -117,14 +117,14 @@ public class GameManager : MonoBehaviour
     }
   }
 
-  private static void FreezeGame()
+  private static void FreezeTime()
   {
     Time.timeScale = 0;
   }
 
   private static void Pause()
   {
-    FreezeGame();
+    FreezeTime();
     pauseMenu.SetActive(true);
   }
 
