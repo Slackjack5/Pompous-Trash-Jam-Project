@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
   public static Minigame CurrentMinigame { get; private set; }
 
   private static Vector2 defaultGravity = new Vector2(0, -9.8f);
+  private static bool isLevelComplete = false;
   private static bool isPaused = false;
   private static GameObject pauseMenu;
 
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
   public static void EndLevel()
   {
     FreezeGame();
+    isLevelComplete = true;
   }
 
   public static void EndMinigame()
@@ -100,15 +102,18 @@ public class GameManager : MonoBehaviour
 
   public static void TogglePause()
   {
-    if (isPaused)
+    if (!isLevelComplete)
     {
-      Resume();
-      isPaused = false;
-    }
-    else
-    {
-      Pause();
-      isPaused = true;
+      if (isPaused)
+      {
+        Resume();
+        isPaused = false;
+      }
+      else
+      {
+        Pause();
+        isPaused = true;
+      }
     }
   }
 
