@@ -19,7 +19,7 @@ public class ExplosionVFX : MonoBehaviour
   {
     if ((Time.time - startTime) > 5)
     {
-      Destroy(this);
+      Destroy(gameObject);
     }
   }
 }
