@@ -5311,6 +5311,8 @@ MonoBehaviour:
   star: {fileID: 1350523212213426446, guid: e511e1e176dd2c14ab7e8152837c2d2c, type: 3}
   highScoreText: {fileID: 1401144582}
   comboProgress: {fileID: 1828894380}
+  comboPanel: {fileID: 643213642}
+  comboMaxSize: 1.2
 --- !u!4 &1310723170
 Transform:
   m_ObjectHideFlags: 0
