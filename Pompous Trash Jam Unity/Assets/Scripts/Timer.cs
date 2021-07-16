@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
   [SerializeField] private float maxTime = 100f;
   [SerializeField] private GameObject levelCompleteCanvas;
   [SerializeField] private TextMeshProUGUI timerText;
+  [SerializeField] private TextMeshProUGUI shadowTimerText;
   [SerializeField] private TextMeshProUGUI countdownText;
   [SerializeField] private float maxFontSize = 72f;
   [SerializeField] private float minFontSize = 24f;
@@ -29,6 +30,7 @@ public class Timer : MonoBehaviour
   void Update()
   {
     timerText.text = FormatTime(currentTimeLeft);
+    shadowTimerText.text = FormatTime(currentTimeLeft);
 
     if (isCountingDown)
     {

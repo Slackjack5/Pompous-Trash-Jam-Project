@@ -10,7 +10,9 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private float maxComboTime = 1f;
   [SerializeField] private int maxComboUpgradeCount = 10;
   [SerializeField] private TextMeshProUGUI scoreText;
+  [SerializeField] private TextMeshProUGUI shadowScoreText;
   [SerializeField] private TextMeshProUGUI comboMultiplierText;
+  [SerializeField] private TextMeshProUGUI shadowComboMultiplierText;
   [SerializeField] private TextMeshProUGUI comboCountText;
   [SerializeField] private int bronzeScore;
   [SerializeField] private int silverScore;
@@ -37,8 +39,11 @@ public class ScoreTracker : MonoBehaviour
 
   private void Update()
   {
+    // Update score text
     scoreText.text = score.ToString();
+    shadowScoreText.text = score.ToString();
     comboMultiplierText.text = comboMultiplier + "x";
+    shadowComboMultiplierText.text = comboMultiplier + "x";
     comboCountText.text = currentComboUpgradeCount + " / " + maxComboUpgradeCount;
     highScoreText.text = highScore.ToString();
 
