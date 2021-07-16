@@ -56,11 +56,6 @@ public class ScoreTracker : MonoBehaviour
     }
   }
 
-  private void OnGUI()
-  {
-    GUI.Label(new Rect(10, 10, 400, 30), "currentComboTime: " + currentComboTime);
-  }
-
   public void Increase(int value)
   {
     currentComboTime = maxComboTime;
