@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
   [SerializeField] private TubeMinigame tubeMinigame;
   [SerializeField] private GameObject pauseMenuCanvas;
 
+  public static readonly UnityEvent levelComplete = new UnityEvent();
+
   public static bool IsGameActive { get; private set; }
 
   public static bool IsMinigameActive {
@@ -80,6 +82,7 @@ public class GameManager : MonoBehaviour
   public static void EndLevel()
   {
     FreezeTime();
+    levelComplete.Invoke();
     isLevelComplete = true;
   }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class ScoreTracker : MonoBehaviour
@@ -14,7 +15,8 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private int bronzeScore;
   [SerializeField] private int silverScore;
   [SerializeField] private int goldScore;
-  [SerializeField] private TextMeshProUGUI starText;
+  [SerializeField] private GameObject starPanel;
+  [SerializeField] private GameObject star;
   [SerializeField] private TextMeshProUGUI highScoreText;
 
   private int comboMultiplier = 1;
@@ -26,6 +28,11 @@ public class ScoreTracker : MonoBehaviour
   private void Start()
   {
     highScore = PlayerPrefs.GetInt("highScore", 0);
+
+    GameManager.levelComplete.AddListener(() =>
+    {
+      EvaluateScore();
+    });
   }
 
   private void Update()
@@ -33,7 +40,6 @@ public class ScoreTracker : MonoBehaviour
     scoreText.text = score.ToString();
     comboMultiplierText.text = comboMultiplier + "x";
     comboCountText.text = currentComboUpgradeCount + " / " + maxComboUpgradeCount;
-    starText.text = EvaluateScore();
     highScoreText.text = highScore.ToString();
 
     if (GameManager.IsGameActive)
@@ -77,23 +83,31 @@ public class ScoreTracker : MonoBehaviour
     }
   }
 
-  private string EvaluateScore()
+  private void EvaluateScore()
   {
+    int numStars;
     if (score >= goldScore)
     {
-      return "3 Stars";
+      numStars = 3;
     }
     else if (score >= silverScore)
     {
-      return "2 Stars";
+      numStars = 2;
     }
     else if (score >= bronzeScore)
     {
-      return "1 Star";
+      numStars = 1;
     }
     else
     {
-      return "0 Stars";
+      numStars = 0;
+    }
+
+    for (int i = 0; i < numStars; i++)
+    {
+      GameObject newStar = Instantiate(star);
+      RectTransform rectTransform = newStar.GetComponent<RectTransform>();
+      rectTransform.SetParent(starPanel.transform);
     }
   }
 }

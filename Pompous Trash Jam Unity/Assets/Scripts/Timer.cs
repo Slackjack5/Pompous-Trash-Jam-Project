@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
 
   private float currentCountdownTime = 3f;
   private bool isCountingDown = true;
+  private bool isTimeDone = false;
   private float currentTimeLeft;
 
   // Start is called before the first frame update
@@ -45,9 +46,10 @@ public class Timer : MonoBehaviour
     }
     else
     {
-      if (currentTimeLeft <= 0)
+      if (currentTimeLeft <= 0 && !isTimeDone)
       {
         // Player ran out of time
+        isTimeDone = true;
         currentTimeLeft = 0;
         levelCompleteCanvas.SetActive(true);
         GameManager.EndLevel();
