@@ -13,22 +13,29 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private TextMeshProUGUI shadowScoreText;
   [SerializeField] private TextMeshProUGUI comboMultiplierText;
   [SerializeField] private TextMeshProUGUI shadowComboMultiplierText;
-  [SerializeField] private TextMeshProUGUI comboCountText;
   [SerializeField] private int bronzeScore;
   [SerializeField] private int silverScore;
   [SerializeField] private int goldScore;
   [SerializeField] private GameObject starPanel;
   [SerializeField] private GameObject star;
   [SerializeField] private TextMeshProUGUI highScoreText;
+  [SerializeField] private Image comboProgress;
+  [SerializeField] private GameObject comboPanel;
+  [SerializeField] private float comboMaxSize = 1.2f;
+
+  private RectTransform comboRectTransform;
 
   private int comboMultiplier = 1;
   private float currentComboTime;
   private int currentComboUpgradeCount;
+  private float currentScaleTime;
   private int highScore;
   private int score;
 
   private void Start()
   {
+    comboRectTransform = comboPanel.GetComponent<RectTransform>();
+
     highScore = PlayerPrefs.GetInt("highScore", 0);
 
     GameManager.levelComplete.AddListener(() =>
@@ -44,11 +51,18 @@ public class ScoreTracker : MonoBehaviour
     shadowScoreText.text = score.ToString();
     comboMultiplierText.text = comboMultiplier + "x";
     shadowComboMultiplierText.text = comboMultiplier + "x";
-    comboCountText.text = currentComboUpgradeCount + " / " + maxComboUpgradeCount;
     highScoreText.text = highScore.ToString();
+
+    comboProgress.fillAmount = (float) currentComboUpgradeCount / maxComboUpgradeCount;
 
     if (GameManager.IsGameActive)
     {
+      if (currentScaleTime > 0)
+      {
+        currentScaleTime -= Time.deltaTime;
+        RestoreSize();
+      }
+
       if (currentComboTime > 0)
       {
         currentComboTime -= Time.deltaTime;
@@ -65,6 +79,7 @@ public class ScoreTracker : MonoBehaviour
   {
     currentComboTime = maxComboTime;
     currentComboUpgradeCount++;
+    Bulge();
 
     if (currentComboUpgradeCount >= maxComboUpgradeCount)
     {
@@ -81,6 +96,18 @@ public class ScoreTracker : MonoBehaviour
       // Use PlayerPrefs to save values
       PlayerPrefs.SetInt("highScore", highScore);
     }
+  }
+
+  private void Bulge()
+  {
+    comboRectTransform.localScale = new Vector3(comboMaxSize, comboMaxSize);
+    currentScaleTime = 1f;
+  }
+
+  private void RestoreSize()
+  {
+    float size = Mathf.Lerp(1, comboMaxSize, currentScaleTime);
+    comboRectTransform.localScale = new Vector3(size, size);
   }
 
   private void EvaluateScore()
