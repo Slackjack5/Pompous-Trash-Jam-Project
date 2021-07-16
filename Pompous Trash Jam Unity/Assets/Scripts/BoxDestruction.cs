@@ -16,6 +16,8 @@ public class BoxDestruction : PhysicsObject
   public GameObject Wormhole;
   public GameObject Box;
   public GameObject explosionVFX;
+  public GameObject blackHoleVFX;
+  public Material blackHoleVFXMat;
   public bool Explosive;
   public bool gravityBox;
   public bool infinityBox;
@@ -97,7 +99,7 @@ public class BoxDestruction : PhysicsObject
     }
     if (gravityBox)
     {
-      Instantiate(Wormhole, new Vector2(transform.position.x, transform.position.y + 2), Quaternion.identity);
+      Instantiate(Wormhole, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
     }
     else if (infinityBox)
     {
@@ -131,13 +133,23 @@ public class BoxDestruction : PhysicsObject
     GameManager.DeactivateGame();
     yield return new WaitForSeconds(freezeTime);
     GameManager.ActivateGame();
-    if (Explosive)
+    if (Explosive && !gravityBox)
     {
       Shader.SetGlobalFloat("_ShockTime", Time.time);
       Vector2 focalPoint = new Vector2(Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).x / Screen.width, Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).y / Screen.height);
       Shader.SetGlobalVector("_FocalPoint", focalPoint);
       Instantiate(explosionVFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
     }
+    if (gravityBox)
+    {
+      Shader.SetGlobalFloat("_ShockTime", Time.time);
+      Vector2 focalPoint = new Vector2(Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).x / Screen.width, Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).y / Screen.height);
+      Shader.SetGlobalVector("_FocalPoint", focalPoint);
+      GameObject temp = Instantiate(blackHoleVFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+      SpriteRenderer tempSR = temp.GetComponentInChildren<SpriteRenderer>();
+      tempSR.material = new Material(blackHoleVFXMat);
+    }
+
     DestroyGameObject();
   }
 
