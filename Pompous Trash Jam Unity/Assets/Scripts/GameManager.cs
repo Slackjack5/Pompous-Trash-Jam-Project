@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
   [SerializeField] private TubeMinigame tubeMinigame;
   [SerializeField] private GameObject pauseMenuCanvas;
 
+  public static readonly UnityEvent levelComplete = new UnityEvent();
+
   public static bool IsGameActive { get; private set; }
 
   public static bool IsMinigameActive {
@@ -39,32 +41,6 @@ public class GameManager : MonoBehaviour
     isLevelComplete = false;
   }
 
-  private void OnGUI()
-  {
-    if (GUI.Button(new Rect(25, 25, 120, 40), "Start Button Mash"))
-    {
-      StartMinigame(buttonMashMinigame);
-    }
-
-    if (GUI.Button(new Rect(145, 25, 120, 40), "Start Accuracy"))
-    {
-      StartMinigame(accuracyMinigame);
-    }
-
-    if (GUI.Button(new Rect(265, 25, 120, 40), "Start Alternating Button Mash"))
-    {
-      StartMinigame(alternatingButtonMashMinigame);
-    }
-
-    if (GUI.Button(new Rect(385, 25, 120, 40), "Start Sequence"))
-    {
-      StartMinigame(sequenceMinigame);
-    }
-
-    GUI.Label(new Rect(10, 70, 400, 40), "IsGameActive: " + IsGameActive);
-    GUI.Label(new Rect(10, 90, 400, 40), "IsMinigameActive: " + IsMinigameActive);
-  }
-
   public static void ActivateGame()
   {
     IsGameActive = true;
@@ -80,6 +56,7 @@ public class GameManager : MonoBehaviour
   public static void EndLevel()
   {
     FreezeTime();
+    levelComplete.Invoke();
     isLevelComplete = true;
   }
 

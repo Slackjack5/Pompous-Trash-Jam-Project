@@ -8,12 +8,14 @@ public class Timer : MonoBehaviour
   [SerializeField] private float maxTime = 100f;
   [SerializeField] private GameObject levelCompleteCanvas;
   [SerializeField] private TextMeshProUGUI timerText;
+  [SerializeField] private TextMeshProUGUI shadowTimerText;
   [SerializeField] private TextMeshProUGUI countdownText;
   [SerializeField] private float maxFontSize = 72f;
   [SerializeField] private float minFontSize = 24f;
 
   private float currentCountdownTime = 3f;
   private bool isCountingDown = true;
+  private bool isTimeDone = false;
   private float currentTimeLeft;
 
   // Start is called before the first frame update
@@ -28,6 +30,7 @@ public class Timer : MonoBehaviour
   void Update()
   {
     timerText.text = FormatTime(currentTimeLeft);
+    shadowTimerText.text = FormatTime(currentTimeLeft);
 
     if (isCountingDown)
     {
@@ -45,9 +48,10 @@ public class Timer : MonoBehaviour
     }
     else
     {
-      if (currentTimeLeft <= 0)
+      if (currentTimeLeft <= 0 && !isTimeDone)
       {
         // Player ran out of time
+        isTimeDone = true;
         currentTimeLeft = 0;
         levelCompleteCanvas.SetActive(true);
         GameManager.EndLevel();
