@@ -13,19 +13,23 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private TextMeshProUGUI shadowScoreText;
   [SerializeField] private TextMeshProUGUI comboMultiplierText;
   [SerializeField] private TextMeshProUGUI shadowComboMultiplierText;
+  [SerializeField] private TextMeshProUGUI exclamation;
+  [SerializeField] private TextMeshProUGUI shadowExclamation;
   [SerializeField] private int bronzeScore;
   [SerializeField] private int silverScore;
   [SerializeField] private int goldScore;
   [SerializeField] private GameObject starPanel;
   [SerializeField] private GameObject star;
   [SerializeField] private TextMeshProUGUI highScoreText;
+  [SerializeField] private int[] comboMultipliers;
+  [SerializeField] private string[] exclamations;
   [SerializeField] private Image comboProgress;
   [SerializeField] private GameObject comboPanel;
   [SerializeField] private float comboMaxSize = 1.2f;
 
   private RectTransform comboRectTransform;
 
-  private int comboMultiplier = 1;
+  private int comboMultiplierIndex;
   private float currentComboTime;
   private int currentComboUpgradeCount;
   private float currentScaleTime;
@@ -46,12 +50,14 @@ public class ScoreTracker : MonoBehaviour
 
   private void Update()
   {
-    // Update score text
+    // Update text
     scoreText.text = score.ToString();
     shadowScoreText.text = score.ToString();
-    comboMultiplierText.text = comboMultiplier + "x";
-    shadowComboMultiplierText.text = comboMultiplier + "x";
+    comboMultiplierText.text = comboMultipliers[comboMultiplierIndex] + "x";
+    shadowComboMultiplierText.text = comboMultipliers[comboMultiplierIndex] + "x";
     highScoreText.text = highScore.ToString();
+    exclamation.text = exclamations[comboMultiplierIndex];
+    shadowExclamation.text = exclamations[comboMultiplierIndex];
 
     comboProgress.fillAmount = (float) currentComboUpgradeCount / maxComboUpgradeCount;
 
@@ -69,7 +75,7 @@ public class ScoreTracker : MonoBehaviour
       }
       else
       {
-        comboMultiplier = 1;
+        comboMultiplierIndex = 0;
         currentComboUpgradeCount = 0;
       }
     }
@@ -83,11 +89,18 @@ public class ScoreTracker : MonoBehaviour
 
     if (currentComboUpgradeCount >= maxComboUpgradeCount)
     {
-      comboMultiplier++;
-      currentComboUpgradeCount = 0;
+      if (comboMultiplierIndex == comboMultipliers.Length - 1)
+      {
+        currentComboUpgradeCount = maxComboUpgradeCount;
+      }
+      else
+      {
+        comboMultiplierIndex++;
+        currentComboUpgradeCount = 0;
+      }
     }
 
-    score += value * baseMultiplier * comboMultiplier;
+    score += value * baseMultiplier * comboMultipliers[comboMultiplierIndex];
 
     if (score > highScore)
     {
