@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
   [SerializeField] private GameObject box;
   [SerializeField] private float spawnWidth = 12f;
-  [SerializeField] private float spawnInterval = 0.5f;
+  [SerializeField] private float spawnInterval = 1.5f;
 
   private bool isWaitingSpawn;
 
