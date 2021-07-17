@@ -17,6 +17,7 @@ public class BoxDestruction : PhysicsObject
   public GameObject Box;
   public GameObject explosionVFX;
   public GameObject blackHoleVFX;
+  public GameObject infinityVFX;
   public Material blackHoleVFXMat;
   public bool Explosive;
   public bool gravityBox;
@@ -74,7 +75,7 @@ public class BoxDestruction : PhysicsObject
     foreach (Collider2D obj in objects)
     {
       float theForce = force;
-      if (obj.name == player.gameObject.name)
+      if (obj.name == "Capsule Player")
       {
         theForce *= playerForceMultiplier;
         player.Stun();
@@ -133,7 +134,7 @@ public class BoxDestruction : PhysicsObject
     GameManager.DeactivateGame();
     yield return new WaitForSeconds(freezeTime);
     GameManager.ActivateGame();
-    if (Explosive && !gravityBox)
+    if (Explosive && !gravityBox && !infinityBox)
     {
       Shader.SetGlobalFloat("_ShockTime", Time.time);
       Vector2 focalPoint = new Vector2(Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).x / Screen.width, Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).y / Screen.height);
@@ -148,6 +149,10 @@ public class BoxDestruction : PhysicsObject
       GameObject temp = Instantiate(blackHoleVFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
       SpriteRenderer tempSR = temp.GetComponentInChildren<SpriteRenderer>();
       tempSR.material = new Material(blackHoleVFXMat);
+    }
+    if (infinityBox)
+    {
+      Instantiate(infinityVFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
     }
 
     DestroyGameObject();

@@ -147,11 +147,16 @@ MonoBehaviour:
   maxHealth: 3
   hitForce: 500
   freezeTime: 0.1
+  explodeSpeed: 10
+  tube: Tube
+  player: {fileID: 0}
+  playerForceMultiplier: 3
   destructable: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
   Wormhole: {fileID: 958652358315364687, guid: a3b12e4323a002044894e174dd7c8b58, type: 3}
   Box: {fileID: 2202151929508145569}
   explosionVFX: {fileID: 267461415123664180, guid: b325f329fe9bbe14893057443aa536eb, type: 3}
   blackHoleVFX: {fileID: 853518560958430793, guid: d851685f2746c0746893b473e35677ad, type: 3}
+  infinityVFX: {fileID: 0}
   blackHoleVFXMat: {fileID: 2100000, guid: 5309fe80cbacdea41a078b0e442d6ff6, type: 2}
   Explosive: 0
   gravityBox: 0

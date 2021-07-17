@@ -9,7 +9,7 @@ public class VacuumColliderController : MonoBehaviour
   public Rigidbody2D vacuumBone;
   void OnTriggerStay2D(Collider2D col)
   {
-    if (GameManager.IsGameActive && !tubeMinigame.IsReady && col.attachedRigidbody != null && Input.GetMouseButton(0))
+    if (GameManager.IsGameActive && !tubeMinigame.IsReady && col.attachedRigidbody != null && Input.GetMouseButton(0) && col.gameObject.name != "Capsule Player")
     {
       float dist = Vector2.Distance(col.attachedRigidbody.transform.position, vacuumBone.transform.position);
       dist = Mathf.Max(dist, 0.2f);

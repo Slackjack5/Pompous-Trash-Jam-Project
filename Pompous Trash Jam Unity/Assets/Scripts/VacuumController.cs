@@ -9,7 +9,6 @@ public class VacuumController : MonoBehaviour
   [SerializeField] private ScoreTracker scoreTracker;
   [SerializeField] private string trash = "Trash";
   [SerializeField] private TubeMinigame tubeMinigame;
-
   Rigidbody2D bone;
   VisualEffect vfx;
   // Start is called before the first frame update
@@ -46,7 +45,7 @@ public class VacuumController : MonoBehaviour
 
   void OnCollisionEnter2D(Collision2D col)
   {
-    if (col.gameObject.layer == LayerMask.NameToLayer(trash) && col.gameObject.name != "Capsule Player")
+    if (col.gameObject.layer == LayerMask.NameToLayer(trash))
     {
       scoreTracker.Increase(1);
       Destroy(col.gameObject);
