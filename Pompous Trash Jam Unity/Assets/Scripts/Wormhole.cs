@@ -26,30 +26,29 @@ public class Wormhole : MonoBehaviour
     StartCoroutine("EndWormHole");
   }
 
-    private void Explosion()
+  private void Explosion()
+  {
+    Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldofImpact, LayerToHit);
+    foreach (Collider2D obj in objects)
     {
-        Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldofImpact, LayerToHit);
-        foreach (Collider2D obj in objects)
-        {
-            float randTorque = Random.Range(-25, 25);
-            Vector2 direction = obj.transform.position - transform.position;
-            obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
-            obj.GetComponent<Rigidbody2D>().AddForce(transform.up * force / 2);
-            obj.GetComponent<Rigidbody2D>().AddTorque(randTorque);
-        }
+      float randTorque = Random.Range(-25, 25);
+      Vector2 direction = obj.transform.position - transform.position;
+      obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
+      obj.GetComponent<Rigidbody2D>().AddForce(transform.up * force / 2);
+      obj.GetComponent<Rigidbody2D>().AddTorque(randTorque);
     }
+  }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  // Update is called once per frame
+  void Update()
+  {
 
-    IEnumerator EndWormHole()
-    {
+  }
 
-        yield return new WaitForSeconds(5f);
-        Explosion();
-        Destroy(gameObject);
-    }
+  IEnumerator EndWormHole()
+  {
+    yield return new WaitForSeconds(5f);
+    Explosion();
+    Destroy(gameObject);
+  }
 }

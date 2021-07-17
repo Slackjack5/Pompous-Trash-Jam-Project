@@ -44,10 +44,20 @@ public class BoxDestruction : PhysicsObject
     CameraShaker.Instance.ShakeOnce(2.5f, 2.5f, .2f, 2f);
   }
 
+  protected virtual void PostDestroy()
+  {
+
+  }
+
   protected virtual void Destroy()
   {
     PreDestroy();
     StartCoroutine(FreezeImpact());
+  }
+
+  public void BlackHoleDestroy()
+  {
+    PreDestroy();
   }
 
   protected IEnumerator FreezeImpact()
@@ -55,7 +65,7 @@ public class BoxDestruction : PhysicsObject
     GameManager.DeactivateGame();
     yield return new WaitForSeconds(freezeTime);
     GameManager.ActivateGame();
-
+    PostDestroy();
     Destroy(gameObject);
   }
 
