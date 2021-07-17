@@ -2720,6 +2720,7 @@ GameObject:
   - component: {fileID: 643213643}
   - component: {fileID: 643213645}
   - component: {fileID: 643213644}
+  - component: {fileID: 643213646}
   m_Layer: 5
   m_Name: Combo
   m_TagString: Untagged
@@ -2789,6 +2790,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643213642}
   m_CullTransparentMesh: 1
+--- !u!114 &643213646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643213642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e184fd8b13475843b335060d1e57257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxComboTime: 1
+  maxComboUpgradeCount: 10
+  comboMultipliers: 0100000002000000050000000a00000032000000
+  exclamations:
+  - 
+  - GREAT!
+  - SUPER!
+  - OUTSTANDING!
+  - SENSATIONAL!
+  comboMultiplierText: {fileID: 611312664}
+  shadowComboMultiplierText: {fileID: 659049002}
+  exclamation: {fileID: 1103842666}
+  shadowExclamation: {fileID: 896366734}
+  comboProgress: {fileID: 1828894380}
+  maxScaleTime: 1
+  comboMaxSize: 1.2
 --- !u!1 &659049000
 GameObject:
   m_ObjectHideFlags: 0
@@ -5667,30 +5696,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseMultiplier: 100
-  maxComboTime: 1
-  maxComboUpgradeCount: 10
+  combo: {fileID: 643213646}
   scoreText: {fileID: 346484315}
   shadowScoreText: {fileID: 591312824}
-  comboMultiplierText: {fileID: 611312664}
-  shadowComboMultiplierText: {fileID: 659049002}
-  exclamation: {fileID: 1103842666}
-  shadowExclamation: {fileID: 896366734}
   bronzeScore: 1000
   silverScore: 2000
   goldScore: 3000
   starPanel: {fileID: 712308589}
   star: {fileID: 1350523212213426446, guid: e511e1e176dd2c14ab7e8152837c2d2c, type: 3}
   highScoreText: {fileID: 1401144582}
-  comboMultipliers: 0100000002000000050000000a00000032000000
-  exclamations:
-  - 
-  - GREAT!
-  - SUPER!
-  - OUTSTANDING!
-  - SENSATIONAL!
-  comboProgress: {fileID: 1828894380}
-  comboPanel: {fileID: 643213642}
-  comboMaxSize: 1.2
   pointsCanvas: {fileID: 1002112075}
   pointsObject: {fileID: 7185819809198225204, guid: 1c25c6b881452c741a67e1a11d892e51, type: 3}
   tubeEntry: {fileID: 616557220}
