@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="3491673687">
+		<SoundBank Id="85412153" Language="SFX" Hash="2768442662">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
@@ -72,7 +72,7 @@
 						</File>
 						<File Id="792431716" Language="SFX">
 							<ShortName>WoodBreak\SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse.wav</ShortName>
-							<Path>SFX\WoodBreak\SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse_D15B8345.wem</Path>
+							<Path>SFX\WoodBreak\SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse_6F21EB07.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -145,7 +145,7 @@
 					<IncludedMemoryFiles>
 						<File Id="157096378" Language="SFX">
 							<ShortName>BRS_Vacuum_Bissell_Rev_Short_1.wav</ShortName>
-							<Path>SFX\BRS_Vacuum_Bissell_Rev_Short_1_95BB3DB3.wem</Path>
+							<Path>SFX\BRS_Vacuum_Bissell_Rev_Short_1_AD8B7609.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<AuxBusSends>

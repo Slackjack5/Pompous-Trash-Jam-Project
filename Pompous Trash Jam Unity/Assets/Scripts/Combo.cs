@@ -37,6 +37,7 @@ public class Combo : MonoBehaviour
 
   private void Update()
   {
+    Debug.Log("Current Multiplier"+ComboMultiplierIndex);
     // Update text
     comboMultiplierText.text = comboMultipliers[ComboMultiplierIndex] + "x";
     shadowComboMultiplierText.text = comboMultipliers[ComboMultiplierIndex] + "x";
@@ -90,6 +91,8 @@ public class Combo : MonoBehaviour
     currentComboTime = maxComboTime;
     currentComboUpgradeCount++;
 
+
+
     if (currentComboUpgradeCount >= maxComboUpgradeCount)
     {
       if (ComboMultiplierIndex == comboMultipliers.Length - 1)
@@ -100,6 +103,24 @@ public class Combo : MonoBehaviour
       else
       {
         ComboMultiplierIndex++;
+        //Audio
+        if (ComboMultiplierIndex == 1)
+        {
+          AkSoundEngine.PostEvent("Play_AnnouncerGreat", gameObject);
+        }
+        else if (ComboMultiplierIndex == 2)
+        {
+          AkSoundEngine.PostEvent("Play_AnnouncerSuper", gameObject);
+        }
+        else if (ComboMultiplierIndex == 3)
+        {
+          AkSoundEngine.PostEvent("Play_AnnouncerOutstanding", gameObject);
+        }
+        else if (ComboMultiplierIndex == 4)
+        {
+          AkSoundEngine.PostEvent("Play_AnnouncerSensational", gameObject);
+        }
+
         currentComboUpgradeCount = 0;
       }
     }
