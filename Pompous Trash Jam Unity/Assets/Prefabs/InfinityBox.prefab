@@ -147,10 +147,6 @@ MonoBehaviour:
   maxHealth: 3
   hitForce: 10
   freezeTime: 0.4
-  explodeSpeed: 10
-  tube: Tube
-  player: {fileID: 0}
-  playerForceMultiplier: 3
   destructable: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
   fieldOfImpact: 2
   explosiveForce: 600
@@ -158,3 +154,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   box: {fileID: 2202151929508145569, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
+  infinityVFX: {fileID: 3508066184126592876, guid: 5dfbed7f9cbe8f34e9615fe68195700f, type: 3}
