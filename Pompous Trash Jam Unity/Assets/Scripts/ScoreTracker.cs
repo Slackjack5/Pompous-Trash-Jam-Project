@@ -26,6 +26,9 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private Image comboProgress;
   [SerializeField] private GameObject comboPanel;
   [SerializeField] private float comboMaxSize = 1.2f;
+  [SerializeField] private GameObject pointsCanvas;
+  [SerializeField] private GameObject pointsObject;
+  [SerializeField] private Transform tubeEntry;
 
   private RectTransform comboRectTransform;
 
@@ -100,7 +103,10 @@ public class ScoreTracker : MonoBehaviour
       }
     }
 
-    score += value * baseMultiplier * comboMultipliers[comboMultiplierIndex];
+    int points = value * baseMultiplier * comboMultipliers[comboMultiplierIndex];
+    score += points;
+
+    SpawnPoints(points);
 
     if (score > highScore)
     {
@@ -121,6 +127,22 @@ public class ScoreTracker : MonoBehaviour
   {
     float size = Mathf.Lerp(1, comboMaxSize, currentScaleTime);
     comboRectTransform.localScale = new Vector3(size, size);
+  }
+
+  private void SpawnPoints(int points)
+  {
+    GameObject newPointsObject = Instantiate(pointsObject, pointsCanvas.transform);
+
+    RectTransform rectTransform = newPointsObject.GetComponent<RectTransform>();
+    Vector2 viewportPoint = Camera.main.WorldToViewportPoint(tubeEntry.position);
+    rectTransform.anchorMin = viewportPoint;
+    rectTransform.anchorMax = viewportPoint;
+
+    TextMeshProUGUI[] texts = newPointsObject.GetComponentsInChildren<TextMeshProUGUI>();
+    foreach (TextMeshProUGUI text in texts)
+    {
+      text.text = "+" + points;
+    }
   }
 
   private void EvaluateScore()
