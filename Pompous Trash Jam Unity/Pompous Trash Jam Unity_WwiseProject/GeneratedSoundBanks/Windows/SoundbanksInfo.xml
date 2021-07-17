@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="2049358642">
+		<SoundBank Id="85412153" Language="SFX" Hash="2768442662">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
@@ -60,6 +60,22 @@
 						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 					</AuxBusSends>
 				</Event>
+				<Event Id="843996146" Name="Play_BoxBreak" ObjectPath="\Events\Default Work Unit\Play_BoxBreak" DurationType="OneShot" DurationMin="0.674404" DurationMax="2.059344">
+					<IncludedMemoryFiles>
+						<File Id="310359424" Language="SFX">
+							<ShortName>WoodBreak\SPLC-1333_FX_Oneshot_Wood_Hit_Smashing.wav</ShortName>
+							<Path>SFX\WoodBreak\SPLC-1333_FX_Oneshot_Wood_Hit_Smashing_151B07DB.wem</Path>
+						</File>
+						<File Id="407245434" Language="SFX">
+							<ShortName>ESM_Builder_Game_Wood_Break_Large_3_Organic_Smash_Crash_Crumble_Drop_Splatter_Particle_Hit_Stab_Impact.wav</ShortName>
+							<Path>SFX\ESM_Builder_Game_Wood_Break_Large_3_Organic_Smash_Crash_Crumble_Drop_Splatter_Particle_Hit_Stab_Impact_10C4C929.wem</Path>
+						</File>
+						<File Id="792431716" Language="SFX">
+							<ShortName>WoodBreak\SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse.wav</ShortName>
+							<Path>SFX\WoodBreak\SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse_6F21EB07.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="762239356" Name="Play_BoxHit" ObjectPath="\Events\Default Work Unit\Play_BoxHit" DurationType="OneShot" DurationMin="0.975238" DurationMax="1.300317">
 					<IncludedMemoryFiles>
 						<File Id="228988825" Language="SFX">
@@ -80,6 +96,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="301007570" Name="Play_BoxThud" ObjectPath="\Events\Default Work Unit\Play_BoxThud" DurationType="OneShot" DurationMin="0.461139" DurationMax="1.845333"/>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.273314" DurationMax="0.581079">
 					<IncludedMemoryFiles>
 						<File Id="89330362" Language="SFX">
@@ -124,7 +141,60 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1424032314" Name="Play_VacuumEnd" ObjectPath="\Events\Default Work Unit\Play_VacuumEnd" DurationType="OneShot" DurationMin="5.457418" DurationMax="5.457418">
+					<IncludedMemoryFiles>
+						<File Id="157096378" Language="SFX">
+							<ShortName>BRS_Vacuum_Bissell_Rev_Short_1.wav</ShortName>
+							<Path>SFX\BRS_Vacuum_Bissell_Rev_Short_1_AD8B7609.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3537388541" Name="Play_VacuumLoop" ObjectPath="\Events\Default Work Unit\Play_VacuumLoop" DurationType="OneShot" DurationMin="60.139683" DurationMax="60.139683">
+					<IncludedMemoryFiles>
+						<File Id="262164500" Language="SFX">
+							<ShortName>Vacuum\VacuumLoop.wav</ShortName>
+							<Path>SFX\Vacuum\VacuumLoop_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="740603203" Name="Stop_VacuumLoop" ObjectPath="\Events\Default Work Unit\Stop_VacuumLoop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="2430078" Language="SFX">
+					<ShortName>WoodThud\Wood Thud 6.wav</ShortName>
+					<Path>SFX\WoodThud\Wood Thud 6_10C4C929.wem</Path>
+				</File>
+				<File Id="144115303" Language="SFX">
+					<ShortName>WoodThud\Wood Thud 2.wav</ShortName>
+					<Path>SFX\WoodThud\Wood Thud 2_10C4C929.wem</Path>
+				</File>
+				<File Id="271794642" Language="SFX">
+					<ShortName>WoodThud\Wood Thud 7.wav</ShortName>
+					<Path>SFX\WoodThud\Wood Thud 7_10C4C929.wem</Path>
+				</File>
+				<File Id="454540404" Language="SFX">
+					<ShortName>WoodThud\Wood Thud 3.wav</ShortName>
+					<Path>SFX\WoodThud\Wood Thud 3_1036C15D.wem</Path>
+				</File>
+				<File Id="525101497" Language="SFX">
+					<ShortName>WoodThud\Wood Thud 5.wav</ShortName>
+					<Path>SFX\WoodThud\Wood Thud 5_80CD3A19.wem</Path>
+				</File>
+				<File Id="752847234" Language="SFX">
+					<ShortName>WoodThud\Wood Thud 1.wav</ShortName>
+					<Path>SFX\WoodThud\Wood Thud 1_10C4C929.wem</Path>
+				</File>
+				<File Id="777306263" Language="SFX">
+					<ShortName>WoodThud\Wood Thud 4.wav</ShortName>
+					<Path>SFX\WoodThud\Wood Thud 4_81E2876F.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="1463999939">
 			<ObjectPath>Init</ObjectPath>

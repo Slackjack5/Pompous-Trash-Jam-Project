@@ -80,6 +80,66 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_BoxBreak" ID="{9F8184E8-8C65-41FD-8033-25DE543A4F1A}">
+					<ChildrenList>
+						<Action Name="" ID="{39F6A85C-9EF1-4F88-B7BB-14477A96CEAC}" ShortID="150131040">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodBreak" ID="{B6B8385D-43BB-498D-BA1A-8FA2E81429F0}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BoxThud" ID="{E9F73CEF-0A74-4949-8D95-E8694F8A885A}">
+					<ChildrenList>
+						<Action Name="" ID="{F76D07DE-F0D1-4A79-90C5-0DD5B768C947}" ShortID="45637513">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodThud" ID="{45E7A9C7-E43D-44A4-AC0F-29103600C512}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VacuumLoop" ID="{47230B34-ACD5-4D58-92BC-7DD7874242F2}">
+					<ChildrenList>
+						<Action Name="" ID="{7DD49E59-4E9B-497F-8D94-21E5617C42B6}" ShortID="838570113">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VacuumLoop" ID="{1B9ABFF4-F163-44B9-A390-6ABA4351D92A}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VacuumEnd" ID="{26B0680D-F551-4731-9E1F-9819C8984C62}">
+					<ChildrenList>
+						<Action Name="" ID="{121D4DEC-E083-40ED-8D50-3278D82CFF08}" ShortID="617187600">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VacuumEnd" ID="{39472B59-BC90-45C4-BE08-5FF06872A97A}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_VacuumLoop" ID="{6350279C-4F9F-4095-A469-954F2E212583}">
+					<ChildrenList>
+						<Action Name="" ID="{404BD5C6-5FE8-49D1-B0DD-65B21F304576}" ShortID="524722494">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VacuumLoop" ID="{1B9ABFF4-F163-44B9-A390-6ABA4351D92A}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

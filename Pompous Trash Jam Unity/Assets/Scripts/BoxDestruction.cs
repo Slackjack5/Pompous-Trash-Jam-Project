@@ -29,12 +29,25 @@ public class BoxDestruction : PhysicsObject
     rb.AddForce(new Vector2(hitForce * direction, hitForce));
 
     currentHealth--;
+
+    //Sound
+    AkSoundEngine.PostEvent("Play_BoxHit", gameObject);
     if (currentHealth <= 0)
     {
+      //Sound
+      AkSoundEngine.PostEvent("Play_BoxBreak", gameObject);
       Destroy();
     }
   }
 
+  private void OnCollisionEnter2D(Collision2D collision)
+  {
+    if(collision.relativeVelocity.magnitude>10)
+    {
+      //Sound
+      AkSoundEngine.PostEvent("Play_BoxThud", gameObject);
+    }
+  }
   protected virtual void PreDestroy()
   {
     spriteRenderer.enabled = false;

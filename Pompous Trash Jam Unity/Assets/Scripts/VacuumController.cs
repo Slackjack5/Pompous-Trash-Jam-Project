@@ -11,6 +11,8 @@ public class VacuumController : MonoBehaviour
   [SerializeField] private TubeMinigame tubeMinigame;
   Rigidbody2D bone;
   VisualEffect vfx;
+
+  private bool vacuumStarted=false;
   // Start is called before the first frame update
   void Start()
   {
@@ -27,10 +29,24 @@ public class VacuumController : MonoBehaviour
       vfx.SetInt("SpawnRate", 64);
       //Camera Shake
       CameraShaker.Instance.ShakeOnce(1f, 1f, .1f, 1f);
+
+      //Sound
+      if(vacuumStarted==false)
+      {
+        AkSoundEngine.PostEvent("Play_VacuumLoop", gameObject);
+        vacuumStarted = true;
+      }
     }
     else
     {
       vfx.SetInt("SpawnRate", 0);
+      //Sound
+      if(vacuumStarted == true)
+      {
+        AkSoundEngine.PostEvent("Play_VacuumEnd", gameObject);
+        AkSoundEngine.PostEvent("Stop_VacuumLoop", gameObject);
+        vacuumStarted = false;
+      }
     }
 
     Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);

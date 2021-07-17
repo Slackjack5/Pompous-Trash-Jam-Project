@@ -17,9 +17,14 @@ namespace AK
         static const AkUniqueID PLAY_ANNOUNCEROUTSTANDING = 714949245U;
         static const AkUniqueID PLAY_ANNOUNCERSENSATIONAL = 3391790366U;
         static const AkUniqueID PLAY_ANNOUNCERSUPER = 2614288908U;
+        static const AkUniqueID PLAY_BOXBREAK = 843996146U;
         static const AkUniqueID PLAY_BOXHIT = 762239356U;
+        static const AkUniqueID PLAY_BOXTHUD = 301007570U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_SWING = 989180208U;
+        static const AkUniqueID PLAY_VACUUMEND = 1424032314U;
+        static const AkUniqueID PLAY_VACUUMLOOP = 3537388541U;
+        static const AkUniqueID STOP_VACUUMLOOP = 740603203U;
     } // namespace EVENTS
 
     namespace BANKS
