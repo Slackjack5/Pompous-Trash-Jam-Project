@@ -112,9 +112,19 @@ public class PlayerController : PhysicsObject
 
     StartCoroutine(Stun());
   }
-
+  //Player Attacking
   public void OnAttack()
   {
+    if(currentMeleeCooldown <= 0)
+    {
+      //animation
+      myAnimator.SetBool("isAttacking", true);
+    }
+  }
+
+  public void PlaySwing()
+  {
+    AkSoundEngine.PostEvent("Play_Swing", gameObject);
     if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
     {
       // Hit minigame boxes beneath player
@@ -159,9 +169,6 @@ public class PlayerController : PhysicsObject
       }
 
       currentMeleeCooldown = meleeCooldownTime;
-
-     //animation
-      myAnimator.SetBool("isAttacking", true);
     }
   }
 
@@ -250,9 +257,5 @@ public class PlayerController : PhysicsObject
   public void PlayFootstep()
   {
     AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
-  }
-  public void PlaySwing()
-  {
-    AkSoundEngine.PostEvent("Play_Swing", gameObject);
   }
 }

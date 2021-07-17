@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 226b383d1762534c83eb131ccfd311f8
     GuidInternal: 
-    m_lastTime: -8585750469733577078
+    m_lastTime: -8585750470394989770
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -83,7 +83,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: b65bdd52986abd4fbb51b640cc412cdb
     GuidInternal: 
-    m_lastTime: -8585750469733028549
+    m_lastTime: -8585750439728301013
     List:
     - name: Ambience
       guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
@@ -111,7 +111,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a33f0301cc3b20418f2028f42eef846f
     GuidInternal: 
-    m_lastTime: -8585750469733846364
+    m_lastTime: -8585750439728500469
     List:
     - name: Play_AnnouncerGreat
       guid: 0946f6c27474d148822cdaafb1617d06
@@ -181,6 +181,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.875011
       minDuration: 0.875011
+    - name: Play_BoxBreak
+      guid: e884819f658cfd41803325de543a4f1a
+      id: 843996146
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_BoxBreak
+        ObjectType: 3
+        guid: e884819f658cfd41803325de543a4f1a
+      Path: Events\Default Work Unit\Play_BoxBreak
+      maxAttenuation: 0
+      maxDuration: 2.059344
+      minDuration: 0.674404
     - name: Play_BoxHit
       guid: 175f157062760f4da105274599e52b33
       id: 762239356
@@ -198,6 +215,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.300317
       minDuration: 0.975238
+    - name: Play_BoxThud
+      guid: ef3cf7e9740a49498d95e8694f8a885a
+      id: 301007570
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_BoxThud
+        ObjectType: 3
+        guid: ef3cf7e9740a49498d95e8694f8a885a
+      Path: Events\Default Work Unit\Play_BoxThud
+      maxAttenuation: 0
+      maxDuration: 1.845333
+      minDuration: 0.461139
     - name: Play_Footsteps
       guid: 85ac2cc88c764841a79c385aecd1ea0c
       id: 3854155799
@@ -232,6 +266,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.041667
       minDuration: 0.541667
+    - name: Play_VacuumEnd
+      guid: 0d68b02651f531479e1f9819c8984c62
+      id: 1424032314
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_VacuumEnd
+        ObjectType: 3
+        guid: 0d68b02651f531479e1f9819c8984c62
+      Path: Events\Default Work Unit\Play_VacuumEnd
+      maxAttenuation: 0
+      maxDuration: 5.457418
+      minDuration: 5.457418
+    - name: Play_VacuumLoop
+      guid: 340b2347d5ac584d92bc7dd7874242f2
+      id: 3537388541
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_VacuumLoop
+        ObjectType: 3
+        guid: 340b2347d5ac584d92bc7dd7874242f2
+      Path: Events\Default Work Unit\Play_VacuumLoop
+      maxAttenuation: 0
+      maxDuration: 60.139683
+      minDuration: 60.139683
+    - name: Stop_VacuumLoop
+      guid: 9c2750639f4f9540a469954f2e212583
+      id: 740603203
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Stop_VacuumLoop
+        ObjectType: 3
+        guid: 9c2750639f4f9540a469954f2e212583
+      Path: Events\Default Work Unit\Stop_VacuumLoop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -289,7 +374,7 @@ MonoBehaviour:
     m_lastTime: -8585757543609773690
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 03000000040000000500000006000000090000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
