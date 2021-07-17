@@ -4,7 +4,15 @@
 		<WorkUnit Name="Default Work Unit" ID="{52DD5BB6-6A98-4FBD-BB51-B640CC412CDB}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="Ambience" ID="{1C6D7C3A-E0D6-48C3-904E-D9D02E3E32CB}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Footsteps" ID="{C82CAC85-768C-4148-A79C-385AECD1EA0C}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AnnouncerOutstanding" ID="{30E08385-1D4C-442F-BCC0-A53C3AD44510}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AnnouncerSensational" ID="{55C418A8-4D95-4489-BBB8-87E62711F737}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AnnouncerGreat" ID="{C2F64609-7474-48D1-822C-DAAFB1617D06}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Swing" ID="{2698A7DB-D36F-4C25-BB77-1CB134295DC1}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BoxHit" ID="{70155F17-7662-4D0F-A105-274599E52B33}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AnnouncerSuper" ID="{F5568AD7-F96A-4D23-8F29-145F46894A57}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
