@@ -7,7 +7,7 @@ public class PlayerController : PhysicsObject
 {
   [SerializeField] private float baseSpeed = 800f;
   [SerializeField] private float movementSmoothTime = 0.1f;
-  [SerializeField] private float baseJumpSpeed = 10f;
+  [SerializeField] private float baseJumpSpeed = 7f;
   [SerializeField] private float maxJumpTime = 0.3f;
   [SerializeField] private LayerMask whatIsBox;
   [SerializeField] private LayerMask whatIsGround;
