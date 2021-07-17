@@ -81,6 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4b0333ab5b8ef4099f91591ca63779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackHoleVFX: {fileID: 853518560958430793, guid: d851685f2746c0746893b473e35677ad, type: 3}
+  blackHoleVFXMat: {fileID: 2100000, guid: 5309fe80cbacdea41a078b0e442d6ff6, type: 2}
   fieldofImpact: 4
   force: 400
   torque: 50
