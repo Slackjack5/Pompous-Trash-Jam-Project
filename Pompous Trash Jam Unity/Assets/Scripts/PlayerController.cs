@@ -16,7 +16,7 @@ public class PlayerController : PhysicsObject
   [SerializeField] private float hitboxWidth = 1f;
   [SerializeField] private float hitboxHeight = 0.6f;
   [SerializeField] private float meleeCooldownTime = 0.5f;
-  [SerializeField] private float stunTime = 4f;
+  [SerializeField] private float stunTime = 1.5f;
 
   private Vector2 boxCastSize;
   private float currentMeleeCooldown;

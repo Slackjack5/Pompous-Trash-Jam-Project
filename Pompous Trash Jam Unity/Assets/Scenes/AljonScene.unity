@@ -2096,7 +2096,7 @@ MonoBehaviour:
   hitboxWidth: 1
   hitboxHeight: 0.6
   meleeCooldownTime: 0.5
-  stunTime: 4
+  stunTime: 1.5
   myAnimator: {fileID: 590744677}
 --- !u!95 &590744677
 Animator:
