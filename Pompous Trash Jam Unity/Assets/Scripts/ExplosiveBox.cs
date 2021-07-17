@@ -19,15 +19,13 @@ public class ExplosiveBox : SpecialBox
     }
   }
 
-  protected override void Destroy()
+  protected override void PreDestroy()
   {
-    base.Destroy();
+    base.PreDestroy();
 
     Shader.SetGlobalFloat("_ShockTime", Time.time);
     Vector2 focalPoint = new Vector2(Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).x / Screen.width, Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).y / Screen.height);
     Shader.SetGlobalVector("_FocalPoint", focalPoint);
     Instantiate(explosionVFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-
-    StartCoroutine(FreezeImpact());
   }
 }
