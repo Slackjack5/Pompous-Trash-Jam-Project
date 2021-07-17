@@ -44,7 +44,7 @@ public class BoxDestruction : PhysicsObject
     CameraShaker.Instance.ShakeOnce(2.5f, 2.5f, .2f, 2f);
   }
 
-  protected void Destroy()
+  protected virtual void Destroy()
   {
     PreDestroy();
     StartCoroutine(FreezeImpact());

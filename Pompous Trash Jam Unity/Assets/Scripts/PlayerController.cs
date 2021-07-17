@@ -14,10 +14,9 @@ public class PlayerController : PhysicsObject
   [SerializeField] private Transform groundCheckPosition;
   [SerializeField] private Transform frontCheckPosition;
   [SerializeField] private float hitboxWidth = 1f;
-  [SerializeField] private float hitboxHeight = 1f;
+  [SerializeField] private float hitboxHeight = 0.6f;
   [SerializeField] private float meleeCooldownTime = 0.5f;
   [SerializeField] private float stunTime = 4f;
-  [SerializeField] private bool isHittingFront = false;
 
   private Vector2 boxCastSize;
   private float currentMeleeCooldown;
@@ -118,43 +117,46 @@ public class PlayerController : PhysicsObject
   {
     if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
     {
-      // Hit boxes in front of player
-      if (isHittingFront)
+      // Hit minigame boxes beneath player
+      RaycastHit2D groundHit = Physics2D.BoxCast(groundCheckPosition.position, boxCastSize, /* angle = */ 0f, Vector2.down, /* distance = */ 0f, whatIsBox);
+      if (groundHit)
       {
-        Vector2 origin = frontCheckPosition.position;
-        if (isFacingRight)
+        MinigameBox minigameBox = groundHit.transform.GetComponent<MinigameBox>();
+        if (minigameBox)
         {
-          origin.x += hitboxWidth / 2;
+          minigameBox.Hit(isFacingRight);
         }
-        else
-        {
-          origin.x -= hitboxWidth / 2;
-        }
+      }
 
-        Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
-        RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
-
-        foreach (RaycastHit2D hit in hits)
-        {
-          hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
-        }
-
-        //Screen shake
-        if (hits.Length > 0)
-        {
-          CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1f);
-        }
+      // Hit all other boxes in front of player
+      Vector2 origin = frontCheckPosition.position;
+      if (isFacingRight)
+      {
+        origin.x += hitboxWidth / 2;
       }
       else
       {
-        // Hit boxes beneath player
-        RaycastHit2D groundHit = Physics2D.BoxCast(groundCheckPosition.position, boxCastSize, /* angle = */ 0f, Vector2.down, /* distance = */ 0f, whatIsBox);
-        if (groundHit)
+        origin.x -= hitboxWidth / 2;
+      }
+
+      Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
+      RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
+
+      foreach (RaycastHit2D hit in hits)
+      {
+        BoxDestruction boxDestruction = hit.transform.GetComponent<BoxDestruction>();
+        if (boxDestruction)
         {
-          groundHit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
+          boxDestruction.Hit(isFacingRight);
         }
       }
-      
+
+      //Screen shake
+      if (hits.Length > 0)
+      {
+        CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1f);
+      }
+
       currentMeleeCooldown = meleeCooldownTime;
 
      //animation
