@@ -7,6 +7,7 @@ public class PointsNumber : MonoBehaviour
 {
   [SerializeField] private float maxStayTime = 0.3f;
   [SerializeField] private float maxFadeTime = 1f;
+  [SerializeField] private float scaleFactor = 1.5f;
 
   private RectTransform rectTransform;
   private TextMeshProUGUI text;
@@ -24,7 +25,7 @@ public class PointsNumber : MonoBehaviour
     rectTransform.anchorMax = viewportPoint;
 
     text.text = "+" + points;
-    text.fontSize += scale;
+    text.fontSize += scale * scaleFactor;
   }
 
   private void Start()
