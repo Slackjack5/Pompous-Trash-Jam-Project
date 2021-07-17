@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 226b383d1762534c83eb131ccfd311f8
     GuidInternal: 
-    m_lastTime: -8585757543609823562
+    m_lastTime: -8585750472342885501
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Reverb
+      guid: 3356a59d6edcb643a2537ebcc9122b96
+      id: 348963605
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 226b383d1762534c83eb131ccfd311f8
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Reverb
+        ObjectType: 1
+        guid: 3356a59d6edcb643a2537ebcc9122b96
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +83,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: b65bdd52986abd4fbb51b640cc412cdb
     GuidInternal: 
-    m_lastTime: -8585757543609793643
+    m_lastTime: -8585750472341967956
     List:
     - name: Ambience
       guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
@@ -94,8 +111,127 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a33f0301cc3b20418f2028f42eef846f
     GuidInternal: 
-    m_lastTime: -8585757543609883405
-    List: []
+    m_lastTime: -8585750472343713252
+    List:
+    - name: Play_AnnouncerGreat
+      guid: 0946f6c27474d148822cdaafb1617d06
+      id: 2423607242
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_AnnouncerGreat
+        ObjectType: 3
+        guid: 0946f6c27474d148822cdaafb1617d06
+      Path: Events\Default Work Unit\Play_AnnouncerGreat
+      maxAttenuation: 0
+      maxDuration: 0.687506
+      minDuration: 0.687506
+    - name: Play_AnnouncerOutstanding
+      guid: 8583e0304c1d2f44bcc0a53c3ad44510
+      id: 714949245
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_AnnouncerOutstanding
+        ObjectType: 3
+        guid: 8583e0304c1d2f44bcc0a53c3ad44510
+      Path: Events\Default Work Unit\Play_AnnouncerOutstanding
+      maxAttenuation: 0
+      maxDuration: 1.25
+      minDuration: 1.25
+    - name: Play_AnnouncerSensational
+      guid: a818c455954d8944bbb887e62711f737
+      id: 3391790366
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_AnnouncerSensational
+        ObjectType: 3
+        guid: a818c455954d8944bbb887e62711f737
+      Path: Events\Default Work Unit\Play_AnnouncerSensational
+      maxAttenuation: 0
+      maxDuration: 1.312517
+      minDuration: 1.312517
+    - name: Play_AnnouncerSuper
+      guid: d78a56f56af9234d8f29145f46894a57
+      id: 2614288908
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_AnnouncerSuper
+        ObjectType: 3
+        guid: d78a56f56af9234d8f29145f46894a57
+      Path: Events\Default Work Unit\Play_AnnouncerSuper
+      maxAttenuation: 0
+      maxDuration: 0.875011
+      minDuration: 0.875011
+    - name: Play_BoxHit
+      guid: 175f157062760f4da105274599e52b33
+      id: 762239356
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_BoxHit
+        ObjectType: 3
+        guid: 175f157062760f4da105274599e52b33
+      Path: Events\Default Work Unit\Play_BoxHit
+      maxAttenuation: 0
+      maxDuration: 1.300317
+      minDuration: 0.975238
+    - name: Play_Footsteps
+      guid: 85ac2cc88c764841a79c385aecd1ea0c
+      id: 3854155799
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_Footsteps
+        ObjectType: 3
+        guid: 85ac2cc88c764841a79c385aecd1ea0c
+      Path: Events\Default Work Unit\Play_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.581079
+      minDuration: 0.273314
+    - name: Play_Swing
+      guid: dba798266fd3254cbb771cb134295dc1
+      id: 989180208
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_Swing
+        ObjectType: 3
+        guid: dba798266fd3254cbb771cb134295dc1
+      Path: Events\Default Work Unit\Play_Swing
+      maxAttenuation: 0
+      maxDuration: 1.041667
+      minDuration: 0.541667
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -153,7 +289,7 @@ MonoBehaviour:
     m_lastTime: -8585757543609773690
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 050000000600000007000000090000000a0000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

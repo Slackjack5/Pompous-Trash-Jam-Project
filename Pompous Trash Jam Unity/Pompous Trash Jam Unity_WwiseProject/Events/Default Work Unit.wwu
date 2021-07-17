@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Footsteps" ID="{C82CAC85-768C-4148-A79C-385AECD1EA0C}">
+					<ChildrenList>
+						<Action Name="" ID="{8DDDD6CB-7567-4ECA-8B37-685A58717711}" ShortID="728059935">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{5EAB3052-9747-458A-8EEE-1D743C85F109}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Swing" ID="{2698A7DB-D36F-4C25-BB77-1CB134295DC1}">
+					<ChildrenList>
+						<Action Name="" ID="{18B2498F-16FB-4D18-9F7A-5C97A5F032EF}" ShortID="370162497">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Swing" ID="{6B5B4560-CC9A-4AF6-B770-85AE4652F6A8}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BoxHit" ID="{70155F17-7662-4D0F-A105-274599E52B33}">
+					<ChildrenList>
+						<Action Name="" ID="{68ACE668-D49E-40AA-86A0-1729FC06DCD3}" ShortID="629761232">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodHit" ID="{990298CD-B86D-4713-BEB7-4E1D89ACEE0F}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AnnouncerGreat" ID="{C2F64609-7474-48D1-822C-DAAFB1617D06}">
+					<ChildrenList>
+						<Action Name="" ID="{224EEA4F-03A7-448E-8F95-26D960AD86AA}" ShortID="57840023">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AnnouncerGreat" ID="{87EA58DE-A887-4ADA-B785-810D0E4E5799}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AnnouncerOutstanding" ID="{30E08385-1D4C-442F-BCC0-A53C3AD44510}">
+					<ChildrenList>
+						<Action Name="" ID="{EDA0195E-A44C-4E5E-B47B-FD5E4D980306}" ShortID="827852491">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AnnouncerOutstanding" ID="{05631212-F2C9-41CD-BA71-D88A7283223A}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AnnouncerSensational" ID="{55C418A8-4D95-4489-BBB8-87E62711F737}">
+					<ChildrenList>
+						<Action Name="" ID="{5BFC3775-13EB-42FE-BB51-954789D1A0E6}" ShortID="509480911">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AnnouncerSensational" ID="{CC1365AA-FF5D-4EE3-81AD-226F6CEAEE23}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AnnouncerSuper" ID="{F5568AD7-F96A-4D23-8F29-145F46894A57}">
+					<ChildrenList>
+						<Action Name="" ID="{29DE963E-04C7-4D44-ABDB-F343962714A7}" ShortID="83536783">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AnnouncerSuper" ID="{A50E81FA-C19B-4E84-AF28-E0EF5A9E24EE}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

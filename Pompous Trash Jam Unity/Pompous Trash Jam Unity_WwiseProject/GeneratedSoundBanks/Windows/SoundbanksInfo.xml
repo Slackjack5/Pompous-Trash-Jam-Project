@@ -11,15 +11,128 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="2564553725">
+		<SoundBank Id="85412153" Language="SFX" Hash="2049358642">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2423607242" Name="Play_AnnouncerGreat" ObjectPath="\Events\Default Work Unit\Play_AnnouncerGreat" DurationType="OneShot" DurationMin="0.687506" DurationMax="0.687506">
+					<IncludedMemoryFiles>
+						<File Id="970197400" Language="SFX">
+							<ShortName>Announcer\AnnouncerGreat.wav</ShortName>
+							<Path>SFX\Announcer\AnnouncerGreat_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="714949245" Name="Play_AnnouncerOutstanding" ObjectPath="\Events\Default Work Unit\Play_AnnouncerOutstanding" DurationType="OneShot" DurationMin="1.250000" DurationMax="1.250000">
+					<IncludedMemoryFiles>
+						<File Id="797186171" Language="SFX">
+							<ShortName>Announcer\AnnouncerOutstanding.wav</ShortName>
+							<Path>SFX\Announcer\AnnouncerOutstanding_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="3391790366" Name="Play_AnnouncerSensational" ObjectPath="\Events\Default Work Unit\Play_AnnouncerSensational" DurationType="OneShot" DurationMin="1.312517" DurationMax="1.312517">
+					<IncludedMemoryFiles>
+						<File Id="264469527" Language="SFX">
+							<ShortName>Announcer\AnnouncerSensational.wav</ShortName>
+							<Path>SFX\Announcer\AnnouncerSensational_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="2614288908" Name="Play_AnnouncerSuper" ObjectPath="\Events\Default Work Unit\Play_AnnouncerSuper" DurationType="OneShot" DurationMin="0.875011" DurationMax="0.875011">
+					<IncludedMemoryFiles>
+						<File Id="1045306547" Language="SFX">
+							<ShortName>Announcer\AnnouncerSuper.wav</ShortName>
+							<Path>SFX\Announcer\AnnouncerSuper_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+					</AuxBusSends>
+				</Event>
+				<Event Id="762239356" Name="Play_BoxHit" ObjectPath="\Events\Default Work Unit\Play_BoxHit" DurationType="OneShot" DurationMin="0.975238" DurationMax="1.300317">
+					<IncludedMemoryFiles>
+						<File Id="228988825" Language="SFX">
+							<ShortName>WoodHit\WoodHit2.wav</ShortName>
+							<Path>SFX\WoodHit\WoodHit2_10C4C929.wem</Path>
+						</File>
+						<File Id="489467709" Language="SFX">
+							<ShortName>WoodHit\WoodHit4.wav</ShortName>
+							<Path>SFX\WoodHit\WoodHit4_10C4C929.wem</Path>
+						</File>
+						<File Id="571112002" Language="SFX">
+							<ShortName>WoodHit\WoodHit3.wav</ShortName>
+							<Path>SFX\WoodHit\WoodHit3_10C4C929.wem</Path>
+						</File>
+						<File Id="595008138" Language="SFX">
+							<ShortName>WoodHit\WoodHit1.wav</ShortName>
+							<Path>SFX\WoodHit\WoodHit1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.273314" DurationMax="0.581079">
+					<IncludedMemoryFiles>
+						<File Id="89330362" Language="SFX">
+							<ShortName>Character\Footsteps\Cement4.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement4_10C4C929.wem</Path>
+						</File>
+						<File Id="99111655" Language="SFX">
+							<ShortName>Character\Footsteps\Cement3.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement3_10C4C929.wem</Path>
+						</File>
+						<File Id="320509478" Language="SFX">
+							<ShortName>Character\Footsteps\Cement1.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement1_10C4C929.wem</Path>
+						</File>
+						<File Id="668926591" Language="SFX">
+							<ShortName>Character\Footsteps\Cement2.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement2_10C4C929.wem</Path>
+						</File>
+						<File Id="746593466" Language="SFX">
+							<ShortName>Character\Footsteps\Cement6.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement6_10C4C929.wem</Path>
+						</File>
+						<File Id="1039475092" Language="SFX">
+							<ShortName>Character\Footsteps\Cement5.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement5_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="989180208" Name="Play_Swing" ObjectPath="\Events\Default Work Unit\Play_Swing" DurationType="OneShot" DurationMin="0.541667" DurationMax="1.041667">
+					<IncludedMemoryFiles>
+						<File Id="371522550" Language="SFX">
+							<ShortName>Swing\Swing3.wav</ShortName>
+							<Path>SFX\Swing\Swing3_10C4C929.wem</Path>
+						</File>
+						<File Id="548731478" Language="SFX">
+							<ShortName>Swing\Swing1.wav</ShortName>
+							<Path>SFX\Swing\Swing1_10C4C929.wem</Path>
+						</File>
+						<File Id="568422131" Language="SFX">
+							<ShortName>Swing\Swing2.wav</ShortName>
+							<Path>SFX\Swing\Swing2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1463999939">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+			</IncludedAuxBusses>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

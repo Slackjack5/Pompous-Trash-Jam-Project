@@ -244,4 +244,14 @@ public class PlayerController : PhysicsObject
     yield return new WaitForSeconds(stunTime);
     isStunned = false;
   }
+
+  //Audio
+  public void PlayFootstep()
+  {
+    AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
+  }
+  public void PlaySwing()
+  {
+    AkSoundEngine.PostEvent("Play_Swing", gameObject);
+  }
 }

@@ -11,6 +11,17 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID PLAY_ANNOUNCERGREAT = 2423607242U;
+        static const AkUniqueID PLAY_ANNOUNCEROUTSTANDING = 714949245U;
+        static const AkUniqueID PLAY_ANNOUNCERSENSATIONAL = 3391790366U;
+        static const AkUniqueID PLAY_ANNOUNCERSUPER = 2614288908U;
+        static const AkUniqueID PLAY_BOXHIT = 762239356U;
+        static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_SWING = 989180208U;
+    } // namespace EVENTS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
@@ -21,6 +32,11 @@ namespace AK
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVERB = 348963605U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

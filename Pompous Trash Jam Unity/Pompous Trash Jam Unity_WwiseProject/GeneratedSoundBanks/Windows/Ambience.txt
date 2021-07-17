@@ -1,0 +1,28 @@
+Event	ID	Name			Wwise Object Path	Notes
+	714949245	Play_AnnouncerOutstanding			\Default Work Unit\Play_AnnouncerOutstanding	
+	762239356	Play_BoxHit			\Default Work Unit\Play_BoxHit	
+	989180208	Play_Swing			\Default Work Unit\Play_Swing	
+	2423607242	Play_AnnouncerGreat			\Default Work Unit\Play_AnnouncerGreat	
+	2614288908	Play_AnnouncerSuper			\Default Work Unit\Play_AnnouncerSuper	
+	3391790366	Play_AnnouncerSensational			\Default Work Unit\Play_AnnouncerSensational	
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	89330362	Cement4	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Character\Footsteps\Cement4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cement4		102304
+	99111655	Cement3	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Character\Footsteps\Cement3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cement3		118144
+	228988825	WoodHit2	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\WoodHit\WoodHit2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodHit\WoodHit2		198720
+	264469527	AnnouncerSensational	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Announcer\AnnouncerSensational_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Announcer\AnnouncerSensational		231592
+	320509478	Cement1	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Character\Footsteps\Cement1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cement1		90032
+	371522550	Swing3	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Swing\Swing3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Swing\Swing3		168064
+	489467709	WoodHit4	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\WoodHit\WoodHit4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodHit\WoodHit4		172096
+	548731478	Swing1	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Swing\Swing1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Swing\Swing1		200064
+	568422131	Swing2	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Swing\Swing2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Swing\Swing2		104064
+	571112002	WoodHit3	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\WoodHit\WoodHit3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodHit\WoodHit3		229440
+	595008138	WoodHit1	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\WoodHit\WoodHit1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodHit\WoodHit1		186432
+	668926591	Cement2	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Character\Footsteps\Cement2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cement2		137140
+	746593466	Cement6	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Character\Footsteps\Cement6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cement6		151880
+	797186171	AnnouncerOutstanding	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Announcer\AnnouncerOutstanding_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Announcer\AnnouncerOutstanding		220564
+	970197400	AnnouncerGreat	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Announcer\AnnouncerGreat_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Announcer\AnnouncerGreat		121340
+	1039475092	Cement5	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Character\Footsteps\Cement5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cement5		147172
+	1045306547	AnnouncerSuper	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Announcer\AnnouncerSuper_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Announcer\AnnouncerSuper		154416
+
