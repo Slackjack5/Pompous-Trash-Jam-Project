@@ -9,6 +9,11 @@ public class GravityBox : SpecialBox
   protected override void PreDestroy()
   {
     base.PreDestroy();
+  }
+
+  protected override void PostDestroy()
+  {
+    base.PostDestroy();
 
     Instantiate(wormhole, new Vector2(transform.position.x, transform.position.y + 2), Quaternion.identity);
   }
