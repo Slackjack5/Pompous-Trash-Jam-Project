@@ -6,12 +6,10 @@ public class GravityBox : SpecialBox
 {
   [SerializeField] private GameObject wormhole;
 
-  protected override void Destroy()
+  protected override void PreDestroy()
   {
-    base.Destroy();
+    base.PreDestroy();
 
     Instantiate(wormhole, new Vector2(transform.position.x, transform.position.y + 2), Quaternion.identity);
-
-    StartCoroutine(FreezeImpact());
   }
 }

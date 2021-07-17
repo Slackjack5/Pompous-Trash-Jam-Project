@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UpgradeBox : SpecialBox
 {
-  protected override void Destroy()
+  protected override void PreDestroy()
   {
-    base.Destroy();
+    base.PreDestroy();
 
     int randNumber = Random.Range(0, 3);
     if (randNumber == 0)
@@ -21,7 +21,5 @@ public class UpgradeBox : SpecialBox
     {
       Debug.Log("Spawned Power Up 3");
     }
-
-    StartCoroutine(FreezeImpact());
   }
 }

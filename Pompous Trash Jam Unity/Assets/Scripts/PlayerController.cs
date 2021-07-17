@@ -7,14 +7,14 @@ public class PlayerController : PhysicsObject
 {
   [SerializeField] private float baseSpeed = 800f;
   [SerializeField] private float movementSmoothTime = 0.1f;
-  [SerializeField] private float baseJumpSpeed = 10f;
+  [SerializeField] private float baseJumpSpeed = 7f;
   [SerializeField] private float maxJumpTime = 0.3f;
   [SerializeField] private LayerMask whatIsBox;
   [SerializeField] private LayerMask whatIsGround;
   [SerializeField] private Transform groundCheckPosition;
   [SerializeField] private Transform frontCheckPosition;
   [SerializeField] private float hitboxWidth = 1f;
-  [SerializeField] private float hitboxHeight = 1f;
+  [SerializeField] private float hitboxHeight = 0.6f;
   [SerializeField] private float meleeCooldownTime = 0.5f;
   [SerializeField] private float stunTime = 4f;
 
@@ -117,9 +117,20 @@ public class PlayerController : PhysicsObject
   {
     if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
     {
-      // Hit boxes in front of player
+      // Hit minigame boxes beneath player
+      RaycastHit2D groundHit = Physics2D.BoxCast(groundCheckPosition.position, boxCastSize, /* angle = */ 0f, Vector2.down, /* distance = */ 0f, whatIsBox);
+      if (groundHit)
+      {
+        MinigameBox minigameBox = groundHit.transform.GetComponent<MinigameBox>();
+        if (minigameBox)
+        {
+          minigameBox.Hit(isFacingRight);
+        }
+      }
+
+      // Hit all other boxes in front of player
       Vector2 origin = frontCheckPosition.position;
-      if(isFacingRight)
+      if (isFacingRight)
       {
         origin.x += hitboxWidth / 2;
       }
@@ -127,20 +138,25 @@ public class PlayerController : PhysicsObject
       {
         origin.x -= hitboxWidth / 2;
       }
-      
+
       Vector2 size = new Vector2(hitboxWidth, hitboxHeight);
       RaycastHit2D[] hits = Physics2D.BoxCastAll(origin, size, /* angle = */ 0f, Vector2.right, /* distance = */ 0f, whatIsBox);
 
       foreach (RaycastHit2D hit in hits)
       {
-        hit.transform.GetComponent<BoxDestruction>().Hit(isFacingRight);
+        BoxDestruction boxDestruction = hit.transform.GetComponent<BoxDestruction>();
+        if (boxDestruction)
+        {
+          boxDestruction.Hit(isFacingRight);
+        }
       }
 
-      //Screan shake
+      //Screen shake
       if (hits.Length > 0)
       {
         CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1f);
       }
+
       currentMeleeCooldown = meleeCooldownTime;
 
      //animation

@@ -8,9 +8,9 @@ public class SpecialBox : BoxDestruction
   [SerializeField] private float explosiveForce = 600f;
   [SerializeField] private LayerMask layerToHit;
 
-  protected override void Destroy()
+  protected override void PreDestroy()
   {
-    base.Destroy();
+    base.PreDestroy();
 
     Explosion();
   }

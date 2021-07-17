@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 9083730487365473030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.487, y: 0.5510059, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -144,9 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7aa730a4787ba41b0e3f161485c208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  hitForce: 10
-  freezeTime: 0.4
+  maxHealth: 2
+  hitForce: 500
+  freezeTime: 0.1
   destructable: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
   fieldOfImpact: 3
   explosiveForce: 600

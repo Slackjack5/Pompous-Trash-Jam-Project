@@ -4,9 +4,9 @@ using UnityEngine;
 using EZCameraShake;
 public class BoxDestruction : PhysicsObject
 {
-  [SerializeField] private int maxHealth = 3;
-  [SerializeField] private float hitForce = 10f;
-  [SerializeField] private float freezeTime = 0.4f;
+  [SerializeField] private int maxHealth = 2;
+  [SerializeField] private float hitForce = 500f;
+  [SerializeField] private float freezeTime = 0.1f;
   [SerializeField] private GameObject destructable;
 
   private SpriteRenderer spriteRenderer;
@@ -35,13 +35,19 @@ public class BoxDestruction : PhysicsObject
     }
   }
 
-  protected virtual void Destroy()
+  protected virtual void PreDestroy()
   {
     spriteRenderer.enabled = false;
 
     Instantiate(destructable, transform.position, Quaternion.identity);
 
     CameraShaker.Instance.ShakeOnce(2.5f, 2.5f, .2f, 2f);
+  }
+
+  protected virtual void Destroy()
+  {
+    PreDestroy();
+    StartCoroutine(FreezeImpact());
   }
 
   protected IEnumerator FreezeImpact()

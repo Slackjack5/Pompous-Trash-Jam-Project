@@ -7,7 +7,6 @@ using UnityEngine.Events;
 public class TubeMinigame : ButtonMash
 {
   [SerializeField] private float playInterval = 30f;
-  [SerializeField] private GameObject player;
 
   public bool IsReady { get; private set; }
 
@@ -23,7 +22,7 @@ public class TubeMinigame : ButtonMash
 
   private void OnTriggerEnter2D(Collider2D collision)
   {
-    if (IsReady && collision.name == player.name)
+    if (IsReady && collision.gameObject.GetComponent<PlayerController>())
     {
       IsReady = false;
       triggered.Invoke();
