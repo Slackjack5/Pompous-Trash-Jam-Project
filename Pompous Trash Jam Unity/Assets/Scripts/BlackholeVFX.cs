@@ -32,4 +32,14 @@ public class BlackholeVFX : MonoBehaviour
       print(circle.material.GetColor("_BaseColor"));
     }
   }
+
+  void OnTriggerStay2D(Collider2D col)
+  {
+    if (col.gameObject.GetComponent<BoxDestruction>() != null && col.gameObject != gameObject)
+    {
+      BoxDestruction box = col.gameObject.GetComponent<BoxDestruction>();
+      box.BlackHoleDestroy();
+      Destroy(col.gameObject);
+    }
+  }
 }

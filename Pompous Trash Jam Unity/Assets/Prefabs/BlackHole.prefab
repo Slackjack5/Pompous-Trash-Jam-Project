@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 853518560958430795}
   - component: {fileID: 853518560958430794}
   - component: {fileID: 853518560958430789}
+  - component: {fileID: 5891442851506403479}
   m_Layer: 0
   m_Name: BlackHole
   m_TagString: Untagged
@@ -207,3 +208,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab25b77fa1fd51b4aa0cde3c4345e8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &5891442851506403479
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853518560958430793}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
