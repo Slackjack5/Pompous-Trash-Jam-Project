@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -147,7 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e44c42bf69f81e43b6d03230824c24d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxStayTime: 0.3
   maxFadeTime: 1
+  scaleFactor: 1.5
 --- !u!1 &7185819809184404671
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.3, y: -1.7}
+  m_AnchoredPosition: {x: 1.2, y: -0.8}
   m_SizeDelta: {x: 150, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7185819809184404658
@@ -241,8 +243,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -295,7 +297,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e44c42bf69f81e43b6d03230824c24d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxStayTime: 0.3
   maxFadeTime: 1
+  scaleFactor: 1.5
 --- !u!1 &7185819809198225204
 GameObject:
   m_ObjectHideFlags: 0

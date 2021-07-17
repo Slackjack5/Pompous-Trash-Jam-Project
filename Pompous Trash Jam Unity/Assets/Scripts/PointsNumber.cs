@@ -7,6 +7,7 @@ public class PointsNumber : MonoBehaviour
 {
   [SerializeField] private float maxStayTime = 0.3f;
   [SerializeField] private float maxFadeTime = 1f;
+  [SerializeField] private float scaleFactor = 1.5f;
 
   private RectTransform rectTransform;
   private TextMeshProUGUI text;
@@ -14,11 +15,21 @@ public class PointsNumber : MonoBehaviour
   private float currentFadeTime;
   private float currentStayTime;
 
-  private void Start()
+  public void Initialize(int points, int scale, Vector2 position)
   {
     rectTransform = GetComponent<RectTransform>();
     text = GetComponent<TextMeshProUGUI>();
 
+    Vector2 viewportPoint = Camera.main.WorldToViewportPoint(position);
+    rectTransform.anchorMin = viewportPoint;
+    rectTransform.anchorMax = viewportPoint;
+
+    text.text = "+" + points;
+    text.fontSize += scale * scaleFactor;
+  }
+
+  private void Start()
+  {
     currentFadeTime = maxFadeTime;
     currentStayTime = maxStayTime;
   }
