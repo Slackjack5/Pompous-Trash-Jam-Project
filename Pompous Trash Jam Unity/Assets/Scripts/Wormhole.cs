@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class Wormhole : MonoBehaviour
 {
-    //Explosion
-    public float fieldofImpact;
-    public float force;
-    public float torque;
-    public LayerMask LayerToHit;
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine("EndWormHole");
-    }
+  [SerializeField] private GameObject blackHoleVFX;
+  [SerializeField] private Material blackHoleVFXMat;
+
+  //Explosion
+  public float fieldofImpact;
+  public float force;
+  public float torque;
+  public LayerMask LayerToHit;
+
+  // Start is called before the first frame update
+  void Start()
+  {
+    Shader.SetGlobalFloat("_ShockTime", Time.time);
+    Vector2 focalPoint = new Vector2(Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).x / Screen.width, Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).y / Screen.height);
+    Shader.SetGlobalVector("_FocalPoint", focalPoint);
+    GameObject temp = Instantiate(blackHoleVFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+    SpriteRenderer tempSR = temp.GetComponentInChildren<SpriteRenderer>();
+    tempSR.material = new Material(blackHoleVFXMat);
+
+    StartCoroutine("EndWormHole");
+  }
 
     private void Explosion()
     {

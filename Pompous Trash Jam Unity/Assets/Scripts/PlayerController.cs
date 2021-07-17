@@ -106,9 +106,11 @@ public class PlayerController : PhysicsObject
         myAnimator.SetBool("isAttacking", false);
     }
 
-  public void Stun()
+  public override void Launch(Vector3 origin, float force)
   {
-    StartCoroutine(WaitStun());
+    base.Launch(origin, force);
+
+    StartCoroutine(Stun());
   }
 
   public void OnAttack()
@@ -220,7 +222,7 @@ public class PlayerController : PhysicsObject
     transform.localScale = theScale;
   }
 
-  private IEnumerator WaitStun()
+  private IEnumerator Stun()
   {
     isStunned = true;
     yield return new WaitForSeconds(stunTime);
