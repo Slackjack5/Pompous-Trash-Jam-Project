@@ -18,8 +18,6 @@ public class BoxDestruction : PhysicsObject
     Shader.SetGlobalFloat("_ShockTime", -99999);
     base.Start();
 
-    print("[BoxDestruction] In the middle of Start");
-
     spriteRenderer = GetComponent<SpriteRenderer>();
 
     currentHealth = maxHealth;
