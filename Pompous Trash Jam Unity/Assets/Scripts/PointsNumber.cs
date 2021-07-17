@@ -14,11 +14,21 @@ public class PointsNumber : MonoBehaviour
   private float currentFadeTime;
   private float currentStayTime;
 
-  private void Start()
+  public void Initialize(int points, int scale, Vector2 position)
   {
     rectTransform = GetComponent<RectTransform>();
     text = GetComponent<TextMeshProUGUI>();
 
+    Vector2 viewportPoint = Camera.main.WorldToViewportPoint(position);
+    rectTransform.anchorMin = viewportPoint;
+    rectTransform.anchorMax = viewportPoint;
+
+    text.text = "+" + points;
+    text.fontSize += scale;
+  }
+
+  private void Start()
+  {
     currentFadeTime = maxFadeTime;
     currentStayTime = maxStayTime;
   }

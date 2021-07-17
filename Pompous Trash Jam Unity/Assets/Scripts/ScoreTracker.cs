@@ -62,17 +62,10 @@ public class ScoreTracker : MonoBehaviour
   private void SpawnPoints(int points)
   {
     GameObject newPointsObject = Instantiate(pointsObject, pointsCanvas.transform);
-
-    RectTransform rectTransform = newPointsObject.GetComponent<RectTransform>();
-    Vector2 viewportPoint = Camera.main.WorldToViewportPoint(tubeEntry.position);
-    rectTransform.anchorMin = viewportPoint;
-    rectTransform.anchorMax = viewportPoint;
-
-    TextMeshProUGUI[] texts = newPointsObject.GetComponentsInChildren<TextMeshProUGUI>();
-    foreach (TextMeshProUGUI text in texts)
+    PointsNumber[] numbers = newPointsObject.GetComponentsInChildren<PointsNumber>();
+    foreach (PointsNumber number in numbers)
     {
-      text.text = "+" + points;
-      text.fontSize = 12 + combo.ComboMultiplierIndex;
+      number.Initialize(points, combo.ComboMultiplierIndex, tubeEntry.position);
     }
   }
 
