@@ -145,7 +145,8 @@ public class PlayerController : PhysicsObject
       foreach (RaycastHit2D hit in hits)
       {
         BoxDestruction boxDestruction = hit.transform.GetComponent<BoxDestruction>();
-        if (boxDestruction)
+        MinigameBox minigameBox = hit.transform.GetComponent<MinigameBox>();
+        if (boxDestruction && !minigameBox)
         {
           boxDestruction.Hit(isFacingRight);
         }

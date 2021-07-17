@@ -6,11 +6,6 @@ public class GravityBox : SpecialBox
 {
   [SerializeField] private GameObject wormhole;
 
-  protected override void PreDestroy()
-  {
-    base.PreDestroy();
-  }
-
   protected override void PostDestroy()
   {
     base.PostDestroy();
