@@ -8,6 +8,7 @@ public class PointsNumber : MonoBehaviour
   [SerializeField] private float maxStayTime = 0.3f;
   [SerializeField] private float maxFadeTime = 1f;
 
+  private RectTransform rectTransform;
   private TextMeshProUGUI text;
 
   private float currentFadeTime;
@@ -15,6 +16,7 @@ public class PointsNumber : MonoBehaviour
 
   private void Start()
   {
+    rectTransform = GetComponent<RectTransform>();
     text = GetComponent<TextMeshProUGUI>();
 
     currentFadeTime = maxFadeTime;
@@ -43,5 +45,12 @@ public class PointsNumber : MonoBehaviour
         Destroy(gameObject);
       }
     }
+  }
+
+  private void FixedUpdate()
+  {
+    Vector2 anchoredPosition = rectTransform.anchoredPosition;
+    anchoredPosition.y++;
+    rectTransform.anchoredPosition = anchoredPosition;
   }
 }

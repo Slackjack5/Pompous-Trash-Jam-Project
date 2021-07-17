@@ -29,7 +29,6 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private GameObject pointsCanvas;
   [SerializeField] private GameObject pointsObject;
   [SerializeField] private Transform tubeEntry;
-  [SerializeField] private float pointsDuration = 1f;
 
   private RectTransform comboRectTransform;
 
