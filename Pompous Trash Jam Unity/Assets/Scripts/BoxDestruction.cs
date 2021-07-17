@@ -9,7 +9,6 @@ public class BoxDestruction : PhysicsObject
   [SerializeField] private float freezeTime = 0.4f;
   [SerializeField] private float explodeSpeed = 10f;
   [SerializeField] private string tube = "Tube";
-  [SerializeField] private float playerForceMultiplier = 3f;
 
   public GameObject destructable;
   public GameObject Wormhole;
@@ -71,18 +70,11 @@ public class BoxDestruction : PhysicsObject
     Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldofImpact, LayerToHit);
     foreach (Collider2D obj in objects)
     {
-      float theForce = force;
-      if (obj.name == "Capsule Player")
+      PhysicsObject physicsObject = obj.GetComponent<PhysicsObject>();
+      if (physicsObject)
       {
-        theForce *= playerForceMultiplier;
-        player.Stun();
+        physicsObject.Launch(transform.position, force);
       }
-
-      float randTorque = Random.Range(-25, 25);
-      Vector2 direction = obj.transform.position - transform.position;
-      obj.GetComponent<Rigidbody2D>().AddForce(direction * theForce);
-      obj.GetComponent<Rigidbody2D>().AddForce(transform.up * theForce / 2);
-      obj.GetComponent<Rigidbody2D>().AddTorque(randTorque);
     }
   }
 

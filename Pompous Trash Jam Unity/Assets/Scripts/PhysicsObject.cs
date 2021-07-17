@@ -37,4 +37,14 @@ public class PhysicsObject : MonoBehaviour
       rb.velocity = Vector2.zero;
     }
   }
+
+  public virtual void Launch(Vector3 origin, float force) 
+  {
+    Vector2 direction = (transform.position - origin).normalized;
+    rb.AddForce(direction * force);
+    rb.AddForce(transform.up * force / 2);
+
+    float randTorque = Random.Range(-25, 25);
+    rb.AddTorque(randTorque);
+  }
 }
