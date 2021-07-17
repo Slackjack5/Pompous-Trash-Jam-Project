@@ -6,7 +6,7 @@ using TMPro;
 
 public class Combo : MonoBehaviour
 {
-  [SerializeField] private float maxComboTime = 1f;
+  [SerializeField] private float maxComboTime = 2f;
   [SerializeField] private int maxComboUpgradeCount = 10;
   [SerializeField] private int[] comboMultipliers;
   [SerializeField] private string[] exclamations;
@@ -15,6 +15,7 @@ public class Combo : MonoBehaviour
   [SerializeField] private TextMeshProUGUI exclamation;
   [SerializeField] private TextMeshProUGUI shadowExclamation;
   [SerializeField] private Image comboProgress;
+  [SerializeField] private float maxFillTime = 0.2f;
   [SerializeField] private float maxScaleTime = 1f;
   [SerializeField] private float comboMaxSize = 1.2f;
 
@@ -22,6 +23,9 @@ public class Combo : MonoBehaviour
 
   private float currentComboTime;
   private int currentComboUpgradeCount;
+  private float startFillAmount;
+  private float currentFillTime;
+  private float currentResetFillTime;
   private float currentScaleTime;
 
   public int ComboMultiplierIndex { get; private set; }
@@ -39,8 +43,6 @@ public class Combo : MonoBehaviour
     exclamation.text = exclamations[ComboMultiplierIndex];
     shadowExclamation.text = exclamations[ComboMultiplierIndex];
 
-    comboProgress.fillAmount = (float) currentComboUpgradeCount / maxComboUpgradeCount;
-
     if (GameManager.IsGameActive)
     {
       if (currentScaleTime > 0)
@@ -49,12 +51,29 @@ public class Combo : MonoBehaviour
         ReduceSize();
       }
 
+      if (currentFillTime > 0)
+      {
+        currentFillTime -= Time.deltaTime;
+        Fill();
+      }
+
+      if (currentResetFillTime > 0)
+      {
+        currentResetFillTime -= Time.deltaTime;
+        ReduceFill();
+      }
+
       if (currentComboTime > 0)
       {
         currentComboTime -= Time.deltaTime;
       }
       else
       {
+        if (currentComboUpgradeCount > 0)
+        {
+          ResetFill();
+        }
+
         ComboMultiplierIndex = 0;
         currentComboUpgradeCount = 0;
       }
@@ -86,12 +105,39 @@ public class Combo : MonoBehaviour
     }
 
     Bulge();
+    StartFill();
   }
 
   private void Bulge()
   {
     rectTransform.localScale = new Vector3(comboMaxSize, comboMaxSize);
     currentScaleTime = maxScaleTime;
+  }
+
+  private void Fill()
+  {
+    float t = Mathf.InverseLerp(maxFillTime, 0, currentFillTime);
+    float fill = Mathf.Lerp(startFillAmount, (float) currentComboUpgradeCount / maxComboUpgradeCount, t);
+    comboProgress.fillAmount = fill;
+  }
+
+  private void ReduceFill()
+  {
+    float t = Mathf.InverseLerp(0, maxFillTime, currentResetFillTime);
+    float fill = Mathf.Lerp(0, startFillAmount, t);
+    comboProgress.fillAmount = fill;
+  }
+
+  private void StartFill()
+  {
+    currentFillTime = maxFillTime;
+    startFillAmount = comboProgress.fillAmount;
+  }
+
+  private void ResetFill()
+  {
+    currentResetFillTime = maxFillTime;
+    startFillAmount = comboProgress.fillAmount;
   }
 
   private void ReduceSize()
