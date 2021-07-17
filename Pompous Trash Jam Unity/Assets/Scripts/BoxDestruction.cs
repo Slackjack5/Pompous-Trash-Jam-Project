@@ -4,7 +4,7 @@ using UnityEngine;
 using EZCameraShake;
 public class BoxDestruction : PhysicsObject
 {
-  [SerializeField] private int maxHealth = 3;
+  [SerializeField] private int maxHealth = 2;
   [SerializeField] private float hitForce = 500f;
   [SerializeField] private float freezeTime = 0.1f;
   [SerializeField] private GameObject destructable;
