@@ -20,10 +20,11 @@ public class Combo : MonoBehaviour
 
   private RectTransform rectTransform;
 
-  private int comboMultiplierIndex;
   private float currentComboTime;
   private int currentComboUpgradeCount;
   private float currentScaleTime;
+
+  public int ComboMultiplierIndex { get; private set; }
 
   private void Start()
   {
@@ -33,10 +34,10 @@ public class Combo : MonoBehaviour
   private void Update()
   {
     // Update text
-    comboMultiplierText.text = comboMultipliers[comboMultiplierIndex] + "x";
-    shadowComboMultiplierText.text = comboMultipliers[comboMultiplierIndex] + "x";
-    exclamation.text = exclamations[comboMultiplierIndex];
-    shadowExclamation.text = exclamations[comboMultiplierIndex];
+    comboMultiplierText.text = comboMultipliers[ComboMultiplierIndex] + "x";
+    shadowComboMultiplierText.text = comboMultipliers[ComboMultiplierIndex] + "x";
+    exclamation.text = exclamations[ComboMultiplierIndex];
+    shadowExclamation.text = exclamations[ComboMultiplierIndex];
 
     comboProgress.fillAmount = (float) currentComboUpgradeCount / maxComboUpgradeCount;
 
@@ -54,7 +55,7 @@ public class Combo : MonoBehaviour
       }
       else
       {
-        comboMultiplierIndex = 0;
+        ComboMultiplierIndex = 0;
         currentComboUpgradeCount = 0;
       }
     }
@@ -62,7 +63,7 @@ public class Combo : MonoBehaviour
 
   public int GetMultiplier()
   {
-    return comboMultipliers[comboMultiplierIndex];
+    return comboMultipliers[ComboMultiplierIndex];
   }
 
   public void Hit()
@@ -72,14 +73,14 @@ public class Combo : MonoBehaviour
 
     if (currentComboUpgradeCount >= maxComboUpgradeCount)
     {
-      if (comboMultiplierIndex == comboMultipliers.Length - 1)
+      if (ComboMultiplierIndex == comboMultipliers.Length - 1)
       {
         // Combo multiplier is at its max, so maintain the max upgrade count
         currentComboUpgradeCount = maxComboUpgradeCount;
       }
       else
       {
-        comboMultiplierIndex++;
+        ComboMultiplierIndex++;
         currentComboUpgradeCount = 0;
       }
     }

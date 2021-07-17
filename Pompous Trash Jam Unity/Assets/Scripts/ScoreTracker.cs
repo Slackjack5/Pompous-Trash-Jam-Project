@@ -72,6 +72,7 @@ public class ScoreTracker : MonoBehaviour
     foreach (TextMeshProUGUI text in texts)
     {
       text.text = "+" + points;
+      text.fontSize = 12 + combo.ComboMultiplierIndex;
     }
   }
 
