@@ -11,10 +11,76 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="2564553725">
+		<SoundBank Id="85412153" Language="SFX" Hash="3173126536">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
+			<IncludedEvents>
+				<Event Id="762239356" Name="Play_BoxHit" ObjectPath="\Events\Default Work Unit\Play_BoxHit" DurationType="OneShot" DurationMin="0.975238" DurationMax="1.300317">
+					<IncludedMemoryFiles>
+						<File Id="228988825" Language="SFX">
+							<ShortName>WoodHit\WoodHit2.wav</ShortName>
+							<Path>SFX\WoodHit\WoodHit2_10C4C929.wem</Path>
+						</File>
+						<File Id="489467709" Language="SFX">
+							<ShortName>WoodHit\WoodHit4.wav</ShortName>
+							<Path>SFX\WoodHit\WoodHit4_10C4C929.wem</Path>
+						</File>
+						<File Id="571112002" Language="SFX">
+							<ShortName>WoodHit\WoodHit3.wav</ShortName>
+							<Path>SFX\WoodHit\WoodHit3_10C4C929.wem</Path>
+						</File>
+						<File Id="595008138" Language="SFX">
+							<ShortName>WoodHit\WoodHit1.wav</ShortName>
+							<Path>SFX\WoodHit\WoodHit1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.273314" DurationMax="0.581079">
+					<IncludedMemoryFiles>
+						<File Id="89330362" Language="SFX">
+							<ShortName>Character\Footsteps\Cement4.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement4_10C4C929.wem</Path>
+						</File>
+						<File Id="99111655" Language="SFX">
+							<ShortName>Character\Footsteps\Cement3.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement3_10C4C929.wem</Path>
+						</File>
+						<File Id="320509478" Language="SFX">
+							<ShortName>Character\Footsteps\Cement1.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement1_10C4C929.wem</Path>
+						</File>
+						<File Id="668926591" Language="SFX">
+							<ShortName>Character\Footsteps\Cement2.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement2_10C4C929.wem</Path>
+						</File>
+						<File Id="746593466" Language="SFX">
+							<ShortName>Character\Footsteps\Cement6.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement6_10C4C929.wem</Path>
+						</File>
+						<File Id="1039475092" Language="SFX">
+							<ShortName>Character\Footsteps\Cement5.wav</ShortName>
+							<Path>SFX\Character\Footsteps\Cement5_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="989180208" Name="Play_Swing" ObjectPath="\Events\Default Work Unit\Play_Swing" DurationType="OneShot" DurationMin="0.541667" DurationMax="1.041667">
+					<IncludedMemoryFiles>
+						<File Id="371522550" Language="SFX">
+							<ShortName>Swing\Swing3.wav</ShortName>
+							<Path>SFX\Swing\Swing3_10C4C929.wem</Path>
+						</File>
+						<File Id="548731478" Language="SFX">
+							<ShortName>Swing\Swing1.wav</ShortName>
+							<Path>SFX\Swing\Swing1_10C4C929.wem</Path>
+						</File>
+						<File Id="568422131" Language="SFX">
+							<ShortName>Swing\Swing2.wav</ShortName>
+							<Path>SFX\Swing\Swing2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
 			<ObjectPath>Init</ObjectPath>
