@@ -29,7 +29,10 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Pause_Music" ID="{EA4B4A3C-6941-4127-A142-B62C81120359}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Music" ID="{6A4A732B-75B6-427D-84A8-CD1293E7C0F4}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Active" ID="{7CE86739-F07F-435B-BFDB-39D669CE8F5A}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Music" ID="{8B99E62E-A32D-451A-9043-00309957495D}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Inactive" ID="{96A4E230-0CAE-46D7-A4F6-A7CAEAFC179A}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{07E8EF99-5DB2-4AA2-A80C-6937C2B12C9F}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Resume_Music" ID="{328BD652-D34E-4AAC-BD89-C1F700A5125A}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
