@@ -86,6 +86,8 @@ public class BoxDestruction : PhysicsObject
   //Debugging Code
   private void OnMouseDown()
   {
+#if UNITY_EDITOR
     Destroy();
+#endif
   }
 }
