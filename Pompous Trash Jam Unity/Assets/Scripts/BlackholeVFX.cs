@@ -36,7 +36,6 @@ public class BlackholeVFX : MonoBehaviour
       Color tmp = circle.material.color;
       tmp.a = Mathf.Max(1 - (Time.time - startTime - 5), 0);
       circle.material.SetColor("_BaseColor", tmp);
-      print(circle.material.GetColor("_BaseColor"));
     }
   }
 

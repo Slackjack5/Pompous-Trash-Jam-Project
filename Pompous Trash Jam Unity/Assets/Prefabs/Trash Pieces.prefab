@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 2958561602904709236}
   - component: {fileID: 223474001725800397}
   m_Layer: 0
-  m_Name: DestructableBox
+  m_Name: Trash Pieces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -8,9 +8,7 @@ public class Timer : MonoBehaviour
 {
   [SerializeField] private float maxTime = 100f;
   [SerializeField] private TextMeshProUGUI timerText;
-  [SerializeField] private TextMeshProUGUI shadowTimerText;
   [SerializeField] private TextMeshProUGUI countdownText;
-  [SerializeField] private TextMeshProUGUI shadowCountdownText;
   [SerializeField] private string startLevelText = "Press Space to start";
   [SerializeField] private float maxFontSize = 72f;
   [SerializeField] private float minFontSize = 24f;
@@ -32,7 +30,6 @@ public class Timer : MonoBehaviour
   void Update()
   {
     timerText.text = FormatTime(currentTimeLeft);
-    shadowTimerText.text = FormatTime(currentTimeLeft);
 
     if (GameManager.IsLevelStarted)
     {
@@ -76,7 +73,6 @@ public class Timer : MonoBehaviour
     else
     {
       countdownText.text = startLevelText;
-      shadowCountdownText.text = startLevelText;
     }
   }
 
@@ -86,18 +82,12 @@ public class Timer : MonoBehaviour
     float t = Mathf.InverseLerp(0, 1, currentCountdownTime % 1);
 
     countdownText.fontSize = Mathf.Lerp(minFontSize, maxFontSize, t);
-    shadowCountdownText.fontSize = countdownText.fontSize;
 
     Color color = countdownText.color;
     color.a = t;
     countdownText.color = color;
 
-    color = shadowCountdownText.color;
-    color.a = t;
-    shadowCountdownText.color = color;
-
     countdownText.text = string.Format("{0}", Mathf.CeilToInt(currentCountdownTime));
-    shadowCountdownText.text = countdownText.text;
 
     // Make background color transparent
     Image image = countdownText.gameObject.GetComponentInParent<Image>();
@@ -114,22 +104,15 @@ public class Timer : MonoBehaviour
   private IEnumerator DisplayGo()
   {
     countdownText.fontSize = maxFontSize;
-    shadowCountdownText.fontSize = maxFontSize;
 
     Color color = countdownText.color;
     color.a = 1;
     countdownText.color = color;
 
-    color = shadowCountdownText.color;
-    color.a = 1;
-    shadowCountdownText.color = color;
-
     countdownText.text = "GO";
-    shadowCountdownText.text = "GO";
 
     yield return new WaitForSeconds(1f);
 
     countdownText.enabled = false;
-    shadowCountdownText.enabled = false;
   }
 }

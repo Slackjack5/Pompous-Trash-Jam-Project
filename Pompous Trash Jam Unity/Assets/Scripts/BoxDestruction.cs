@@ -7,7 +7,7 @@ public class BoxDestruction : PhysicsObject
   [SerializeField] private int maxHealth = 2;
   [SerializeField] private float hitForce = 500f;
   [SerializeField] private float freezeTime = 0.1f;
-  [SerializeField] private GameObject destructable;
+  [SerializeField] private GameObject trashPieces;
 
   private SpriteRenderer spriteRenderer;
 
@@ -52,7 +52,7 @@ public class BoxDestruction : PhysicsObject
   {
     spriteRenderer.enabled = false;
 
-    Instantiate(destructable, transform.position, Quaternion.identity);
+    Instantiate(trashPieces, transform.position, Quaternion.identity);
 
     CameraShaker.Instance.ShakeOnce(2.5f, 2.5f, .2f, 2f);
   }
@@ -86,6 +86,8 @@ public class BoxDestruction : PhysicsObject
   //Debugging Code
   private void OnMouseDown()
   {
+#if UNITY_EDITOR
     Destroy();
+#endif
   }
 }

@@ -11,9 +11,7 @@ public class Combo : MonoBehaviour
   [SerializeField] private int[] comboMultipliers;
   [SerializeField] private string[] exclamations;
   [SerializeField] private TextMeshProUGUI comboMultiplierText;
-  [SerializeField] private TextMeshProUGUI shadowComboMultiplierText;
   [SerializeField] private TextMeshProUGUI exclamation;
-  [SerializeField] private TextMeshProUGUI shadowExclamation;
   [SerializeField] private Image comboProgress;
   [SerializeField] private float maxFillTime = 0.2f;
   [SerializeField] private float maxScaleTime = 1f;
@@ -39,9 +37,7 @@ public class Combo : MonoBehaviour
   {
     // Update text
     comboMultiplierText.text = comboMultipliers[ComboMultiplierIndex] + "x";
-    shadowComboMultiplierText.text = comboMultipliers[ComboMultiplierIndex] + "x";
     exclamation.text = exclamations[ComboMultiplierIndex];
-    shadowExclamation.text = exclamations[ComboMultiplierIndex];
 
     if (GameManager.IsGameActive)
     {

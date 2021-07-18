@@ -11,7 +11,6 @@ public class Wormhole : MonoBehaviour
   //Explosion
   public float fieldofImpact;
   public float force;
-  public float torque;
   public LayerMask LayerToHit;
 
   // Start is called before the first frame update
