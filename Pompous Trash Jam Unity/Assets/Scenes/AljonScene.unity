@@ -2672,9 +2672,7 @@ MonoBehaviour:
   - OUTSTANDING!
   - SENSATIONAL!
   comboMultiplierText: {fileID: 611312664}
-  shadowComboMultiplierText: {fileID: 0}
   exclamation: {fileID: 1103842666}
-  shadowExclamation: {fileID: 0}
   comboProgress: {fileID: 1828894380}
   maxFillTime: 0.2
   maxScaleTime: 1
@@ -4565,6 +4563,7 @@ GameObject:
   - component: {fileID: 1006719899}
   - component: {fileID: 1006719901}
   - component: {fileID: 1006719900}
+  - component: {fileID: 1006719902}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -4629,6 +4628,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006719898}
   m_CullTransparentMesh: 1
+--- !u!114 &1006719902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006719898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1059252182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4898,9 +4912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTime: 20
   timerText: {fileID: 765614955}
-  shadowTimerText: {fileID: 0}
   countdownText: {fileID: 332385450}
-  shadowCountdownText: {fileID: 0}
   startLevelText: Press Space to start
   maxFontSize: 72
   minFontSize: 24
@@ -5472,14 +5484,12 @@ MonoBehaviour:
   baseMultiplier: 100
   combo: {fileID: 643213646}
   scoreText: {fileID: 346484315}
-  shadowScoreText: {fileID: 0}
   bronzeScore: 1000
   silverScore: 2000
   goldScore: 3000
   starPanel: {fileID: 712308589}
   star: {fileID: 1350523212213426446, guid: e511e1e176dd2c14ab7e8152837c2d2c, type: 3}
   highScoreText: {fileID: 1401144582}
-  shadowHighScoreText: {fileID: 0}
   pointsCanvas: {fileID: 1002112075}
   pointsObject: {fileID: 7185819809198225204, guid: 1c25c6b881452c741a67e1a11d892e51, type: 3}
   tubeEntry: {fileID: 616557220}
@@ -5687,7 +5697,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showDelay: 3
   countdownText: {fileID: 332385450}
-  shadowCountdownText: {fileID: 0}
   endLevelText: FINISHED
 --- !u!1 &1369377965
 GameObject:
@@ -6075,6 +6084,7 @@ GameObject:
   - component: {fileID: 1416941340}
   - component: {fileID: 1416941339}
   - component: {fileID: 1416941341}
+  - component: {fileID: 1416941342}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -6195,6 +6205,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1416941342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416941337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1417691534
 GameObject:
   m_ObjectHideFlags: 0
