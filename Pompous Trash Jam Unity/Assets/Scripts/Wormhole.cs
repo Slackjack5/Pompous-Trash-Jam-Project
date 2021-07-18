@@ -24,6 +24,9 @@ public class Wormhole : MonoBehaviour
     tempSR.material = new Material(blackHoleVFXMat);
 
     StartCoroutine("EndWormHole");
+    //Audio
+    AkSoundEngine.PostEvent("Pause_Music", gameObject);
+    AkSoundEngine.PostEvent("LowPass_Music", gameObject);
   }
 
   private void Explosion()
@@ -37,6 +40,7 @@ public class Wormhole : MonoBehaviour
       obj.GetComponent<Rigidbody2D>().AddForce(transform.up * force / 2);
       obj.GetComponent<Rigidbody2D>().AddTorque(randTorque);
     }
+    AkSoundEngine.PostEvent("Resume_Music", gameObject);
   }
 
   // Update is called once per frame

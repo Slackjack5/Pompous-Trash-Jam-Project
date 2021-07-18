@@ -140,6 +140,70 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Music" ID="{6A4A732B-75B6-427D-84A8-CD1293E7C0F4}">
+					<ChildrenList>
+						<Action Name="" ID="{0F9F6B1B-0343-4A34-8D32-653055B575DC}" ShortID="545763887">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{07E8EF99-5DB2-4AA2-A80C-6937C2B12C9F}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pause_Music" ID="{EA4B4A3C-6941-4127-A142-B62C81120359}">
+					<ChildrenList>
+						<Action Name="" ID="{EF44D7F0-9E66-4988-9615-83431D3218B0}" ShortID="626847642">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Resume_Music" ID="{328BD652-D34E-4AAC-BD89-C1F700A5125A}">
+					<ChildrenList>
+						<Action Name="" ID="{70A82DDB-1B43-4022-AF18-94F117B1626A}" ShortID="455340668">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Music" ID="{8B99E62E-A32D-451A-9043-00309957495D}">
+					<ChildrenList>
+						<Action Name="" ID="{417864B6-C2CB-450F-94E9-71E1C3A4299E}" ShortID="1032003217">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

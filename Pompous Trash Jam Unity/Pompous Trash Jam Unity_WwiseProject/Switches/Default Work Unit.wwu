@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A45D887F-0DEC-4640-9606-F748436FAB1C}" SchemaVersion="103">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{A45D887F-0DEC-4640-9606-F748436FAB1C}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A45D887F-0DEC-4640-9606-F748436FAB1C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="GamePlay_Switch" ID="{8FEF3309-F65E-4F39-986E-6048AFF1E70A}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Active" ID="{0982FD4B-D540-4DE8-BFEE-01BADCBFA9A7}"/>
+						<Switch Name="Inactive" ID="{ED23F611-7461-4DF5-9951-F81ABCD266B5}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

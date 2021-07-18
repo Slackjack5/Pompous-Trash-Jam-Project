@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2735935537	Pause_Music			\Default Work Unit\Pause_Music	
+	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	2940177080	Resume_Music			\Default Work Unit\Resume_Music	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2702523344	GamePlay_Switch			\Default Work Unit\GamePlay_Switch	
+
+Switch	ID	Name	Switch Group			Notes
+	58138747	Active	GamePlay_Switch			
+	3163453698	Inactive	GamePlay_Switch			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	306968131	Nycelly - TrashHouse9 (Game Jam Song)	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Nycelly - TrashHouse9 (Game Jam Song)_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Active\Nycelly - TrashHouse9 (Game Jam Song)\Nycelly - TrashHouse9 (Game Jam Song)		17562688
+	867489106	Nycelly - TrashHouse9(Intro-Loop)	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Nycelly - TrashHouse9(Intro-Loop)_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Inactive\Nycelly - TrashHouse9(Intro-Loop)\Nycelly - TrashHouse9(Intro-Loop)		1323064
+

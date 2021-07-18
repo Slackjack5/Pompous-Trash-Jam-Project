@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="2768442662">
+		<SoundBank Id="85412153" Language="SFX" Hash="1677943464">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
@@ -196,13 +196,55 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3474713773">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3298532009">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<IncludedAuxBusses>
 				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 			</IncludedAuxBusses>
+		</SoundBank>
+		<SoundBank Id="3991942870" Language="SFX" Hash="1677374978">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2735935537" Name="Pause_Music" ObjectPath="\Events\Default Work Unit\Pause_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="306968131" Language="SFX">
+							<ShortName>Nycelly - TrashHouse9 (Game Jam Song).wav</ShortName>
+							<Path>SFX\Nycelly - TrashHouse9 (Game Jam Song)_D79FB2B7.wem</Path>
+						</File>
+						<File Id="867489106" Language="SFX">
+							<ShortName>Nycelly - TrashHouse9(Intro-Loop).wav</ShortName>
+							<Path>SFX\Nycelly - TrashHouse9(Intro-Loop)_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{0982FD4B-D540-4DE8-BFEE-01BADCBFA9A7}">
+							<Media>
+								<File Id="306968131"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{ED23F611-7461-4DF5-9951-F81ABCD266B5}">
+							<Media>
+								<File Id="867489106"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2940177080" Name="Resume_Music" ObjectPath="\Events\Default Work Unit\Resume_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="2702523344" Name="GamePlay_Switch" ObjectPath="\Switches\Default Work Unit\GamePlay_Switch">
+					<Switches>
+						<Switch Id="58138747" Name="Active" ObjectPath="\Switches\Default Work Unit\GamePlay_Switch\Active"/>
+						<Switch Id="3163453698" Name="Inactive" ObjectPath="\Switches\Default Work Unit\GamePlay_Switch\Inactive"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
