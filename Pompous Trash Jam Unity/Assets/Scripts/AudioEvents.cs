@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using EZCameraShake;
 
 public class AudioEvents : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class AudioEvents : MonoBehaviour
   public UnityEvent OnEveryBeat;
   public UnityEvent OnEveryBar;
   public UnityEvent OnR;
+  public UnityEvent OnSubtractTime;
   public int GridCount = 0;
   public int gridCounter = 0;
   public bool startCounting = false;
@@ -79,11 +81,40 @@ public class AudioEvents : MonoBehaviour
         if(playerReady==true)
         {
           AkSoundEngine.SetSwitch("GamePlay_Switch", "Active", gameObject);
-          GameManager.StartLevel();
+          
         }
+        break;
+      case "Ready":
+        OnSubtractTime.Invoke();
+        Debug.Log("Yay: Ready");
+        break;
+      case "3":
+        OnSubtractTime.Invoke();
+        Debug.Log("Yay: 3");
+        break;
+      case "2":
+        OnSubtractTime.Invoke();
+        Debug.Log("Yay: 2");
+        break;
+      case "1":
+        OnSubtractTime.Invoke();
+        Debug.Log("Yay: 1");
+        break;
+      case "Go":
+        OnSubtractTime.Invoke();
+        Debug.Log("Yay: Go!");
         break;
       default:
         break;
+    }
+  }
+
+  public void Bump()
+  {
+    if(GameManager.IsGameActive)
+    {
+      //Camera Shake
+      CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, .1f);
     }
   }
 

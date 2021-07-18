@@ -134,6 +134,7 @@ public class PlayerController : PhysicsObject
     else
     {
       StartGame.Invoke();
+      GameManager.StartLevel();
     }
   }
 

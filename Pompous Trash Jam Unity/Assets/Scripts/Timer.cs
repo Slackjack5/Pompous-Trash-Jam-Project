@@ -12,8 +12,9 @@ public class Timer : MonoBehaviour
   [SerializeField] private string startLevelText = "Press Space to start";
   [SerializeField] private float maxFontSize = 72f;
   [SerializeField] private float minFontSize = 24f;
-
-  private float currentCountdownTime = 3f;
+  [SerializeField] private float fadeTime = 1f;
+  private float currentFadeTime;
+  private int currentCountdownTime = 5;
   private bool isCountingDown = true;
   private bool isTimeDone = false;
   private float currentTimeLeft;
@@ -30,13 +31,26 @@ public class Timer : MonoBehaviour
   void Update()
   {
     timerText.text = FormatTime(currentTimeLeft);
-
+    Debug.Log(currentCountdownTime);
     if (GameManager.IsLevelStarted)
     {
       if (isCountingDown)
       {
-        DisplayCountdownTime();
-        currentCountdownTime -= Time.deltaTime;
+        if (currentCountdownTime<4)
+        {
+          DisplayCountdownTime();
+          Fade();
+        }
+        else if (currentCountdownTime == 4)
+        {
+          countdownText.text = "Get Ready";
+          Fade();
+        }
+        else
+        {
+          countdownText.text = "Preparing Room";
+          //Fade();
+        }
 
         if (currentCountdownTime <= 0)
         {
@@ -44,7 +58,12 @@ public class Timer : MonoBehaviour
           StartCoroutine(DisplayGo());
 
           isCountingDown = false;
-          GameManager.ActivateGame();
+
+        }
+
+        if(currentFadeTime>0)
+        {
+          currentFadeTime -= Time.deltaTime;
         }
       }
       else
@@ -76,22 +95,29 @@ public class Timer : MonoBehaviour
     }
   }
 
-  private void DisplayCountdownTime()
+  private void Fade()
   {
     // Have the countdown get smaller and more transparent over time
-    float t = Mathf.InverseLerp(0, 1, currentCountdownTime % 1);
+    float t = Mathf.InverseLerp(0, fadeTime, currentFadeTime);
 
     countdownText.fontSize = Mathf.Lerp(minFontSize, maxFontSize, t);
 
     Color color = countdownText.color;
     color.a = t;
     countdownText.color = color;
-
-    countdownText.text = string.Format("{0}", Mathf.CeilToInt(currentCountdownTime));
+  }
+  public void SubtractTime()
+  {
+    currentCountdownTime -= 1; //1f;/////Time.deltaTime;
+    currentFadeTime = fadeTime;
+  }
+  private void DisplayCountdownTime()
+  {
+    countdownText.text = string.Format("{0}",(currentCountdownTime));
 
     // Make background color transparent
     Image image = countdownText.gameObject.GetComponentInParent<Image>();
-    color = image.color;
+    Color color = image.color;
     color.a = 0;
     image.color = color;
   }
@@ -111,8 +137,8 @@ public class Timer : MonoBehaviour
 
     countdownText.text = "GO";
 
-    yield return new WaitForSeconds(1f);
-
+    yield return new WaitForSeconds(.5f);
+    GameManager.ActivateGame();
     countdownText.enabled = false;
   }
 }
