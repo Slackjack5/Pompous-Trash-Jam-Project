@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using EZCameraShake;
+using UnityEngine.Events;
 public class PlayerController : PhysicsObject
 {
   [SerializeField] private float baseSpeed = 800f;
@@ -29,9 +30,9 @@ public class PlayerController : PhysicsObject
   private float xInput;
   
   const float touchDistance = .1f;
-
-    //Animations
-    [SerializeField] private Animator myAnimator;
+  public UnityEvent StartGame;
+  //Animations
+  [SerializeField] private Animator myAnimator;
     // Start is called before the first frame update
   protected override void Start()
   {
@@ -132,7 +133,7 @@ public class PlayerController : PhysicsObject
     }
     else
     {
-      GameManager.StartLevel();
+      StartGame.Invoke();
     }
   }
 

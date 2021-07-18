@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using EZCameraShake;
 public class Wormhole : MonoBehaviour
 {
   [SerializeField] private GameObject blackHoleVFX;
@@ -33,6 +33,7 @@ public class Wormhole : MonoBehaviour
   private void Explosion()
   {
     Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldofImpact, LayerToHit);
+    AkSoundEngine.PostEvent("Play_WormholeExplosion", gameObject);
     foreach (Collider2D obj in objects)
     {
       float randTorque = Random.Range(-25, 25);
@@ -47,7 +48,8 @@ public class Wormhole : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-
+    //Camera Shake
+    CameraShaker.Instance.ShakeOnce(1f, 1f, .1f, 1f);
   }
 
   IEnumerator EndWormHole()

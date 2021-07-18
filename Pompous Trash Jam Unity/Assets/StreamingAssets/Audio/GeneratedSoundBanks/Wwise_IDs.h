@@ -21,11 +21,15 @@ namespace AK
         static const AkUniqueID PLAY_BOXBREAK = 843996146U;
         static const AkUniqueID PLAY_BOXHIT = 762239356U;
         static const AkUniqueID PLAY_BOXTHUD = 301007570U;
+        static const AkUniqueID PLAY_EXPLOSION = 4030404899U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_SMOKECLOUD = 2971166468U;
         static const AkUniqueID PLAY_SWING = 989180208U;
         static const AkUniqueID PLAY_VACUUMEND = 1424032314U;
         static const AkUniqueID PLAY_VACUUMLOOP = 3537388541U;
+        static const AkUniqueID PLAY_WORMHOLE = 208310577U;
+        static const AkUniqueID PLAY_WORMHOLEEXPLOSION = 631525614U;
         static const AkUniqueID RESUME_MUSIC = 2940177080U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_VACUUMLOOP = 740603203U;
