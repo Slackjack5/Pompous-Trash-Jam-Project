@@ -10904,7 +10904,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1fca7788e1d6546bff09e9fb97fc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  box: {fileID: 2202151929508145569, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
+  boxes:
+  - {fileID: 2202151929508145569, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
+  - {fileID: 8555884608545438775, guid: ac04d1cfe4f2a6943b7eba4fb2b233ca, type: 3}
+  - {fileID: 9083730487365473030, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+  - {fileID: 6735901189982893078, guid: b06d3c172dc044c40b6a7f62b964dd70, type: 3}
+  - {fileID: 248289148682040791, guid: f3e944e4b2cf41f4fb720769987aa9a4, type: 3}
   spawnWidth: 12
   spawnInterval: 1.5
 --- !u!1 &2130790591
