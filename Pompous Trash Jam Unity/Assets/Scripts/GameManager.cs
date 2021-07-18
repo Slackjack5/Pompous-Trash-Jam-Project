@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
   public static readonly UnityEvent levelComplete = new UnityEvent();
 
+  public static bool IsLevelStarted { get; private set; }
+
   public static bool IsGameActive { get; private set; }
 
   public static bool IsMinigameActive {
@@ -51,6 +53,11 @@ public class GameManager : MonoBehaviour
   {
     IsGameActive = false;
     Physics2D.gravity = Vector2.zero;
+  }
+
+  public static void StartLevel()
+  {
+    IsLevelStarted = true;
   }
 
   public static void EndLevel()

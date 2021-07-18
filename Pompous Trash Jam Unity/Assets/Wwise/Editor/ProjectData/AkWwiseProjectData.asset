@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 226b383d1762534c83eb131ccfd311f8
     GuidInternal: 
-    m_lastTime: -8585750327082258224
+    m_lastTime: -8585750469733577078
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -97,7 +97,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: b65bdd52986abd4fbb51b640cc412cdb
     GuidInternal: 
-    m_lastTime: -8585750327081909162
+    m_lastTime: -8585750321437948103
     List:
     - name: Ambience
       guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
@@ -139,7 +139,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a33f0301cc3b20418f2028f42eef846f
     GuidInternal: 
-    m_lastTime: -8585750327082118608
+    m_lastTime: -8585750321441654465
     List:
     - name: LowPass_Music
       guid: e33b4dea1f30284fb0eaf34f4b322b44
@@ -568,7 +568,7 @@ MonoBehaviour:
     m_lastTime: -8585757543609773690
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000150000001600000017000000180000001a0000001d0000001e0000001f00000020000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

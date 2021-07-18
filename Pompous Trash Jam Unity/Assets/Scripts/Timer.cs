@@ -32,33 +32,36 @@ public class Timer : MonoBehaviour
     timerText.text = FormatTime(currentTimeLeft);
     shadowTimerText.text = FormatTime(currentTimeLeft);
 
-    if (isCountingDown)
+    if (GameManager.IsLevelStarted)
     {
-      DisplayCountdownTime();
-      currentCountdownTime -= Time.deltaTime;
-
-      if (currentCountdownTime <= 0)
+      if (isCountingDown)
       {
-        // Countdown is over
-        StartCoroutine(DisplayGo());
+        DisplayCountdownTime();
+        currentCountdownTime -= Time.deltaTime;
 
-        isCountingDown = false;
-        GameManager.ActivateGame();
-      }
-    }
-    else
-    {
-      if (currentTimeLeft <= 0 && !isTimeDone)
-      {
-        // Player ran out of time
-        isTimeDone = true;
-        currentTimeLeft = 0;
-        levelCompleteCanvas.SetActive(true);
-        GameManager.EndLevel();
+        if (currentCountdownTime <= 0)
+        {
+          // Countdown is over
+          StartCoroutine(DisplayGo());
+
+          isCountingDown = false;
+          GameManager.ActivateGame();
+        }
       }
       else
       {
-        currentTimeLeft -= Time.deltaTime;
+        if (currentTimeLeft <= 0 && !isTimeDone)
+        {
+          // Player ran out of time
+          isTimeDone = true;
+          currentTimeLeft = 0;
+          levelCompleteCanvas.SetActive(true);
+          GameManager.EndLevel();
+        }
+        else
+        {
+          currentTimeLeft -= Time.deltaTime;
+        }
       }
     }
   }
