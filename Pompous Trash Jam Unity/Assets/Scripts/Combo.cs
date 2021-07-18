@@ -37,7 +37,6 @@ public class Combo : MonoBehaviour
 
   private void Update()
   {
-    Debug.Log("Current Multiplier"+ComboMultiplierIndex);
     // Update text
     comboMultiplierText.text = comboMultipliers[ComboMultiplierIndex] + "x";
     shadowComboMultiplierText.text = comboMultipliers[ComboMultiplierIndex] + "x";
@@ -90,8 +89,6 @@ public class Combo : MonoBehaviour
   {
     currentComboTime = maxComboTime;
     currentComboUpgradeCount++;
-
-
 
     if (currentComboUpgradeCount >= maxComboUpgradeCount)
     {

@@ -112,13 +112,20 @@ public class PlayerController : PhysicsObject
 
     StartCoroutine(Stun());
   }
-  //Player Attacking
+
   public void OnAttack()
   {
-    if(currentMeleeCooldown <= 0)
+    if (GameManager.IsLevelStarted)
     {
-      //animation
-      myAnimator.SetBool("isAttacking", true);
+      if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
+      {
+        // Setting this bool to true triggers PlaySwing
+        myAnimator.SetBool("isAttacking", true);
+      }
+    }
+    else
+    {
+      GameManager.StartLevel();
     }
   }
 

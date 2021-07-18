@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
   public static readonly UnityEvent levelComplete = new UnityEvent();
 
+  public static bool IsLevelStarted { get; private set; }
+
   public static bool IsGameActive { get; private set; }
 
   public static bool IsMinigameActive {
@@ -53,9 +55,14 @@ public class GameManager : MonoBehaviour
     Physics2D.gravity = Vector2.zero;
   }
 
+  public static void StartLevel()
+  {
+    IsLevelStarted = true;
+  }
+
   public static void EndLevel()
   {
-    FreezeTime();
+    DeactivateGame();
     levelComplete.Invoke();
     isLevelComplete = true;
   }
@@ -96,7 +103,7 @@ public class GameManager : MonoBehaviour
     }
   }
 
-  private static void FreezeTime()
+  public static void FreezeTime()
   {
     Time.timeScale = 0;
   }
