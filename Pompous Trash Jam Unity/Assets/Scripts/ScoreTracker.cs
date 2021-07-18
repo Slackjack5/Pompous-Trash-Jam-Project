@@ -9,14 +9,12 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private int baseMultiplier = 100;
   [SerializeField] private Combo combo;
   [SerializeField] private TextMeshProUGUI scoreText;
-  [SerializeField] private TextMeshProUGUI shadowScoreText;
   [SerializeField] private int bronzeScore;
   [SerializeField] private int silverScore;
   [SerializeField] private int goldScore;
   [SerializeField] private GameObject starPanel;
   [SerializeField] private GameObject star;
   [SerializeField] private TextMeshProUGUI highScoreText;
-  [SerializeField] private TextMeshProUGUI shadowHighScoreText;
   [SerializeField] private GameObject pointsCanvas;
   [SerializeField] private GameObject pointsObject;
   [SerializeField] private Transform tubeEntry;
@@ -38,9 +36,7 @@ public class ScoreTracker : MonoBehaviour
   {
     // Update text
     scoreText.text = score.ToString();
-    shadowScoreText.text = score.ToString();
     highScoreText.text = highScore.ToString();
-    shadowHighScoreText.text = highScore.ToString();
   }
 
   public void Increase(int value)
