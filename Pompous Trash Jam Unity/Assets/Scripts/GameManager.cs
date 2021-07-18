@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
   private static Vector2 defaultGravity = new Vector2(0, -9.8f);
   private static bool isLevelComplete = false;
   private static bool isPaused = false;
+  private static Minigame[] minigames;
   private static GameObject pauseMenu;
 
   private void Start()
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     DeactivateGame();
 
+    minigames = new Minigame[] { buttonMashMinigame, accuracyMinigame, alternatingButtonMashMinigame, sequenceMinigame };
     tubeMinigame.triggered.AddListener(() => StartMinigame(tubeMinigame));
 
     isPaused = false;
@@ -86,6 +88,11 @@ public class GameManager : MonoBehaviour
       minigame.Restart();
       CurrentMinigame = minigame;
     }
+  }
+
+  public static void StartRandomMinigame()
+  {
+    StartMinigame(minigames[Random.Range(0, minigames.Length)]);
   }
 
   public static void TogglePause()

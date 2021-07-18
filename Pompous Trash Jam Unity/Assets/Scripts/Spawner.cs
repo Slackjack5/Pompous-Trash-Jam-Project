@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-  [SerializeField] private GameObject box;
+  [SerializeField] private GameObject[] boxes;
   [SerializeField] private float spawnWidth = 12f;
   [SerializeField] private float spawnInterval = 1.5f;
 
@@ -25,6 +25,7 @@ public class Spawner : MonoBehaviour
     float min = transform.position.x - (spawnWidth / 2);
     float max = transform.position.x + (spawnWidth / 2);
 
+    GameObject box = boxes[Random.Range(0, boxes.Length)];
     Vector2 spawnPosition = new Vector2(Random.Range(min, max), spawnHeight);
     Instantiate(box, spawnPosition, Quaternion.identity);
   }
