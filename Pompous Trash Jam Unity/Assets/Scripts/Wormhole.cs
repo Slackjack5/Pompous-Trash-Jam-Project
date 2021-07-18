@@ -27,7 +27,6 @@ public class Wormhole : MonoBehaviour
     StartCoroutine("EndWormHole");
     //Audio
     AkSoundEngine.PostEvent("Pause_Music", gameObject);
-    AkSoundEngine.PostEvent("LowPass_Music", gameObject);
   }
 
   private void Explosion()
