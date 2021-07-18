@@ -77,6 +77,8 @@ public class Timer : MonoBehaviour
             currentTimeLeft = 0;
 
             GameManager.EndLevel();
+            //Audio
+            AkSoundEngine.PostEvent("Play_AnnouncerFinish", gameObject);
           }
           else
           {
