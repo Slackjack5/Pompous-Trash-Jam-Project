@@ -21,9 +21,12 @@ namespace AK
         static const AkUniqueID PLAY_BOXBREAK = 843996146U;
         static const AkUniqueID PLAY_BOXHIT = 762239356U;
         static const AkUniqueID PLAY_BOXTHUD = 301007570U;
+        static const AkUniqueID PLAY_COLLECTMONO = 4163428053U;
+        static const AkUniqueID PLAY_COLLECTSTEREO = 2165590428U;
         static const AkUniqueID PLAY_EXPLOSION = 4030404899U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_NEXTSTAGE = 852948253U;
         static const AkUniqueID PLAY_SMOKECLOUD = 2971166468U;
         static const AkUniqueID PLAY_SWING = 989180208U;
         static const AkUniqueID PLAY_VACUUMEND = 1424032314U;
@@ -53,6 +56,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID ACTIVE = 58138747U;
+        static const AkUniqueID COMBO = 2333396925U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

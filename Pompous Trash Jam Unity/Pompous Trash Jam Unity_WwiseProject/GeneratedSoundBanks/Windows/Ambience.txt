@@ -6,8 +6,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	740603203	Stop_VacuumLoop			\Default Work Unit\Stop_VacuumLoop	
 	762239356	Play_BoxHit			\Default Work Unit\Play_BoxHit	
 	843996146	Play_BoxBreak			\Default Work Unit\Play_BoxBreak	
+	852948253	Play_NextStage			\Default Work Unit\Play_NextStage	
 	989180208	Play_Swing			\Default Work Unit\Play_Swing	
 	1424032314	Play_VacuumEnd			\Default Work Unit\Play_VacuumEnd	
+	2165590428	Play_CollectStereo			\Default Work Unit\Play_CollectStereo	
 	2423607242	Play_AnnouncerGreat			\Default Work Unit\Play_AnnouncerGreat	
 	2614288908	Play_AnnouncerSuper			\Default Work Unit\Play_AnnouncerSuper	
 	2971166468	Play_SmokeCloud			\Default Work Unit\Play_SmokeCloud	
@@ -15,6 +17,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	3537388541	Play_VacuumLoop			\Default Work Unit\Play_VacuumLoop	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
 	4030404899	Play_Explosion			\Default Work Unit\Play_Explosion	
+	4163428053	Play_CollectMono			\Default Work Unit\Play_CollectMono	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2333396925	Combo			\Default Work Unit\Combo	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	2430078	Wood Thud 6	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\WoodThud\Wood Thud 6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodThud\Wood Thud 6		213056
@@ -27,9 +33,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	262164500	VacuumLoop	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Vacuum\VacuumLoop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vacuum\VacuumLoop		10608704
 	264469527	AnnouncerSensational	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Announcer\AnnouncerSensational_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Announcer\AnnouncerSensational		231592
 	271794642	Wood Thud 7	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\WoodThud\Wood Thud 7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodThud\Wood Thud 7		206912
+	291935303	CollectStereo	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\CollectStereo_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\TrashCollect\CollectStereo		75244
 	310359424	SPLC-1333_FX_Oneshot_Wood_Hit_Smashing	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\WoodBreak\SPLC-1333_FX_Oneshot_Wood_Hit_Smashing_151B07DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodBreak\SPLC-1333_FX_Oneshot_Wood_Hit_Smashing		352320
 	320509478	Cement1	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Character\Footsteps\Cement1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cement1		90032
 	371522550	Swing3	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Swing\Swing3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Swing\Swing3		168064
+	387298748	CollectMono	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\CollectMono_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\TrashCollect\CollectMono		69064
 	396465836	Smoke1	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\SmokeCloud\Smoke1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SmokeCloud\Smoke1		529264
 	407245434	ESM_Builder_Game_Wood_Break_Large_3_Organic_Smash_Crash_Crumble_Drop_Splatter_Particle_Hit_Stab_Impact	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\ESM_Builder_Game_Wood_Break_Large_3_Organic_Smash_Crash_Crumble_Drop_Splatter_Particle_Hit_Stab_Impact_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodBreak\ESM_Builder_Game_Wood_Break_Large_3_Organic_Smash_Crash_Crumble_Drop_Splatter_Particle_Hit_Stab_Impact		215964
 	453758982	Wormhole Explosion Test 1	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Wormhole Explosion Test 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WormHole\Wormhole Explosion Test 1		529264
@@ -47,6 +55,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	668926591	Cement2	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Character\Footsteps\Cement2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cement2		137140
 	746593466	Cement6	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Character\Footsteps\Cement6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Cement6		151880
 	752847234	Wood Thud 1	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\WoodThud\Wood Thud 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodThud\Wood Thud 1		63552
+	775028966	PE-PowerUp_BW_38733	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\PE-PowerUp_BW.38733_CCE68E9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\TrashCollect\PE-PowerUp_BW_38733		435264
 	777306263	Wood Thud 4	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\WoodThud\Wood Thud 4_81E2876F.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodThud\Wood Thud 4		88604
 	792431716	SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\WoodBreak\SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse_6F21EB07.wem		\Actor-Mixer Hierarchy\Default Work Unit\WoodBreak\SPLC-1291_FX_Oneshot_Wood_Bedframe_Collapse		145408
 	797186171	AnnouncerOutstanding	E:\GitKraken\Pompous Trash Jam\Pompous Trash Jam Project\Pompous Trash Jam Unity\Pompous Trash Jam Unity_WwiseProject\.cache\Windows\SFX\Announcer\AnnouncerOutstanding_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Announcer\AnnouncerOutstanding		220564

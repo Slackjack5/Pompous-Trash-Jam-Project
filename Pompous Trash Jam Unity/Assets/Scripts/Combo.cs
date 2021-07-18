@@ -83,6 +83,10 @@ public class Combo : MonoBehaviour
 
   public void Hit()
   {
+    //Sound
+    AkSoundEngine.PostEvent("Play_CollectStereo", gameObject);
+    AkSoundEngine.SetRTPCValue("Combo", currentComboUpgradeCount, gameObject);
+
     currentComboTime = maxComboTime;
     currentComboUpgradeCount++;
 
@@ -97,6 +101,8 @@ public class Combo : MonoBehaviour
       {
         ComboMultiplierIndex++;
         //Audio
+        AkSoundEngine.PostEvent("Play_NextStage", gameObject);
+        AkSoundEngine.ResetRTPCValue("Combo");
         if (ComboMultiplierIndex == 1)
         {
           AkSoundEngine.PostEvent("Play_AnnouncerGreat", gameObject);

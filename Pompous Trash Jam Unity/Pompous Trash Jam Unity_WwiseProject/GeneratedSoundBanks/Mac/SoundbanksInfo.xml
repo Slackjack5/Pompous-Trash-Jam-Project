@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="2337454493">
+		<SoundBank Id="85412153" Language="SFX" Hash="962363271">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
@@ -97,6 +97,22 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="301007570" Name="Play_BoxThud" ObjectPath="\Events\Default Work Unit\Play_BoxThud" DurationType="OneShot" DurationMin="0.461139" DurationMax="1.845333"/>
+				<Event Id="4163428053" Name="Play_CollectMono" ObjectPath="\Events\Default Work Unit\Play_CollectMono" DurationType="OneShot" DurationMin="0.391156" DurationMax="0.391156">
+					<IncludedMemoryFiles>
+						<File Id="387298748" Language="SFX">
+							<ShortName>CollectMono.wav</ShortName>
+							<Path>SFX\CollectMono_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2165590428" Name="Play_CollectStereo" ObjectPath="\Events\Default Work Unit\Play_CollectStereo" DurationType="OneShot" DurationMin="0.391146" DurationMax="0.391146">
+					<IncludedMemoryFiles>
+						<File Id="291935303" Language="SFX">
+							<ShortName>CollectStereo.wav</ShortName>
+							<Path>SFX\CollectStereo_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="4030404899" Name="Play_Explosion" ObjectPath="\Events\Default Work Unit\Play_Explosion" DurationType="OneShot" DurationMin="3.000000" DurationMax="4.000000">
 					<IncludedMemoryFiles>
 						<File Id="79359579" Language="SFX">
@@ -138,6 +154,14 @@
 						<File Id="1039475092" Language="SFX">
 							<ShortName>Character\Footsteps\Cement5.wav</ShortName>
 							<Path>SFX\Character\Footsteps\Cement5_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="852948253" Name="Play_NextStage" ObjectPath="\Events\Default Work Unit\Play_NextStage" DurationType="OneShot" DurationMin="2.266667" DurationMax="2.266667">
+					<IncludedMemoryFiles>
+						<File Id="775028966" Language="SFX">
+							<ShortName>PE-PowerUp_BW.38733.wav</ShortName>
+							<Path>SFX\PE-PowerUp_BW.38733_CCE68E9A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -243,8 +267,11 @@
 					<Path>SFX\WoodThud\Wood Thud 4_81E2876F.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="2333396925" Name="Combo" ObjectPath="\Game Parameters\Default Work Unit\Combo"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3298532009">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2359853261">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -252,7 +279,7 @@
 				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="2422621822">
+		<SoundBank Id="3991942870" Language="SFX" Hash="936561691">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

@@ -248,6 +248,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_NextStage" ID="{4EBA3E62-5833-4121-ADC6-CF0B86786AD9}">
+					<ChildrenList>
+						<Action Name="" ID="{A5ACA16E-2F4C-4235-BC54-CFDF9BEA73F2}" ShortID="426593368">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PE-PowerUp_BW_38733" ID="{1B99826D-EF25-4AB9-957C-383000652E81}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CollectMono" ID="{DDACCAD8-4F7E-4F1F-9F46-6973B2D11612}">
+					<ChildrenList>
+						<Action Name="" ID="{931943F1-5FB5-46D8-8A0A-AB41CA6CB9A6}" ShortID="1050196878">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CollectMono" ID="{D240DBB8-BC85-43CC-998C-76A13B2AFAEB}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CollectStereo" ID="{71145938-D7A8-4695-BC7C-6641BAF9190A}">
+					<ChildrenList>
+						<Action Name="" ID="{A02EFA33-6BA8-4BED-BCF5-1723CD78DCE5}" ShortID="503460436">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CollectStereo" ID="{E56D0A81-5A71-46CD-84D9-469D59957173}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
