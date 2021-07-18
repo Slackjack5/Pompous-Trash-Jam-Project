@@ -31,7 +31,7 @@ public class Spawner : MonoBehaviour
     {
       MinigameBox minigameBox = box.GetComponent<MinigameBox>();
       UpgradeBox upgradeBox = box.GetComponent<UpgradeBox>();
-      if ((minigameBox && !MinigameBoxExists()) || !minigameBox || (upgradeBox && !UpgradeBoxExists()) || !upgradeBox)
+      if ((!minigameBox && !upgradeBox) || (minigameBox && !MinigameBoxExists()) || (upgradeBox && !UpgradeBoxExists()))
       {
         spawnOptions.Add(box);
       }
