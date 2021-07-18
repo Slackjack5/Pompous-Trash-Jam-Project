@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
 
   private void Start()
   {
+    IsLevelStarted = false;
+
     DeactivateGame();
 
     tubeMinigame.triggered.AddListener(() => StartMinigame(tubeMinigame));

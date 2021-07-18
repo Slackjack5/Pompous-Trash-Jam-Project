@@ -16,6 +16,7 @@ public class ScoreTracker : MonoBehaviour
   [SerializeField] private GameObject starPanel;
   [SerializeField] private GameObject star;
   [SerializeField] private TextMeshProUGUI highScoreText;
+  [SerializeField] private TextMeshProUGUI shadowHighScoreText;
   [SerializeField] private GameObject pointsCanvas;
   [SerializeField] private GameObject pointsObject;
   [SerializeField] private Transform tubeEntry;
@@ -39,6 +40,7 @@ public class ScoreTracker : MonoBehaviour
     scoreText.text = score.ToString();
     shadowScoreText.text = score.ToString();
     highScoreText.text = highScore.ToString();
+    shadowHighScoreText.text = highScore.ToString();
   }
 
   public void Increase(int value)
