@@ -147,5 +147,4 @@ MonoBehaviour:
   maxHealth: 1
   hitForce: 500
   freezeTime: 0.1
-  destructable: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
-  minigame: {fileID: 0}
+  trashPieces: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
