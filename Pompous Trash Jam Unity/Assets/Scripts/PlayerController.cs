@@ -47,10 +47,19 @@ public class PlayerController : PhysicsObject
     // Use BoxCast instead of Raycast so that ground checking spans the width of the player
     isGrounded = Physics2D.BoxCast(groundCheckPosition.position, boxCastSize, /* angle = */ 0f, Vector2.down, /* distance = */ 0f, whatIsGround | whatIsBox);
 
-    // Update melee cooldown
-    if (currentMeleeCooldown > 0)
+    if (GameManager.IsGameActive)
     {
-      currentMeleeCooldown -= Time.deltaTime;
+      // Update melee cooldown
+      if (currentMeleeCooldown > 0)
+      {
+        currentMeleeCooldown -= Time.deltaTime;
+      }
+
+      myAnimator.speed = 1;
+    }
+    else
+    {
+      myAnimator.speed = 0;
     }
   }
 
@@ -77,7 +86,16 @@ public class PlayerController : PhysicsObject
         jumpTimeCounter = 0;
       }
 
-      //Animation
+      // Animation
+      if (jumpTimeCounter > 0)
+      {
+        myAnimator.SetBool("isJumping", true);
+      }
+      else
+      {
+        myAnimator.SetBool("isJumping", false);
+      }
+
       if (xInput != 0 && !isStunned)
       {
         myAnimator.SetFloat("Speed", 1);
@@ -86,17 +104,6 @@ public class PlayerController : PhysicsObject
       {
         myAnimator.SetFloat("Speed", 0);
       }
-    }
-
-    if (isGrounded)
-    {
-      //animation
-      myAnimator.SetBool("isJumping", false);
-    }
-    else
-    {
-      //animation
-      myAnimator.SetBool("isJumping", true);
     }
   }
 
@@ -193,7 +200,7 @@ public class PlayerController : PhysicsObject
   {
     Vector2 motionVector = value.Get<Vector2>();
     xInput = motionVector.x;
-    if (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight)
+    if (GameManager.IsGameActive && (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight))
     {
       Flip();
     }
