@@ -4,22 +4,12 @@ using UnityEngine;
 
 public class UpgradeBox : SpecialBox
 {
+  [SerializeField] private Powerup[] powerups;
+
   protected override void PreDestroy()
   {
     base.PreDestroy();
 
-    int randNumber = Random.Range(0, 3);
-    if (randNumber == 0)
-    {
-      Debug.Log("Spawned Power Up 1");
-    }
-    else if (randNumber == 1)
-    {
-      Debug.Log("Spawned Power Up 2");
-    }
-    else if (randNumber == 2)
-    {
-      Debug.Log("Spawned Power Up 3");
-    }
+    PowerupManager.Instance.Activate(powerups[Random.Range(0, powerups.Length)]);
   }
 }

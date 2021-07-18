@@ -145,7 +145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
-  hitForce: 500
   freezeTime: 0.1
   trashPieces: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
   fieldOfImpact: 2
@@ -153,3 +152,5 @@ MonoBehaviour:
   layerToHit:
     serializedVersion: 2
     m_Bits: 64
+  powerups:
+  - {fileID: 177474465462727952, guid: 34510ec403d7dbf40bb6b06fc6c7540f, type: 3}
