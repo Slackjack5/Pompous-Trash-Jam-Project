@@ -19,4 +19,9 @@ public class MinigameBox : BoxDestruction
   {
     PreDestroy();
   }
+
+  public override void BlackHoleDestroy()
+  {
+    base.PreDestroy();
+  }
 }

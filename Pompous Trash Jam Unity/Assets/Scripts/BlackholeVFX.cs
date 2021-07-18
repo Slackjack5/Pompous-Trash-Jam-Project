@@ -42,11 +42,10 @@ public class BlackholeVFX : MonoBehaviour
 
   void OnTriggerStay2D(Collider2D col)
   {
-    if (col.gameObject.GetComponent<BoxDestruction>() != null && col.gameObject != gameObject)
+    BoxDestruction box = col.gameObject.GetComponent<BoxDestruction>();
+    if (box && col.gameObject != gameObject)
     {
-      BoxDestruction box = col.gameObject.GetComponent<BoxDestruction>();
       box.BlackHoleDestroy();
-      Destroy(col.gameObject);
     }
   }
 }
