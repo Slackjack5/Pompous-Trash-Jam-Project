@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: minigame
       value: 
       objectReference: {fileID: 1525289460}
+    - target: {fileID: 2202151929508145568, guid: a6834dfb676740a49878684c198385d9, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2202151929508145569, guid: a6834dfb676740a49878684c198385d9, type: 3}
       propertyPath: m_Name
       value: MinigameBox
