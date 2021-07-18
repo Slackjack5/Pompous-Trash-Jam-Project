@@ -14,7 +14,7 @@ public class ExplosiveBox : SpecialBox
   {
     if (!isExploded && collision.gameObject.layer != LayerMask.NameToLayer(tube) && rb.velocity.magnitude >= speedToExplode)
     {
-      Destroy();
+      EnvironmentalDestroy();
       isExploded = true;
     }
   }

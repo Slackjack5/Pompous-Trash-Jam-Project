@@ -16,12 +16,13 @@ public class PlayerController : PhysicsObject
   [SerializeField] private Transform frontCheckPosition;
   [SerializeField] private float hitboxWidth = 1f;
   [SerializeField] private float hitboxHeight = 0.6f;
+  [SerializeField] private float hitForce = 500f;
   [SerializeField] private float meleeCooldownTime = 0.5f;
   [SerializeField] private float stunTime = 1.5f;
 
   private Vector2 boxCastSize;
   private float currentMeleeCooldown;
-  private bool isFacingRight = true;
+  
   private bool isGrounded = false;
   private bool isJumpKeyHeld = false;
   private bool isStunned = false;
@@ -33,11 +34,16 @@ public class PlayerController : PhysicsObject
   public UnityEvent StartGame;
   //Animations
   [SerializeField] private Animator myAnimator;
-    // Start is called before the first frame update
+
+  public bool IsFacingRight { get; private set; }
+
+  public float HitForce { get; private set; }
+
   protected override void Start()
   {
     base.Start();
 
+    IsFacingRight = true;
     boxCastSize = new Vector2(transform.localScale.x - touchDistance, touchDistance);
   }
 
@@ -150,13 +156,13 @@ public class PlayerController : PhysicsObject
         MinigameBox minigameBox = groundHit.transform.GetComponent<MinigameBox>();
         if (minigameBox)
         {
-          minigameBox.Hit(isFacingRight);
+          minigameBox.Hit(IsFacingRight, hitForce);
         }
       }
 
       // Hit all other boxes in front of player
       Vector2 origin = frontCheckPosition.position;
-      if (isFacingRight)
+      if (IsFacingRight)
       {
         origin.x += hitboxWidth / 2;
       }
@@ -174,7 +180,7 @@ public class PlayerController : PhysicsObject
         MinigameBox minigameBox = hit.transform.GetComponent<MinigameBox>();
         if (boxDestruction && !minigameBox)
         {
-          boxDestruction.Hit(isFacingRight);
+          boxDestruction.Hit(IsFacingRight, hitForce);
         }
       }
 
@@ -202,7 +208,7 @@ public class PlayerController : PhysicsObject
   {
     Vector2 motionVector = value.Get<Vector2>();
     xInput = motionVector.x;
-    if (GameManager.IsGameActive && (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight))
+    if (GameManager.IsGameActive && (xInput < 0 && IsFacingRight || xInput > 0 && !IsFacingRight))
     {
       Flip();
     }
@@ -255,7 +261,7 @@ public class PlayerController : PhysicsObject
 
   private void Flip()
   {
-    isFacingRight = !isFacingRight;
+    IsFacingRight = !IsFacingRight;
 
     Vector3 theScale = transform.localScale;
     theScale.x *= -1;

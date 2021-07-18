@@ -59,6 +59,11 @@ public class GameManager : MonoBehaviour
     Physics2D.gravity = Vector2.zero;
   }
 
+  private static void DeactivateMinigame()
+  {
+    CurrentMinigame = null;
+  }
+
   public static void StartLevel()
   {
     IsLevelStarted = true;
@@ -67,6 +72,8 @@ public class GameManager : MonoBehaviour
   public static void EndLevel()
   {
     DeactivateGame();
+    DeactivateMinigame();
+
     levelComplete.Invoke();
     isLevelComplete = true;
   }

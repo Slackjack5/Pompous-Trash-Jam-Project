@@ -5,7 +5,6 @@ using EZCameraShake;
 public class BoxDestruction : PhysicsObject
 {
   [SerializeField] private int maxHealth = 2;
-  [SerializeField] private float hitForce = 500f;
   [SerializeField] private float freezeTime = 0.1f;
   [SerializeField] private GameObject trashPieces;
 
@@ -23,10 +22,10 @@ public class BoxDestruction : PhysicsObject
     currentHealth = maxHealth;
   }
 
-  public void Hit(bool isHitRight)
+  public void Hit(bool isHitRight, float force)
   {
     int direction = isHitRight ? 1 : -1;
-    rb.AddForce(new Vector2(hitForce * direction, hitForce));
+    rb.AddForce(new Vector2(force * direction, force));
 
     currentHealth--;
 
@@ -68,7 +67,7 @@ public class BoxDestruction : PhysicsObject
     StartCoroutine(FreezeImpact());
   }
 
-  public virtual void BlackHoleDestroy()
+  public virtual void EnvironmentalDestroy()
   {
     PreDestroy();
     Destroy(gameObject);
