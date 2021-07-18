@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class MinigameBox : BoxDestruction
 {
-  [SerializeField] private Minigame minigame;
-
   protected override void PreDestroy()
   {
     base.PreDestroy();
 
-    GameManager.StartMinigame(minigame);
+    GameManager.StartRandomMinigame();
   }
 
   protected override void Destroy()
