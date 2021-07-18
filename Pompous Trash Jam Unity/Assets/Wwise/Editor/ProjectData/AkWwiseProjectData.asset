@@ -97,7 +97,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: b65bdd52986abd4fbb51b640cc412cdb
     GuidInternal: 
-    m_lastTime: -8585750317891032464
+    m_lastTime: -8585750247879055101
     List:
     - name: Ambience
       guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
@@ -139,7 +139,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a33f0301cc3b20418f2028f42eef846f
     GuidInternal: 
-    m_lastTime: -8585750317894448521
+    m_lastTime: -8585750247879294468
     List:
     - name: Pause_Music
       guid: 3c4a4bea41692741a142b62c81120359
@@ -277,6 +277,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.845333
       minDuration: 0.461139
+    - name: Play_Explosion
+      guid: c2277c07bdac164388540faae8462514
+      id: 4030404899
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_Explosion
+        ObjectType: 3
+        guid: c2277c07bdac164388540faae8462514
+      Path: Events\Default Work Unit\Play_Explosion
+      maxAttenuation: 0
+      maxDuration: 4
+      minDuration: 3
     - name: Play_Footsteps
       guid: 85ac2cc88c764841a79c385aecd1ea0c
       id: 3854155799
@@ -311,6 +328,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_SmokeCloud
+      guid: 75ecb23991b4cf4995f5d3974fbcd3ab
+      id: 2971166468
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_SmokeCloud
+        ObjectType: 3
+        guid: 75ecb23991b4cf4995f5d3974fbcd3ab
+      Path: Events\Default Work Unit\Play_SmokeCloud
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 2
     - name: Play_Swing
       guid: dba798266fd3254cbb771cb134295dc1
       id: 989180208
@@ -362,6 +396,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 60.139683
       minDuration: 60.139683
+    - name: Play_Wormhole
+      guid: 43afb8527655f8478a8bbbdb8070c32c
+      id: 208310577
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_Wormhole
+        ObjectType: 3
+        guid: 43afb8527655f8478a8bbbdb8070c32c
+      Path: Events\Default Work Unit\Play_Wormhole
+      maxAttenuation: 0
+      maxDuration: 6
+      minDuration: 6
+    - name: Play_WormholeExplosion
+      guid: f40df91e116c264a8d270b35b45d7285
+      id: 631525614
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_WormholeExplosion
+        ObjectType: 3
+        guid: f40df91e116c264a8d270b35b45d7285
+      Path: Events\Default Work Unit\Play_WormholeExplosion
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 3
     - name: Resume_Music
       guid: 52d68b324ed3ac4abd89c1f700a5125a
       id: 2940177080
@@ -534,7 +602,7 @@ MonoBehaviour:
     m_lastTime: -8585757543609773690
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000070000001d0000001f000000200000002400000025000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

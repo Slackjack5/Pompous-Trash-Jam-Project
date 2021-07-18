@@ -9,7 +9,7 @@ public class GravityBox : SpecialBox
   protected override void PostDestroy()
   {
     base.PostDestroy();
-
+    AkSoundEngine.PostEvent("Play_Wormhole", gameObject);
     Instantiate(wormhole, new Vector2(transform.position.x, transform.position.y + 2), Quaternion.identity);
   }
 }

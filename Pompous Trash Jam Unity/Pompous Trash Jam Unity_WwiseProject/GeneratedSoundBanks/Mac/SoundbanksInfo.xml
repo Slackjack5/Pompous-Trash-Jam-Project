@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="1677943464">
+		<SoundBank Id="85412153" Language="SFX" Hash="119150479">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
@@ -97,6 +97,22 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="301007570" Name="Play_BoxThud" ObjectPath="\Events\Default Work Unit\Play_BoxThud" DurationType="OneShot" DurationMin="0.461139" DurationMax="1.845333"/>
+				<Event Id="4030404899" Name="Play_Explosion" ObjectPath="\Events\Default Work Unit\Play_Explosion" DurationType="OneShot" DurationMin="3.000000" DurationMax="4.000000">
+					<IncludedMemoryFiles>
+						<File Id="79359579" Language="SFX">
+							<ShortName>Explosion\Explosion3.wav</ShortName>
+							<Path>SFX\Explosion\Explosion3_10C4C929.wem</Path>
+						</File>
+						<File Id="459571454" Language="SFX">
+							<ShortName>Explosion\Explosion2.wav</ShortName>
+							<Path>SFX\Explosion\Explosion2_10C4C929.wem</Path>
+						</File>
+						<File Id="513411101" Language="SFX">
+							<ShortName>Explosion\Explosion1.wav</ShortName>
+							<Path>SFX\Explosion\Explosion1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps" DurationType="OneShot" DurationMin="0.273314" DurationMax="0.581079">
 					<IncludedMemoryFiles>
 						<File Id="89330362" Language="SFX">
@@ -122,6 +138,22 @@
 						<File Id="1039475092" Language="SFX">
 							<ShortName>Character\Footsteps\Cement5.wav</ShortName>
 							<Path>SFX\Character\Footsteps\Cement5_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2971166468" Name="Play_SmokeCloud" ObjectPath="\Events\Default Work Unit\Play_SmokeCloud" DurationType="OneShot" DurationMin="2.000000" DurationMax="3.000000">
+					<IncludedMemoryFiles>
+						<File Id="396465836" Language="SFX">
+							<ShortName>SmokeCloud\Smoke1.wav</ShortName>
+							<Path>SFX\SmokeCloud\Smoke1_10C4C929.wem</Path>
+						</File>
+						<File Id="551914538" Language="SFX">
+							<ShortName>SmokeCloud\Smoke2.wav</ShortName>
+							<Path>SFX\SmokeCloud\Smoke2_10C4C929.wem</Path>
+						</File>
+						<File Id="558005612" Language="SFX">
+							<ShortName>SmokeCloud\Smoke3.wav</ShortName>
+							<Path>SFX\SmokeCloud\Smoke3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -162,6 +194,22 @@
 					<AuxBusSends>
 						<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 					</AuxBusSends>
+				</Event>
+				<Event Id="208310577" Name="Play_Wormhole" ObjectPath="\Events\Default Work Unit\Play_Wormhole" DurationType="OneShot" DurationMin="6.000000" DurationMax="6.000000">
+					<IncludedMemoryFiles>
+						<File Id="840477855" Language="SFX">
+							<ShortName>Wormhole Test1.wav</ShortName>
+							<Path>SFX\Wormhole Test1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="631525614" Name="Play_WormholeExplosion" ObjectPath="\Events\Default Work Unit\Play_WormholeExplosion" DurationType="OneShot" DurationMin="3.000000" DurationMax="3.000000">
+					<IncludedMemoryFiles>
+						<File Id="453758982" Language="SFX">
+							<ShortName>Wormhole Explosion Test 1.wav</ShortName>
+							<Path>SFX\Wormhole Explosion Test 1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="740603203" Name="Stop_VacuumLoop" ObjectPath="\Events\Default Work Unit\Stop_VacuumLoop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
@@ -204,7 +252,7 @@
 				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="1677374978">
+		<SoundBank Id="3991942870" Language="SFX" Hash="3317099540">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
@@ -237,6 +285,16 @@
 				<Event Id="2940177080" Name="Resume_Music" ObjectPath="\Events\Default Work Unit\Resume_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="306968131" Language="SFX">
+					<ShortName>Nycelly - TrashHouse9 (Game Jam Song).wav</ShortName>
+					<Path>SFX\Nycelly - TrashHouse9 (Game Jam Song)_D79FB2B7.wem</Path>
+				</File>
+				<File Id="867489106" Language="SFX">
+					<ShortName>Nycelly - TrashHouse9(Intro-Loop).wav</ShortName>
+					<Path>SFX\Nycelly - TrashHouse9(Intro-Loop)_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 			<SwitchGroups>
 				<SwitchGroup Id="2702523344" Name="GamePlay_Switch" ObjectPath="\Switches\Default Work Unit\GamePlay_Switch">
 					<Switches>

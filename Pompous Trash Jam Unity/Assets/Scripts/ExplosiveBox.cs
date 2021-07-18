@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using EZCameraShake;
 public class ExplosiveBox : SpecialBox
 {
   [SerializeField] private string tube = "Tube";
@@ -22,7 +22,9 @@ public class ExplosiveBox : SpecialBox
   protected override void PreDestroy()
   {
     base.PreDestroy();
-
+    AkSoundEngine.PostEvent("Play_Explosion", gameObject);
+    //Camera Shake
+    CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1f);
     Shader.SetGlobalFloat("_ShockTime", Time.time);
     Vector2 focalPoint = new Vector2(Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).x / Screen.width, Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).y / Screen.height);
     Shader.SetGlobalVector("_FocalPoint", focalPoint);

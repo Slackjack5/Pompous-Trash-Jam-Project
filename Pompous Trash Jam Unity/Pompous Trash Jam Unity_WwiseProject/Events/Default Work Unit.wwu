@@ -204,6 +204,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Explosion" ID="{077C27C2-ACBD-4316-8854-0FAAE8462514}">
+					<ChildrenList>
+						<Action Name="" ID="{B59D4E53-8E4F-4A97-9A62-57219F377DA4}" ShortID="976562385">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Explosion" ID="{AED8E0E0-2CF6-40E0-B911-DF872200F4E6}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SmokeCloud" ID="{39B2EC75-B491-49CF-95F5-D3974FBCD3AB}">
+					<ChildrenList>
+						<Action Name="" ID="{BA4CC81F-6C04-4CD6-A251-DEFFDF7C0A8F}" ShortID="183712783">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SmokeCloud" ID="{0348A276-374B-458A-A166-7A55B62350EC}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Wormhole" ID="{52B8AF43-5576-47F8-8A8B-BBDB8070C32C}">
+					<ChildrenList>
+						<Action Name="" ID="{1935B13C-E0FC-45F8-9651-EBA6B1F6492F}" ShortID="410134810">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wormhole Test1" ID="{92FD11F4-F890-4976-B8C2-B7092423245D}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WormholeExplosion" ID="{1EF90DF4-6C11-4A26-8D27-0B35B45D7285}">
+					<ChildrenList>
+						<Action Name="" ID="{29151873-8A53-494A-AE41-8B2D4D48DA0A}" ShortID="172857926">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wormhole Explosion Test 1" ID="{24BA4DD3-E110-4708-AAAF-FD88DAA71A2A}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
