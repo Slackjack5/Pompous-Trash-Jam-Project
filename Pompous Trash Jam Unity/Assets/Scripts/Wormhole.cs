@@ -6,6 +6,7 @@ public class Wormhole : MonoBehaviour
 {
   [SerializeField] private GameObject blackHoleVFX;
   [SerializeField] private Material blackHoleVFXMat;
+  [SerializeField] private float duration = 5f;
 
   //Explosion
   public float fieldofImpact;
@@ -20,6 +21,7 @@ public class Wormhole : MonoBehaviour
     Vector2 focalPoint = new Vector2(Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).x / Screen.width, Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).y / Screen.height);
     Shader.SetGlobalVector("_FocalPoint", focalPoint);
     GameObject temp = Instantiate(blackHoleVFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+    temp.GetComponent<BlackholeVFX>().Initialize(duration);
     SpriteRenderer tempSR = temp.GetComponentInChildren<SpriteRenderer>();
     tempSR.material = new Material(blackHoleVFXMat);
 
@@ -51,7 +53,7 @@ public class Wormhole : MonoBehaviour
 
   IEnumerator EndWormHole()
   {
-    yield return new WaitForSeconds(5f);
+    yield return new WaitForSeconds(duration);
     Explosion();
     Destroy(gameObject);
   }
