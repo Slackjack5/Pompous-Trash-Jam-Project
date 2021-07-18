@@ -26,12 +26,16 @@ public class LevelComplete : MonoBehaviour
   private IEnumerator Show()
   {
     countdownText.enabled = true;
+    shadowCountdownText.enabled = true;
+
     countdownText.text = endLevelText;
     shadowCountdownText.text = endLevelText;
 
     yield return new WaitForSeconds(showDelay);
 
     countdownText.enabled = false;
+    shadowCountdownText.enabled = false;
+
     canvas.enabled = true;
     GameManager.FreezeTime();
   }
