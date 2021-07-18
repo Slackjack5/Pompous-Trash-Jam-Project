@@ -44,7 +44,7 @@ public class BlackholeVFX : MonoBehaviour
     BoxDestruction box = col.gameObject.GetComponent<BoxDestruction>();
     if (box && col.gameObject != gameObject)
     {
-      box.BlackHoleDestroy();
+      box.EnvironmentalDestroy();
     }
   }
 }

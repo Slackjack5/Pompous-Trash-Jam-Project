@@ -20,7 +20,7 @@ public class MinigameBox : BoxDestruction
     PreDestroy();
   }
 
-  public override void BlackHoleDestroy()
+  public override void EnvironmentalDestroy()
   {
     base.PreDestroy();
     Destroy(gameObject);
