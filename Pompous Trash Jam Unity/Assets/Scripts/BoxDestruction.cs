@@ -68,9 +68,10 @@ public class BoxDestruction : PhysicsObject
     StartCoroutine(FreezeImpact());
   }
 
-  public void BlackHoleDestroy()
+  public virtual void BlackHoleDestroy()
   {
     PreDestroy();
+    Destroy(gameObject);
   }
 
   protected IEnumerator FreezeImpact()

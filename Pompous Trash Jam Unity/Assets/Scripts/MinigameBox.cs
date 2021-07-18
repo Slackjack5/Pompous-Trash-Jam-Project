@@ -6,14 +6,23 @@ public class MinigameBox : BoxDestruction
 {
   protected override void PreDestroy()
   {
-    base.PreDestroy();
-
     GameManager.StartRandomMinigame();
+
+    GameManager.CurrentMinigame.complete.AddListener(() =>
+    {
+      base.PreDestroy();
+      Destroy(gameObject);
+    });
   }
 
   protected override void Destroy()
   {
     PreDestroy();
+  }
+
+  public override void BlackHoleDestroy()
+  {
+    base.PreDestroy();
     Destroy(gameObject);
   }
 }

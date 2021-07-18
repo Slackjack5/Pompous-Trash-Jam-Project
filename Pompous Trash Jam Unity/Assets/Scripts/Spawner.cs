@@ -9,6 +9,12 @@ public class Spawner : MonoBehaviour
   [SerializeField] private float spawnInterval = 1.5f;
 
   private bool isWaitingSpawn;
+  private List<GameObject> spawnOptions;
+
+  private void Start()
+  {
+    spawnOptions = new List<GameObject>();
+  }
 
   // Update is called once per frame
   void Update()
@@ -19,13 +25,25 @@ public class Spawner : MonoBehaviour
     }
   }
 
+  private void EvaluateOptions()
+  {
+    foreach (GameObject box in boxes)
+    {
+      MinigameBox minigameBox = box.GetComponent<MinigameBox>();
+      if ((minigameBox && !MinigameBoxExists()) || !minigameBox)
+      {
+        spawnOptions.Add(box);
+      }
+    }
+  }
+
   private void Spawn()
   {
     float spawnHeight = transform.position.y;
     float min = transform.position.x - (spawnWidth / 2);
     float max = transform.position.x + (spawnWidth / 2);
 
-    GameObject box = boxes[Random.Range(0, boxes.Length)];
+    GameObject box = spawnOptions[Random.Range(0, spawnOptions.Count)];
     Vector2 spawnPosition = new Vector2(Random.Range(min, max), spawnHeight);
     Instantiate(box, spawnPosition, Quaternion.identity);
   }
@@ -36,6 +54,12 @@ public class Spawner : MonoBehaviour
     yield return new WaitForSeconds(spawnInterval);
     isWaitingSpawn = false;
 
+    EvaluateOptions();
     Spawn();
+  }
+
+  private bool MinigameBoxExists()
+  {
+    return FindObjectOfType<MinigameBox>();
   }
 }
