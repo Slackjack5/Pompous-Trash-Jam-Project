@@ -9863,6 +9863,7 @@ MonoBehaviour:
   - {fileID: 6735901189982893078, guid: b06d3c172dc044c40b6a7f62b964dd70, type: 3}
   - {fileID: 248289148682040791, guid: f3e944e4b2cf41f4fb720769987aa9a4, type: 3}
   - {fileID: 2202151929508145569, guid: a6834dfb676740a49878684c198385d9, type: 3}
+  - {fileID: 1661812240818282736, guid: a167e93b3e96acd489e3e23912b9802e, type: 3}
   spawnWidth: 12
   spawnInterval: 1.5
 --- !u!1 &2130790591

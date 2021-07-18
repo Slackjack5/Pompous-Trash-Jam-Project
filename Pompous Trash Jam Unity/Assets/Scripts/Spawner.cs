@@ -30,7 +30,8 @@ public class Spawner : MonoBehaviour
     foreach (GameObject box in boxes)
     {
       MinigameBox minigameBox = box.GetComponent<MinigameBox>();
-      if ((minigameBox && !MinigameBoxExists()) || !minigameBox)
+      UpgradeBox upgradeBox = box.GetComponent<UpgradeBox>();
+      if ((minigameBox && !MinigameBoxExists()) || !minigameBox || (upgradeBox && !UpgradeBoxExists()) || !upgradeBox)
       {
         spawnOptions.Add(box);
       }
@@ -61,5 +62,10 @@ public class Spawner : MonoBehaviour
   private bool MinigameBoxExists()
   {
     return FindObjectOfType<MinigameBox>();
+  }
+
+  private bool UpgradeBoxExists()
+  {
+    return FindObjectOfType<UpgradeBox>();
   }
 }
