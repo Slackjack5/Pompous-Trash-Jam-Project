@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
 
     levelComplete.Invoke();
     isLevelComplete = true;
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().FadeAudio();
   }
 
   public static void EndMinigame()
@@ -128,17 +129,20 @@ public class GameManager : MonoBehaviour
   {
     FreezeTime();
     pauseMenu.SetActive(true);
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().PauseAudio();
   }
 
   private static void Resume()
   {
     Time.timeScale = 1;
     pauseMenu.SetActive(false);
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().ResumeAudio();
   }
 
   public void NextLevel()
   {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
   }
 
   public void Quit()
@@ -149,5 +153,6 @@ public class GameManager : MonoBehaviour
   public void Restart()
   {
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
   }
 }

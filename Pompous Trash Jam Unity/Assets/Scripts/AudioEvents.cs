@@ -30,10 +30,24 @@ public class AudioEvents : MonoBehaviour
   }
   public void EndAudio()
   {
-    AkSoundEngine.PostEvent("Stop_VacuumLoop", gameObject);
-    AkSoundEngine.PostEvent("Stop_Music", gameObject);
+    //End All Audio
+    AkSoundEngine.PostEvent("Stop_Audio", gameObject);
   }
-
+  public void PauseAudio()
+  {
+    //End All Audio
+    AkSoundEngine.PostEvent("Pause_Audio", gameObject);
+  }
+  public void ResumeAudio()
+  {
+    //End All Audio
+    AkSoundEngine.PostEvent("Resume_Audio", gameObject);
+  }
+  public void FadeAudio()
+  {
+    //End All Audio
+    AkSoundEngine.PostEvent("Fade_Audio", gameObject);
+  }
   void MusicCallbackFunction(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
   {
 

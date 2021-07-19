@@ -1504,6 +1504,165 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="TrashCollect" ID="{4244647A-8B80-49B1-A3E0-5DED37A16365}" ShortID="67181094">
+					<ChildrenList>
+						<Sound Name="CollectMono" ID="{D240DBB8-BC85-43CC-998C-76A13B2AFAEB}" ShortID="103851906">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{DC4D5AD6-1F01-46B7-8AB2-5150E45CBC81}" ShortID="216757456">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Combo" ID="{57D77116-0074-4D06-A413-539FBB99501C}" WorkUnitID="{7690BE8F-DB6C-435D-BDF5-4EA2808A00DC}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{40C54DBE-6263-4089-9DD9-8CEAB1D720A0}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>8.99422</XPos>
+														<YPos>1950</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>10</XPos>
+														<YPos>844</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CollectMono" ID="{6FCB08F5-985F-490C-8FB3-28CDF5909A8B}">
+									<Language>SFX</Language>
+									<AudioFile>CollectMono.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="387298748"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CollectMono" ID="{6FCB08F5-985F-490C-8FB3-28CDF5909A8B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CollectStereo" ID="{E56D0A81-5A71-46CD-84D9-469D59957173}" ShortID="62097608">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{6215C8E8-4164-4262-BFDC-52E80F57EB59}" ShortID="864133760">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Combo" ID="{57D77116-0074-4D06-A413-539FBB99501C}" WorkUnitID="{7690BE8F-DB6C-435D-BDF5-4EA2808A00DC}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{A3F81610-6782-480C-9550-EE944E51A900}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>8.99422</XPos>
+														<YPos>1950</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>10</XPos>
+														<YPos>844</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CollectStereo" ID="{39E77208-8BA9-4FFE-8257-6590A0C49294}">
+									<Language>SFX</Language>
+									<AudioFile>CollectStereo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="291935303"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="CollectStereo" ID="{39E77208-8BA9-4FFE-8257-6590A0C49294}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PE-PowerUp_BW_38733" ID="{1B99826D-EF25-4AB9-957C-383000652E81}" ShortID="83333752">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PE-PowerUp_BW_38733" ID="{ABCD49C1-6431-48A8-8E0A-F048103DA656}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.266957470010905"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>PE-PowerUp_BW.38733.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="775028966"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="PE-PowerUp_BW_38733" ID="{ABCD49C1-6431-48A8-8E0A-F048103DA656}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

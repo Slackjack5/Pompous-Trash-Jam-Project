@@ -133,7 +133,9 @@ public class PlayerController : PhysicsObject
     {
       if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
       {
+        int randNumb = Random.Range(1,4);
         // Setting this bool to true triggers PlaySwing
+        myAnimator.SetInteger("AttackType", randNumb);
         myAnimator.SetBool("isAttacking", true);
       }
     }

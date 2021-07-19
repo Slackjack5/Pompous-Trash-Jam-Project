@@ -97,7 +97,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: b65bdd52986abd4fbb51b640cc412cdb
     GuidInternal: 
-    m_lastTime: -8585749782700986423
+    m_lastTime: -8585749698598779982
     List:
     - name: Ambience
       guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
@@ -139,7 +139,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a33f0301cc3b20418f2028f42eef846f
     GuidInternal: 
-    m_lastTime: -8585749782705504336
+    m_lastTime: -8585749698997249578
     List:
     - name: Pause_Music
       guid: 3c4a4bea41692741a142b62c81120359
@@ -277,6 +277,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.845333
       minDuration: 0.461139
+    - name: Play_CollectMono
+      guid: d8caacdd7e4f1f4f9f466973b2d11612
+      id: 4163428053
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_CollectMono
+        ObjectType: 3
+        guid: d8caacdd7e4f1f4f9f466973b2d11612
+      Path: Events\Default Work Unit\Play_CollectMono
+      maxAttenuation: 0
+      maxDuration: 0.391156
+      minDuration: 0.391156
+    - name: Play_CollectStereo
+      guid: 38591471a8d79546bc7c6641baf9190a
+      id: 2165590428
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_CollectStereo
+        ObjectType: 3
+        guid: 38591471a8d79546bc7c6641baf9190a
+      Path: Events\Default Work Unit\Play_CollectStereo
+      maxAttenuation: 0
+      maxDuration: 0.391146
+      minDuration: 0.391146
     - name: Play_Explosion
       guid: c2277c07bdac164388540faae8462514
       id: 4030404899
@@ -328,6 +362,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_NextStage
+      guid: 623eba4e33582141adc6cf0b86786ad9
+      id: 852948253
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_NextStage
+        ObjectType: 3
+        guid: 623eba4e33582141adc6cf0b86786ad9
+      Path: Events\Default Work Unit\Play_NextStage
+      maxAttenuation: 0
+      maxDuration: 2.266667
+      minDuration: 2.266667
     - name: Play_SmokeCloud
       guid: 75ecb23991b4cf4995f5d3974fbcd3ab
       id: 2971166468
@@ -493,7 +544,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 8fbe90766cdb5d43bdf54ea2808a00dc
     GuidInternal: 
-    m_lastTime: -8585750317894438552
+    m_lastTime: -8585749698997000239
     List:
     - name: Active
       guid: 5deb7ecf99cab245912e127799b885dc
@@ -509,6 +560,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 5deb7ecf99cab245912e127799b885dc
       Path: Game Parameters\Default Work Unit\Active
+    - name: Combo
+      guid: 1671d7577400064da413539fbb99501c
+      id: 2333396925
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8fbe90766cdb5d43bdf54ea2808a00dc
+      - ElementName: Combo
+        ObjectType: 13
+        guid: 1671d7577400064da413539fbb99501c
+      Path: Game Parameters\Default Work Unit\Combo
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
