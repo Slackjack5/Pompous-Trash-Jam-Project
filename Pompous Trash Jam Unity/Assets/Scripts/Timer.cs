@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
   void Update()
   {
     timerText.text = FormatTime(currentTimeLeft);
-    Debug.Log(currentCountdownTime);
+
     if (GameManager.IsLevelStarted)
     {
       if (isCountingDown)
