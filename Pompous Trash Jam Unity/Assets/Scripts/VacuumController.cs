@@ -8,7 +8,7 @@ public class VacuumController : MonoBehaviour
 {
   [SerializeField] private ScoreTracker scoreTracker;
   [SerializeField] private string trash = "Trash";
-  [SerializeField] private TubeMinigame tubeMinigame;
+
   Rigidbody2D bone;
   VisualEffect vfx;
 
@@ -24,7 +24,7 @@ public class VacuumController : MonoBehaviour
 
   void FixedUpdate()
   {
-    if (GameManager.IsGameActive && !tubeMinigame.IsReady && Input.GetMouseButton(0))
+    if (GameManager.IsGameActive && !GameManager.TubeMinigame.IsReady && Input.GetMouseButton(0))
     {
       vfx.SetInt("SpawnRate", 64);
       //Camera Shake
@@ -51,7 +51,7 @@ public class VacuumController : MonoBehaviour
 
     Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
 
-    if (GameManager.IsGameActive && !tubeMinigame.IsReady)
+    if (GameManager.IsGameActive && !GameManager.TubeMinigame.IsReady)
     {
       vfx.SetFloat("VFXAngle", Mathf.Deg2Rad * (bone.rotation + 90));
       Vector2 normal = (mousePos - bone.position).normalized;

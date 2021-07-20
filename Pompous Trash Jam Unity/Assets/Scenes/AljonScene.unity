@@ -533,7 +533,7 @@ Transform:
   m_LocalPosition: {x: -0.0008864403, y: -0.007954195, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2095182612}
+  - {fileID: 557843023}
   m_Father: {fileID: 971615009}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1918,6 +1918,81 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &557843022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 557843023}
+  - component: {fileID: 557843025}
+  - component: {fileID: 557843024}
+  m_Layer: 0
+  m_Name: Tube Minigame Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &557843023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557843022}
+  m_LocalRotation: {x: -0, y: -0, z: 0.70710045, w: 0.7071132}
+  m_LocalPosition: {x: -0.00795418, y: 0.00088658277, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 263068814}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &557843024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557843022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d04af4448aef4e4b90ee52bde9ac2c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBar: {fileID: 558301999}
+  increaseAmount: 50
+  decreaseInterval: 0.01
+  playInterval: 30
+  FixMe: {fileID: 2425218742030117337, guid: e5b6ec4f033fec144b25b55013228ee1, type: 3}
+--- !u!61 &557843025
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557843022}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.060437083}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 1.1208742}
+  m_EdgeRadius: 0
 --- !u!1 &558301998
 GameObject:
   m_ObjectHideFlags: 0
@@ -6707,7 +6782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreTracker: {fileID: 1310723169}
   trash: Trash
-  tubeMinigame: {fileID: 2095182613}
+  tubeMinigame: {fileID: 557843024}
 --- !u!61 &1468048484
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7294,7 +7369,7 @@ MonoBehaviour:
   accuracyMinigame: {fileID: 723148405}
   alternatingButtonMashMinigame: {fileID: 312563547}
   sequenceMinigame: {fileID: 1884561162}
-  tubeMinigame: {fileID: 2095182613}
+  tubeMinigame: {fileID: 557843024}
   pauseMenuCanvas: {fileID: 964170981}
 --- !u!4 &1559761009
 Transform:
@@ -7359,7 +7434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411bcbfdbabf5246936812daa27b5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tubeMinigame: {fileID: 2095182613}
+  tubeMinigame: {fileID: 557843024}
   vacuumBone: {fileID: 1468048481}
 --- !u!58 &1691120461
 CircleCollider2D:
@@ -9796,81 +9871,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068955970}
   m_CullTransparentMesh: 1
---- !u!1 &2095182611
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2095182612}
-  - component: {fileID: 2095182614}
-  - component: {fileID: 2095182613}
-  m_Layer: 0
-  m_Name: Tube Minigame Trigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2095182612
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095182611}
-  m_LocalRotation: {x: -0, y: -0, z: 0.70710045, w: 0.7071132}
-  m_LocalPosition: {x: -0.00795418, y: 0.00088658277, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 263068814}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2095182613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095182611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d04af4448aef4e4b90ee52bde9ac2c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progressBar: {fileID: 558301999}
-  increaseAmount: 50
-  decreaseInterval: 0.01
-  playInterval: 30
-  FixMe: {fileID: 0}
---- !u!61 &2095182614
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095182611}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &2122302125
 GameObject:
   m_ObjectHideFlags: 0
