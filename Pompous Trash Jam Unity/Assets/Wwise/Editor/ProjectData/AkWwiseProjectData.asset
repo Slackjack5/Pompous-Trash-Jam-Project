@@ -111,7 +111,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: b65bdd52986abd4fbb51b640cc412cdb
     GuidInternal: 
-    m_lastTime: -8585748513683467452
+    m_lastTime: -8585748445782209919
     List:
     - name: Ambience
       guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
@@ -153,7 +153,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a33f0301cc3b20418f2028f42eef846f
     GuidInternal: 
-    m_lastTime: -8585748513685631808
+    m_lastTime: -8585748445782429636
     List:
     - name: Pause_Audio
       guid: 10a0a29eef2a974c8d23b26495373058
@@ -580,6 +580,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Resume_Music_01
+      guid: 9a456986d3fbcb458cda1de6d16a302a
+      id: 3249548110
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Resume_Music_01
+        ObjectType: 3
+        guid: 9a456986d3fbcb458cda1de6d16a302a
+      Path: Events\Default Work Unit\Resume_Music_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_All
       guid: ca3fb404509a064a92ec3938f68521b0
       id: 452547817
@@ -631,9 +648,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_VacuumBroken_01
+    - name: Stop_VacuumBroken
       guid: 4a42c6703c5c8c47a6a2796b77def2fe
-      id: 3523129852
+      id: 1293495406
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -641,13 +658,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a33f0301cc3b20418f2028f42eef846f
-      - ElementName: Stop_VacuumBroken_01
+      - ElementName: Stop_VacuumBroken
         ObjectType: 3
         guid: 4a42c6703c5c8c47a6a2796b77def2fe
-      Path: Events\Default Work Unit\Stop_VacuumBroken_01
+      Path: Events\Default Work Unit\Stop_VacuumBroken
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_VacuumLoop
       guid: 9c2750639f4f9540a469954f2e212583
       id: 740603203
