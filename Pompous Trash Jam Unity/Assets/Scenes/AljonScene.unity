@@ -9914,17 +9914,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxes:
-  - {fileID: 2202151929508145569, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
-  - {fileID: 8555884608545438775, guid: ac04d1cfe4f2a6943b7eba4fb2b233ca, type: 3}
-  - {fileID: 9083730487365473030, guid: 03e3594560a701e458b6f71e27515897, type: 3}
-  - {fileID: 6735901189982893078, guid: b06d3c172dc044c40b6a7f62b964dd70, type: 3}
-  - {fileID: 248289148682040791, guid: f3e944e4b2cf41f4fb720769987aa9a4, type: 3}
-  - {fileID: 2202151929508145569, guid: a6834dfb676740a49878684c198385d9, type: 3}
-  - {fileID: 1661812240818282736, guid: a167e93b3e96acd489e3e23912b9802e, type: 3}
-  - {fileID: 3901209825489518008, guid: 99a3763a7c419c4439e226a8fc076ae4, type: 3}
-  - {fileID: 8191822727387873994, guid: 758de096803c99747bca3f6cf7eb0cb2, type: 3}
-  - {fileID: 578747152893419232, guid: 31c981277e33df34d8dccd8d90b293b8, type: 3}
-  - {fileID: 1269534415749248297, guid: e8fbb8b81c2d66e47a31504109d0c009, type: 3}
+  - box: {fileID: 8555884608545438775, guid: ac04d1cfe4f2a6943b7eba4fb2b233ca, type: 3}
+    spawnRate: 0.2
+  - box: {fileID: 2202151929508145569, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
+    spawnRate: 0.06
+  - box: {fileID: 578747152893419232, guid: 31c981277e33df34d8dccd8d90b293b8, type: 3}
+    spawnRate: 0.2
+  - box: {fileID: 3901209825489518008, guid: 99a3763a7c419c4439e226a8fc076ae4, type: 3}
+    spawnRate: 0.2
+  - box: {fileID: 8191822727387873994, guid: 758de096803c99747bca3f6cf7eb0cb2, type: 3}
+    spawnRate: 0.07
+  - box: {fileID: 1269534415749248297, guid: e8fbb8b81c2d66e47a31504109d0c009, type: 3}
+    spawnRate: 0.07
+  - box: {fileID: 9083730487365473030, guid: 03e3594560a701e458b6f71e27515897, type: 3}
+    spawnRate: 0.05
+  - box: {fileID: 6735901189982893078, guid: b06d3c172dc044c40b6a7f62b964dd70, type: 3}
+    spawnRate: 0.01
+  - box: {fileID: 248289148682040791, guid: f3e944e4b2cf41f4fb720769987aa9a4, type: 3}
+    spawnRate: 0.04
+  - box: {fileID: 2202151929508145569, guid: a6834dfb676740a49878684c198385d9, type: 3}
+    spawnRate: 0.06
+  - box: {fileID: 1661812240818282736, guid: a167e93b3e96acd489e3e23912b9802e, type: 3}
+    spawnRate: 0.04
+  defaultBox: {fileID: 2202151929508145569, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
   spawnWidth: 12
   spawnInterval: 1.5
 --- !u!1 &2130790591
