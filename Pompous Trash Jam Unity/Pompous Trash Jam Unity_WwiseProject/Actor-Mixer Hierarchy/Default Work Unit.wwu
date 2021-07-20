@@ -1288,6 +1288,37 @@
 								<ActiveSource Name="BRS_Vacuum_Bissell_Rev_Short_1" ID="{AED88DBE-6771-4388-8E5C-A9230B241C7A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="VacuumBroken" ID="{2F0A50B6-7399-488C-993A-691A3F96A297}" ShortID="655210674">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VacuumBroken" ID="{BF1C6FA1-564A-4BEF-B23A-726FBDE01D8D}">
+									<Language>SFX</Language>
+									<AudioFile>VacuumBroken.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="368506604"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="VacuumBroken" ID="{BF1C6FA1-564A-4BEF-B23A-726FBDE01D8D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<RandomSequenceContainer Name="Explosion" ID="{AED8E0E0-2CF6-40E0-B911-DF872200F4E6}" ShortID="475227194">
