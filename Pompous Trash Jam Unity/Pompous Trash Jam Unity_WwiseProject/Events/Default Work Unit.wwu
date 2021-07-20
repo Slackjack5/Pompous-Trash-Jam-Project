@@ -281,6 +281,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_VacuumBroken" ID="{37C2D2F4-3019-437C-B784-3BB269A3FBC3}">
+					<ChildrenList>
+						<Action Name="" ID="{0A4DB188-68AB-4889-96C5-E39E0B583CF5}" ShortID="997394299">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VacuumBroken" ID="{2F0A50B6-7399-488C-993A-691A3F96A297}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_VacuumBroken" ID="{04B43FCA-9A50-4A06-92EC-3938F68521B0}">
+					<ChildrenList>
+						<Action Name="" ID="{3A6C5098-5995-4038-9F39-4EEE4F5F79F2}" ShortID="266452674">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VacuumBroken" ID="{2F0A50B6-7399-488C-993A-691A3F96A297}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

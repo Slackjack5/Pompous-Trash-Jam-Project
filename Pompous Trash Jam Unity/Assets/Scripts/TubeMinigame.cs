@@ -12,6 +12,9 @@ public class TubeMinigame : ButtonMash
 
   public readonly UnityEvent triggered = new UnityEvent();
 
+  //UI
+  [SerializeField] public GameObject FixMe;
+
   protected override void Start()
   {
     base.Start();
@@ -26,6 +29,8 @@ public class TubeMinigame : ButtonMash
     {
       IsReady = false;
       triggered.Invoke();
+      AkSoundEngine.PostEvent("Stop_VacuumBroken", gameObject);
+      FixMe.SetActive(false);
     }
   }
 
@@ -33,6 +38,8 @@ public class TubeMinigame : ButtonMash
   {
     yield return new WaitForSeconds(playInterval);
     IsReady = true;
+    AkSoundEngine.PostEvent("Play_VacuumBroken", gameObject);
+    FixMe.SetActive(true);
   }
 
   public override void Restart()
