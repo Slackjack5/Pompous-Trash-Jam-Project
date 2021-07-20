@@ -1,6 +1,377 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" SchemaVersion="103">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="Music" ID="{07E8EF99-5DB2-4AA2-A80C-6937C2B12C9F}" ShortID="1009101887">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicPlaylistContainer Name="Inactive" ID="{96A4E230-0CAE-46D7-A4F6-A7CAEAFC179A}" ShortID="578773598">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Nycelly - TrashHouse9(Intro-Loop)" ID="{B138ED1E-C834-488E-AFB8-510C5F48F1D9}" ShortID="621744466">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="7500"/>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="128"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Nycelly - TrashHouse9(Intro-Loop)" ID="{C8D40C0D-7C80-4CD2-AB6D-7BBB62F0681D}" ShortID="503873229">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Nycelly - TrashHouse9(Intro-Loop)" ID="{7C8D08E1-B2C0-4BD7-B7A0-5DF9B90EB17E}">
+													<Language>SFX</Language>
+													<AudioFile>Nycelly - TrashHouse9(Intro-Loop).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="867489106"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{8A9C0AFA-F8FC-47FB-B219-AD7695DD911F}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{22F7D97E-C74E-4F44-9D39-BA2D7E2DE9CB}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Nycelly - TrashHouse9(Intro-Loop)" ID="{147AC215-0628-439F-81C0-B54504293CEF}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="7500"/>
+																						<Property Name="FadeInDuration" Type="Real64" Value="23.5849056603774"/>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="23.5849056603774"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Nycelly - TrashHouse9(Intro-Loop)" ID="{7C8D08E1-B2C0-4BD7-B7A0-5DF9B90EB17E}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{14969D18-8BE0-43B1-881C-BE7FBEA5108A}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{42D98DEB-641D-4A59-BDA9-0B980DAB2E13}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="7500"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="R" ID="{76BC2F1C-8979-4B10-8A50-70F99684E70B}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="7382.8125"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{A0AFA607-1235-4194-B628-04CCDCB50F5C}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{9443B527-C20D-47DE-B2FF-F883E2595656}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{B678EC75-F88B-4481-901A-060EB0B7D3F2}" ShortID="278555408">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{17D9BE50-748B-44F3-A10A-8FCC549A5516}" ShortID="675656738">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Nycelly - TrashHouse9(Intro-Loop)" ID="{B138ED1E-C834-488E-AFB8-510C5F48F1D9}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Active" ID="{7CE86739-F07F-435B-BFDB-39D669CE8F5A}" ShortID="88036607">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Nycelly - TrashHouse9 (Game Jam Song)" ID="{28840063-F207-4A05-B427-47CCE36320F4}" ShortID="722779397">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="99561.3605442177"/>
+										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="Tempo" Type="Real64" Value="128"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A4F5B9B8-49D9-4BAA-82B7-F72BE97BCF9B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Nycelly - TrashHouse9 (Game Jam Song)" ID="{2A62477E-B70C-42BA-B218-C4A90298E29D}" ShortID="333741545">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Nycelly - TrashHouse9 (Game Jam Song)" ID="{57F89C56-2574-42E5-8A5F-FF98579ED518}">
+													<Language>SFX</Language>
+													<AudioFile>Nycelly - TrashHouse9 (Game Jam Song).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="306968131"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{4C27FC5D-1760-4F3B-BB19-2307AC992AB7}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{E4CDFEAE-A368-4506-82D5-B7CAF37468E6}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="Nycelly - TrashHouse9 (Game Jam Song)" ID="{6E196C77-5265-4A7C-A3D4-7E2567A24C86}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="99561.3605442177"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="Nycelly - TrashHouse9 (Game Jam Song)" ID="{57F89C56-2574-42E5-8A5F-FF98579ED518}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{9BD79872-4386-42ED-9750-A8FBE98EC011}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{33EA4309-1907-4675-9ED0-86303366962F}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="99561.3605442177"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="3" ID="{513119EA-82BC-4936-9EA8-A857D1550682}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="1982.87824983243"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="2" ID="{E79E5852-A8E3-4A14-92D8-8C5B3ED318E9}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="3750"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="1" ID="{4EBBFA66-1795-484B-A526-0FE2F272D104}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="5625"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Go" ID="{9414603E-A67F-401A-AFE6-A913645CBC59}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="6562.5"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Ready" ID="{97FD32D5-CE94-4BC0-8FD3-A868C13939B1}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="2"/>
+															<Property Name="TimeMs" Type="Real64" Value="63.1316861639521"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{37A9B471-88F6-44B2-8EEB-9CA7ADFEC5C1}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{0BB8F8A6-A9CD-44CC-86BE-5655D86A6A0D}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{01C28A3A-0A20-480D-9E7D-AEF1E976E098}" ShortID="653786447">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{FE8E2D29-44E2-4B75-8DC1-03735D6FA37D}" ShortID="1046129437">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Nycelly - TrashHouse9 (Game Jam Song)" ID="{28840063-F207-4A05-B427-47CCE36320F4}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{54C59E7A-05B0-457E-8031-D80447D50428}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{BA847E5B-531D-458A-9603-BBB170AE4D52}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<ArgumentList>
+						<ArgumentRef Name="GamePlay_Switch" ID="{8FEF3309-F65E-4F39-986E-6048AFF1E70A}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Active" ID="{0982FD4B-D540-4DE8-BFEE-01BADCBFA9A7}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Active" ID="{7CE86739-F07F-435B-BFDB-39D669CE8F5A}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Inactive" ID="{ED23F611-7461-4DF5-9951-F81ABCD266B5}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Inactive" ID="{96A4E230-0CAE-46D7-A4F6-A7CAEAFC179A}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

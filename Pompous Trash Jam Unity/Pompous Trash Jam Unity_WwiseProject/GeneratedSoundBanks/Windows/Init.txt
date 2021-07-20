@@ -1,5 +1,7 @@
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	1751072860	Special FX			\Default Work Unit\Special FX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Music	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	

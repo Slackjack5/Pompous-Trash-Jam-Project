@@ -23,6 +23,22 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
+				<Bus Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{1D8261E1-2185-4191-91CE-23C9CC7A6CE5}" WorkUnitID="{A76241B6-6879-4EC0-BEC8-9AA924145522}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</Bus>
+				<Bus Name="Special FX" ID="{4B575788-1A25-41A7-8E72-83F0A9D01321}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{1D8261E1-2185-4191-91CE-23C9CC7A6CE5}" WorkUnitID="{A76241B6-6879-4EC0-BEC8-9AA924145522}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</Bus>
 			</ChildrenList>
 		</WorkUnit>
 	</Busses>

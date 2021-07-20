@@ -80,6 +80,207 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_BoxBreak" ID="{9F8184E8-8C65-41FD-8033-25DE543A4F1A}">
+					<ChildrenList>
+						<Action Name="" ID="{39F6A85C-9EF1-4F88-B7BB-14477A96CEAC}" ShortID="150131040">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodBreak" ID="{B6B8385D-43BB-498D-BA1A-8FA2E81429F0}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BoxThud" ID="{E9F73CEF-0A74-4949-8D95-E8694F8A885A}">
+					<ChildrenList>
+						<Action Name="" ID="{F76D07DE-F0D1-4A79-90C5-0DD5B768C947}" ShortID="45637513">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WoodThud" ID="{45E7A9C7-E43D-44A4-AC0F-29103600C512}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VacuumLoop" ID="{47230B34-ACD5-4D58-92BC-7DD7874242F2}">
+					<ChildrenList>
+						<Action Name="" ID="{7DD49E59-4E9B-497F-8D94-21E5617C42B6}" ShortID="838570113">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VacuumLoop" ID="{1B9ABFF4-F163-44B9-A390-6ABA4351D92A}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_VacuumEnd" ID="{26B0680D-F551-4731-9E1F-9819C8984C62}">
+					<ChildrenList>
+						<Action Name="" ID="{121D4DEC-E083-40ED-8D50-3278D82CFF08}" ShortID="617187600">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VacuumEnd" ID="{39472B59-BC90-45C4-BE08-5FF06872A97A}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_VacuumLoop" ID="{6350279C-4F9F-4095-A469-954F2E212583}">
+					<ChildrenList>
+						<Action Name="" ID="{404BD5C6-5FE8-49D1-B0DD-65B21F304576}" ShortID="524722494">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VacuumLoop" ID="{1B9ABFF4-F163-44B9-A390-6ABA4351D92A}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Music" ID="{6A4A732B-75B6-427D-84A8-CD1293E7C0F4}">
+					<ChildrenList>
+						<Action Name="" ID="{0F9F6B1B-0343-4A34-8D32-653055B575DC}" ShortID="545763887">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{07E8EF99-5DB2-4AA2-A80C-6937C2B12C9F}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pause_Music" ID="{EA4B4A3C-6941-4127-A142-B62C81120359}">
+					<ChildrenList>
+						<Action Name="" ID="{EF44D7F0-9E66-4988-9615-83431D3218B0}" ShortID="626847642">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Resume_Music" ID="{328BD652-D34E-4AAC-BD89-C1F700A5125A}">
+					<ChildrenList>
+						<Action Name="" ID="{70A82DDB-1B43-4022-AF18-94F117B1626A}" ShortID="455340668">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Music" ID="{8B99E62E-A32D-451A-9043-00309957495D}">
+					<ChildrenList>
+						<Action Name="" ID="{417864B6-C2CB-450F-94E9-71E1C3A4299E}" ShortID="1032003217">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Explosion" ID="{077C27C2-ACBD-4316-8854-0FAAE8462514}">
+					<ChildrenList>
+						<Action Name="" ID="{B59D4E53-8E4F-4A97-9A62-57219F377DA4}" ShortID="976562385">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Explosion" ID="{AED8E0E0-2CF6-40E0-B911-DF872200F4E6}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SmokeCloud" ID="{39B2EC75-B491-49CF-95F5-D3974FBCD3AB}">
+					<ChildrenList>
+						<Action Name="" ID="{BA4CC81F-6C04-4CD6-A251-DEFFDF7C0A8F}" ShortID="183712783">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SmokeCloud" ID="{0348A276-374B-458A-A166-7A55B62350EC}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Wormhole" ID="{52B8AF43-5576-47F8-8A8B-BBDB8070C32C}">
+					<ChildrenList>
+						<Action Name="" ID="{1935B13C-E0FC-45F8-9651-EBA6B1F6492F}" ShortID="410134810">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wormhole Test1" ID="{92FD11F4-F890-4976-B8C2-B7092423245D}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WormholeExplosion" ID="{1EF90DF4-6C11-4A26-8D27-0B35B45D7285}">
+					<ChildrenList>
+						<Action Name="" ID="{29151873-8A53-494A-AE41-8B2D4D48DA0A}" ShortID="172857926">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wormhole Explosion Test 1" ID="{24BA4DD3-E110-4708-AAAF-FD88DAA71A2A}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_NextStage" ID="{4EBA3E62-5833-4121-ADC6-CF0B86786AD9}">
+					<ChildrenList>
+						<Action Name="" ID="{A5ACA16E-2F4C-4235-BC54-CFDF9BEA73F2}" ShortID="426593368">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PE-PowerUp_BW_38733" ID="{1B99826D-EF25-4AB9-957C-383000652E81}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CollectMono" ID="{DDACCAD8-4F7E-4F1F-9F46-6973B2D11612}">
+					<ChildrenList>
+						<Action Name="" ID="{931943F1-5FB5-46D8-8A0A-AB41CA6CB9A6}" ShortID="1050196878">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CollectMono" ID="{D240DBB8-BC85-43CC-998C-76A13B2AFAEB}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CollectStereo" ID="{71145938-D7A8-4695-BC7C-6641BAF9190A}">
+					<ChildrenList>
+						<Action Name="" ID="{A02EFA33-6BA8-4BED-BCF5-1723CD78DCE5}" ShortID="503460436">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CollectStereo" ID="{E56D0A81-5A71-46CD-84D9-469D59957173}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

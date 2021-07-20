@@ -45,7 +45,7 @@ PointEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 1088
-  m_ForceMagnitude: -50
+  m_ForceMagnitude: -100
   m_ForceVariation: 0
   m_DistanceScale: 1
   m_ForceSource: 0
@@ -83,9 +83,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackHoleVFX: {fileID: 853518560958430793, guid: d851685f2746c0746893b473e35677ad, type: 3}
   blackHoleVFXMat: {fileID: 2100000, guid: 5309fe80cbacdea41a078b0e442d6ff6, type: 2}
+  duration: 5
   fieldofImpact: 4
-  force: 400
-  torque: 50
+  force: 600
   LayerToHit:
     serializedVersion: 2
     m_Bits: 1088

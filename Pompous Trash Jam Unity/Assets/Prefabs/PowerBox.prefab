@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1661812240818282736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.18, y: -0.38, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -145,11 +145,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
-  hitForce: 500
   freezeTime: 0.1
-  destructable: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
+  trashPieces: {fileID: 5584003428336877601, guid: 8f7304048066f094b8ee44e209fd5640, type: 3}
   fieldOfImpact: 2
   explosiveForce: 600
   layerToHit:
     serializedVersion: 2
     m_Bits: 64
+  powerups:
+  - {fileID: 177474465462727952, guid: 34510ec403d7dbf40bb6b06fc6c7540f, type: 3}

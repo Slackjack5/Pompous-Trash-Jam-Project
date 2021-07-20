@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
   public static readonly UnityEvent levelComplete = new UnityEvent();
 
+  public static bool IsLevelStarted { get; private set; }
+
   public static bool IsGameActive { get; private set; }
 
   public static bool IsMinigameActive {
@@ -26,12 +28,16 @@ public class GameManager : MonoBehaviour
   private static Vector2 defaultGravity = new Vector2(0, -9.8f);
   private static bool isLevelComplete = false;
   private static bool isPaused = false;
+  private static Minigame[] minigames;
   private static GameObject pauseMenu;
 
   private void Start()
   {
+    IsLevelStarted = false;
+
     DeactivateGame();
 
+    minigames = new Minigame[] { buttonMashMinigame, accuracyMinigame, alternatingButtonMashMinigame, sequenceMinigame };
     tubeMinigame.triggered.AddListener(() => StartMinigame(tubeMinigame));
 
     isPaused = false;
@@ -53,11 +59,24 @@ public class GameManager : MonoBehaviour
     Physics2D.gravity = Vector2.zero;
   }
 
+  private static void DeactivateMinigame()
+  {
+    CurrentMinigame = null;
+  }
+
+  public static void StartLevel()
+  {
+    IsLevelStarted = true;
+  }
+
   public static void EndLevel()
   {
-    FreezeTime();
+    DeactivateGame();
+    DeactivateMinigame();
+
     levelComplete.Invoke();
     isLevelComplete = true;
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().FadeAudio();
   }
 
   public static void EndMinigame()
@@ -79,6 +98,11 @@ public class GameManager : MonoBehaviour
     }
   }
 
+  public static void StartRandomMinigame()
+  {
+    StartMinigame(minigames[Random.Range(0, minigames.Length)]);
+  }
+
   public static void TogglePause()
   {
     if (!isLevelComplete)
@@ -96,7 +120,7 @@ public class GameManager : MonoBehaviour
     }
   }
 
-  private static void FreezeTime()
+  public static void FreezeTime()
   {
     Time.timeScale = 0;
   }
@@ -105,17 +129,20 @@ public class GameManager : MonoBehaviour
   {
     FreezeTime();
     pauseMenu.SetActive(true);
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().PauseAudio();
   }
 
   private static void Resume()
   {
     Time.timeScale = 1;
     pauseMenu.SetActive(false);
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().ResumeAudio();
   }
 
   public void NextLevel()
   {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
   }
 
   public void Quit()
@@ -126,5 +153,6 @@ public class GameManager : MonoBehaviour
   public void Restart()
   {
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
   }
 }

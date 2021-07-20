@@ -5,13 +5,38 @@
 			<ChildrenList>
 				<SoundBank Name="Ambience" ID="{1C6D7C3A-E0D6-48C3-904E-D9D02E3E32CB}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Stop_VacuumLoop" ID="{6350279C-4F9F-4095-A469-954F2E212583}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_NextStage" ID="{4EBA3E62-5833-4121-ADC6-CF0B86786AD9}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footsteps" ID="{C82CAC85-768C-4148-A79C-385AECD1EA0C}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BoxBreak" ID="{9F8184E8-8C65-41FD-8033-25DE543A4F1A}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Explosion" ID="{077C27C2-ACBD-4316-8854-0FAAE8462514}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AnnouncerOutstanding" ID="{30E08385-1D4C-442F-BCC0-A53C3AD44510}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AnnouncerSensational" ID="{55C418A8-4D95-4489-BBB8-87E62711F737}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="WoodThud" ID="{45E7A9C7-E43D-44A4-AC0F-29103600C512}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CollectStereo" ID="{71145938-D7A8-4695-BC7C-6641BAF9190A}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_VacuumEnd" ID="{26B0680D-F551-4731-9E1F-9819C8984C62}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Wormhole" ID="{52B8AF43-5576-47F8-8A8B-BBDB8070C32C}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AnnouncerGreat" ID="{C2F64609-7474-48D1-822C-DAAFB1617D06}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SmokeCloud" ID="{39B2EC75-B491-49CF-95F5-D3974FBCD3AB}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_WormholeExplosion" ID="{1EF90DF4-6C11-4A26-8D27-0B35B45D7285}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Swing" ID="{2698A7DB-D36F-4C25-BB77-1CB134295DC1}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BoxHit" ID="{70155F17-7662-4D0F-A105-274599E52B33}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AnnouncerSuper" ID="{F5568AD7-F96A-4D23-8F29-145F46894A57}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_VacuumLoop" ID="{47230B34-ACD5-4D58-92BC-7DD7874242F2}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CollectMono" ID="{DDACCAD8-4F7E-4F1F-9F46-6973B2D11612}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Music" ID="{13E0593B-D60C-4C8A-A11C-ED6FFE71830A}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Pause_Music" ID="{EA4B4A3C-6941-4127-A142-B62C81120359}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Music" ID="{6A4A732B-75B6-427D-84A8-CD1293E7C0F4}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Active" ID="{7CE86739-F07F-435B-BFDB-39D669CE8F5A}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Music" ID="{8B99E62E-A32D-451A-9043-00309957495D}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Inactive" ID="{96A4E230-0CAE-46D7-A4F6-A7CAEAFC179A}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{07E8EF99-5DB2-4AA2-A80C-6937C2B12C9F}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Resume_Music" ID="{328BD652-D34E-4AAC-BD89-C1F700A5125A}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

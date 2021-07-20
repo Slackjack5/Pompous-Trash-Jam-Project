@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 226b383d1762534c83eb131ccfd311f8
     GuidInternal: 
-    m_lastTime: -8585750472342885501
+    m_lastTime: -8585748661130240917
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,20 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: d6b71c7367af7440ae22a0ea1e9afd32
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 226b383d1762534c83eb131ccfd311f8
+      - ElementName: Music
+        ObjectType: 2
+        guid: d6b71c7367af7440ae22a0ea1e9afd32
+      Path: Master-Mixer Hierarchy\Default Work Unit\Music
     - name: Reverb
       guid: 3356a59d6edcb643a2537ebcc9122b96
       id: 348963605
@@ -71,6 +85,20 @@ MonoBehaviour:
         ObjectType: 1
         guid: 3356a59d6edcb643a2537ebcc9122b96
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb
+    - name: Special FX
+      guid: 8857574b251aa7418e7283f0a9d01321
+      id: 1751072860
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 226b383d1762534c83eb131ccfd311f8
+      - ElementName: Special FX
+        ObjectType: 2
+        guid: 8857574b251aa7418e7283f0a9d01321
+      Path: Master-Mixer Hierarchy\Default Work Unit\Special FX
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -83,7 +111,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: b65bdd52986abd4fbb51b640cc412cdb
     GuidInternal: 
-    m_lastTime: -8585750472341967956
+    m_lastTime: -8585749513462675098
     List:
     - name: Ambience
       guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
@@ -99,6 +127,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
       Path: SoundBanks\Default Work Unit\Ambience
+    - name: Music
+      guid: 3b59e0130cd68a4ca11ced6ffe71830a
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b65bdd52986abd4fbb51b640cc412cdb
+      - ElementName: Music
+        ObjectType: 7
+        guid: 3b59e0130cd68a4ca11ced6ffe71830a
+      Path: SoundBanks\Default Work Unit\Music
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -111,8 +153,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a33f0301cc3b20418f2028f42eef846f
     GuidInternal: 
-    m_lastTime: -8585750472343713252
+    m_lastTime: -8585749513467771466
     List:
+    - name: Pause_Music
+      guid: 3c4a4bea41692741a142b62c81120359
+      id: 2735935537
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Pause_Music
+        ObjectType: 3
+        guid: 3c4a4bea41692741a142b62c81120359
+      Path: Events\Default Work Unit\Pause_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_AnnouncerGreat
       guid: 0946f6c27474d148822cdaafb1617d06
       id: 2423607242
@@ -181,6 +240,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.875011
       minDuration: 0.875011
+    - name: Play_BoxBreak
+      guid: e884819f658cfd41803325de543a4f1a
+      id: 843996146
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_BoxBreak
+        ObjectType: 3
+        guid: e884819f658cfd41803325de543a4f1a
+      Path: Events\Default Work Unit\Play_BoxBreak
+      maxAttenuation: 0
+      maxDuration: 2.059344
+      minDuration: 0.674404
     - name: Play_BoxHit
       guid: 175f157062760f4da105274599e52b33
       id: 762239356
@@ -198,6 +274,74 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.300317
       minDuration: 0.975238
+    - name: Play_BoxThud
+      guid: ef3cf7e9740a49498d95e8694f8a885a
+      id: 301007570
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_BoxThud
+        ObjectType: 3
+        guid: ef3cf7e9740a49498d95e8694f8a885a
+      Path: Events\Default Work Unit\Play_BoxThud
+      maxAttenuation: 0
+      maxDuration: 1.845333
+      minDuration: 0.461139
+    - name: Play_CollectMono
+      guid: d8caacdd7e4f1f4f9f466973b2d11612
+      id: 4163428053
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_CollectMono
+        ObjectType: 3
+        guid: d8caacdd7e4f1f4f9f466973b2d11612
+      Path: Events\Default Work Unit\Play_CollectMono
+      maxAttenuation: 0
+      maxDuration: 0.391156
+      minDuration: 0.391156
+    - name: Play_CollectStereo
+      guid: 38591471a8d79546bc7c6641baf9190a
+      id: 2165590428
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_CollectStereo
+        ObjectType: 3
+        guid: 38591471a8d79546bc7c6641baf9190a
+      Path: Events\Default Work Unit\Play_CollectStereo
+      maxAttenuation: 0
+      maxDuration: 0.391146
+      minDuration: 0.391146
+    - name: Play_Explosion
+      guid: c2277c07bdac164388540faae8462514
+      id: 4030404899
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_Explosion
+        ObjectType: 3
+        guid: c2277c07bdac164388540faae8462514
+      Path: Events\Default Work Unit\Play_Explosion
+      maxAttenuation: 0
+      maxDuration: 4
+      minDuration: 3
     - name: Play_Footsteps
       guid: 85ac2cc88c764841a79c385aecd1ea0c
       id: 3854155799
@@ -215,6 +359,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.581079
       minDuration: 0.273314
+    - name: Play_Music
+      guid: 2b734a6ab6757d4284a8cd1293e7c0f4
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 2b734a6ab6757d4284a8cd1293e7c0f4
+      Path: Events\Default Work Unit\Play_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_NextStage
+      guid: 623eba4e33582141adc6cf0b86786ad9
+      id: 852948253
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_NextStage
+        ObjectType: 3
+        guid: 623eba4e33582141adc6cf0b86786ad9
+      Path: Events\Default Work Unit\Play_NextStage
+      maxAttenuation: 0
+      maxDuration: 2.266667
+      minDuration: 2.266667
+    - name: Play_SmokeCloud
+      guid: 75ecb23991b4cf4995f5d3974fbcd3ab
+      id: 2971166468
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_SmokeCloud
+        ObjectType: 3
+        guid: 75ecb23991b4cf4995f5d3974fbcd3ab
+      Path: Events\Default Work Unit\Play_SmokeCloud
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 2
     - name: Play_Swing
       guid: dba798266fd3254cbb771cb134295dc1
       id: 989180208
@@ -232,6 +427,125 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.041667
       minDuration: 0.541667
+    - name: Play_VacuumEnd
+      guid: 0d68b02651f531479e1f9819c8984c62
+      id: 1424032314
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_VacuumEnd
+        ObjectType: 3
+        guid: 0d68b02651f531479e1f9819c8984c62
+      Path: Events\Default Work Unit\Play_VacuumEnd
+      maxAttenuation: 0
+      maxDuration: 5.457418
+      minDuration: 5.457418
+    - name: Play_VacuumLoop
+      guid: 340b2347d5ac584d92bc7dd7874242f2
+      id: 3537388541
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_VacuumLoop
+        ObjectType: 3
+        guid: 340b2347d5ac584d92bc7dd7874242f2
+      Path: Events\Default Work Unit\Play_VacuumLoop
+      maxAttenuation: 0
+      maxDuration: 60.139683
+      minDuration: 60.139683
+    - name: Play_Wormhole
+      guid: 43afb8527655f8478a8bbbdb8070c32c
+      id: 208310577
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_Wormhole
+        ObjectType: 3
+        guid: 43afb8527655f8478a8bbbdb8070c32c
+      Path: Events\Default Work Unit\Play_Wormhole
+      maxAttenuation: 0
+      maxDuration: 6
+      minDuration: 6
+    - name: Play_WormholeExplosion
+      guid: f40df91e116c264a8d270b35b45d7285
+      id: 631525614
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_WormholeExplosion
+        ObjectType: 3
+        guid: f40df91e116c264a8d270b35b45d7285
+      Path: Events\Default Work Unit\Play_WormholeExplosion
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 3
+    - name: Resume_Music
+      guid: 52d68b324ed3ac4abd89c1f700a5125a
+      id: 2940177080
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Resume_Music
+        ObjectType: 3
+        guid: 52d68b324ed3ac4abd89c1f700a5125a
+      Path: Events\Default Work Unit\Resume_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Music
+      guid: 2ee6998b2da31a45904300309957495d
+      id: 2837384057
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Stop_Music
+        ObjectType: 3
+        guid: 2ee6998b2da31a45904300309957495d
+      Path: Events\Default Work Unit\Stop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_VacuumLoop
+      guid: 9c2750639f4f9540a469954f2e212583
+      id: 740603203
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Stop_VacuumLoop
+        ObjectType: 3
+        guid: 9c2750639f4f9540a469954f2e212583
+      Path: Events\Default Work Unit\Stop_VacuumLoop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -244,8 +558,36 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 8fbe90766cdb5d43bdf54ea2808a00dc
     GuidInternal: 
-    m_lastTime: -8585757543609873428
-    List: []
+    m_lastTime: -8585749513466554718
+    List:
+    - name: Active
+      guid: 5deb7ecf99cab245912e127799b885dc
+      id: 58138747
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8fbe90766cdb5d43bdf54ea2808a00dc
+      - ElementName: Active
+        ObjectType: 13
+        guid: 5deb7ecf99cab245912e127799b885dc
+      Path: Game Parameters\Default Work Unit\Active
+    - name: Combo
+      guid: 1671d7577400064da413539fbb99501c
+      id: 2333396925
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8fbe90766cdb5d43bdf54ea2808a00dc
+      - ElementName: Combo
+        ObjectType: 13
+        guid: 1671d7577400064da413539fbb99501c
+      Path: Game Parameters\Default Work Unit\Combo
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -272,8 +614,58 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 7f885da4ec0d40469606f748436fab1c
     GuidInternal: 
-    m_lastTime: -8585757543609773690
-    List: []
+    m_lastTime: -8585750317891022489
+    List:
+    - name: GamePlay_Switch
+      guid: 0933ef8f5ef6394f986e6048aff1e70a
+      id: 2702523344
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7f885da4ec0d40469606f748436fab1c
+      - ElementName: GamePlay_Switch
+        ObjectType: 11
+        guid: 0933ef8f5ef6394f986e6048aff1e70a
+      Path: Switches\Default Work Unit\GamePlay_Switch
+      values:
+      - name: Active
+        guid: 4bfd820940d5e84dbfee01badcbfa9a7
+        id: 58138747
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 7f885da4ec0d40469606f748436fab1c
+        - ElementName: GamePlay_Switch
+          ObjectType: 11
+          guid: 0933ef8f5ef6394f986e6048aff1e70a
+        - ElementName: Active
+          ObjectType: 10
+          guid: 4bfd820940d5e84dbfee01badcbfa9a7
+      - name: Inactive
+        guid: 11f623ed6174f54d9951f81abcd266b5
+        id: 3163453698
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 7f885da4ec0d40469606f748436fab1c
+        - ElementName: GamePlay_Switch
+          ObjectType: 11
+          guid: 0933ef8f5ef6394f986e6048aff1e70a
+        - ElementName: Inactive
+          ObjectType: 10
+          guid: 11f623ed6174f54d9951f81abcd266b5
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -289,7 +681,7 @@ MonoBehaviour:
     m_lastTime: -8585757543609773690
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000007000000090000000a0000000b0000000c000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

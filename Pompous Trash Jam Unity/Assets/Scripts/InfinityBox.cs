@@ -10,7 +10,7 @@ public class InfinityBox : SpecialBox
   protected override void PreDestroy()
   {
     base.PreDestroy();
-
+    AkSoundEngine.PostEvent("Play_SmokeCloud", gameObject);
     Instantiate(box, new Vector2(transform.position.x + .5f, transform.position.y + .5f), Quaternion.identity);
     Instantiate(box, new Vector2(transform.position.x - .5f, transform.position.y + .5f), Quaternion.identity);
     Instantiate(box, new Vector2(transform.position.x, transform.position.y + .5f), Quaternion.identity);

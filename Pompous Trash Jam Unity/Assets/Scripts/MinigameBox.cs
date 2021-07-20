@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class MinigameBox : BoxDestruction
 {
-  [SerializeField] private Minigame minigame;
-
   protected override void PreDestroy()
   {
-    base.PreDestroy();
+    GameManager.StartRandomMinigame();
 
-    GameManager.StartMinigame(minigame);
+    GameManager.CurrentMinigame.complete.AddListener(() =>
+    {
+      base.PreDestroy();
+      Destroy(gameObject);
+    });
   }
 
   protected override void Destroy()
   {
     PreDestroy();
+  }
+
+  public override void EnvironmentalDestroy()
+  {
+    base.PreDestroy();
     Destroy(gameObject);
   }
 }

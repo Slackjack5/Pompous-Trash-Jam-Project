@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using EZCameraShake;
+using UnityEngine.Events;
 public class PlayerController : PhysicsObject
 {
   [SerializeField] private float baseSpeed = 800f;
@@ -15,12 +16,13 @@ public class PlayerController : PhysicsObject
   [SerializeField] private Transform frontCheckPosition;
   [SerializeField] private float hitboxWidth = 1f;
   [SerializeField] private float hitboxHeight = 0.6f;
+  [SerializeField] private float hitForce = 500f;
   [SerializeField] private float meleeCooldownTime = 0.5f;
-  [SerializeField] private float stunTime = 4f;
+  [SerializeField] private float stunTime = 1.5f;
 
   private Vector2 boxCastSize;
   private float currentMeleeCooldown;
-  private bool isFacingRight = true;
+  
   private bool isGrounded = false;
   private bool isJumpKeyHeld = false;
   private bool isStunned = false;
@@ -29,14 +31,19 @@ public class PlayerController : PhysicsObject
   private float xInput;
   
   const float touchDistance = .1f;
+  public UnityEvent StartGame;
+  //Animations
+  [SerializeField] private Animator myAnimator;
 
-    //Animations
-    [SerializeField] private Animator myAnimator;
-    // Start is called before the first frame update
+  public bool IsFacingRight { get; private set; }
+
+  public float HitForce { get; private set; }
+
   protected override void Start()
   {
     base.Start();
 
+    IsFacingRight = true;
     boxCastSize = new Vector2(transform.localScale.x - touchDistance, touchDistance);
   }
 
@@ -47,10 +54,19 @@ public class PlayerController : PhysicsObject
     // Use BoxCast instead of Raycast so that ground checking spans the width of the player
     isGrounded = Physics2D.BoxCast(groundCheckPosition.position, boxCastSize, /* angle = */ 0f, Vector2.down, /* distance = */ 0f, whatIsGround | whatIsBox);
 
-    // Update melee cooldown
-    if (currentMeleeCooldown > 0)
+    if (GameManager.IsGameActive)
     {
-      currentMeleeCooldown -= Time.deltaTime;
+      // Update melee cooldown
+      if (currentMeleeCooldown > 0)
+      {
+        currentMeleeCooldown -= Time.deltaTime;
+      }
+
+      myAnimator.speed = 1;
+    }
+    else
+    {
+      myAnimator.speed = 0;
     }
   }
 
@@ -77,7 +93,16 @@ public class PlayerController : PhysicsObject
         jumpTimeCounter = 0;
       }
 
-      //Animation
+      // Animation
+      if (jumpTimeCounter > 0)
+      {
+        myAnimator.SetBool("isJumping", true);
+      }
+      else
+      {
+        myAnimator.SetBool("isJumping", false);
+      }
+
       if (xInput != 0 && !isStunned)
       {
         myAnimator.SetFloat("Speed", 1);
@@ -86,17 +111,6 @@ public class PlayerController : PhysicsObject
       {
         myAnimator.SetFloat("Speed", 0);
       }
-    }
-
-    if (isGrounded)
-    {
-      //animation
-      myAnimator.SetBool("isJumping", false);
-    }
-    else
-    {
-      //animation
-      myAnimator.SetBool("isJumping", true);
     }
   }
 
@@ -115,6 +129,26 @@ public class PlayerController : PhysicsObject
 
   public void OnAttack()
   {
+    if (GameManager.IsLevelStarted)
+    {
+      if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
+      {
+        int randNumb = Random.Range(1,4);
+        // Setting this bool to true triggers PlaySwing
+        myAnimator.SetInteger("AttackType", randNumb);
+        myAnimator.SetBool("isAttacking", true);
+      }
+    }
+    else
+    {
+      StartGame.Invoke();
+      GameManager.StartLevel();
+    }
+  }
+
+  public void PlaySwing()
+  {
+    AkSoundEngine.PostEvent("Play_Swing", gameObject);
     if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
     {
       // Hit minigame boxes beneath player
@@ -124,13 +158,13 @@ public class PlayerController : PhysicsObject
         MinigameBox minigameBox = groundHit.transform.GetComponent<MinigameBox>();
         if (minigameBox)
         {
-          minigameBox.Hit(isFacingRight);
+          minigameBox.Hit(IsFacingRight, hitForce);
         }
       }
 
       // Hit all other boxes in front of player
       Vector2 origin = frontCheckPosition.position;
-      if (isFacingRight)
+      if (IsFacingRight)
       {
         origin.x += hitboxWidth / 2;
       }
@@ -145,9 +179,10 @@ public class PlayerController : PhysicsObject
       foreach (RaycastHit2D hit in hits)
       {
         BoxDestruction boxDestruction = hit.transform.GetComponent<BoxDestruction>();
-        if (boxDestruction)
+        MinigameBox minigameBox = hit.transform.GetComponent<MinigameBox>();
+        if (boxDestruction && !minigameBox)
         {
-          boxDestruction.Hit(isFacingRight);
+          boxDestruction.Hit(IsFacingRight, hitForce);
         }
       }
 
@@ -158,9 +193,6 @@ public class PlayerController : PhysicsObject
       }
 
       currentMeleeCooldown = meleeCooldownTime;
-
-     //animation
-      myAnimator.SetBool("isAttacking", true);
     }
   }
 
@@ -178,7 +210,7 @@ public class PlayerController : PhysicsObject
   {
     Vector2 motionVector = value.Get<Vector2>();
     xInput = motionVector.x;
-    if (xInput < 0 && isFacingRight || xInput > 0 && !isFacingRight)
+    if (GameManager.IsGameActive && (xInput < 0 && IsFacingRight || xInput > 0 && !IsFacingRight))
     {
       Flip();
     }
@@ -231,7 +263,7 @@ public class PlayerController : PhysicsObject
 
   private void Flip()
   {
-    isFacingRight = !isFacingRight;
+    IsFacingRight = !IsFacingRight;
 
     Vector3 theScale = transform.localScale;
     theScale.x *= -1;
@@ -249,9 +281,5 @@ public class PlayerController : PhysicsObject
   public void PlayFootstep()
   {
     AkSoundEngine.PostEvent("Play_Footsteps", gameObject);
-  }
-  public void PlaySwing()
-  {
-    AkSoundEngine.PostEvent("Play_Swing", gameObject);
   }
 }
