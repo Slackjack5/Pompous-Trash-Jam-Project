@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using TMPro;
 
 public class Combo : MonoBehaviour
@@ -27,10 +29,17 @@ public class Combo : MonoBehaviour
   private float currentScaleTime;
 
   public int ComboMultiplierIndex { get; private set; }
-
+  public ParticleSystem particles;
+  public Volume volume;
+  private Bloom bloom;
+  private ChromaticAberration chromatic;
+  private ColorAdjustments colorAdjustments;
   private void Start()
   {
     rectTransform = GetComponent<RectTransform>();
+    volume.profile.TryGet(out bloom);
+    volume.profile.TryGet(out chromatic);
+    volume.profile.TryGet(out colorAdjustments);
   }
 
   private void Update()
@@ -38,6 +47,32 @@ public class Combo : MonoBehaviour
     // Update text
     comboMultiplierText.text = comboMultipliers[ComboMultiplierIndex] + "x";
     exclamation.text = exclamations[ComboMultiplierIndex];
+    float comboRatio = (float)ComboMultiplierIndex / (float)(comboMultipliers.Length - 1);
+    print(comboRatio);
+    if (comboRatio >= 0.99)
+    {
+      if (bloom.intensity.value != 100)
+      {
+        // Place audio here
+        Shader.SetGlobalFloat("_ShockTime", Time.time);
+        Shader.SetGlobalVector("_FocalPoint", new Vector2(0.5f, 0.5f));
+      }
+      bloom.intensity.value = 100;
+      chromatic.intensity.value = 1;
+      colorAdjustments.contrast.value = 100;
+      colorAdjustments.hueShift.value = 180;
+      colorAdjustments.saturation.value = 100;
+    }
+    else
+    {
+      bloom.intensity.value = 5;
+      chromatic.intensity.value = 0;
+      colorAdjustments.contrast.value = 0;
+      colorAdjustments.hueShift.value = 0;
+      colorAdjustments.saturation.value = 0;
+    }
+    particles.startSpeed = comboRatio * 200f;
+    particles.emissionRate = comboRatio * 200f;
 
     if (GameManager.IsGameActive)
     {
@@ -137,7 +172,7 @@ public class Combo : MonoBehaviour
   private void Fill()
   {
     float t = Mathf.InverseLerp(maxFillTime, 0, currentFillTime);
-    float fill = Mathf.Lerp(startFillAmount, (float) currentComboUpgradeCount / maxComboUpgradeCount, t);
+    float fill = Mathf.Lerp(startFillAmount, (float)currentComboUpgradeCount / maxComboUpgradeCount, t);
     comboProgress.fillAmount = fill;
   }
 

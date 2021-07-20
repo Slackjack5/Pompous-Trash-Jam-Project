@@ -144,6 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e1bde99663f9a4081bcbcf3de7fc0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 1
   freezeTime: 0.1
   trashPieces: {fileID: 1632352378333449726, guid: 99460543220271f4ea641119996d055b, type: 3}

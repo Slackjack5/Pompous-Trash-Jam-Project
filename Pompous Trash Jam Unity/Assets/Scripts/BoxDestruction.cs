@@ -11,6 +11,7 @@ public class BoxDestruction : PhysicsObject
   private SpriteRenderer spriteRenderer;
 
   private int currentHealth;
+  private Color originalColor;
 
   protected override void Start()
   {
@@ -20,6 +21,16 @@ public class BoxDestruction : PhysicsObject
     spriteRenderer = GetComponent<SpriteRenderer>();
 
     currentHealth = maxHealth;
+    originalColor = spriteRenderer.color;
+  }
+
+  public void FixedUpdate()
+  {
+    float healthRatio = ((float)currentHealth / (float)maxHealth);
+    if (healthRatio > 0.1)
+    {
+      spriteRenderer.color = new Color(originalColor.r * healthRatio, originalColor.g * healthRatio, originalColor.b * healthRatio, originalColor.a);
+    }
   }
 
   public void Hit(bool isHitRight, float force)
@@ -41,7 +52,7 @@ public class BoxDestruction : PhysicsObject
 
   private void OnCollisionEnter2D(Collision2D collision)
   {
-    if(collision.relativeVelocity.magnitude>10)
+    if (collision.relativeVelocity.magnitude > 10)
     {
       //Sound
       AkSoundEngine.PostEvent("Play_BoxThud", gameObject);
