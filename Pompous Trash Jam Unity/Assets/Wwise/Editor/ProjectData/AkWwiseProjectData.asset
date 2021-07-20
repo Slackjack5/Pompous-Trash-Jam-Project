@@ -111,7 +111,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: b65bdd52986abd4fbb51b640cc412cdb
     GuidInternal: 
-    m_lastTime: -8585748597834729243
+    m_lastTime: -8585748577897087738
     List:
     - name: Ambience
       guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
@@ -153,8 +153,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a33f0301cc3b20418f2028f42eef846f
     GuidInternal: 
-    m_lastTime: -8585748597840917846
+    m_lastTime: -8585748577896918213
     List:
+    - name: Pause_Audio
+      guid: 10a0a29eef2a974c8d23b26495373058
+      id: 4122976862
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Pause_Audio
+        ObjectType: 3
+        guid: 10a0a29eef2a974c8d23b26495373058
+      Path: Events\Default Work Unit\Pause_Audio
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Pause_Music
       guid: 3c4a4bea41692741a142b62c81120359
       id: 2735935537
@@ -172,6 +189,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_AnnouncerFinish
+      guid: 7e50de1a16ba6d41a172c3e22d1656fd
+      id: 3372131670
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_AnnouncerFinish
+        ObjectType: 3
+        guid: 7e50de1a16ba6d41a172c3e22d1656fd
+      Path: Events\Default Work Unit\Play_AnnouncerFinish
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: Play_AnnouncerGreat
       guid: 0946f6c27474d148822cdaafb1617d06
       id: 2423607242
@@ -529,6 +563,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_All
+      guid: ca3fb404509a064a92ec3938f68521b0
+      id: 452547817
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Stop_All
+        ObjectType: 3
+        guid: ca3fb404509a064a92ec3938f68521b0
+      Path: Events\Default Work Unit\Stop_All
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Audio
+      guid: 4d3bbe202912b44ea6cd8c1c38fea823
+      id: 3785866374
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Stop_Audio
+        ObjectType: 3
+        guid: 4d3bbe202912b44ea6cd8c1c38fea823
+      Path: Events\Default Work Unit\Stop_Audio
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Music
       guid: 2ee6998b2da31a45904300309957495d
       id: 2837384057
@@ -546,9 +614,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_VacuumBroken
-      guid: ca3fb404509a064a92ec3938f68521b0
-      id: 1293495406
+    - name: Stop_VacuumBroken_01
+      guid: 4a42c6703c5c8c47a6a2796b77def2fe
+      id: 3523129852
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -556,13 +624,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a33f0301cc3b20418f2028f42eef846f
-      - ElementName: Stop_VacuumBroken
+      - ElementName: Stop_VacuumBroken_01
         ObjectType: 3
-        guid: ca3fb404509a064a92ec3938f68521b0
-      Path: Events\Default Work Unit\Stop_VacuumBroken
+        guid: 4a42c6703c5c8c47a6a2796b77def2fe
+      Path: Events\Default Work Unit\Stop_VacuumBroken_01
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_VacuumLoop
       guid: 9c2750639f4f9540a469954f2e212583
       id: 740603203

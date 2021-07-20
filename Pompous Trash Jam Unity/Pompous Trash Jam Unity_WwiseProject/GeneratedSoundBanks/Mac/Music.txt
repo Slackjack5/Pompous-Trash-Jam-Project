@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	452547817	Stop_All			\Default Work Unit\Stop_All	
 	2735935537	Pause_Music			\Default Work Unit\Pause_Music	
 	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
 	2932040671	Play_Music			\Default Work Unit\Play_Music	

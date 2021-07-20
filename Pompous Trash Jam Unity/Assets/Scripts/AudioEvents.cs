@@ -32,6 +32,7 @@ public class AudioEvents : MonoBehaviour
   {
     //End All Audio
     AkSoundEngine.PostEvent("Stop_Audio", gameObject);
+    AkSoundEngine.PostEvent("Stop_All", gameObject);
   }
   public void PauseAudio()
   {
