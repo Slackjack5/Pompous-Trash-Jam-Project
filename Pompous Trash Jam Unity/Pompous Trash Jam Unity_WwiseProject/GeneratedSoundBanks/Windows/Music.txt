@@ -4,6 +4,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
 	2932040671	Play_Music			\Default Work Unit\Play_Music	
 	2940177080	Resume_Music			\Default Work Unit\Resume_Music	
+	3249548110	Resume_Music_01			\Default Work Unit\Resume_Music_01	
 	3785866374	Stop_Audio			\Default Work Unit\Stop_Audio	
 
 Switch Group	ID	Name			Wwise Object Path	Notes

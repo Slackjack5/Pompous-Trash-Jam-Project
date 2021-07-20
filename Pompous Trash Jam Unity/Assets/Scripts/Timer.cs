@@ -102,7 +102,11 @@ public class Timer : MonoBehaviour
           }
           else
           {
-            currentTimeLeft -= Time.deltaTime;
+            if(GameManager.IsTimerPaused==false)
+            {
+              currentTimeLeft -= Time.deltaTime;
+            }
+            
           }
         }
       }
