@@ -13,11 +13,13 @@ public class Timer : MonoBehaviour
   [SerializeField] private float maxFontSize = 72f;
   [SerializeField] private float minFontSize = 24f;
   [SerializeField] private float fadeTime = 1f;
+
   private float currentFadeTime;
   private int currentCountdownTime = 5;
   private bool isCountingDown = true;
   private bool isTimeDone = false;
   private float currentTimeLeft;
+  private bool isTutorialSetup = false;
 
   // Start is called before the first frame update
   void Start()
@@ -34,60 +36,73 @@ public class Timer : MonoBehaviour
 
     if (GameManager.IsLevelStarted)
     {
-      if (isCountingDown)
+      if (GameManager.IsTutorial)
       {
-        if (currentCountdownTime<4)
+        if (!isTutorialSetup)
         {
-          DisplayCountdownTime();
-          Fade();
-        }
-        else if (currentCountdownTime == 4)
-        {
-          countdownText.text = "Get Ready";
-          Fade();
-        }
-        else
-        {
-          countdownText.text = "Preparing Room";
-          //Fade();
-        }
+          isTutorialSetup = true;
 
-        if (currentCountdownTime <= 0)
-        {
-          // Countdown is over
-          StartCoroutine(DisplayGo());
-
-          isCountingDown = false;
-
-        }
-
-        if(currentFadeTime>0)
-        {
-          currentFadeTime -= Time.deltaTime;
+          countdownText.enabled = false;
+          RemoveBackground();
+          GameManager.ActivateGame();
         }
       }
       else
       {
-        if (currentTimeLeft <= 0)
+        if (isCountingDown)
         {
-          if (!isTimeDone)
+          if (currentCountdownTime < 4)
           {
-            // Player ran out of time
-            isTimeDone = true;
-            currentTimeLeft = 0;
-
-            GameManager.EndLevel();
-            //Audio
-            AkSoundEngine.PostEvent("Play_AnnouncerFinish", gameObject);
+            DisplayCountdownTime();
+            Fade();
+          }
+          else if (currentCountdownTime == 4)
+          {
+            countdownText.text = "Get Ready";
+            Fade();
           }
           else
           {
-            currentTimeLeft = 0;
+            countdownText.text = "Preparing Room";
+          }
+
+          if (currentCountdownTime <= 0)
+          {
+            // Countdown is over
+            StartCoroutine(DisplayGo());
+
+            isCountingDown = false;
+
+          }
+
+          if (currentFadeTime > 0)
+          {
+            currentFadeTime -= Time.deltaTime;
           }
         }
         else
         {
-          currentTimeLeft -= Time.deltaTime;
+          if (currentTimeLeft <= 0)
+          {
+            if (!isTimeDone)
+            {
+              // Player ran out of time
+              isTimeDone = true;
+              currentTimeLeft = 0;
+
+              GameManager.EndLevel();
+              //Audio
+              AkSoundEngine.PostEvent("Play_AnnouncerFinish", gameObject);
+            }
+            else
+            {
+              currentTimeLeft = 0;
+            }
+          }
+          else
+          {
+            currentTimeLeft -= Time.deltaTime;
+          }
         }
       }
     }
@@ -117,6 +132,11 @@ public class Timer : MonoBehaviour
   {
     countdownText.text = string.Format("{0}",(currentCountdownTime));
 
+    RemoveBackground();
+  }
+
+  private void RemoveBackground()
+  {
     // Make background color transparent
     Image image = countdownText.gameObject.GetComponentInParent<Image>();
     Color color = image.color;

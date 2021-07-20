@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using EZCameraShake;
 public class BoxDestruction : PhysicsObject
 {
   [SerializeField] private int maxHealth = 2;
   [SerializeField] private float freezeTime = 0.1f;
   [SerializeField] private GameObject trashPieces;
+  [SerializeField] private UnityEvent destroyed;
 
   private SpriteRenderer spriteRenderer;
 
@@ -46,7 +48,17 @@ public class BoxDestruction : PhysicsObject
     {
       //Sound
       AkSoundEngine.PostEvent("Play_BoxBreak", gameObject);
+
       Destroy();
+    }
+  }
+
+  public void EnvironmentalDamage()
+  {
+    currentHealth--;
+    if (currentHealth <= 0)
+    {
+      EnvironmentalDestroy();
     }
   }
 
@@ -69,7 +81,7 @@ public class BoxDestruction : PhysicsObject
 
   protected virtual void PostDestroy()
   {
-
+    destroyed.Invoke();
   }
 
   protected virtual void Destroy()

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
   [SerializeField] private Sequence sequenceMinigame;
   [SerializeField] private TubeMinigame tubeMinigame;
   [SerializeField] private GameObject pauseMenuCanvas;
+  [SerializeField] private bool isTutorial = false;
 
   public static readonly UnityEvent levelComplete = new UnityEvent();
 
@@ -24,6 +25,10 @@ public class GameManager : MonoBehaviour
   }
 
   public static Minigame CurrentMinigame { get; private set; }
+
+  public static TubeMinigame TubeMinigame { get; private set; }
+
+  public static bool IsTutorial { get; private set; }
 
   private static Vector2 defaultGravity = new Vector2(0, -9.8f);
   private static bool isLevelComplete = false;
@@ -38,13 +43,16 @@ public class GameManager : MonoBehaviour
     DeactivateGame();
 
     minigames = new Minigame[] { buttonMashMinigame, accuracyMinigame, alternatingButtonMashMinigame, sequenceMinigame };
-    tubeMinigame.triggered.AddListener(() => StartMinigame(tubeMinigame));
+    TubeMinigame = tubeMinigame;
+    TubeMinigame.triggered.AddListener(() => StartMinigame(TubeMinigame));
 
     isPaused = false;
     pauseMenu = pauseMenuCanvas;
     pauseMenu.SetActive(false);
 
     isLevelComplete = false;
+
+    IsTutorial = isTutorial;
   }
 
   public static void ActivateGame()
@@ -76,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     levelComplete.Invoke();
     isLevelComplete = true;
-    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().FadeAudio();
+    // GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().FadeAudio();
   }
 
   public static void EndMinigame()
