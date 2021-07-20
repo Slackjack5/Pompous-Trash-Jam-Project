@@ -17,6 +17,7 @@
 						<ObjectRef Name="WoodThud" ID="{45E7A9C7-E43D-44A4-AC0F-29103600C512}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CollectStereo" ID="{71145938-D7A8-4695-BC7C-6641BAF9190A}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_VacuumEnd" ID="{26B0680D-F551-4731-9E1F-9819C8984C62}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_VacuumBroken" ID="{70C6424A-5C3C-478C-A6A2-796B77DEF2FE}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Wormhole" ID="{52B8AF43-5576-47F8-8A8B-BBDB8070C32C}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AnnouncerGreat" ID="{C2F64609-7474-48D1-822C-DAAFB1617D06}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SmokeCloud" ID="{39B2EC75-B491-49CF-95F5-D3974FBCD3AB}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>

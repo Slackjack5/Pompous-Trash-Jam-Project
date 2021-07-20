@@ -358,11 +358,12 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Stop_VacuumBroken_01" ID="{70C6424A-5C3C-478C-A6A2-796B77DEF2FE}">
+				<Event Name="Stop_VacuumBroken" ID="{70C6424A-5C3C-478C-A6A2-796B77DEF2FE}">
 					<ChildrenList>
 						<Action Name="" ID="{F38FFF3D-0A44-416C-918D-33618749C7D8}" ShortID="590334125">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -395,6 +396,21 @@
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Resume_Music_01" ID="{8669459A-FBD3-45CB-8CDA-1DE6D16A302A}">
+					<ChildrenList>
+						<Action Name="" ID="{28F9C34F-C190-42C2-8A37-910293DFFC28}" ShortID="81534093">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{07E8EF99-5DB2-4AA2-A80C-6937C2B12C9F}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
