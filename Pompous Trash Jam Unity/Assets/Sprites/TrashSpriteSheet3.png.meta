@@ -1,0 +1,708 @@
+fileFormatVersion: 2
+guid: 2acf03dc3eb5ae1448ed8d0f1946ddbd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1258767616951837763
+    second: TrashSpriteSheet3_0
+  - first:
+      213: -6778456727398085186
+    second: TrashSpriteSheet3_1
+  - first:
+      213: -6632045245836834814
+    second: TrashSpriteSheet3_2
+  - first:
+      213: -6600494378589736516
+    second: TrashSpriteSheet3_3
+  - first:
+      213: 4272776219219112817
+    second: TrashSpriteSheet3_4
+  - first:
+      213: -1405729242809395632
+    second: TrashSpriteSheet3_5
+  - first:
+      213: -194339709603558121
+    second: TrashSpriteSheet3_6
+  - first:
+      213: 4574623800335184052
+    second: TrashSpriteSheet3_7
+  - first:
+      213: 1151841093678422960
+    second: TrashSpriteSheet3_8
+  - first:
+      213: 1158747084736768560
+    second: TrashSpriteSheet3_9
+  - first:
+      213: 317054099325783992
+    second: TrashSpriteSheet3_10
+  - first:
+      213: 573265176208454234
+    second: TrashSpriteSheet3_11
+  - first:
+      213: -7912747205936986414
+    second: TrashSpriteSheet3_12
+  - first:
+      213: -655082538036841413
+    second: TrashSpriteSheet3_13
+  - first:
+      213: 5941186481355931066
+    second: TrashSpriteSheet3_14
+  - first:
+      213: 3151549563519305160
+    second: TrashSpriteSheet3_15
+  - first:
+      213: -6901557999338626943
+    second: TrashSpriteSheet3_16
+  - first:
+      213: 4005601348988963119
+    second: TrashSpriteSheet3_17
+  - first:
+      213: 8283444780818404893
+    second: TrashSpriteSheet3_18
+  - first:
+      213: -8123005383188591398
+    second: TrashSpriteSheet3_19
+  - first:
+      213: -67573129407314195
+    second: TrashSpriteSheet3_20
+  - first:
+      213: -2779469435532155867
+    second: TrashSpriteSheet3_21
+  - first:
+      213: 4867048019087082852
+    second: TrashSpriteSheet3_22
+  - first:
+      213: 7076873831916968910
+    second: TrashSpriteSheet3_23
+  - first:
+      213: -8845291696312561238
+    second: TrashSpriteSheet3_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344ed277a7a087110800000000000000
+      internalID: 1258767616951837763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 352
+        width: 50
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd841e25851ee1a0800000000000000
+      internalID: -6778456727398085186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_2
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 480
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208c39bacfd36f3a0800000000000000
+      internalID: -6632045245836834814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_3
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 469
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1323665555664a0800000000000000
+      internalID: -6600494378589736516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_4
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 435
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173ba4f4553fb4b30800000000000000
+      internalID: 4272776219219112817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_5
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 441
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05697f793b8dd7ce0800000000000000
+      internalID: -1405729242809395632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 353
+        width: 34
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71dc35350119d4df0800000000000000
+      internalID: -194339709603558121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 382
+        width: 34
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0b608eb145c7f30800000000000000
+      internalID: 4574623800335184052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb566a3f592cff00800000000000000
+      internalID: 1151841093678422960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 276
+        width: 70
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a21429552b41010800000000000000
+      internalID: 1158747084736768560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_10
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 294
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf05e40607666400800000000000000
+      internalID: 317054099325783992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_11
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 288
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52b106f3a5a4f700800000000000000
+      internalID: 573265176208454234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_12
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 286
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d649a8f656403290800000000000000
+      internalID: -7912747205936986414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_13
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 269
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34b0c507eda8e6f0800000000000000
+      internalID: -655082538036841413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_14
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 278
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdb29580a5537250800000000000000
+      internalID: 5941186481355931066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_15
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 263
+        width: 45
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c50b9161ad8cbb20800000000000000
+      internalID: 3151549563519305160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 230
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1806aacc09db830a0800000000000000
+      internalID: -6901557999338626943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_17
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 248
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29005e4431c69730800000000000000
+      internalID: 4005601348988963119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_18
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 242
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d169e3df325b4f270800000000000000
+      internalID: 8283444780818404893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 236
+        width: 18
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc457a34a9454f80800000000000000
+      internalID: -8123005383188591398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_20
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 230
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6c059c89eef0ff0800000000000000
+      internalID: -67573129407314195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 163
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524ec0f46475d69d0800000000000000
+      internalID: -2779469435532155867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 98
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465447af26a3b8340800000000000000
+      internalID: 4867048019087082852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_23
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 40
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb1ba7514b163260800000000000000
+      internalID: 7076873831916968910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet3_24
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 38
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1d39a01163f3580800000000000000
+      internalID: -8845291696312561238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

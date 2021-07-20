@@ -111,7 +111,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: b65bdd52986abd4fbb51b640cc412cdb
     GuidInternal: 
-    m_lastTime: -8585748577897087738
+    m_lastTime: -8585748513683467452
     List:
     - name: Ambience
       guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
@@ -153,7 +153,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a33f0301cc3b20418f2028f42eef846f
     GuidInternal: 
-    m_lastTime: -8585748577896918213
+    m_lastTime: -8585748513685631808
     List:
     - name: Pause_Audio
       guid: 10a0a29eef2a974c8d23b26495373058
@@ -546,6 +546,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3
       minDuration: 3
+    - name: Resume_Audio
+      guid: 1399d5c47745f749a195aab3ab9beb3a
+      id: 589943719
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Resume_Audio
+        ObjectType: 3
+        guid: 1399d5c47745f749a195aab3ab9beb3a
+      Path: Events\Default Work Unit\Resume_Audio
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Resume_Music
       guid: 52d68b324ed3ac4abd89c1f700a5125a
       id: 2940177080

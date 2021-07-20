@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="2449309247">
+		<SoundBank Id="85412153" Language="SFX" Hash="1634769896">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
@@ -258,6 +258,7 @@
 				<Event Id="589943719" Name="Resume_Audio" ObjectPath="\Events\Default Work Unit\Resume_Audio" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\Default Work Unit\Stop_All" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3785866374" Name="Stop_Audio" ObjectPath="\Events\Default Work Unit\Stop_Audio" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1293495406" Name="Stop_VacuumBroken" ObjectPath="\Events\Default Work Unit\Stop_VacuumBroken" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="740603203" Name="Stop_VacuumLoop" ObjectPath="\Events\Default Work Unit\Stop_VacuumLoop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
