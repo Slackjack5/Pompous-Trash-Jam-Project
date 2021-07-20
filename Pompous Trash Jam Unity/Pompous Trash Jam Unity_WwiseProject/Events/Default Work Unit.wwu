@@ -292,9 +292,61 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Stop_VacuumBroken" ID="{04B43FCA-9A50-4A06-92EC-3938F68521B0}">
+				<Event Name="Stop_All" ID="{04B43FCA-9A50-4A06-92EC-3938F68521B0}">
 					<ChildrenList>
 						<Action Name="" ID="{3A6C5098-5995-4038-9F39-4EEE4F5F79F2}" ShortID="266452674">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AnnouncerFinish" ID="{1ADE507E-BA16-416D-A172-C3E22D1656FD}">
+					<ChildrenList>
+						<Action Name="" ID="{7BB41D77-DED7-4F0C-952B-DF748FA1885E}" ShortID="560510166">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AnnouncerFinish" ID="{6DE9B99F-2FE1-400B-A06A-69D7D735EAC3}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Audio" ID="{20BE3B4D-1229-4EB4-A6CD-8C1C38FEA823}">
+					<ChildrenList>
+						<Action Name="" ID="{8993B54D-BAE2-4F3D-B79D-7277E1082390}" ShortID="977745473">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{07E8EF99-5DB2-4AA2-A80C-6937C2B12C9F}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{86C50934-5898-42C1-8E89-562F5C34031C}" ShortID="355571348">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wormhole Test1" ID="{92FD11F4-F890-4976-B8C2-B7092423245D}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FBC4CD67-AFAC-4612-B3E9-99FFF322D745}" ShortID="102555315">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VacuumLoop" ID="{1B9ABFF4-F163-44B9-A390-6ABA4351D92A}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{91248635-6E93-4893-9580-785F8112DAF8}" ShortID="20907554">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 							</PropertyList>
@@ -303,6 +355,46 @@
 									<ObjectRef Name="VacuumBroken" ID="{2F0A50B6-7399-488C-993A-691A3F96A297}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
 								</Reference>
 							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_VacuumBroken_01" ID="{70C6424A-5C3C-478C-A6A2-796B77DEF2FE}">
+					<ChildrenList>
+						<Action Name="" ID="{F38FFF3D-0A44-416C-918D-33618749C7D8}" ShortID="590334125">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VacuumBroken" ID="{2F0A50B6-7399-488C-993A-691A3F96A297}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pause_Audio" ID="{9EA2A010-2AEF-4C97-8D23-B26495373058}">
+					<ChildrenList>
+						<Action Name="" ID="{206744CA-EA7E-4D18-B3EB-6B4144684CB5}" ShortID="1070047350">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="8"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Resume_Audio" ID="{C4D59913-4577-49F7-A195-AAB3AB9BEB3A}">
+					<ChildrenList>
+						<Action Name="" ID="{E13F2B94-D615-4618-BD52-FD61D4180DEB}" ShortID="952600849">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="10"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
 						</Action>
 					</ChildrenList>
 				</Event>

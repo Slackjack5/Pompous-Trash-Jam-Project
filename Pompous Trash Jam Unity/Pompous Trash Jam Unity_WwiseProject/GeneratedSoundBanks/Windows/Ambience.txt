@@ -1,6 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
 	208310577	Play_Wormhole			\Default Work Unit\Play_Wormhole	
 	301007570	Play_BoxThud			\Default Work Unit\Play_BoxThud	
+	452547817	Stop_All			\Default Work Unit\Stop_All	
+	589943719	Resume_Audio			\Default Work Unit\Resume_Audio	
 	631525614	Play_WormholeExplosion			\Default Work Unit\Play_WormholeExplosion	
 	714949245	Play_AnnouncerOutstanding			\Default Work Unit\Play_AnnouncerOutstanding	
 	740603203	Stop_VacuumLoop			\Default Work Unit\Stop_VacuumLoop	
@@ -8,7 +10,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	843996146	Play_BoxBreak			\Default Work Unit\Play_BoxBreak	
 	852948253	Play_NextStage			\Default Work Unit\Play_NextStage	
 	989180208	Play_Swing			\Default Work Unit\Play_Swing	
-	1293495406	Stop_VacuumBroken			\Default Work Unit\Stop_VacuumBroken	
 	1424032314	Play_VacuumEnd			\Default Work Unit\Play_VacuumEnd	
 	2013389220	Play_VacuumBroken			\Default Work Unit\Play_VacuumBroken	
 	2165590428	Play_CollectStereo			\Default Work Unit\Play_CollectStereo	
@@ -21,6 +22,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3785866374	Stop_Audio			\Default Work Unit\Stop_Audio	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
 	4030404899	Play_Explosion			\Default Work Unit\Play_Explosion	
+	4122976862	Pause_Audio			\Default Work Unit\Pause_Audio	
 	4163428053	Play_CollectMono			\Default Work Unit\Play_CollectMono	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
