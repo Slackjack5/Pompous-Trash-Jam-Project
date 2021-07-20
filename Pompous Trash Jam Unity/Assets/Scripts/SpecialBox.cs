@@ -8,6 +8,8 @@ public class SpecialBox : BoxDestruction
   [SerializeField] private float explosiveForce = 600f;
   [SerializeField] private LayerMask layerToHit;
 
+  protected Collider2D[] hitObjects;
+
   protected override void PreDestroy()
   {
     base.PreDestroy();
@@ -17,8 +19,8 @@ public class SpecialBox : BoxDestruction
 
   protected void Explosion()
   {
-    Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldOfImpact, layerToHit);
-    foreach (Collider2D obj in objects)
+    hitObjects = Physics2D.OverlapCircleAll(transform.position, fieldOfImpact, layerToHit);
+    foreach (Collider2D obj in hitObjects)
     {
       PhysicsObject physicsObject = obj.GetComponent<PhysicsObject>();
       if (physicsObject)

@@ -22,9 +22,24 @@ public class ExplosiveBox : SpecialBox
   protected override void PreDestroy()
   {
     base.PreDestroy();
+
+    foreach (Collider2D obj in hitObjects)
+    {
+      if (obj.gameObject != gameObject)
+      {
+        BoxDestruction box = obj.GetComponent<BoxDestruction>();
+        if (box)
+        {
+          box.EnvironmentalDamage();
+        }
+      }
+    }
+
     AkSoundEngine.PostEvent("Play_Explosion", gameObject);
+
     //Camera Shake
     CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1f);
+
     Shader.SetGlobalFloat("_ShockTime", Time.time);
     Vector2 focalPoint = new Vector2(Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).x / Screen.width, Camera.main.WorldToScreenPoint(transform.position, Camera.main.stereoActiveEye).y / Screen.height);
     Shader.SetGlobalVector("_FocalPoint", focalPoint);

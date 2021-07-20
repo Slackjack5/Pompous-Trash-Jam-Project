@@ -46,7 +46,17 @@ public class BoxDestruction : PhysicsObject
     {
       //Sound
       AkSoundEngine.PostEvent("Play_BoxBreak", gameObject);
+
       Destroy();
+    }
+  }
+
+  public void EnvironmentalDamage()
+  {
+    currentHealth--;
+    if (currentHealth <= 0)
+    {
+      EnvironmentalDestroy();
     }
   }
 
