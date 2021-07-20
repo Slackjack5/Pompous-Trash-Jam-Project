@@ -2836,7 +2836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxComboTime: 2
   maxComboUpgradeCount: 10
-  comboMultipliers: 0100000002000000050000000a0000003200000064000000
+  comboMultipliers: 0100000002000000050000000a00000032000000
   exclamations:
   - 
   - GREAT!
