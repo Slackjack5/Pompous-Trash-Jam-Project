@@ -4,6 +4,7 @@
 		<UserProjectSettings Name="" ID="{BD45A122-C92C-4564-8C87-77C4D9B38994}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="G:\Ableton\Audio\PompoesTrash\Destruction\Wormhole\"/>
+				<Property Name="Event Action List\{04B43FCA-9A50-4A06-92EC-3938F68521B0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{062C5D2D-CBCA-47F5-9EE8-B1925909E21F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0637747D-B60B-4E57-B080-B4E31CEF69DE}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{077C27C2-ACBD-4316-8854-0FAAE8462514}\x64_Expand States" Type="string" Value=""/>
@@ -14,6 +15,7 @@
 				<Property Name="Event Action List\{26B0680D-F551-4731-9E1F-9819C8984C62}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{30E08385-1D4C-442F-BCC0-A53C3AD44510}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{328BD652-D34E-4AAC-BD89-C1F700A5125A}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{37C2D2F4-3019-437C-B784-3BB269A3FBC3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{39B2EC75-B491-49CF-95F5-D3974FBCD3AB}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{47230B34-ACD5-4D58-92BC-7DD7874242F2}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{49AD1725-FB83-4DA5-B3A6-3709D17D5632}\x64_Expand States" Type="string" Value=""/>
@@ -57,7 +59,7 @@
 				<Property Name="General\LatestPlatform" Type="string" Value="Mac"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="/WipfuHLqE6xKPWFiYL664t/TJrAjWtMl+T9WHPynVw="/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value=""/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="OnxtHNbgw0iQTtnQLj4yyztZ4BMM1opMoRztb/5xgwo="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="B63SIln4zUCWDoufb75ztQHvwF7/////ZR93N05eLU+1sYUVl/Jx4wHvwF7/////"/>
 				<Property Name="Interactive Music\x64_{28840063-F207-4A05-B427-47CCE36320F4} - SegmentEditorZoomInfo" Type="string" Value="blcgTTkaPEDJBQmKNpQmQCXDEun/KSNAAAAAAAAA8D8AAAAAAKiWQAAAAAAAAAAA"/>
