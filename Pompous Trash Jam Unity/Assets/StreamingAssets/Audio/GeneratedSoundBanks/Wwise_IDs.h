@@ -38,9 +38,11 @@ namespace AK
         static const AkUniqueID PLAY_WORMHOLEEXPLOSION = 631525614U;
         static const AkUniqueID RESUME_AUDIO = 589943719U;
         static const AkUniqueID RESUME_MUSIC = 2940177080U;
+        static const AkUniqueID RESUME_MUSIC_01 = 3249548110U;
         static const AkUniqueID STOP_ALL = 452547817U;
         static const AkUniqueID STOP_AUDIO = 3785866374U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
+        static const AkUniqueID STOP_VACUUMBROKEN = 1293495406U;
         static const AkUniqueID STOP_VACUUMLOOP = 740603203U;
     } // namespace EVENTS
 

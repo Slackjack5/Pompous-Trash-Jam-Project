@@ -10,6 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	843996146	Play_BoxBreak			\Default Work Unit\Play_BoxBreak	
 	852948253	Play_NextStage			\Default Work Unit\Play_NextStage	
 	989180208	Play_Swing			\Default Work Unit\Play_Swing	
+	1293495406	Stop_VacuumBroken			\Default Work Unit\Stop_VacuumBroken	
 	1424032314	Play_VacuumEnd			\Default Work Unit\Play_VacuumEnd	
 	2013389220	Play_VacuumBroken			\Default Work Unit\Play_VacuumBroken	
 	2165590428	Play_CollectStereo			\Default Work Unit\Play_CollectStereo	

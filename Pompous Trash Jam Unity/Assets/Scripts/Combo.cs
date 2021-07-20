@@ -34,6 +34,7 @@ public class Combo : MonoBehaviour
   private Bloom bloom;
   private ChromaticAberration chromatic;
   private ColorAdjustments colorAdjustments;
+  [SerializeField] private float freezeTime = 1f;
   private void Start()
   {
     rectTransform = GetComponent<RectTransform>();
@@ -56,6 +57,9 @@ public class Combo : MonoBehaviour
         // Place audio here
         Shader.SetGlobalFloat("_ShockTime", Time.time);
         Shader.SetGlobalVector("_FocalPoint", new Vector2(0.5f, 0.5f));
+        AkSoundEngine.PostEvent("Pause_Music", gameObject);
+        GameManager.IsTimerPaused = true;
+        StartCoroutine(FreezeImpact());
       }
       bloom.intensity.value = 100;
       chromatic.intensity.value = 1;
@@ -65,6 +69,8 @@ public class Combo : MonoBehaviour
     }
     else
     {
+      GameManager.IsTimerPaused = false;
+      AkSoundEngine.PostEvent("Resume_Music", gameObject);
       bloom.intensity.value = 5;
       chromatic.intensity.value = 0;
       colorAdjustments.contrast.value = 0;
@@ -200,5 +206,13 @@ public class Combo : MonoBehaviour
     float t = Mathf.InverseLerp(0, maxScaleTime, currentScaleTime);
     float size = Mathf.Lerp(1, comboMaxSize, t);
     rectTransform.localScale = new Vector3(size, size);
+  }
+
+
+  protected IEnumerator FreezeImpact()
+  {
+    GameManager.DeactivateGame();
+    yield return new WaitForSeconds(freezeTime);
+    GameManager.ActivateGame();
   }
 }

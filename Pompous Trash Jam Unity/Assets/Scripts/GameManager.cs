@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
   public static bool IsTutorial { get; private set; }
 
+  public static bool IsTimerPaused;
+
   private static Vector2 defaultGravity = new Vector2(0, -9.8f);
   private static bool isLevelComplete = false;
   private static bool isPaused = false;
