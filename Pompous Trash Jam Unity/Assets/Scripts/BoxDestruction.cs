@@ -35,7 +35,7 @@ public class BoxDestruction : PhysicsObject
     }
   }
 
-  public void Hit(bool isHitRight, float force)
+  public void PlayerHit(bool isHitRight, float force, bool isMinigameBoxHit)
   {
     int direction = isHitRight ? 1 : -1;
     rb.AddForce(new Vector2(force * direction, force));
@@ -49,7 +49,14 @@ public class BoxDestruction : PhysicsObject
       //Sound
       AkSoundEngine.PostEvent("Play_BoxBreak", gameObject);
 
-      Destroy();
+      if (isMinigameBoxHit)
+      {
+        EnvironmentalDestroy();
+      }
+      else
+      {
+        Destroy();
+      }
     }
   }
 
@@ -70,6 +77,8 @@ public class BoxDestruction : PhysicsObject
       AkSoundEngine.PostEvent("Play_BoxThud", gameObject);
     }
   }
+
+  // Do things before freeze impact
   protected virtual void PreDestroy()
   {
     spriteRenderer.enabled = false;
@@ -79,17 +88,20 @@ public class BoxDestruction : PhysicsObject
     CameraShaker.Instance.ShakeOnce(2.5f, 2.5f, .2f, 2f);
   }
 
+  // Do things after freeze impact
   protected virtual void PostDestroy()
   {
     destroyed.Invoke();
   }
 
+  // Destroy with freeze impact
   protected virtual void Destroy()
   {
     PreDestroy();
     StartCoroutine(FreezeImpact());
   }
 
+  // Destroy without freeze impact
   public virtual void EnvironmentalDestroy()
   {
     PreDestroy();

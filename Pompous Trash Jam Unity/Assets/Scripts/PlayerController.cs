@@ -151,6 +151,8 @@ public class PlayerController : PhysicsObject
     AkSoundEngine.PostEvent("Play_Swing", gameObject);
     if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
     {
+      bool isMinigameBoxHit = false;
+
       // Hit minigame boxes beneath player
       RaycastHit2D groundHit = Physics2D.BoxCast(groundCheckPosition.position, boxCastSize, /* angle = */ 0f, Vector2.down, /* distance = */ 0f, whatIsBox);
       if (groundHit)
@@ -158,11 +160,12 @@ public class PlayerController : PhysicsObject
         MinigameBox minigameBox = groundHit.transform.GetComponent<MinigameBox>();
         if (minigameBox)
         {
-          minigameBox.Hit(IsFacingRight, hitForce);
+          minigameBox.PlayerHit(IsFacingRight, hitForce, false);
+          isMinigameBoxHit = true;
         }
       }
 
-      // Hit all other boxes in front of player
+      // Hit all boxes (except minigame boxes) in front of player
       Vector2 origin = frontCheckPosition.position;
       if (IsFacingRight)
       {
@@ -182,7 +185,7 @@ public class PlayerController : PhysicsObject
         MinigameBox minigameBox = hit.transform.GetComponent<MinigameBox>();
         if (boxDestruction && !minigameBox)
         {
-          boxDestruction.Hit(IsFacingRight, hitForce);
+          boxDestruction.PlayerHit(IsFacingRight, hitForce, isMinigameBoxHit);
         }
       }
 
