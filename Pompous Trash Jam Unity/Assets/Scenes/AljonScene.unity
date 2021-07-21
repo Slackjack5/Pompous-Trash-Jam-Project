@@ -1966,6 +1966,7 @@ MonoBehaviour:
   increaseAmount: 50
   decreaseInterval: 0.01
   playInterval: 30
+  isTutorialStage: 0
   FixMe: {fileID: 670773869}
 --- !u!61 &557843025
 BoxCollider2D:
@@ -4924,7 +4925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b08b003697ccf4a8d67cd624969c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 99
+  maxTime: 20
   timerText: {fileID: 765614955}
   countdownText: {fileID: 332385450}
   startLevelText: Press Space to start
@@ -5723,7 +5724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
