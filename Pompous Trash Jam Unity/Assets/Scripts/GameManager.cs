@@ -62,15 +62,15 @@ public class GameManager : MonoBehaviour
 
   private void Update()
   {
-    if (isGameStarted && !IsGameActive)
-    {
-      timeFrozen += Time.deltaTime;
-      if (timeFrozen >= 1f)
-      {
-        print("[GameManager] Fail-safe initialized: activating game");
-        ActivateGame();
-      }
-    }
+    //if (isGameStarted && !IsGameActive)
+    //{
+    //  timeFrozen += Time.deltaTime;
+    //  if (timeFrozen >= 1f)
+    //  {
+    //    print("[GameManager] Fail-safe initialized: activating game");
+    //    ActivateGame();
+    //  }
+    //}
   }
 
   public static void ActivateGame()
