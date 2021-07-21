@@ -1,0 +1,1188 @@
+fileFormatVersion: 2
+guid: aadd146f74fdc394791e5820b2138228
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4589012636053562282
+    second: TrashSpriteSheet5_0
+  - first:
+      213: -491308826099936136
+    second: TrashSpriteSheet5_1
+  - first:
+      213: -7896729624216315651
+    second: TrashSpriteSheet5_2
+  - first:
+      213: -2580396000226368540
+    second: TrashSpriteSheet5_3
+  - first:
+      213: 1972402309968440460
+    second: TrashSpriteSheet5_4
+  - first:
+      213: 1789585684432907285
+    second: TrashSpriteSheet5_5
+  - first:
+      213: -3301685638381913317
+    second: TrashSpriteSheet5_6
+  - first:
+      213: 6471878509561147037
+    second: TrashSpriteSheet5_7
+  - first:
+      213: 9008818207426239719
+    second: TrashSpriteSheet5_8
+  - first:
+      213: 6649098597927056576
+    second: TrashSpriteSheet5_9
+  - first:
+      213: 1388503917893880948
+    second: TrashSpriteSheet5_10
+  - first:
+      213: -5197704394160317279
+    second: TrashSpriteSheet5_11
+  - first:
+      213: -3151680157947437407
+    second: TrashSpriteSheet5_12
+  - first:
+      213: 7849081276490174590
+    second: TrashSpriteSheet5_13
+  - first:
+      213: -9121530057921561252
+    second: TrashSpriteSheet5_14
+  - first:
+      213: -5761917271712754806
+    second: TrashSpriteSheet5_15
+  - first:
+      213: -8466390580688747654
+    second: TrashSpriteSheet5_16
+  - first:
+      213: 7809327438721633940
+    second: TrashSpriteSheet5_17
+  - first:
+      213: -1131796728881340196
+    second: TrashSpriteSheet5_18
+  - first:
+      213: -3290280688416187423
+    second: TrashSpriteSheet5_19
+  - first:
+      213: -1827574765188096736
+    second: TrashSpriteSheet5_20
+  - first:
+      213: -377560542904748245
+    second: TrashSpriteSheet5_21
+  - first:
+      213: -8078936987680577586
+    second: TrashSpriteSheet5_22
+  - first:
+      213: -5563540356685350058
+    second: TrashSpriteSheet5_23
+  - first:
+      213: 7527962255907345104
+    second: TrashSpriteSheet5_24
+  - first:
+      213: 2803296496854625977
+    second: TrashSpriteSheet5_25
+  - first:
+      213: 3954555781408697060
+    second: TrashSpriteSheet5_26
+  - first:
+      213: -6622439646899158216
+    second: TrashSpriteSheet5_27
+  - first:
+      213: -1162318227410409662
+    second: TrashSpriteSheet5_28
+  - first:
+      213: 2916468193818415227
+    second: TrashSpriteSheet5_29
+  - first:
+      213: -7150205794889832250
+    second: TrashSpriteSheet5_30
+  - first:
+      213: 5695243228536540366
+    second: TrashSpriteSheet5_31
+  - first:
+      213: -6598621422937136184
+    second: TrashSpriteSheet5_32
+  - first:
+      213: -4410670489567988480
+    second: TrashSpriteSheet5_33
+  - first:
+      213: -582256684115368373
+    second: TrashSpriteSheet5_34
+  - first:
+      213: 9198233664730906965
+    second: TrashSpriteSheet5_35
+  - first:
+      213: -663360484945534975
+    second: TrashSpriteSheet5_36
+  - first:
+      213: -8822686961413669711
+    second: TrashSpriteSheet5_37
+  - first:
+      213: 6775386743113551809
+    second: TrashSpriteSheet5_38
+  - first:
+      213: 7307715456690946139
+    second: TrashSpriteSheet5_39
+  - first:
+      213: 8978052642637869935
+    second: TrashSpriteSheet5_40
+  - first:
+      213: 3291224207600319558
+    second: TrashSpriteSheet5_41
+  - first:
+      213: 8178497413780070506
+    second: TrashSpriteSheet5_42
+  - first:
+      213: 3613760854594725917
+    second: TrashSpriteSheet5_43
+  - first:
+      213: 7036131634397956658
+    second: TrashSpriteSheet5_44
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa360c9cda27faf30800000000000000
+      internalID: 4589012636053562282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 352
+        width: 50
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8749c49c9358e29f0800000000000000
+      internalID: -491308826099936136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_2
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 480
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df85845de3e296290800000000000000
+      internalID: -7896729624216315651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_3
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 469
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e32ba26287903cd0800000000000000
+      internalID: -2580396000226368540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_4
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 435
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c24df53716f5b10800000000000000
+      internalID: 1972402309968440460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_5
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 441
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c6fb7c2b2e5d810800000000000000
+      internalID: 1789585684432907285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 353
+        width: 34
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bbc3ca76e0e22d0800000000000000
+      internalID: -3301685638381913317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 382
+        width: 34
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e60e7073bb0d950800000000000000
+      internalID: 6471878509561147037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec56bbcd60c50d70800000000000000
+      internalID: 9008818207426239719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 276
+        width: 70
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c47df542f7564c50800000000000000
+      internalID: 6649098597927056576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_10
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 294
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c8d4be4f4f44310800000000000000
+      internalID: 1388503917893880948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_11
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 288
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac5692646b0ed7b0800000000000000
+      internalID: -5197704394160317279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_12
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 286
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae55eb389bf244d0800000000000000
+      internalID: -3151680157947437407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_13
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 269
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70dd52b5d98dec60800000000000000
+      internalID: 7849081276490174590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_14
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 278
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d79818db0d96180800000000000000
+      internalID: -9121530057921561252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_15
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 263
+        width: 45
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a839f52f4ce8900b0800000000000000
+      internalID: -5761917271712754806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 230
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73855caf96518a80800000000000000
+      internalID: -8466390580688747654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_17
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 248
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ec6bf0eed406c60800000000000000
+      internalID: 7809327438721633940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_18
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 242
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd024112fdc0b40f0800000000000000
+      internalID: -1131796728881340196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 236
+        width: 18
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb10a385239652d0800000000000000
+      internalID: -3290280688416187423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_20
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 230
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02dde781f6623a6e0800000000000000
+      internalID: -1827574765188096736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 163
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2775f6cfa2a2caf0800000000000000
+      internalID: -377560542904748245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_22
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 100
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7e88e1d99d1ef80800000000000000
+      internalID: -8078936987680577586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_23
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 165
+        width: 44
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b3832c5855ac2b0800000000000000
+      internalID: -5563540356685350058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_24
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 176
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2d7e179c1b87860800000000000000
+      internalID: 7527962255907345104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_25
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 181
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9beed17bf4f47e620800000000000000
+      internalID: 2803296496854625977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_26
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 132
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea2553f78761e630800000000000000
+      internalID: 3954555781408697060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_27
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 154
+        width: 96
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833cc147a3e5814a0800000000000000
+      internalID: -6622439646899158216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 98
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247ad3bfabd9edfe0800000000000000
+      internalID: -1162318227410409662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_29
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 117
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b709543ce50697820800000000000000
+      internalID: 2916468193818415227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_30
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 112
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8e6a486bd55cc90800000000000000
+      internalID: -7150205794889832250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_31
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 130
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc8e5aaa81990f40800000000000000
+      internalID: 5695243228536540366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_32
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 104
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3ac8ed6ccfc64a0800000000000000
+      internalID: -6598621422937136184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_33
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 101
+        width: 41
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0057008fe862ac2c0800000000000000
+      internalID: -4410670489567988480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_34
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 100
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46e43771a86be7f0800000000000000
+      internalID: -582256684115368373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 40
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5514353a8c0b6af70800000000000000
+      internalID: 9198233664730906965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_36
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 60
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1006ac057254bc6f0800000000000000
+      internalID: -663360484945534975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_37
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 73
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bcb77404f48f8580800000000000000
+      internalID: -8822686961413669711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_38
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 38
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf8c276852070e50800000000000000
+      internalID: 6775386743113551809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_39
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 75
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5002bb6d783a6560800000000000000
+      internalID: 7307715456690946139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 54
+        width: 17
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63ff2b8f43789c70800000000000000
+      internalID: 8978052642637869935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_41
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 29
+        width: 50
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cfe2aaaf6ccad20800000000000000
+      internalID: 3291224207600319558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_42
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 45
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60efc8f01cdf7170800000000000000
+      internalID: 8178497413780070506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_43
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 41
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18a459c958a62230800000000000000
+      internalID: 3613760854594725917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrashSpriteSheet5_44
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 32
+        width: 50
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23acd25417c55a160800000000000000
+      internalID: 7036131634397956658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

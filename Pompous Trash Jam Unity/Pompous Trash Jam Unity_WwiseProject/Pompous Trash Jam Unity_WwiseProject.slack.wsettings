@@ -74,7 +74,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="/WipfuHLqE6xKPWFiYL664t/TJrAjWtMl+T9WHPynVw="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="OnxtHNbgw0iQTtnQLj4yyztZ4BMM1opMoRztb/5xgwo="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="B63SIln4zUCWDoufb75ztQHvwF7/////ZR93N05eLU+1sYUVl/Jx4wHvwF7/////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="ZR93N05eLU+1sYUVl/Jx4wHv7FL/////B63SIln4zUCWDoufb75ztQHv7FL/////"/>
 				<Property Name="Interactive Music\x64_{28840063-F207-4A05-B427-47CCE36320F4} - SegmentEditorZoomInfo" Type="string" Value="blcgTTkaPEDJBQmKNpQmQCXDEun/KSNAAAAAAAAA8D8AAAAAAAAAAAAAAAAAcH9A"/>
 				<Property Name="Interactive Music\x64_{38312A46-211A-4830-BF0A-2A47DBBE00AC} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAA0G1AAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{B138ED1E-C834-488E-AFB8-510C5F48F1D9} - SegmentEditorZoomInfo" Type="string" Value="2X5a+/Et/z+0ne+nxkv1P83MzMzMzF9AAAAAAAAA8D8AAAAAAGiJQAAAAAAAAAAA"/>
@@ -117,7 +117,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value="tlvdUphqvU+7UbZAzEEs2w=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_9_1" Type="string" Value=""/>
 				<Property Name="RTPC\GameParameterSimValue\{57D77116-0074-4D06-A413-539FBB99501C}" Type="Real64" Value="0"/>
