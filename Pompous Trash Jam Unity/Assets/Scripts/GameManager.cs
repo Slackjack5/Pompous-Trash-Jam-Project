@@ -38,8 +38,6 @@ public class GameManager : MonoBehaviour
   private static bool isPaused = false;
   private static Minigame[] minigames;
   private static GameObject pauseMenu;
-  
-  private float timeFrozen = 0;
 
   private void Awake()
   {
@@ -58,19 +56,6 @@ public class GameManager : MonoBehaviour
     isLevelComplete = false;
 
     IsTutorial = isTutorial;
-  }
-
-  private void Update()
-  {
-    //if (isGameStarted && !IsGameActive)
-    //{
-    //  timeFrozen += Time.deltaTime;
-    //  if (timeFrozen >= 1f)
-    //  {
-    //    print("[GameManager] Fail-safe initialized: activating game");
-    //    ActivateGame();
-    //  }
-    //}
   }
 
   public static void ActivateGame()
