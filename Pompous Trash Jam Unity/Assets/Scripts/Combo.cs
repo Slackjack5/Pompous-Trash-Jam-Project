@@ -49,7 +49,6 @@ public class Combo : MonoBehaviour
     comboMultiplierText.text = comboMultipliers[ComboMultiplierIndex] + "x";
     exclamation.text = exclamations[ComboMultiplierIndex];
     float comboRatio = (float)ComboMultiplierIndex / (float)(comboMultipliers.Length - 1);
-    print(comboRatio);
     if (comboRatio >= 0.99)
     {
       if (bloom.intensity.value != 100)
@@ -165,8 +164,11 @@ public class Combo : MonoBehaviour
       }
     }
 
-    Bulge();
-    StartFill();
+    if (!GameManager.IsTutorial)
+    {
+      Bulge();
+      StartFill();
+    }
   }
 
   private void Bulge()

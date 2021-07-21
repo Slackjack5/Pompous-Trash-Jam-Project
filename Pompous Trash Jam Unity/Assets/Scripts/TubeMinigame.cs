@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class TubeMinigame : ButtonMash
 {
   [SerializeField] private float playInterval = 30f;
+  [SerializeField] private bool isTutorialStage = false;
 
   public bool IsReady { get; private set; }
 
@@ -19,8 +20,18 @@ public class TubeMinigame : ButtonMash
   {
     base.Start();
 
-    IsReady = false;
-    StartCoroutine(Ready());
+    if (GameManager.IsTutorial)
+    {
+      if (isTutorialStage)
+      {
+        Activate();
+      }
+    }
+    else
+    {
+      IsReady = false;
+      StartCoroutine(Ready());
+    }
   }
 
   private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +48,14 @@ public class TubeMinigame : ButtonMash
   private IEnumerator Ready()
   {
     yield return new WaitForSeconds(playInterval);
+    if (!IsReady)
+    {
+      Activate();
+    }
+  }
+
+  private void Activate()
+  {
     IsReady = true;
     AkSoundEngine.PostEvent("Play_VacuumBroken", gameObject);
     FixMe.SetActive(true);
@@ -46,6 +65,9 @@ public class TubeMinigame : ButtonMash
   {
     base.Restart();
 
-    StartCoroutine(Ready());
+    if (!isTutorialStage)
+    {
+      StartCoroutine(Ready());
+    }
   }
 }

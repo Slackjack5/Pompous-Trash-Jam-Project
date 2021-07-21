@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
   private static Minigame[] minigames;
   private static GameObject pauseMenu;
 
-  private void Start()
+  private void Awake()
   {
     IsLevelStarted = false;
 
@@ -91,9 +91,16 @@ public class GameManager : MonoBehaviour
 
   public static void EndMinigame()
   {
-    ActivateGame();
+    if (IsTutorial)
+    {
+      EndLevel();
+    }
+    else
+    {
+      ActivateGame();
 
-    CurrentMinigame = null;
+      CurrentMinigame = null;
+    }
   }
 
   public static void StartMinigame(Minigame minigame)
@@ -151,18 +158,19 @@ public class GameManager : MonoBehaviour
 
   public void NextLevel()
   {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
   }
 
   public void Quit()
   {
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
     SceneManager.LoadScene(0);
   }
 
   public void Restart()
   {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 }

@@ -37,6 +37,11 @@ public class ScoreTracker : MonoBehaviour
     // Update text
     scoreText.text = score.ToString();
     highScoreText.text = highScore.ToString();
+
+    if (GameManager.IsTutorial && score >= 500)
+    {
+      GameManager.EndLevel();
+    }
   }
 
   public void Increase(int value)
@@ -46,7 +51,10 @@ public class ScoreTracker : MonoBehaviour
     int points = value * baseMultiplier * combo.GetMultiplier();
     score += points;
 
-    SpawnPoints(points);
+    if (!GameManager.IsTutorial)
+    {
+      SpawnPoints(points);
+    }
 
     if (score > highScore)
     {
