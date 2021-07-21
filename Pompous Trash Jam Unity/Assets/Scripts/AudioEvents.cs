@@ -20,6 +20,7 @@ public class AudioEvents : MonoBehaviour
   public bool startCounting = false;
   private bool playerReady = false;
   private bool musicReady = false;
+  private bool isMusicMuted = false;
 
   //id of the wwise event - using this to get the playback position
   static uint playingID;
@@ -50,6 +51,21 @@ public class AudioEvents : MonoBehaviour
     //End All Audio
     AkSoundEngine.PostEvent("Fade_Audio", gameObject);
   }
+
+  public void ToggleMute()
+  {
+    if (isMusicMuted)
+    {
+      isMusicMuted = false;
+      AkSoundEngine.PostEvent("Resume_Music", gameObject);
+    }
+    else
+    {
+      isMusicMuted = true;
+      AkSoundEngine.PostEvent("Mute_Music", gameObject);
+    }
+  }
+
   void MusicCallbackFunction(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
   {
 

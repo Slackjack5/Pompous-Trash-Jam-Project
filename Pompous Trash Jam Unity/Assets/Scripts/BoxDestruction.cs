@@ -119,12 +119,4 @@ public class BoxDestruction : PhysicsObject
     PostDestroy();
     Destroy(gameObject);
   }
-
-  //Debugging Code
-  private void OnMouseDown()
-  {
-#if UNITY_EDITOR
-    Destroy();
-#endif
-  }
 }
