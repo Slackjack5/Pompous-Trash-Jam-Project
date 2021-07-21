@@ -7406,6 +7406,7 @@ MonoBehaviour:
   pauseMenuCanvas: {fileID: 964170981}
   isTutorial: 0
   transition: {fileID: 739723573}
+  Wwise: {fileID: 1699890148}
 --- !u!4 &1559761009
 Transform:
   m_ObjectHideFlags: 0

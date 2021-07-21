@@ -3379,6 +3379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MinigameBox
       objectReference: {fileID: 0}
+    - target: {fileID: 2202151929508145570, guid: a6834dfb676740a49878684c198385d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8078936987680577586, guid: aadd146f74fdc394791e5820b2138228, type: 3}
     - target: {fileID: 2202151929508145597, guid: a6834dfb676740a49878684c198385d9, type: 3}
       propertyPath: m_RootOrder
       value: 8

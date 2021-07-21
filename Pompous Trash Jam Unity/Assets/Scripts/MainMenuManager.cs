@@ -14,6 +14,7 @@ public class MainMenuManager : MonoBehaviour
 
   IEnumerator LoadLevel(int levelIndex)
   {
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
     transition.SetTrigger("Start");
 
     yield return new WaitForSeconds(1);

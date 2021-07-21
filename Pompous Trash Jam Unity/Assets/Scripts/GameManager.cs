@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
   [SerializeField] private bool isTutorial = false;
 
   public Animator transition;
-
   public static readonly UnityEvent levelComplete = new UnityEvent();
 
   public static bool IsLevelStarted { get; private set; }
@@ -170,26 +169,24 @@ public class GameManager : MonoBehaviour
 
   public void NextLevel()
   {
-    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
-    StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+    StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
   }
 
   public void Quit()
   {
-    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
     StartCoroutine(LoadLevel(0));
   }
 
   public void Restart()
   {
-    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
     StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
   }
 
   IEnumerator LoadLevel(int levelIndex)
   {
-    transition.SetTrigger("Start");
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
     Time.timeScale = 1;
+    transition.SetTrigger("Start");
 
     yield return new WaitForSeconds(1);
 
