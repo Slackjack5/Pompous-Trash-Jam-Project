@@ -57,7 +57,7 @@ public class AudioEvents : MonoBehaviour
     if (isMusicMuted)
     {
       isMusicMuted = false;
-      AkSoundEngine.PostEvent("Resume_Music", gameObject);
+      AkSoundEngine.PostEvent("Reset_Music", gameObject);
     }
     else
     {
