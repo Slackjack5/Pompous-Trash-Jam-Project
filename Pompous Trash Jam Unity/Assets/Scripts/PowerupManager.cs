@@ -64,7 +64,7 @@ public class PowerupManager : MonoBehaviour
         BoxDestruction box = collision.gameObject.GetComponent<BoxDestruction>();
         if (box)
         {
-          box.Hit(player.IsFacingRight, (currentPowerup as SuperStrength).HitForce);
+          box.PlayerHit(player.IsFacingRight, (currentPowerup as SuperStrength).HitForce, false);
         }
       }
     }

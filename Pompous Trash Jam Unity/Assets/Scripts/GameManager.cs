@@ -33,10 +33,13 @@ public class GameManager : MonoBehaviour
   public static bool IsTimerPaused;
 
   private static Vector2 defaultGravity = new Vector2(0, -9.8f);
+  private static bool isGameStarted = false;
   private static bool isLevelComplete = false;
   private static bool isPaused = false;
   private static Minigame[] minigames;
   private static GameObject pauseMenu;
+  
+  private float timeFrozen = 0;
 
   private void Awake()
   {
@@ -57,6 +60,19 @@ public class GameManager : MonoBehaviour
     IsTutorial = isTutorial;
   }
 
+  private void Update()
+  {
+    if (isGameStarted && !IsGameActive)
+    {
+      timeFrozen += Time.deltaTime;
+      if (timeFrozen >= 1f)
+      {
+        print("[GameManager] Fail-safe initialized: activating game");
+        ActivateGame();
+      }
+    }
+  }
+
   public static void ActivateGame()
   {
     IsGameActive = true;
@@ -74,6 +90,14 @@ public class GameManager : MonoBehaviour
     CurrentMinigame = null;
   }
 
+  // Called when countdown is finished
+  public static void StartGame()
+  {
+    ActivateGame();
+    isGameStarted = true;
+  }
+
+  // Called when Space is pressed at the beginning
   public static void StartLevel()
   {
     IsLevelStarted = true;
