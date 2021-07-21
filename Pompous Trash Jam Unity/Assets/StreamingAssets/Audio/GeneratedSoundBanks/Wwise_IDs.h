@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID MUTE_MUSIC = 2741649490U;
+        static const AkUniqueID PAUSE_ALL = 3864097025U;
         static const AkUniqueID PAUSE_AUDIO = 4122976862U;
         static const AkUniqueID PAUSE_MUSIC = 2735935537U;
         static const AkUniqueID PLAY_ANNOUNCERFINISH = 3372131670U;
@@ -36,6 +38,7 @@ namespace AK
         static const AkUniqueID PLAY_VACUUMLOOP = 3537388541U;
         static const AkUniqueID PLAY_WORMHOLE = 208310577U;
         static const AkUniqueID PLAY_WORMHOLEEXPLOSION = 631525614U;
+        static const AkUniqueID RESET_MUSIC = 990593514U;
         static const AkUniqueID RESUME_AUDIO = 589943719U;
         static const AkUniqueID RESUME_MUSIC = 2940177080U;
         static const AkUniqueID RESUME_MUSIC_01 = 3249548110U;

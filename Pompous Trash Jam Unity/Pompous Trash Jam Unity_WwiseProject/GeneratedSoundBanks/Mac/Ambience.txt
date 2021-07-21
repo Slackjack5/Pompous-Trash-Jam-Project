@@ -22,6 +22,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3537388541	Play_VacuumLoop			\Default Work Unit\Play_VacuumLoop	
 	3785866374	Stop_Audio			\Default Work Unit\Stop_Audio	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+	3864097025	Pause_All			\Default Work Unit\Pause_All	
 	4030404899	Play_Explosion			\Default Work Unit\Play_Explosion	
 	4122976862	Pause_Audio			\Default Work Unit\Pause_Audio	
 	4163428053	Play_CollectMono			\Default Work Unit\Play_CollectMono	

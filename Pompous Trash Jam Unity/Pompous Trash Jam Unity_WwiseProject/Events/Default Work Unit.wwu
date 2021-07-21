@@ -414,6 +414,64 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Pause_All" ID="{DF6ADACD-F67E-46D4-AFCB-966DF4A049C6}">
+					<ChildrenList>
+						<Action Name="" ID="{28C9734F-4439-4F1E-B205-4C251DE3DACC}" ShortID="413189792">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="8"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mute_Music" ID="{27105666-EE93-4F94-9422-3F8253670EFA}">
+					<ChildrenList>
+						<Action Name="" ID="{1EE1616D-BBE7-43F5-A9EA-B5C8424C01EC}" ShortID="983280528">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="11"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_Bus_Volume_Music" ID="{D66D12F9-1F60-4442-B1D5-C5D9008A8F14}">
+					<ChildrenList>
+						<Action Name="" ID="{BC2F10CE-3B45-486D-8B70-6D70F81A8FBD}" ShortID="743594280">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="11"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reset_Music" ID="{C102D9DD-435A-491C-BA18-02C139C159F0}">
+					<ChildrenList>
+						<Action Name="" ID="{C91F9A50-47F6-4D34-98CA-00784D5C402A}" ShortID="564925849">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="14"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

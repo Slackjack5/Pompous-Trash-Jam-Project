@@ -11,11 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="1634769896">
+		<SoundBank Id="85412153" Language="SFX" Hash="353759741">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3864097025" Name="Pause_All" ObjectPath="\Events\Default Work Unit\Pause_All" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="4122976862" Name="Pause_Audio" ObjectPath="\Events\Default Work Unit\Pause_Audio" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3372131670" Name="Play_AnnouncerFinish" ObjectPath="\Events\Default Work Unit\Play_AnnouncerFinish" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000">
 					<IncludedMemoryFiles>
@@ -303,11 +304,13 @@
 				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="1540960825">
+		<SoundBank Id="3991942870" Language="SFX" Hash="1538918214">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2741649490" Name="Mute_Music" ObjectPath="\Events\Default Work Unit\Mute_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4122976862" Name="Pause_Audio" ObjectPath="\Events\Default Work Unit\Pause_Audio" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2735935537" Name="Pause_Music" ObjectPath="\Events\Default Work Unit\Pause_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -333,6 +336,8 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="990593514" Name="Reset_Music" ObjectPath="\Events\Default Work Unit\Reset_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="589943719" Name="Resume_Audio" ObjectPath="\Events\Default Work Unit\Resume_Audio" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2940177080" Name="Resume_Music" ObjectPath="\Events\Default Work Unit\Resume_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3249548110" Name="Resume_Music_01" ObjectPath="\Events\Default Work Unit\Resume_Music_01" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\Default Work Unit\Stop_All" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
