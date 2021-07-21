@@ -472,6 +472,60 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Reset_Bus_Volume_Music" ID="{4B67EB12-5B0E-4336-9E6A-07DC34ECCB5E}">
+					<ChildrenList>
+						<Action Name="" ID="{9FEA5614-7C50-4404-9A6C-E099F7DDF8F0}" ShortID="1019364039">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="14"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{731CB7D6-AF67-4074-AE22-A0EA1E9AFD32}" WorkUnitID="{3D386B22-6217-4C53-83EB-131CCFD311F8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Heavy" ID="{08B238DE-B24F-4674-8C13-15F21108DCAC}">
+					<ChildrenList>
+						<Action Name="" ID="{834AA3C0-D0A6-48BE-A10B-BF2FB00E4E98}" ShortID="4738164">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="30"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Heavy" ID="{1E8DDA99-7268-4E4A-90AE-854C9E136BDD}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Crit" ID="{8100084F-EF17-4552-A210-04FBB5513BCB}">
+					<ChildrenList>
+						<Action Name="" ID="{4159B8AA-2738-43F6-9D1C-4D7C67AEF2C2}" ShortID="260522401">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="15"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Weapon_Crit" ID="{AE36D6B6-D5E8-407E-AAB6-ED242B833C2F}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_FixNoise" ID="{F1031AC6-79A5-437F-B2FB-795240C3E649}">
+					<ChildrenList>
+						<Action Name="" ID="{5A1F8302-99E0-47D3-B21C-9A51B41080FF}" ShortID="424322021">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FixNoise" ID="{FBE04E5D-A2D0-4AAD-A08A-52FD6E0E5870}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

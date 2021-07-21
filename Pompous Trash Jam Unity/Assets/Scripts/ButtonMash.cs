@@ -33,6 +33,7 @@ public class ButtonMash : Minigame
   {
     progressBar.Increase(increaseAmount);
     CameraShaker.Instance.ShakeOnce(3f, 3f, .1f, 1f);
+    AkSoundEngine.PostEvent("Play_FixNoise", gameObject);
   }
 
   public override void Restart()

@@ -12,9 +12,12 @@
 						<ObjectRef Name="Play_BoxBreak" ID="{9F8184E8-8C65-41FD-8033-25DE543A4F1A}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Explosion" ID="{077C27C2-ACBD-4316-8854-0FAAE8462514}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_VacuumBroken" ID="{37C2D2F4-3019-437C-B784-3BB269A3FBC3}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_FixNoise" ID="{F1031AC6-79A5-437F-B2FB-795240C3E649}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AnnouncerOutstanding" ID="{30E08385-1D4C-442F-BCC0-A53C3AD44510}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AnnouncerSensational" ID="{55C418A8-4D95-4489-BBB8-87E62711F737}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="WoodThud" ID="{45E7A9C7-E43D-44A4-AC0F-29103600C512}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Crit" ID="{8100084F-EF17-4552-A210-04FBB5513BCB}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Heavy" ID="{08B238DE-B24F-4674-8C13-15F21108DCAC}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CollectStereo" ID="{71145938-D7A8-4695-BC7C-6641BAF9190A}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Pause_All" ID="{DF6ADACD-F67E-46D4-AFCB-966DF4A049C6}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_VacuumEnd" ID="{26B0680D-F551-4731-9E1F-9819C8984C62}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>

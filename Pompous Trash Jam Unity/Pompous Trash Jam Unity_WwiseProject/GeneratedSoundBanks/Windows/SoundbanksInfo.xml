@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="353759741">
+		<SoundBank Id="85412153" Language="SFX" Hash="283661287">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
@@ -126,6 +126,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3320189086" Name="Play_Crit" ObjectPath="\Events\Default Work Unit\Play_Crit" DurationType="OneShot" DurationMin="0.000000" DurationMax="2.040340">
+					<IncludedMemoryFiles>
+						<File Id="447524316" Language="SFX">
+							<ShortName>Boxing_gloves_hit_crit1.wav</ShortName>
+							<Path>SFX\Boxing_gloves_hit_crit1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="4030404899" Name="Play_Explosion" ObjectPath="\Events\Default Work Unit\Play_Explosion" DurationType="OneShot" DurationMin="3.000000" DurationMax="4.000000">
 					<IncludedMemoryFiles>
 						<File Id="79359579" Language="SFX">
@@ -139,6 +147,18 @@
 						<File Id="513411101" Language="SFX">
 							<ShortName>Explosion\Explosion1.wav</ShortName>
 							<Path>SFX\Explosion\Explosion1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="439711495" Name="Play_FixNoise" ObjectPath="\Events\Default Work Unit\Play_FixNoise" DurationType="OneShot" DurationMin="1.151519" DurationMax="1.160998">
+					<IncludedMemoryFiles>
+						<File Id="100904823" Language="SFX">
+							<ShortName>FixNoise\Cbar_hit1.wav</ShortName>
+							<Path>SFX\FixNoise\Cbar_hit1_10C4C929.wem</Path>
+						</File>
+						<File Id="481520469" Language="SFX">
+							<ShortName>FixNoise\Cbar_hit2.wav</ShortName>
+							<Path>SFX\FixNoise\Cbar_hit2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -167,6 +187,34 @@
 						<File Id="1039475092" Language="SFX">
 							<ShortName>Character\Footsteps\Cement5.wav</ShortName>
 							<Path>SFX\Character\Footsteps\Cement5_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2484848015" Name="Play_Heavy" ObjectPath="\Events\Default Work Unit\Play_Heavy" DurationType="OneShot" DurationMin="0.000000" DurationMax="1.044014">
+					<IncludedMemoryFiles>
+						<File Id="159673699" Language="SFX">
+							<ShortName>Heavy\Heavy_meleeing02.wav</ShortName>
+							<Path>SFX\Heavy\Heavy_meleeing02_10C4C929.wem</Path>
+						</File>
+						<File Id="196020560" Language="SFX">
+							<ShortName>Heavy\Heavy_meleeing05.wav</ShortName>
+							<Path>SFX\Heavy\Heavy_meleeing05_10C4C929.wem</Path>
+						</File>
+						<File Id="257080637" Language="SFX">
+							<ShortName>Heavy\Heavy_meleeing04.wav</ShortName>
+							<Path>SFX\Heavy\Heavy_meleeing04_10C4C929.wem</Path>
+						</File>
+						<File Id="344532685" Language="SFX">
+							<ShortName>Heavy\Heavy_meleeing03.wav</ShortName>
+							<Path>SFX\Heavy\Heavy_meleeing03_10C4C929.wem</Path>
+						</File>
+						<File Id="738781284" Language="SFX">
+							<ShortName>Heavy\Heavy_meleeing01.wav</ShortName>
+							<Path>SFX\Heavy\Heavy_meleeing01_10C4C929.wem</Path>
+						</File>
+						<File Id="860396959" Language="SFX">
+							<ShortName>Heavy\Heavy_meleeing06.wav</ShortName>
+							<Path>SFX\Heavy\Heavy_meleeing06_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

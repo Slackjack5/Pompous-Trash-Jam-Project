@@ -149,6 +149,7 @@ public class PlayerController : PhysicsObject
   public void PlaySwing()
   {
     AkSoundEngine.PostEvent("Play_Swing", gameObject);
+    AkSoundEngine.PostEvent("Play_Heavy", gameObject);
     if (GameManager.IsGameActive && currentMeleeCooldown <= 0)
     {
       bool isMinigameBoxHit = false;

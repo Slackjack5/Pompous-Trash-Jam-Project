@@ -44,6 +44,7 @@ public class BoxDestruction : PhysicsObject
 
     //Sound
     AkSoundEngine.PostEvent("Play_BoxHit", gameObject);
+    AkSoundEngine.PostEvent("Play_Crit", gameObject);
     if (currentHealth <= 0)
     {
       //Sound

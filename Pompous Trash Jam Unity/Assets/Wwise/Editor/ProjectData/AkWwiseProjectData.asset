@@ -111,7 +111,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: b65bdd52986abd4fbb51b640cc412cdb
     GuidInternal: 
-    m_lastTime: -8585747133824571472
+    m_lastTime: -8585747042589050151
     List:
     - name: Ambience
       guid: 3a7c6d1cd6e0c348904ed9d02e3e32cb
@@ -153,7 +153,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a33f0301cc3b20418f2028f42eef846f
     GuidInternal: 
-    m_lastTime: -8585747133825335964
+    m_lastTime: -8585747042133269682
     List:
     - name: Mute_Music
       guid: 6656102793ee944f94223f8253670efa
@@ -393,6 +393,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.391146
       minDuration: 0.391146
+    - name: Play_Crit
+      guid: 4f08008117ef5245a21004fbb5513bcb
+      id: 3320189086
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_Crit
+        ObjectType: 3
+        guid: 4f08008117ef5245a21004fbb5513bcb
+      Path: Events\Default Work Unit\Play_Crit
+      maxAttenuation: 0
+      maxDuration: 2.04034
+      minDuration: 0
     - name: Play_Explosion
       guid: c2277c07bdac164388540faae8462514
       id: 4030404899
@@ -427,6 +444,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.581079
       minDuration: 0.273314
+    - name: Play_Heavy
+      guid: de38b2084fb274468c1315f21108dcac
+      id: 2484848015
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Play_Heavy
+        ObjectType: 3
+        guid: de38b2084fb274468c1315f21108dcac
+      Path: Events\Default Work Unit\Play_Heavy
+      maxAttenuation: 0
+      maxDuration: 1.044014
+      minDuration: 0
     - name: Play_Music
       guid: 2b734a6ab6757d4284a8cd1293e7c0f4
       id: 2932040671
@@ -580,6 +614,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3
       minDuration: 3
+    - name: Reset_Bus_Volume_Music
+      guid: 12eb674b0e5b36439e6a07dc34eccb5e
+      id: 3009217010
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a33f0301cc3b20418f2028f42eef846f
+      - ElementName: Reset_Bus_Volume_Music
+        ObjectType: 3
+        guid: 12eb674b0e5b36439e6a07dc34eccb5e
+      Path: Events\Default Work Unit\Reset_Bus_Volume_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Reset_Music
       guid: ddd902c15a431c49ba1802c139c159f0
       id: 990593514
