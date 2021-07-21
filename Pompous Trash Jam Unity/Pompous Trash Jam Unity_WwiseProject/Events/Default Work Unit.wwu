@@ -414,6 +414,18 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Pause_All" ID="{DF6ADACD-F67E-46D4-AFCB-966DF4A049C6}">
+					<ChildrenList>
+						<Action Name="" ID="{28C9734F-4439-4F1E-B205-4C251DE3DACC}" ShortID="413189792">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="8"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

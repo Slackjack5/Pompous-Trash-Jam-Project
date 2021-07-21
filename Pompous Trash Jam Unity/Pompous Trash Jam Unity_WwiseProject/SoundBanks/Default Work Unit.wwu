@@ -16,6 +16,7 @@
 						<ObjectRef Name="Play_AnnouncerSensational" ID="{55C418A8-4D95-4489-BBB8-87E62711F737}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="WoodThud" ID="{45E7A9C7-E43D-44A4-AC0F-29103600C512}" WorkUnitID="{862D8526-429E-4F2B-BD75-2F0EFEA08A71}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CollectStereo" ID="{71145938-D7A8-4695-BC7C-6641BAF9190A}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pause_All" ID="{DF6ADACD-F67E-46D4-AFCB-966DF4A049C6}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_VacuumEnd" ID="{26B0680D-F551-4731-9E1F-9819C8984C62}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_VacuumBroken" ID="{70C6424A-5C3C-478C-A6A2-796B77DEF2FE}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Wormhole" ID="{52B8AF43-5576-47F8-8A8B-BBDB8070C32C}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
@@ -42,9 +43,11 @@
 						<ObjectRef Name="Active" ID="{7CE86739-F07F-435B-BFDB-39D669CE8F5A}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Music" ID="{8B99E62E-A32D-451A-9043-00309957495D}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Inactive" ID="{96A4E230-0CAE-46D7-A4F6-A7CAEAFC179A}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Resume_Audio" ID="{C4D59913-4577-49F7-A195-AAB3AB9BEB3A}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_All" ID="{04B43FCA-9A50-4A06-92EC-3938F68521B0}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music" ID="{07E8EF99-5DB2-4AA2-A80C-6937C2B12C9F}" WorkUnitID="{79F0E41A-81F1-4668-AEE1-F5029A203C2E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Resume_Music" ID="{328BD652-D34E-4AAC-BD89-C1F700A5125A}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pause_Audio" ID="{9EA2A010-2AEF-4C97-8D23-B26495373058}" WorkUnitID="{01033FA3-3BCC-4120-8F20-28F42EEF846F}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

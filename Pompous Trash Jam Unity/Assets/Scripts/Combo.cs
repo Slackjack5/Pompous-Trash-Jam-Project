@@ -35,6 +35,7 @@ public class Combo : MonoBehaviour
   private ChromaticAberration chromatic;
   private ColorAdjustments colorAdjustments;
   [SerializeField] private float freezeTime = 1f;
+  private bool audioResumed = false;
   private void Start()
   {
     rectTransform = GetComponent<RectTransform>();
@@ -65,11 +66,16 @@ public class Combo : MonoBehaviour
       colorAdjustments.contrast.value = 100;
       colorAdjustments.hueShift.value = 180;
       colorAdjustments.saturation.value = 100;
+      audioResumed = false;
     }
     else
     {
+      if(!audioResumed)
+      {
+        AkSoundEngine.PostEvent("Resume_Music", gameObject);
+        audioResumed = true;
+      }
       GameManager.IsTimerPaused = false;
-      AkSoundEngine.PostEvent("Resume_Music", gameObject);
       bloom.intensity.value = 5;
       chromatic.intensity.value = 0;
       colorAdjustments.contrast.value = 0;

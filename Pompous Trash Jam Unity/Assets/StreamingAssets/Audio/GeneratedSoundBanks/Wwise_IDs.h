@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PAUSE_ALL = 3864097025U;
         static const AkUniqueID PAUSE_AUDIO = 4122976862U;
         static const AkUniqueID PAUSE_MUSIC = 2735935537U;
         static const AkUniqueID PLAY_ANNOUNCERFINISH = 3372131670U;
