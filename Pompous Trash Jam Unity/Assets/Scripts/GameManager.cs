@@ -14,13 +14,16 @@ public class GameManager : MonoBehaviour
   [SerializeField] private GameObject pauseMenuCanvas;
   [SerializeField] private bool isTutorial = false;
 
+  public Animator transition;
+
   public static readonly UnityEvent levelComplete = new UnityEvent();
 
   public static bool IsLevelStarted { get; private set; }
 
   public static bool IsGameActive { get; private set; }
 
-  public static bool IsMinigameActive {
+  public static bool IsMinigameActive
+  {
     get { return CurrentMinigame != null; }
   }
 
@@ -168,18 +171,28 @@ public class GameManager : MonoBehaviour
   public void NextLevel()
   {
     GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
   }
 
   public void Quit()
   {
     GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
-    SceneManager.LoadScene(0);
+    StartCoroutine(LoadLevel(0));
   }
 
   public void Restart()
   {
     GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+  }
+
+  IEnumerator LoadLevel(int levelIndex)
+  {
+    transition.SetTrigger("Start");
+    Time.timeScale = 1;
+
+    yield return new WaitForSeconds(1);
+
+    SceneManager.LoadScene(levelIndex);
   }
 }

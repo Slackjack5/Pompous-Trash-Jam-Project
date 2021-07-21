@@ -5,9 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+  public Animator transition;
+
   public void Play()
   {
-    SceneManager.LoadScene(1);
+    StartCoroutine(LoadLevel(1));
+  }
+
+  IEnumerator LoadLevel(int levelIndex)
+  {
+    transition.SetTrigger("Start");
+
+    yield return new WaitForSeconds(1);
+
+    SceneManager.LoadScene(levelIndex);
   }
 
   public void Quit()

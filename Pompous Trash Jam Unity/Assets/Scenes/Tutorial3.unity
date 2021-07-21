@@ -499,6 +499,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a9a5d711d1278742b92d6da974684e4, type: 3}
+--- !u!1001 &261067940
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.20294984
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.09665
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.855045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405359, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+--- !u!95 &261067941 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6051675777545580921, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+  m_PrefabInstance: {fileID: 261067940}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &263068813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,6 +2291,7 @@ MonoBehaviour:
   increaseAmount: 50
   decreaseInterval: 0.01
   playInterval: 30
+  isTutorialStage: 0
   FixMe: {fileID: 2425218742030117337, guid: e5b6ec4f033fec144b25b55013228ee1, type: 3}
 --- !u!61 &557843025
 BoxCollider2D:
@@ -8395,6 +8458,7 @@ MonoBehaviour:
   tubeMinigame: {fileID: 557843024}
   pauseMenuCanvas: {fileID: 964170981}
   isTutorial: 1
+  transition: {fileID: 261067941}
 --- !u!4 &1559761009
 Transform:
   m_ObjectHideFlags: 0

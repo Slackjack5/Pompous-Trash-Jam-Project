@@ -407,7 +407,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &230114799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,6 +1329,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010034609}
   m_CullTransparentMesh: 1
+--- !u!1001 &1216991716
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.20294984
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.09665
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.855045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405352, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051675775732405359, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+--- !u!95 &1216991717 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6051675777545580921, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
+  m_PrefabInstance: {fileID: 1216991716}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1345161249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,7 +1485,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
+        m_CallState: 1
       - m_Target: {fileID: 424773247}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1435,7 +1497,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1345161252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,6 +2171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271eacfb505a6e746b96c8bf9e5ea5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 1216991717}
 --- !u!4 &2143050229
 Transform:
   m_ObjectHideFlags: 0
@@ -2217,7 +2280,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &2143620853
 MonoBehaviour:
   m_ObjectHideFlags: 0
