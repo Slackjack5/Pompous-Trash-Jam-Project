@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6666667, y: 0.5416667}
+  m_Size: {x: 1.18, y: 1.25}
   m_EdgeRadius: 0
 --- !u!50 &4459978373810777015
 Rigidbody2D:
@@ -147,3 +147,6 @@ MonoBehaviour:
   maxHealth: 1
   freezeTime: 0.1
   trashPieces: {fileID: 1632352378333449726, guid: 99460543220271f4ea641119996d055b, type: 3}
+  destroyed:
+    m_PersistentCalls:
+      m_Calls: []

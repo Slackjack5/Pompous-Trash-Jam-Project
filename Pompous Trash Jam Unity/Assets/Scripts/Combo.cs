@@ -9,7 +9,7 @@ using TMPro;
 public class Combo : MonoBehaviour
 {
   [SerializeField] private float maxComboTime = 2f;
-  [SerializeField] private int maxComboUpgradeCount = 10;
+  [SerializeField] private float maxComboUpgradeCount = 10;
   [SerializeField] private int[] comboMultipliers;
   [SerializeField] private string[] exclamations;
   [SerializeField] private TextMeshProUGUI comboMultiplierText;
@@ -22,7 +22,7 @@ public class Combo : MonoBehaviour
   private RectTransform rectTransform;
 
   private float currentComboTime;
-  private int currentComboUpgradeCount;
+  private float currentComboUpgradeCount;
   private float startFillAmount;
   private float currentFillTime;
   private float currentResetFillTime;
@@ -70,7 +70,7 @@ public class Combo : MonoBehaviour
     }
     else
     {
-      if(!audioResumed)
+      if (!audioResumed)
       {
         AkSoundEngine.PostEvent("Resume_Music", gameObject);
         audioResumed = true;
@@ -89,25 +89,53 @@ public class Combo : MonoBehaviour
     {
       if (currentScaleTime > 0)
       {
-        currentScaleTime -= Time.deltaTime;
+        if (comboRatio >= 0.99)
+        {
+          currentScaleTime -= Time.deltaTime * 2;
+        }
+        else
+        {
+          currentScaleTime -= Time.deltaTime;
+        }
         ReduceSize();
       }
 
       if (currentFillTime > 0)
       {
-        currentFillTime -= Time.deltaTime;
+        if (comboRatio >= 0.99)
+        {
+          currentFillTime -= Time.deltaTime * 2;
+        }
+        else
+        {
+          currentFillTime -= Time.deltaTime;
+        }
         Fill();
       }
 
       if (currentResetFillTime > 0)
       {
-        currentResetFillTime -= Time.deltaTime;
+        if (comboRatio >= 0.99)
+        {
+          currentResetFillTime -= Time.deltaTime * 2;
+        }
+        else
+        {
+          currentResetFillTime -= Time.deltaTime;
+        }
         ReduceFill();
       }
 
       if (currentComboTime > 0)
       {
-        currentComboTime -= Time.deltaTime;
+        if (comboRatio >= 0.99)
+        {
+          currentComboTime -= Time.deltaTime * 2;
+        }
+        else
+        {
+          currentComboTime -= Time.deltaTime;
+        }
       }
       else
       {
@@ -134,7 +162,7 @@ public class Combo : MonoBehaviour
     AkSoundEngine.SetRTPCValue("Combo", currentComboUpgradeCount, gameObject);
 
     currentComboTime = maxComboTime;
-    currentComboUpgradeCount++;
+    currentComboUpgradeCount += 0.5f;
 
     if (currentComboUpgradeCount >= maxComboUpgradeCount)
     {
