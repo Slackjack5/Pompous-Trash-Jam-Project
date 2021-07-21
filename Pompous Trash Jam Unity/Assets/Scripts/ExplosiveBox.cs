@@ -25,7 +25,7 @@ public class ExplosiveBox : SpecialBox
 
     foreach (Collider2D obj in hitObjects)
     {
-      if (obj.gameObject != gameObject)
+      if (obj.gameObject.GetInstanceID() != gameObject.GetInstanceID())
       {
         BoxDestruction box = obj.GetComponent<BoxDestruction>();
         if (box)

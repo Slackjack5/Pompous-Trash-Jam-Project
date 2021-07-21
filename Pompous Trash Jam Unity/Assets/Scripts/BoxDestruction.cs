@@ -63,7 +63,7 @@ public class BoxDestruction : PhysicsObject
   public void EnvironmentalDamage()
   {
     currentHealth--;
-    if (currentHealth <= 0)
+    if (currentHealth == 0)
     {
       EnvironmentalDestroy();
     }
@@ -98,7 +98,10 @@ public class BoxDestruction : PhysicsObject
   protected virtual void Destroy()
   {
     PreDestroy();
-    StartCoroutine(FreezeImpact());
+    if (GameManager.IsGameActive)
+    {
+      StartCoroutine(FreezeImpact());
+    }
   }
 
   // Destroy without freeze impact

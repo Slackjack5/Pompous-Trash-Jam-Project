@@ -165,7 +165,7 @@ public class Timer : MonoBehaviour
     countdownText.text = "GO";
 
     yield return new WaitForSeconds(.5f);
-    GameManager.ActivateGame();
+    GameManager.StartGame();
     countdownText.enabled = false;
   }
 }
