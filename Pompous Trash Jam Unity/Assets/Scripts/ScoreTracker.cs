@@ -21,6 +21,7 @@ public class ScoreTracker : MonoBehaviour
 
   private int highScore;
   private int score;
+  private bool isComplete = false;
 
   private void Start()
   {
@@ -38,9 +39,10 @@ public class ScoreTracker : MonoBehaviour
     scoreText.text = score.ToString();
     highScoreText.text = highScore.ToString();
 
-    if (GameManager.IsTutorial && score >= 500)
+    if (GameManager.IsTutorial && score >= 500 && !isComplete)
     {
       GameManager.EndLevel();
+      isComplete = true;
     }
   }
 
