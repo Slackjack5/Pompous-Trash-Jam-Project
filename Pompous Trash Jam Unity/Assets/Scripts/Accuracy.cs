@@ -27,6 +27,7 @@ public class Accuracy : Minigame
     {
       if (spinner.CurrentAngle <= hitRange.start && spinner.CurrentAngle >= hitRange.end)
       {
+        AkSoundEngine.PostEvent("Play_FixNoise", gameObject);
         Complete();
         spinner.gameObject.SetActive(false);
       }
