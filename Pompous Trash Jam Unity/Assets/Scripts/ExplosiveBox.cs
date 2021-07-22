@@ -19,9 +19,9 @@ public class ExplosiveBox : SpecialBox
     }
   }
 
-  protected override void PreDestroy()
+  protected override void PreFreeze()
   {
-    base.PreDestroy();
+    base.PreFreeze();
 
     foreach (Collider2D obj in hitObjects)
     {

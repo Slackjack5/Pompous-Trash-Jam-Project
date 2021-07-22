@@ -10,9 +10,9 @@ public class SpecialBox : BoxDestruction
 
   protected Collider2D[] hitObjects;
 
-  protected override void PreDestroy()
+  protected override void PreFreeze()
   {
-    base.PreDestroy();
+    base.PreFreeze();
 
     Explosion();
   }

@@ -47,9 +47,11 @@ public class GameManager : MonoBehaviour
 
   private void Awake()
   {
+    isGameStarted = false;
     IsLevelStarted = false;
 
     DeactivateGame();
+    DeactivateMinigame();
 
     minigames = new Minigame[] { buttonMashMinigame, accuracyMinigame, alternatingButtonMashMinigame, sequenceMinigame };
     TubeMinigame = tubeMinigame;

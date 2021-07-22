@@ -6,9 +6,9 @@ public class UpgradeBox : SpecialBox
 {
   [SerializeField] private Powerup[] powerups;
 
-  protected override void PreDestroy()
+  protected override void PreFreeze()
   {
-    base.PreDestroy();
+    base.PreFreeze();
 
     PowerupManager.Instance.Activate(powerups[Random.Range(0, powerups.Length)]);
   }

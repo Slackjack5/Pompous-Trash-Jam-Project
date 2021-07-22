@@ -7,9 +7,9 @@ public class InfinityBox : SpecialBox
   [SerializeField] private GameObject box;
   [SerializeField] private GameObject infinityVFX;
 
-  protected override void PreDestroy()
+  protected override void PreFreeze()
   {
-    base.PreDestroy();
+    base.PreFreeze();
     AkSoundEngine.PostEvent("Play_SmokeCloud", gameObject);
     Instantiate(box, new Vector2(transform.position.x + .5f, transform.position.y + .5f), Quaternion.identity);
     Instantiate(box, new Vector2(transform.position.x - .5f, transform.position.y + .5f), Quaternion.identity);

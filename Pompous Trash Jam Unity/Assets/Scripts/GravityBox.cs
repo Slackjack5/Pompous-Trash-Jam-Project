@@ -6,9 +6,9 @@ public class GravityBox : SpecialBox
 {
   [SerializeField] private GameObject wormhole;
 
-  protected override void PostDestroy()
+  protected override void PostFreeze()
   {
-    base.PostDestroy();
+    base.PostFreeze();
     AkSoundEngine.PostEvent("Play_Wormhole", gameObject);
     Instantiate(wormhole, new Vector2(transform.position.x, transform.position.y + 2), Quaternion.identity);
   }

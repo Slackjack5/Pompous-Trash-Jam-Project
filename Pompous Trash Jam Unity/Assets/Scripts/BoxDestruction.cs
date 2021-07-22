@@ -13,9 +13,10 @@ public class BoxDestruction : PhysicsObject
 
   private SpriteRenderer spriteRenderer;
 
-
+  private float currentFreezeTime = 0;
   private int currentHealth;
   private bool isEnvironmentallyDestroyed = false;
+  private bool isFrozen = false;
   private Color originalColor;
 
   protected override void Start()
@@ -29,6 +30,22 @@ public class BoxDestruction : PhysicsObject
     originalColor = spriteRenderer.color;
 
     isEnvironmentallyDestroyed = false;
+  }
+
+  protected override void Update()
+  {
+    base.Update();
+
+    if (isFrozen)
+    {
+      currentFreezeTime += Time.deltaTime;
+      if (currentFreezeTime >= freezeTime)
+      {
+        GameManager.ActivateGame();
+        PostFreeze();
+        Destroy(gameObject);
+      }
+    }
   }
 
   public void FixedUpdate()
@@ -86,7 +103,7 @@ public class BoxDestruction : PhysicsObject
   }
 
   // Do things before freeze impact
-  protected virtual void PreDestroy()
+  protected virtual void PreFreeze()
   {
     spriteRenderer.enabled = false;
 
@@ -96,7 +113,7 @@ public class BoxDestruction : PhysicsObject
   }
 
   // Do things after freeze impact
-  protected virtual void PostDestroy()
+  protected virtual void PostFreeze()
   {
     destroyed.Invoke();
   }
@@ -104,26 +121,23 @@ public class BoxDestruction : PhysicsObject
   // Destroy with freeze impact
   protected virtual void Destroy()
   {
-    PreDestroy();
+    PreFreeze();
     if (GameManager.IsGameActive)
     {
-      StartCoroutine(FreezeImpact());
+      FreezeImpact();
     }
   }
 
   // Destroy without freeze impact
   public virtual void EnvironmentalDestroy()
   {
-    PreDestroy();
+    PreFreeze();
     Destroy(gameObject);
   }
 
-  protected IEnumerator FreezeImpact()
+  private void FreezeImpact()
   {
     GameManager.DeactivateGame();
-    yield return new WaitForSeconds(freezeTime);
-    GameManager.ActivateGame();
-    PostDestroy();
-    Destroy(gameObject);
+    isFrozen = true;
   }
 }

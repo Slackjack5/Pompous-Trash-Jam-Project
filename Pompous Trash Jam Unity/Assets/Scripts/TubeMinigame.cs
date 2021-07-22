@@ -16,9 +16,13 @@ public class TubeMinigame : ButtonMash
   //UI
   [SerializeField] public GameObject FixMe;
 
+  private bool hasStartedTicking = false;
+
   protected override void Start()
   {
     base.Start();
+
+    hasStartedTicking = false;
 
     if (GameManager.IsTutorial)
     {
@@ -30,6 +34,16 @@ public class TubeMinigame : ButtonMash
     else
     {
       IsReady = false;
+    }
+  }
+
+  protected override void DoUpdate()
+  {
+    base.DoUpdate();
+
+    if (GameManager.IsGameActive && !hasStartedTicking)
+    {
+      hasStartedTicking = true;
       StartCoroutine(Ready());
     }
   }
