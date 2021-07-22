@@ -45,6 +45,7 @@ public class Spawner : MonoBehaviour
     // Rather than normalize all spawn rates to add up to 1, total the spawn rates
     // and use that total as the maximum of the range to pick a random number from
     float currentTotal = 0;
+    spawnOptions.Clear();
     foreach (BoxSpawner boxSpawner in boxes)
     {
       GameObject box = boxSpawner.box;
