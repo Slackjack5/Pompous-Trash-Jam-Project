@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
   public static TubeMinigame TubeMinigame { get; private set; }
 
+  public static int PressedButton { get; private set; }
+
   public static bool IsTutorial { get; private set; }
 
   public static bool IsTimerPaused;
@@ -58,6 +60,7 @@ public class GameManager : MonoBehaviour
     isLevelComplete = false;
 
     IsTutorial = isTutorial;
+    PressedButton = 0;
   }
 
   public static void ActivateGame()
@@ -169,27 +172,32 @@ public class GameManager : MonoBehaviour
 
   public void NextLevel()
   {
-    StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    Time.timeScale = 1;
+    transition.SetTrigger("Start");
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
+    PressedButton = 1;
   }
 
   public void Quit()
   {
-    StartCoroutine(LoadLevel(0));
+    Time.timeScale = 1;
+    transition.SetTrigger("Start");
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
+    PressedButton = 2;
   }
 
   public void Restart()
   {
-    StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+    Time.timeScale = 1;
+    transition.SetTrigger("Start");
+    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
+    PressedButton = 3;
   }
 
   IEnumerator LoadLevel(int levelIndex)
   {
-    GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
-    Time.timeScale = 1;
-    transition.SetTrigger("Start");
-
-    yield return new WaitForSeconds(1);
-
-    SceneManager.LoadScene(levelIndex);
+    Debug.Log("Made it past time scale");
+    yield return new WaitForSeconds(1f);
+   // SceneManager.LoadScene(levelIndex);
   }
 }

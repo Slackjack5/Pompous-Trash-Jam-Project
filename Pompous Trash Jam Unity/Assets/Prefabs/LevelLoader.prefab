@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 6051675777545580926}
   - component: {fileID: 6051675777545580925}
   - component: {fileID: 6051675777545580921}
+  - component: {fileID: 7264416310917717896}
   m_Layer: 5
   m_Name: Transition
   m_TagString: Untagged
@@ -239,3 +240,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7264416310917717896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051675777545580899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3d5bc5f93375d4b82dc49d6a262130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
