@@ -34,6 +34,7 @@ public class AlternatingButtonMash : Minigame
   {
     if (isLeftNext)
     {
+      AkSoundEngine.PostEvent("Play_FixNoise", gameObject);
       progressBar.Increase(increaseAmount);
       isLeftNext = false;
     }
@@ -43,6 +44,7 @@ public class AlternatingButtonMash : Minigame
   {
     if (!isLeftNext)
     {
+      AkSoundEngine.PostEvent("Play_FixNoise", gameObject);
       progressBar.Increase(increaseAmount);
       isLeftNext = true;
     }

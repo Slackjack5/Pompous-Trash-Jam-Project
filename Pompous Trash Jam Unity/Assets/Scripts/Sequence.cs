@@ -96,6 +96,7 @@ public class Sequence : Minigame
 
   private void Next()
   {
+    AkSoundEngine.PostEvent("Play_FixNoise", gameObject);
     currentProgress++;
     progressBar.SetValue(currentProgress);
   }
