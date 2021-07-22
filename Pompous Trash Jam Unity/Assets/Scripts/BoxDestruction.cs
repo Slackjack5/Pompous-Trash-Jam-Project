@@ -10,7 +10,9 @@ public class BoxDestruction : PhysicsObject
   [SerializeField] private GameObject trashPieces;
   [SerializeField] private UnityEvent destroyed;
 
+
   private SpriteRenderer spriteRenderer;
+
 
   private int currentHealth;
   private Color originalColor;
@@ -41,7 +43,7 @@ public class BoxDestruction : PhysicsObject
     rb.AddForce(new Vector2(force * direction, force));
 
     currentHealth--;
-
+    GameObject.Find("Capsule Player").GetComponent<PlayerController>().SpawnPunch();
     //Sound
     AkSoundEngine.PostEvent("Play_BoxHit", gameObject);
     AkSoundEngine.PostEvent("Play_Crit", gameObject);
