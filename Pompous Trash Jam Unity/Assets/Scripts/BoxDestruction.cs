@@ -15,6 +15,7 @@ public class BoxDestruction : PhysicsObject
 
 
   private int currentHealth;
+  private bool isEnvironmentallyDestroyed = false;
   private Color originalColor;
 
   protected override void Start()
@@ -26,6 +27,8 @@ public class BoxDestruction : PhysicsObject
 
     currentHealth = maxHealth;
     originalColor = spriteRenderer.color;
+
+    isEnvironmentallyDestroyed = false;
   }
 
   public void FixedUpdate()
@@ -66,8 +69,9 @@ public class BoxDestruction : PhysicsObject
   public void EnvironmentalDamage()
   {
     currentHealth--;
-    if (currentHealth == 0)
+    if (currentHealth <= 0 && !isEnvironmentallyDestroyed)
     {
+      isEnvironmentallyDestroyed = true;
       EnvironmentalDestroy();
     }
   }
