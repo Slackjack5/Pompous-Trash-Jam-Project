@@ -2486,6 +2486,7 @@ Transform:
   m_Children:
   - {fileID: 276723935}
   - {fileID: 1984043355}
+  - {fileID: 1118084541}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2569,6 +2570,8 @@ MonoBehaviour:
   hitForce: 500
   meleeCooldownTime: 0.5
   stunTime: 1.5
+  PunchPosition: {fileID: 1118084540}
+  PunchVFX: {fileID: 8413181664376969128, guid: 667e3f4baac7ae64fb477b4488c5233c, type: 3}
   StartGame:
     m_PersistentCalls:
       m_Calls:
@@ -5188,6 +5191,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1118084540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1118084541}
+  m_Layer: 0
+  m_Name: FXposition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1118084541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118084540}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3699999, y: -0.18750012, z: -0.38992193}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 590744673}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143293054
 GameObject:
   m_ObjectHideFlags: 0
@@ -5712,6 +5745,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262487937}
   m_CullTransparentMesh: 1
+--- !u!1 &1290194161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290194162}
+  m_Layer: 0
+  m_Name: PunchParticle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1290194162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290194161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0443292, y: -1.5359498, z: -0.18731831}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1300248606
 GameObject:
   m_ObjectHideFlags: 0
@@ -7510,6 +7573,7 @@ MonoBehaviour:
   tubeMinigame: {fileID: 557843024}
   pauseMenuCanvas: {fileID: 964170981}
   isTutorial: 0
+  transition: {fileID: 0}
 --- !u!4 &1559761009
 Transform:
   m_ObjectHideFlags: 0

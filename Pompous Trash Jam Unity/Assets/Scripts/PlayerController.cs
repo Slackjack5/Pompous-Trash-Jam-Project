@@ -19,6 +19,8 @@ public class PlayerController : PhysicsObject
   [SerializeField] private float hitForce = 500f;
   [SerializeField] private float meleeCooldownTime = 0.5f;
   [SerializeField] private float stunTime = 1.5f;
+  public GameObject PunchPosition;
+  public GameObject PunchVFX;
 
   private Vector2 boxCastSize;
   private float currentMeleeCooldown;
@@ -114,6 +116,11 @@ public class PlayerController : PhysicsObject
     }
   }
 
+  public void SpawnPunch()
+  {
+    int rand = Random.Range(-1, 1);
+    Instantiate(PunchVFX, new Vector2(PunchPosition.transform.position.x, PunchPosition.transform.position.y), Quaternion.identity);
+  }
   public void AttackFinished()
     {
         //animation
