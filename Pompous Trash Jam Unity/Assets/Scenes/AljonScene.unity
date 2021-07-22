@@ -11141,7 +11141,7 @@ MonoBehaviour:
     spawnRate: 0.06
   defaultBox: {fileID: 2202151929508145569, guid: 90ed3bdd966cc684f886eee5b4a7e2bd, type: 3}
   spawnWidth: 12
-  spawnInterval: 1.5
+  spawnInterval: 1
 --- !u!1 &2130790591
 GameObject:
   m_ObjectHideFlags: 0

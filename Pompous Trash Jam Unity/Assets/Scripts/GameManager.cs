@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
   private static Minigame[] minigames;
   private static GameObject pauseMenu;
 
+  private float timeFrozen = 0;
+
   private void Awake()
   {
     IsLevelStarted = false;
@@ -61,6 +63,21 @@ public class GameManager : MonoBehaviour
 
     IsTutorial = isTutorial;
     PressedButton = 0;
+
+    timeFrozen = 0;
+  }
+
+  private void Update()
+  {
+    // Fail-safe
+    if (isGameStarted && !IsTutorial && !isLevelComplete && !isPaused && !IsMinigameActive && !IsGameActive) {
+      timeFrozen += Time.deltaTime;
+      if (timeFrozen >= 1f)
+      {
+        print("[GameManager] Fail-safe initialized: activating game");
+        ActivateGame();
+      }
+    }
   }
 
   public static void ActivateGame()
@@ -192,12 +209,5 @@ public class GameManager : MonoBehaviour
     transition.SetTrigger("Start");
     GameObject.Find("WwiseGlobal").GetComponent<AudioEvents>().EndAudio();
     PressedButton = 3;
-  }
-
-  IEnumerator LoadLevel(int levelIndex)
-  {
-    Debug.Log("Made it past time scale");
-    yield return new WaitForSeconds(1f);
-   // SceneManager.LoadScene(levelIndex);
   }
 }
