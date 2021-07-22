@@ -3070,6 +3070,7 @@ Transform:
   m_Children:
   - {fileID: 276723935}
   - {fileID: 1984043355}
+  - {fileID: 757649613}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3153,6 +3154,8 @@ MonoBehaviour:
   hitForce: 500
   meleeCooldownTime: 0.5
   stunTime: 1.5
+  PunchPosition: {fileID: 757649612}
+  PunchVFX: {fileID: 8413181664376969128, guid: 667e3f4baac7ae64fb477b4488c5233c, type: 3}
   StartGame:
     m_PersistentCalls:
       m_Calls:
@@ -4123,6 +4126,36 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 6051675777545580921, guid: e66209f5fe6b78f4bab566f06d8af2a2, type: 3}
   m_PrefabInstance: {fileID: 6051675776941029452}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &757649612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757649613}
+  m_Layer: 0
+  m_Name: FXposition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &757649613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757649612}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.35, y: -0.13, z: -1.2317168}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 590744673}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &765614953
 GameObject:
   m_ObjectHideFlags: 0
