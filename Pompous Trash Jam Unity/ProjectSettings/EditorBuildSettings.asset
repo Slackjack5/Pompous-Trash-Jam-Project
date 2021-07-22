@@ -20,8 +20,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AljonScene.unity
     guid: 71b64f9e260b9964ba42fad74232079f
-  - enabled: 1
-    path: Assets/Scenes/YouWin.unity
-    guid: 9886d40b21e7356448fd6feab858025f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 17076a3866343424bab69b7f34b609b2, type: 2}
